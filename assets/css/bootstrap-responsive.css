@@ -87,6 +87,9 @@
   }
 }
 @media (max-width: 480px) {
+  footer {
+    display:none;
+  }
   .nav-collapse {
     -webkit-transform: translate3d(0, 0, 0);
   }

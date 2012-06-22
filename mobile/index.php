@@ -71,32 +71,19 @@
         background: -o-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Opera 11.10+ */
         background: -ms-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* IE10+ */
         background: linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* W3C */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abcff', endColorstr='#4096ee',GradientType=0 ); /* IE6-9 */
     }
-
-    #welcome {
-        background-image:url(/images/textures/500/1.jpg);
-    }
-    #welcome h1 small {
-        display:inline-block;
-    }
-
-    #about div h1.title {
-        font-size:50px;
+    #welcome h1 {
+        font-size:40px;
         font-family: 'BigNoodleTitlingRegular';
-        text-align:center;
         margin:10px 0 -10px 0;
+        color:#333;
     }
-    #about h1 small {
-        display:inline-block;
-    }
-    #about div h2 {
-        font-size:25px;
-        font-family: 'TradeGothicLTStdBdCnNo.20';
-        text-align:center;
-    }
+    #welcome h1 span {
 
-
+    }
+    #welcome h2 {
+        color:#39F;
+    }
     </style>
 </head>
 
@@ -106,45 +93,26 @@
 
     <section id="kitchen-sink">
         <header>
-            <a href="#kitchen-sink-scroll" class="button onleft" data-target="aside" data-icon="items"></a>
+            <a href="#kitchen-sink-scroll" class="button onleft" data-target="aside" data-icon="user"></a>
             <nav class="onright">
-                <a href="#profiles" data-target="aside" data-article="welcome" class="button" data-icon="user"></a>
-                <a href="#buttons-extra" data-target="section" data-article="buttons" class="button">Other Examples</a>
+                <a href="#profiles" data-target="aside" data-article="welcome" class="button" data-icon="items"></a>
             </nav>
         </header>
 
         <!-- ============================= welcome ============================= -->
         <article id="welcome" class="list scrollable indented">
             <div>
-                <h1 class="title">Development <small>+</small> Design</h1>
-                <h2>Web Development</h2>
+                <h1 class="title">Development + Design</h1>
+                <h2>Web <span>/</span> Mobile <span>/</span> Social</h2>
                 <br />
+                <h3>A Preamble of Sorts</h3>
                 <p class="text">
-                    My name is Rob, a Web Developer and Designer from the Chicagoland Area. 'Raw Designs' is an acronym for Rob Abby Web Designs. I have been happily building products for the web for almost 5 years now.
+                    As an avid internet enthusiast and web development artist for almost a decade, I offer a variety of web and technical services to a versatile client base. Working as a Freelancer in the Chicagoland area, I have formed a robust network of clientele with various businesses and individuals. From web development to graphic design, I can offer a comprehensive image for my clients to attract new customers, enthusiasts or marketplaces.
                 </p>
-                <p class="text">
-                    I have a deep passion for what I do, and enjoy the challenges that come with designing for multiple browsers and platforms.
-                </p>
-                <p class="text">
-                    Grab a cup of coffee, and hang out!
-                </p>
-            </div>
-        </article>
-
-        <!-- ============================= About ============================= -->
-        <article id="about" class="list scrollable indented">
-            <div>
-                <h1 class="title">Development <small>+</small> Design</h1>
-                <h2>Web Development</h2>
                 <br />
+                <h3>A Brief History</h3>
                 <p class="text">
-                    My name is Rob, a Web Developer and Designer from the Chicagoland Area. 'Raw Designs' is an acronym for Rob Abby Web Designs. I have been happily building products for the web for almost 5 years now.
-                </p>
-                <p class="text">
-                    I have a deep passion for what I do, and enjoy the challenges that come with designing for multiple browsers and platforms.
-                </p>
-                <p class="text">
-                    Grab a cup of coffee, and hang out!
+                    My transition into web development was both swift &amp; profound. Discovering HTML in order to customize the MySpace page of my band in 2005, I quickly fell in love with all things web. Before long I was working with CSS, and then quickly thereafter JavaScript, PHP, and MySQL. My first freelance jobs were naturally for musicians and dabbling artists, but my appetite soon took me to bigger and better places both on &amp; off the web.
                 </p>
             </div>
         </article>

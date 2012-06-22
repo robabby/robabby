@@ -7,7 +7,7 @@
   <title>Rob Abby | <?php if (isset($title)) {echo "{$title}";} ?></title>
   <meta name="description" content="">
 
-  <!-- Mobile viewport optimized: h5bp.com/viewport -->
+  <!-- Mobile viewport optimized: h5bp.com/viewport --
   <meta name="viewport" content="width=device-width">
 
   <!-- Fonts -->

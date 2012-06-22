@@ -10,6 +10,8 @@
   <?php include('./assets/inc/head.inc.php'); ?>
   <style>
   #about {
+    background:none !important;
+    padding:50px 0;
   }
   #about .hero-unit {
     border-radius:0px;
@@ -102,10 +104,10 @@
 <?php include('./assets/inc/contactModal.inc.php'); ?>
 <!-- ## CONTACT MODAL ## -->
 
-<!-- ## HEADER & NAV ## -->
+<!-- ## HEADER & NAV ## --
 <?php include('./assets/inc/nav.inc.php'); ?>
 
-<!-- #### MAIN CONTENT GOES HERE #### -->
+<!-- #### MAIN CONTENT GOES HERE #### --
 
 <div class="hero-unit">
   <div class="container">
@@ -113,8 +115,8 @@
       <div class="span12">
         <h1>Development <small>+</small> Design</h1>
         <h2>Expression through &lt;/code&gt;</h2>
-      </div><!-- .hero-unit -->
-    </div><!-- .span12 -->
+      </div>
+    </div>
   </div>
 </div><!-- .row -->
 
@@ -284,6 +286,12 @@
         <h2>Like what you see? <span>&darr;</span></h2>
         <br />
         <a href="/contact.php" class="btn btn-inverse btn-large" title="">Contact Me</a>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
       </div><!-- .well -->
     </div><!-- span -->
     

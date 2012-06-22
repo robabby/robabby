@@ -6,7 +6,7 @@
 	$ipod = strpos($_SERVER['HTTP_USER_AGENT'],"iPod");
 
 	if ($iphone || $android || $palmpre || $ipod || $berry == true) { 
-		header('Location: http://boilerplate.rawdesigns.net/mobile/');
-		echo "<script>window.location='http://boilerplate.rawdesigns.net/mobile/'</script>";
+		header('Location: http://m.rawdesigns.net/');
+		echo "<script>window.location='http://m.rawdesigns.net/'</script>";
 	}
 ?>

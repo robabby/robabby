@@ -1,7 +1,7 @@
 <div class="modal fade" id="contact">
   <div class="modal-header">
     <a class="close" data-dismiss="modal">×</a>
-    <h3>Contact</h3>
+    <h3>Feedback</h3>
   </div>
   <div class="modal-body">
     <img class="pull-right" src="/images/logo_home.png" />

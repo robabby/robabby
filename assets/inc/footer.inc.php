@@ -4,8 +4,7 @@
       <button class="btn primary dropdown-toggle" data-toggle="dropdown"><img src="/images/ui/gear2.png" /></button>
       <ul class="dropdown-menu">
         <li><a data-toggle="modal" href="#contact">Feedback</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="sandbox.php">Twitter</a></li>
+        <li><a href="contact.php">Contact</a></li>
         <li><a href="index.php">Home</a></li>
       </ul>
     </div>
