@@ -65,7 +65,6 @@
   <style>
   #contact .hero-unit {
     border-radius:0px;
-    border:5px solid #555;
     box-shadow:inset 0px 0px 10px 1px rgba(0, 0, 0, .5);
     padding-bottom:20px;
     padding-top:20px;
