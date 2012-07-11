@@ -147,7 +147,7 @@
     <div class="span6">
       <div class="well">
         <h3><a href="/outer_space.php" title="">Outer Space Concept</a></h3>
-        <p>Spinning planets and flickering stars achieved entirely through CSS3. WebKit only.</p>
+        <p>Spinning planets and flickering stars achieved entirely through CSS3. <b>WebKit only</b>.</p>
         <a class="btn btn-inverse btn-large" href="/outer_space.php" title="">View Project</a>
       </div><!-- span -->
     </div><!-- .well -->
