@@ -320,18 +320,24 @@
       <br />
       <br />
       <br />
-      <br />
       <div class="contact">
+        <h2>Want even more? <span>&darr;</span></h2>
+        <br />
+        <a href="/sandbox.php" class="btn btn-inverse btn-large" title="">View my Sandbox</a>
+        <br />
+        <br />
+        <br />
+        <br />
         <h2>Like what you see? <span>&darr;</span></h2>
         <br />
-        <a href="/contact.php" class="btn btn-inverse btn-large" title="">Contact Me</a>
+        <a href="/contact.php" class="btn btn-primary btn-large" title="">Contact Me</a>
         <br />
         <br />
         <br />
         <br />
         <br />
         <br />
-      </div><!-- .well -->
+      </div><!-- .contact -->
     </div><!-- span -->
     
   </div><!-- .row -->

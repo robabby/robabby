@@ -5,6 +5,7 @@
       <ul class="dropdown-menu">
         <li><a data-toggle="modal" href="#contact">Feedback</a></li>
         <li><a href="contact.php">Contact</a></li>
+        <li><a href="sandbox.php">Sandbox</a></li>
         <li><a href="index.php">Home</a></li>
       </ul>
     </div>

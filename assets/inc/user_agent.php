@@ -9,4 +9,11 @@
 		header('Location: http://m.robabby.com/');
 		echo "<script>window.location='http://m.robabby.com/'</script>";
 	}
+	/*
+	$browser = get_browser(null, true);
+	if ($browser["ismobiledevice"] == true) {
+		header('Location: http://m.robabby.com/');
+		echo "<script>window.location='http://m.robabby.com/'</script>";
+	}
+	*/
 ?>
