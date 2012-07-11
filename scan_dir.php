@@ -48,7 +48,7 @@
 <?php include('./assets/inc/contactModal.inc.php'); ?>
 <!-- ## CONTACT MODAL ## -->
 
-<!-- ## HEADER & NAV ## -->
+<!-- ## HEADER & NAV ## --
 <?php include('./assets/inc/nav.inc.php'); ?>
 <!-- ## HEADER & NAV ## -->
 
@@ -65,7 +65,7 @@
       <th>Filename</th>
       <th>View File</th>
       <?php 
-        $files = new DirectoryIterator('./uploads/');
+        $files = new DirectoryIterator('/uploads/');
         foreach ($files as $file) { ?>
           <tr>
             <td><?php echo $file ?></td>
@@ -91,7 +91,7 @@
       <?php } ?>
     </table>
     -->
-    
+
   </div>
 </div><!-- .container -->
 

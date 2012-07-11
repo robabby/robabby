@@ -1,7 +1,7 @@
 <?php
 function dbConnect($usertype, $connectionType = 'mysqli') {
-  //$host = 'rawdesigns.db.7625389.hostedresource.com';
-  $host = 'localhost';  
+  $host = 'rawdesigns.db.7625389.hostedresource.com';
+  //$host = 'localhost';  
   $db = 'rawdesigns';
   if ($usertype  == 'read') {
 	$user = 'rawdesigns';

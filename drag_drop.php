@@ -111,7 +111,7 @@ pre {
 <div class="container">
   <div class="row">
     <div class="hero-unit">
-      <a class="btn btn-large btn-inverse pull-right" href="scan_dir.php" title="">View Uploaded Files</a>
+      <!--<a class="btn btn-large btn-inverse pull-right" href="scan_dir.php" title="">View Uploaded Files</a>-->
       <h1>HTML5 File Drag &amp; Drop</h1>
 
       <form id="upload" action="/assets/ops/upload.php" method="POST" enctype="multipart/form-data">
