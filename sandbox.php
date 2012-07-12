@@ -72,7 +72,7 @@
 <?php include("$path2root/assets/inc/iecheck.inc.php"); ?>
 <!-- ## IE CHECK ## -->
 
-<!-- ## HEADER & NAV ## --
+<!-- ## HEADER & NAV ## -->
 <?php include('./assets/inc/nav.inc.php'); ?>
 <!-- ## HEADER & NAV ## -->
 

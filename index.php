@@ -126,7 +126,7 @@
 <?php include("$path2root/assets/inc/contactModal.inc.php"); ?>
 <!-- ## CONTACT MODAL ## -->
 
-<!-- ## HEADER & NAV ## --
+<!-- ## HEADER & NAV ## -->
 <?php include("$path2root/assets/inc/nav.inc.php"); ?>
 <!-- ## HEADER & NAV ## -->
 

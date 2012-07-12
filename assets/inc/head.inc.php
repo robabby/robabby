@@ -1,13 +1,9 @@
-  <meta charset="utf-8">
-
-  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
-       More info: h5bp.com/i/378 -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
   <title>Rob Abby | <?php if (isset($title)) {echo "{$title}";} ?></title>
-  <meta name="description" content="">
 
-  <!-- Mobile viewport optimized: h5bp.com/viewport --
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="Web & New Media Design + Development" />
+  <meta name="keywords" content="Rob, Abby, Web, Design, Development, Chicago, Blog, HTML5, CSS3, jQuery, PHP, MySQL, Ruby, Rails"/>
   <meta name="viewport" content="width=device-width">
 
   <!-- Fonts -->
@@ -28,4 +24,3 @@
 
   <script src="/assets/js/libs/modernizr-2.5.3.min.js"></script>
   <script src="/assets/js/libs/jquery-1.7.1.min.js"></script>
-  

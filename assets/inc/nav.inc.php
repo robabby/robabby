@@ -5,8 +5,8 @@
       <ul>
         <li <?php if ($currentPage == 'index.php') {
           echo 'class="active"';} ?>><a class="first" href="<?php echo $path2root ?>/index.php">Home</a></li>
-        <li <?php if ($currentPage == 'about.php') {
-          echo 'class="active"';} ?>><a href="<?php echo $path2root ?>/about.php">About</a></li>
+        <!--<li <?php if ($currentPage == 'about.php') {
+          echo 'class="active"';} ?>><a href="<?php echo $path2root ?>/about.php">About</a></li>-->
         <li <?php if ($currentPage == 'sandbox.php') {
           echo 'class="active"';} ?>><a href="<?php echo $path2root ?>/sandbox.php">Sandbox</a></li>
           <li <?php if ($currentPage == 'blog.php') {
