@@ -72,7 +72,7 @@ h1, h2, h3 {
 p {
   font-family: 'Swiss721Light';
 }
-.btn, .well {
+.btn, .well, .thumbnail {
   border-radius: 0;
 }
 .textalign-right {
@@ -147,17 +147,10 @@ header nav ul li a {
   -o-transition: background .25s ease-in-out;
   transition: background .25s ease-in-out;
 }
-header nav ul li a:hover {
+header nav ul li a:hover, header nav ul li.active a {
   color:#fff;
   border-bottom:3px solid #06e;
   height:47px;
-}
-header nav ul li a b {
-  font-family: 'ModernPictogramsNormal'; 
-  color:#fff;
-  font-size:24px;
-  font-weight:100;
-  line-height:50px;
 }
 
 
@@ -615,13 +608,13 @@ a.jms-link:hover {
     0px -1px 3px 1px rgba(0,0,0,0.75) inset, 
     1px 1px 1px rgba(255,255,255,0.3);
   background: #798479; /* Old browsers */
-background: -moz-linear-gradient(top, #798479 1%, #0a0809 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#798479), color-stop(100%,#0a0809)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top, #798479 1%,#0a0809 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top, #798479 1%,#0a0809 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top, #798479 1%,#0a0809 100%); /* IE10+ */
-background: linear-gradient(top, #798479 1%,#0a0809 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#798479', endColorstr='#0a0809',GradientType=0 ); /* IE6-9 */
+  background: -moz-linear-gradient(top, #798479 1%, #0a0809 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#798479), color-stop(100%,#0a0809)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #798479 1%,#0a0809 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #798479 1%,#0a0809 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #798479 1%,#0a0809 100%); /* IE10+ */
+  background: linear-gradient(top, #798479 1%,#0a0809 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#798479', endColorstr='#0a0809',GradientType=0 ); /* IE6-9 */
 }
 .jms-dots span.jms-dots-current:after{
   content: '';
