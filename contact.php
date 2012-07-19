@@ -179,9 +179,9 @@
 <?php include('./assets/inc/contactModal.inc.php'); ?>
 <!-- ## CONTACT MODAL ## -->
 
-<!-- ## HEADER & NAV ## --
+<!-- ## HEADER & NAV ## -->
 <?php include('./assets/inc/nav.inc.php'); ?>
--->
+<!-- ## HEADER & NAV ## -->
   <div role="main" id="container" class="container">
     <div class="row">
       <div class="span12">

@@ -41,7 +41,16 @@
   }
   #sandbox .well {
     border-radius:0px;
-    box-shadow:inset 0px 0px 5px 0px rgba(0, 0, 0, .75);
+    box-shadow:inset 0px 0px 7px 0px rgba(0, 0, 0, .5);
+    border:3px solid #555;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+  #sandbox .well:hover {
+    box-shadow:inset 0px 0px 15px 2px rgba(0, 0, 0, .6);
   }
   #sandbox .well h3 {
     font-size:25px;
@@ -244,6 +253,9 @@
 
   </div><!-- .row -->
 </div><!-- #container -->
+
+<br />
+<br />
 
   <?php include('./assets/inc/footer.inc.php'); ?>
 </body>
