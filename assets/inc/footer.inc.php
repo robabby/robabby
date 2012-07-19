@@ -23,7 +23,7 @@
               <li><a href="http://dribbble.com/stat30fbliss" title="Dribbble"><img src="/images/social/dribbble.png" /></a></li>
               <li><a href="http://www.behance.net/robabby" title="Béhance.net"><img src="/images/social/behance.png" /></a></li>
               <li><a href="http://www.linkedin.com/in/robabby" title="Linkedin"><img src="/images/social/linkedin.png" /></a></li>
-              <li><a href="http://plus.google.com/110039793553907601610" title="Google+"><img src="/images/social/google.png" /></a></li>
+              <li><a href="http://plus.google.com/110039793553907601610?rel=author" title="Google+"><img src="/images/social/google.png" /></a></li>
               <li><a href="http://www.facebook.com/stat30fbliss" title="Facebook"><img src="/images/social/facebook.png" /></a></li>
               <li><a data-toggle="modal" href="#contact" title="Email"><img src="/images/social/email.png" /></a></li>
             </ul>
