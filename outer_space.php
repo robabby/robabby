@@ -192,9 +192,9 @@
 <?php include('./assets/inc/contactModal.inc.php'); ?>
 <!-- ## CONTACT MODAL ## -->
 
-<!-- ## HEADER & NAV ## --
+<!-- ## HEADER & NAV ## -->
 <?php include('./assets/inc/nav.inc.php'); ?>
--->
+<!-- ## HEADER & NAV ## -->
 
 <div id="container" class="container">
   

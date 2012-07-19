@@ -43,11 +43,11 @@
     border-radius:0px;
     box-shadow:inset 0px 0px 7px 0px rgba(0, 0, 0, .5);
     border:3px solid #555;
-    -webkit-transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    -ms-transition: all .5s ease-in-out;
-    -o-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
+    -webkit-transition: all .15s ease-in-out;
+    -moz-transition: all .15s ease-in-out;
+    -ms-transition: all .15s ease-in-out;
+    -o-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
   }
   #sandbox .well:hover {
     box-shadow:inset 0px 0px 15px 2px rgba(0, 0, 0, .6);

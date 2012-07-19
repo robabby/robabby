@@ -6,8 +6,8 @@
   include("$path2root/assets/inc/user_agent.php");
   require_once("$path2root/assets/inc/connection.inc.php");
   // database connection info
-  //$conn = mysql_connect('rawdesigns.db.7625389.hostedresource.com','rawdesigns','Forever#23') or trigger_error("SQL", E_USER_ERROR);
-  $conn = mysql_connect('localhost','root','') or trigger_error("SQL", E_USER_ERROR);
+  $conn = mysql_connect('rawdesigns.db.7625389.hostedresource.com','rawdesigns','Forever#23') or trigger_error("SQL", E_USER_ERROR);
+  //$conn = mysql_connect('localhost','root','') or trigger_error("SQL", E_USER_ERROR);
   $db = mysql_select_db('rawdesigns',$conn) or trigger_error("SQL", E_USER_ERROR);
   // find out how many rows are in the table 
   $sql = "SELECT COUNT(*) FROM blog";
@@ -58,11 +58,11 @@
     border-radius:0;
     box-shadow:inset 0px 0px 7px 0px rgba(0, 0, 0, .5);
     padding-bottom: 0;
-    -webkit-transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    -ms-transition: all .5s ease-in-out;
-    -o-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
+    -webkit-transition: all .15s ease-in-out;
+    -moz-transition: all .15s ease-in-out;
+    -ms-transition: all .15s ease-in-out;
+    -o-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
   }
   #blog .post:hover {
     box-shadow:inset 0px 0px 15px 2px rgba(0, 0, 0, .6);
@@ -91,6 +91,17 @@
     height:25px;
     line-height: 25px;
   }
+
+  /* ### Temp Styles ### */
+  #blog .post h1, #blog .post h3 {
+    text-align:center;
+  }
+  #blog .post .addMe {
+    display:block;
+    position:relative;
+    width:300px;
+    margin:0 auto;
+  }
   </style>
 </head>
 <body id="blog">
@@ -113,6 +124,19 @@
   <div class="row">
       <br />
       <br />
+      <div class="span12">
+        <div class="well post">
+          <h1>Blog Coming Soon!</h1>
+          <br />
+          <h3>In the meantime...</h3>
+          <br />
+          <!-- Place this tag where you want the badge to render. -->
+          <div class="addMe">
+            <div class="g-plus" data-height="69" data-href="//plus.google.com/110039793553907601610?rel=author"></div>
+          </div>
+        </div>
+      </div>
+      <!--
       <?php while ($list = mysql_fetch_assoc($result)) { ?>
         <div class="span12">
         <div class="well post">
@@ -127,17 +151,18 @@
             <p>
               <a class="btn btn-inverse btn-large" href="post.php?article_id=<?php echo $list['article_id']; ?>">Read Article &raquo;</a>
             </p>
-          </div><!--/row-->
-        </div><!-- #well -->
+          </div>
+        </div>
         </div>
       <?php } // end while  ?>
+    -->
 
-  </div><!-- .row-fluid -->
+  </div><!-- .row -->
 
   <!-- Start Pagination -->
   <div class="row-fluid">
     <div class="span12">
-      <div class="pagination-centered">
+      <div style="display:none;" class="pagination-centered">
 
 <?php
 /******  build the pagination links ******/
@@ -197,7 +222,14 @@ if ($currentpage != $totalpages) {
 <!-- ## FOOTER ## -->
 <?php include("$path2root/assets/inc/footer.inc.php"); ?>
 <!-- ## FOOTER ## -->
-
+<!-- Place this tag after the last badge tag. -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
 </body>
 </html>
 <?php

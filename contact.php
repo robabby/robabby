@@ -52,11 +52,6 @@
     }
   }
 
-  // Twitter API Code
-  $url = 'http://twitter.com/statuses/user_timeline/stat30fbliss.xml';
-  $feed = simplexml_load_file($url, 'SimpleXMLIterator');
-  $filtered = new LimitIterator($feed->status);
-
 ?>
 <!doctype html>
 <html>
