@@ -57,6 +57,9 @@
   #home p.web, #home p.mobile, #home p.social {
     display:none;
   }
+  #home .well h1 {
+    text-align: center;
+  }
   #home .well {
     background-color:#fff;
     border-radius:0px;
@@ -103,6 +106,9 @@
     opacity:1;
     filter:alpha(opacity=100);
   }
+  #home .thumbnail .img_wrapper {
+    margin:0 auto;
+  }
   #home .progress {
     box-shadow:inset 0px 0px 7px 1px rgba(0, 0, 0, .23);
     border:2px solid #333;
@@ -126,7 +132,7 @@
 <?php include("$path2root/assets/inc/contactModal.inc.php"); ?>
 <!-- ## CONTACT MODAL ## -->
 
-<!-- ## HEADER & NAV ## -->
+<!-- ## HEADER & NAV ## --
 <?php include("$path2root/assets/inc/nav.inc.php"); ?>
 <!-- ## HEADER & NAV ## -->
 
@@ -135,7 +141,7 @@
 
 <div class="hero-unit">
   <div class="container">
-    <div class="row-fluid">
+    <div class="row">
       <h2>
         <a class="web" href="#">Web</a> 
         <span>/</span> 
@@ -162,6 +168,13 @@
 <br />
 <br />
   <div class="row">
+    <div class="span12">
+      <div class="well">
+        <div itemscope itemtype="http://www.schema.org/Person">
+          <h1>Hey there!  My Name is <span itemprop="name">Rob Abby</span>, and I'm a <span itemprop="jobTitle">Web Developer</span>.</h1>
+        </div>
+      </div>
+    </div>
     <div class="span6">
       <div class="well">
         <h3>A Brief History</h3>
