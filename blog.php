@@ -56,7 +56,7 @@
     background-color:#fff;
     border:3px solid #555;
     border-radius:0;
-    box-shadow:inset 0px 0px 7px rgba(0, 0, 0, .5);
+    box-shadow:inset 0px 0px 7px 0px rgba(0, 0, 0, .5);
     padding-bottom: 0;
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
@@ -65,21 +65,27 @@
     transition: all .5s ease-in-out;
   }
   #blog .post:hover {
-    border:3px solid #36F;
+    box-shadow:inset 0px 0px 15px 2px rgba(0, 0, 0, .6);
   }
   #blog .post h2 {
+    font-size:35px;
+    margin-bottom: 10px;
     text-shadow:0px 1px 5px rgba(0, 0, 0, .25);
   }
   #blog .post .label {
+    padding:5px 10px;
     box-shadow:0px 1px 5px rgba(0, 0, 0, .25);
-  font-family: 'TradeGothicLTStdLight';
-  font-weight: 100;
+    font-family: 'TradeGothicLTStdLight';
+    font-weight: 100;
   }
   #blog .post p {
-    font-size:14px;
+    font-size:16px;
+  }
+  #blog .post .thumbnail {
+    margin-bottom: 10px;
   }
   #blog .post .btn {
-    width:102%;
+    width:101%;
     border-radius:0px;
     margin:0 0 -10px -19px;
     height:25px;
@@ -108,7 +114,7 @@
       <br />
       <br />
       <?php while ($list = mysql_fetch_assoc($result)) { ?>
-        <div class="span6">
+        <div class="span12">
         <div class="well post">
           <div class="row-fluid">
             <span class="label label-inverse pull-right"><?php echo $list['created']; ?></span>
@@ -178,9 +184,13 @@ if ($currentpage != $totalpages) {
         </div><!-- #Pagination-Centered -->
       </div><!-- #span11 -->
       
-      </div><!-- #row -->
+    </div><!-- #row -->
 
 </div><!-- .container -->
+
+<br />
+<br />
+<br />
 
 <!-- #### MAIN CONTENT GOES HERE #### -->
 

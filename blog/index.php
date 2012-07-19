@@ -15,8 +15,17 @@
 <html>
 <head>
   <?php include("$path2root/assets/inc/head.inc.php"); ?>
+  <style>
+  #cms table tr td {
+    vertical-align: middle;
+    padding:4px;
+  }
+  #cms table tr td .btn {
+    
+  }
+  </style>
 </head>
-<body id="blank">
+<body id="cms">
 <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
      chromium.org/developers/how-tos/chrome-frame-getting-started -->
 <!--[if lt IE 9]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
@@ -46,13 +55,13 @@
       <tr>
         <td><?php echo $row['title']; ?></td>
         <td><?php echo $row['created']; ?></td>
-        <td><a class="btn" href="add_image.php"><i class="icon-picture"></i>&nbsp;Add Image</a></td>
-        <td><a class="btn btn-info" href="update_post.php?article_id=<?php echo $row['article_id']; ?>"><i class="icon-pencil icon-white"></i>&nbsp;Edit</a></td>
-        <td><a class="btn btn-danger" href="delete_post.php?article_id=<?php echo $row['article_id']; ?>"><i class="icon-trash icon-white"></i>&nbsp;Delete</a></td>
+        <td><a class="btn btn-large" href="add_image.php"><i class="icon-picture"></i>&nbsp;Add Image</a></td>
+        <td><a class="btn btn-large btn-info" href="update_post.php?article_id=<?php echo $row['article_id']; ?>"><i class="icon-pencil icon-white"></i>&nbsp;Edit</a></td>
+        <td><a class="btn btn-large btn-danger" href="delete_post.php?article_id=<?php echo $row['article_id']; ?>"><i class="icon-trash icon-white"></i>&nbsp;Delete</a></td>
       </tr>
       <?php } ?>
     </table>
-    <p><a class="btn btn-primary" href="new_post.php"><i class="icon-plus icon-white"></i> New Entry</a></p>
+    <p><a class="btn btn-large btn-primary" href="new_post.php"><i class="icon-plus icon-white"></i> New Entry</a></p>
   </div>
 </div><!-- .container -->
 
