@@ -26,7 +26,7 @@
 <?php include("$path2root/assets/inc/contactModal.inc.php"); ?>
 <!-- ## CONTACT MODAL ## -->
 
-<!-- ## HEADER & NAV ## --
+<!-- ## HEADER & NAV ## -->
 <?php include("$path2root/assets/inc/nav.inc.php"); ?>
 <!-- ## HEADER & NAV ## -->
 
@@ -178,7 +178,7 @@
       </div><!-- .work -->
     </div><!-- span -->
 
-    <!--
+    
     <div class="span12">
       <br />
       <br />
@@ -221,7 +221,7 @@
       <div class="progress progress-striped active">
         <div class="bar" style="width: 30%;"></div>
       </div>
-    </div>-->
+    </div>
 
     <div class="span12">
       <br />
