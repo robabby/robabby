@@ -72,7 +72,7 @@ h1, h2, h3 {
 p {
   font-family: 'Swiss721Light';
 }
-.btn, .well, .thumbnail {
+.btn, .well, .thumbnail, .hero-unit {
   border-radius: 0;
 }
 .textalign-right {
