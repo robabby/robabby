@@ -12,6 +12,7 @@
   <?php include("$path2root/assets/inc/head.inc.php"); ?>
 </head>
 <body id="blank">
+
 <!-- ## IE CHECK ## -->
 <?php include("$path2root/assets/inc/iecheck.inc.php"); ?>
 <!-- ## IE CHECK ## -->
@@ -29,8 +30,35 @@
 <div class="container">
   <div class="hero-unit">
     <h1>Hello World!</h1>
+    <br />
+    <?php
+      $i = 1;
+      do {
+        echo "$i ";
+        $i++;
+      } while ($i <= 100);
+    ?>
+    <br />
+    <br />
+    <?php
+      for ($i = 1; $i <= 100; $i++) {
+        echo "$i ";
+      }
+    ?>
+    <br />
+    <br />
+    <?php
+      $shoppingList = array('Peanut Butter', 'Grape Jelly', 'Protien Shakes', 'Eggs', 'Bacon');
+      foreach ($shoppingList as $item) {
+        echo $item . '<br />';
+      }
+    ?>
+    <br />
+    <?php
+      echo $_SERVER['SCRIPT_FILENAME'];
+    ?>
   </div>
-</div><!-- .container -->
+</div>
 
 <!-- #### MAIN CONTENT GOES HERE #### -->
 
