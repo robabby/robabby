@@ -86,6 +86,11 @@
     display: none;
   }
 }
+
+/*########################
+      480px Width Styles
+  ########################*/
+
 @media (max-width: 480px) {
   footer {
     display:none;
@@ -137,10 +142,6 @@
   }
 }
 @media (max-width: 767px) {
-  body {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
   .navbar-fixed-top {
     margin-left: -20px;
     margin-right: -20px;

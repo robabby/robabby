@@ -30,6 +30,7 @@
             <br />
             <br />
             <br />
+            <div class="clearfix"></div>
             <p class="copy">&copy; Rob Abby 
             <?php 
             
