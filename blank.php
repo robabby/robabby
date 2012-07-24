@@ -10,6 +10,11 @@
 <html>
 <head>
   <?php include("$path2root/assets/inc/head.inc.php"); ?>
+  <style>
+  @media all and (max-width: 1024px) {
+    header {display:none;}
+  }
+  </style>
 </head>
 <body id="blank">
 
