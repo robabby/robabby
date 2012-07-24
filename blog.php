@@ -102,6 +102,12 @@
     width:300px;
     margin:0 auto;
   }
+  #blog .post .follow {
+    display:block;
+    position: relative;
+    width:166px;
+    margin:0 auto;
+  }
   </style>
 </head>
 <body id="blog">
@@ -130,7 +136,11 @@
           <br />
           <h3>In the meantime...</h3>
           <br />
-          <!-- Place this tag where you want the badge to render. -->
+          <div class="follow">
+            <a href="https://twitter.com/stat30fbliss" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @stat30fbliss</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          </div>
+          <br />
           <div class="addMe">
             <div class="g-plus" data-height="69" data-href="//plus.google.com/110039793553907601610?rel=author"></div>
           </div>
