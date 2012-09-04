@@ -162,7 +162,20 @@
   .tweet_list .tweet_avatar img {
     vertical-align: middle;
   }
+
+  #recaptcha_table {
+    background-color:#fff;
+  }
+  #recaptcha_widget_div input {
+    margin-top: 7px;
+    padding:3px;
+  }
   </style>
+  <script type="text/javascript">
+   var RecaptchaOptions = {
+      theme : 'clean'
+   };
+   </script>
 </head>
 <body id="contact">
 
@@ -301,7 +314,6 @@
       });
     });
 </script>
-
 </body>
 </html>
 <?php
