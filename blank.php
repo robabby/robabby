@@ -62,6 +62,9 @@
     <?php
       echo $_SERVER['SCRIPT_FILENAME'];
     ?>
+
+    <iframe width="160" height="400" src="https://leanpub.com/codehappy/embed" frameborder="0" allowtransparency="true"></iframe>
+
   </div>
 </div>
 
