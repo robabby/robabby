@@ -6,8 +6,8 @@
   include("$path2root/assets/inc/user_agent.php");
   require_once("$path2root/assets/inc/connection.inc.php");
   // database connection info
-  //$conn = mysql_connect('rawdesigns.db.7625389.hostedresource.com','rawdesigns','Forever#23') or trigger_error("SQL", E_USER_ERROR);
-  $conn = mysql_connect('localhost','root','') or trigger_error("SQL", E_USER_ERROR);
+  $conn = mysql_connect('rawdesigns.db.7625389.hostedresource.com','rawdesigns','Forever#23') or trigger_error("SQL", E_USER_ERROR);
+  //$conn = mysql_connect('localhost','root','') or trigger_error("SQL", E_USER_ERROR);
   $db = mysql_select_db('rawdesigns',$conn) or trigger_error("SQL", E_USER_ERROR);
   // find out how many rows are in the table 
   $sql = "SELECT COUNT(*) FROM blog";
@@ -58,10 +58,6 @@
 <?php include("$path2root/assets/inc/iecheck.inc.php"); ?>
 <!-- ## IE CHECK ## -->
 
-<!-- ## CONTACT MODAL ## -->
-<?php include("$path2root/assets/inc/contactModal.inc.php"); ?>
-<!-- ## CONTACT MODAL ## -->
-
 <!-- ## HEADER & NAV ## -->
 <?php include("$path2root/assets/inc/nav.inc.php"); ?>
 <!-- ## HEADER & NAV ## -->
@@ -72,43 +68,24 @@
   <div class="row">
       <br />
       <br />
-      <div class="span12">
-        <div class="well post">
-          <h1>Blog Coming Soon!</h1>
-          <br />
-          <h3>In the meantime...</h3>
-          <br />
-          <div class="follow">
-            <a href="https://twitter.com/stat30fbliss" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @stat30fbliss</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-          </div>
-          <br />
-          <div class="addMe">
-            <div class="g-plus" data-height="69" data-href="//plus.google.com/110039793553907601610?rel=author"></div>
-          </div>
-        </div>
-      </div>
-      <!--
       <?php while ($list = mysql_fetch_assoc($result)) { ?>
         <div class="span12">
         <div class="well post">
           <div class="row-fluid">
             <span class="label label-inverse pull-right"><?php echo $list['created']; ?></span>
             <h2><a href="post.php?article_id=<?php echo $list['article_id']; ?>"><?php echo $list['title']; ?></a></h2>
-            <a class="thumbnail pull-left" href="post.php?article_id=<?php echo $list['article_id']; ?>">
-              <img src="http://placehold.it/125x125" alt="" />
-            </a>
-            <p><?php echo substr($list['article'], 0, 300); ?>...</p>
+            <p><?php echo substr($list['article'], 0, 350); ?>...</p>
             <br />
             <p>
-              <a class="btn btn-inverse btn-large" href="post.php?article_id=<?php echo $list['article_id']; ?>">Read Article &raquo;</a>
+              <a class="btn btn-inverse btn-large pull-right" href="post.php?article_id=<?php echo $list['article_id']; ?>">Read Article &raquo;</a>
             </p>
+            <br>
+            <br>
+            <br>
           </div>
         </div>
         </div>
       <?php } // end while  ?>
-    -->
-
   </div><!-- .row -->
 
   <!-- Start Pagination -->

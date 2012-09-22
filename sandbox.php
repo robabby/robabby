@@ -16,9 +16,6 @@
 <!-- ## HEADER & NAV ## -->
 <?php include('./assets/inc/nav.inc.php'); ?>
 <!-- ## HEADER & NAV ## -->
-<!-- ## CONTACT MODAL ## -->
-<?php include('./assets/inc/contactModal.inc.php'); ?>
-<!-- ## CONTACT MODAL ## -->
 <div class="hero-unit">
   <div class="container">
     <div class="row-fluid">

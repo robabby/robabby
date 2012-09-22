@@ -3,11 +3,11 @@
   ob_start();
   try {
   include("$path2root/assets/inc/title.inc.php"); 
-  include("$path2root/assets/inc/user_agent.php");
+  //include("$path2root/assets/inc/user_agent.php");
   //require_once("$path2root/assets/inc/connection.inc.php");
   //database connection info
-  //$conn = mysql_connect('rawdesigns.db.7625389.hostedresource.com','rawdesigns','Forever#23') or trigger_error("SQL", E_USER_ERROR);
-  $conn = mysql_connect('localhost','root','') or trigger_error("SQL", E_USER_ERROR);
+  $conn = mysql_connect('rawdesigns.db.7625389.hostedresource.com','rawdesigns','Forever#23') or trigger_error("SQL", E_USER_ERROR);
+  //$conn = mysql_connect('localhost','root','') or trigger_error("SQL", E_USER_ERROR);
   $db = mysql_select_db('rawdesigns',$conn) or trigger_error("SQL", E_USER_ERROR);
   $sql = "SELECT title, article, created, article_id FROM blog ORDER BY created DESC LIMIT 3";
   $result = mysql_query($sql, $conn) or trigger_error("SQL", E_USER_ERROR);
@@ -21,10 +21,6 @@
 <!-- ## IE CHECK ## -->
 <?php include("$path2root/assets/inc/iecheck.inc.php"); ?>
 <!-- ## IE CHECK ## -->
-
-<!-- ## CONTACT MODAL ## -->
-<?php include("$path2root/assets/inc/contactModal.inc.php"); ?>
-<!-- ## CONTACT MODAL ## -->
 
 <!-- ## HEADER & NAV ## -->
 <?php include("$path2root/assets/inc/nav.inc.php"); ?>
@@ -65,7 +61,7 @@
     <div class="span12">
       <div class="well">
         <div itemscope itemtype="http://www.schema.org/Person">
-          <h1>Hey there!  My Name is <span itemprop="name">Rob Abby</span>, and I'm a <span itemprop="jobTitle">Web Developer</span>.</h1>
+          <h1>Hey there!  My Name is <a href="http://twitter.com/stat30fbliss"><span itemprop="name">Rob Abby</span></a>, and I'm a <span itemprop="jobTitle">Web Developer</span>.</h1>
         </div>
       </div>
     </div>
