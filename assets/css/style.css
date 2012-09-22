@@ -71,6 +71,9 @@ h1, h2, h3 {
 p {
   font-family: 'Swiss721Light';
 }
+a:hover {
+  text-decoration: none;
+}
 .btn, .well, .thumbnail, .hero-unit {
   border-radius: 0;
 }
@@ -87,6 +90,13 @@ p {
   display:block;
   margin:0 10px 0 0;
   background-color:#fff;
+}
+.navbar {
+  margin-bottom: 0px;
+  z-index:9999;
+}
+.navbar-inner {
+  border-radius: 0px;
 }
 
 /* ==|== Header Styles =============================================================================================================== */
@@ -120,8 +130,8 @@ header nav {
   width:100%;
   height:50px;
   position:relative;
-  box-shadow:0px 0px 5px rgba(0, 0, 0, 1);
-  background: #333;
+  box-shadow:0px 0px 15px rgba(0, 0, 0, .75);
+  background: #121212;
 }
 header nav ul {
   display:block;
@@ -438,16 +448,7 @@ footer .copy {
   border-radius:0px;
   overflow: hidden;
   text-align:center;
-  border-bottom:8px solid #06e;
-  box-shadow:0px 0px 15px 3px rgba(0, 0, 0, .5);
   background: #333333; /* Old browsers */
-  background: -moz-linear-gradient(top, #333333 1%, #0e0e0e 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#333333), color-stop(100%,#0e0e0e)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #333333 1%,#0e0e0e 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #333333 1%,#0e0e0e 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #333333 1%,#0e0e0e 100%); /* IE10+ */
-  background: linear-gradient(to bottom, #333333 1%,#0e0e0e 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#0e0e0e',GradientType=0 ); /* IE6-9 */
 }
 #home .hero-unit h2 {
   font-size:75px;
@@ -657,9 +658,7 @@ footer .copy {
   margin-bottom: 10px;
 }
 #blog .post .btn {
-  width:101%;
   border-radius:0px;
-  margin:0 0 -10px -19px;
   height:25px;
   line-height: 25px;
 }
@@ -719,7 +718,6 @@ footer .copy {
 .input-prepend .add-on {
   padding: 4px 10px;
   margin-right: -5px;
-  margin-top:-9px;
   height:35px;
   line-height:35px;
   font-family: 'Swiss721Light';
