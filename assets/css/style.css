@@ -439,8 +439,15 @@ footer .copy {
   overflow: hidden;
   text-align:center;
   border-bottom:8px solid #06e;
-  background: #121212;
   box-shadow:0px 0px 15px 3px rgba(0, 0, 0, .5);
+  background: #333333; /* Old browsers */
+  background: -moz-linear-gradient(top, #333333 1%, #0e0e0e 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#333333), color-stop(100%,#0e0e0e)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #333333 1%,#0e0e0e 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #333333 1%,#0e0e0e 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #333333 1%,#0e0e0e 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #333333 1%,#0e0e0e 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#0e0e0e',GradientType=0 ); /* IE6-9 */
 }
 #home .hero-unit h2 {
   font-size:75px;
@@ -486,6 +493,7 @@ footer .copy {
 }
 #home .well:hover {
   border-color:#06E;
+  box-shadow:inset 0px 0px 25px 3px rgba(0, 0, 0, .35);
 }
 #home .main h2 {
   color:#ccc;
