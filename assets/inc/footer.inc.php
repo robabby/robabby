@@ -1,4 +1,5 @@
   <footer>
+    <!--
     <h1><a class="toggle" id="toggle" href="#" onClick="return false"><img src="/images/social/share_w.png" width="30" /></a></h1>
     <div class="btn-group dropup">
       <button class="btn primary dropdown-toggle" data-toggle="dropdown"><img src="/images/ui/gear2.png" /></button>
@@ -44,8 +45,8 @@
             
             ?></p>
           </div>
-          </div><!-- .row-fluid -->
-        </div><!-- .container-fluid -->
+          </div><!-- .row-fluid --
+        </div><!-- .container-fluid --
       </div><!-- #drawer -->
   </footer>
 
