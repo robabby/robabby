@@ -51,64 +51,6 @@
 <html>
 <head>
   <?php include("$path2root/assets/inc/head.inc.php"); ?>
-  <style>
-  #blog .post {
-    background-color:#fff;
-    border:3px solid #555;
-    border-radius:0;
-    box-shadow:inset 0px 0px 7px 0px rgba(0, 0, 0, .5);
-    padding-bottom: 0;
-    -webkit-transition: all .15s ease-in-out;
-    -moz-transition: all .15s ease-in-out;
-    -ms-transition: all .15s ease-in-out;
-    -o-transition: all .15s ease-in-out;
-    transition: all .15s ease-in-out;
-  }
-  #blog .post:hover {
-    box-shadow:inset 0px 0px 15px 2px rgba(0, 0, 0, .6);
-  }
-  #blog .post h2 {
-    font-size:35px;
-    margin-bottom: 10px;
-    text-shadow:0px 1px 5px rgba(0, 0, 0, .25);
-  }
-  #blog .post .label {
-    padding:5px 10px;
-    box-shadow:0px 1px 5px rgba(0, 0, 0, .25);
-    font-family: 'TradeGothicLTStdLight';
-    font-weight: 100;
-  }
-  #blog .post p {
-    font-size:16px;
-  }
-  #blog .post .thumbnail {
-    margin-bottom: 10px;
-  }
-  #blog .post .btn {
-    width:101%;
-    border-radius:0px;
-    margin:0 0 -10px -19px;
-    height:25px;
-    line-height: 25px;
-  }
-
-  /* ### Temp Styles ### */
-  #blog .post h1, #blog .post h3 {
-    text-align:center;
-  }
-  #blog .post .addMe {
-    display:block;
-    position:relative;
-    width:300px;
-    margin:0 auto;
-  }
-  #blog .post .follow {
-    display:block;
-    position: relative;
-    width:166px;
-    margin:0 auto;
-  }
-  </style>
 </head>
 <body id="blog">
 

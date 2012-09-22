@@ -34,8 +34,8 @@
 
 
 <div class="hero-unit">
-  <div class="container">
-    <div class="row">
+  <div class="container-fluid">
+    <div class="row-fluid">
       <h2>
         <a class="web" href="#">Web</a> 
         <span>/</span> 
@@ -44,13 +44,13 @@
         <a class="social" href="#">Social</a>
       </h2>
       <br />
-      <p class="web animated fadeInLeftBig">
+      <p class="web">
         Using concepts from his earlier hypertext systems like ENQUIRE, British engineer and computer scientist Sir Tim Berners-Lee, now Director of the World Wide Web Consortium (W3C), wrote a proposal in March 1989 for what would eventually become the World Wide Web.  Here in <?php $thisYear = date('Y'); echo "{$thisYear}"; ?> I specialize in building products and services that take advantage of Mr. Berner-Lee's amazing contribution to society.
       </p>
-      <p class="mobile animated fadeInRightBig">
+      <p class="mobile">
         The Mobile Web refers to access to the world wide web, i.e. the use of browser-based Internet services, from a handheld mobile device, such as a smartphone, a feature phone or a tablet computer, connected to a mobile network or other wireless network.  I take advantage of tactics such as Responsive Web Design to produce websites that scale to fit whatever mobile screen is viewing them, preserving both message and design.
       </p>
-      <p class="social animated fadeInLeftBig">
+      <p class="social">
         Social networks and the analysis of them is an inherently interdisciplinary academic field which emerged from social psychology, sociology, statistics, and graph theory.  I can also take advantage of their services to let people follow you on twitter and like you on Facebook.  Cool, huh?
       </p>
     </div><!-- .row -->
@@ -84,60 +84,45 @@
   </div><!-- .row -->
   <br />
   <br />
-  <h2 id="work">Where I work now <span>&darr;</span></h2>
+  <h2 id="work">Current Employer <span>&darr;</span></h2>
   <br />
 
   <div class="row">
     <div class="span12 work">
       <h3><a href="http://web2carz.com" title="Web2Carz.com">Web2Carz.com</a></h3>
-      <a class="thumbnail" href="http://web2carz.com" title="Web2Carz.com">
-        <img src="/images/work/web2carz.jpg" />
+      <a href="http://web2carz.com" title="Web2Carz.com">
+        <img class="thumbnail" src="/images/work/web2carz.jpg" />
       </a>
     </div><!-- .span -->
   </div><!-- .row -->
-
   <br />
-  <br />
-  <br />
-  <h2>Where I have worked <span>&darr;</span></h2>
+  <h2>Previous employment <span>&darr;</span></h2>
   <br />
 
   <div class="row">
     <div class="span6 work">
       <h3><a href="http://chicagobooth.edu" title="University of Chicago Booth">University of Chicago Booth</a></h3>
-      <a class="thumbnail" href="http://chicagobooth.edu" title="University of Chicago Booth">
-        <img src="/images/work/booth.jpg" />
+      <a href="http://chicagobooth.edu" title="University of Chicago Booth">
+        <img class="thumbnail" src="/images/work/booth.jpg" />
       </a>
     </div><!-- .span -->
     <div class="span6 work">
       <h3><a href="http://www.artversion.com/" title="ArtVersion Interactive Agency">ArtVersion Interactive Agency</a></h3>
-      <a class="thumbnail" href="http://www.artversion.com/" title="ArtVersion Interactive Agency">
-        <img src="/images/work/artversion.jpg" />
+      <a href="http://www.artversion.com/" title="ArtVersion Interactive Agency">
+        <img class="thumbnail" src="/images/work/artversion.jpg" />
       </a>
     </div><!-- .span -->
   </div><!-- .row -->
-
   <br />
-  <br />
-  <br />
-  <h2>Other work I have done <span>&darr;</span></h2>
+  <h2>Freelance work <span>&darr;</span></h2>
   <br />
   <div class="row">  
 
     <div class="span4">
       <div class="work">
         <h3><a href="http://mmconsultants-inc.com/" title="MMC Inc.">Management Meeting Consultants</a></h3>
-        <a class="thumbnail" href="http://mmconsultants-inc.com/" title="MMC Inc.">
-          <img src="/images/work/mmc.jpg" width="286" />
-        </a>
-      </div><!-- .work -->
-    </div><!-- span -->
-
-    <div class="span4">
-      <div class="work">
-        <h3><a href="http://imaginethis.ws" title="Imagine This">Imagine This</a></h3>
-        <a class="thumbnail" href="http://imaginethis.ws" title="Imagine This">
-          <img src="/images/work/imaginethis.jpg" width="286" />
+        <a href="http://mmconsultants-inc.com/" title="MMC Inc.">
+          <img class="thumbnail" src="/images/work/mmc.jpg" width="286" />
         </a>
       </div><!-- .work -->
     </div><!-- span -->
@@ -145,8 +130,8 @@
     <div class="span4">
       <div class="work">
         <h3><a href="http://545north.com/" title="545 North Bar &amp; Grill">545 North</a></h3>
-        <a class="thumbnail" href="http://545north.com/" title="545 North Bar &amp; Grill">
-          <img src="/images/work/545.jpg" width="286" />
+        <a href="http://545north.com/" title="545 North Bar &amp; Grill">
+          <img class="thumbnail" src="/images/work/545.jpg" width="286" />
         </a>
       </div><!-- .work -->
     </div><!-- span -->
@@ -154,26 +139,8 @@
     <div class="span4">
       <div class="work">
         <h3><a href="http://danielasloan.com/" title="Daniela Sloan Acoustic Soul">Acoustic Soul</a></h3>
-        <a class="thumbnail" href="http://danielasloan.com/" title="Daniela Sloan Acoustic Soul">
-          <img src="/images/work/daniela.jpg" width="286" />
-        </a>
-      </div><!-- .work -->
-    </div><!-- span -->
-
-    <div class="span4">
-      <div class="work">
-        <h3><a href="http://shakousushi.com/" title="Shakou Sushi">Shakou Sushi</a></h3>
-        <a class="thumbnail" href="http://shakousushi.com/" title="Shakou Sushi">
-          <img src="/images/work/shakou.jpg" width="286" />
-        </a>
-      </div><!-- .work -->
-    </div><!-- span -->
-
-    <div class="span4">
-      <div class="work">
-        <h3><a href="http://www.chicagobooth.edu/bfeo/2012/index.aspx" title="Business Forecast 2012">Business Forecast 2012</a></h3>
-        <a class="thumbnail" href="http://www.chicagobooth.edu/bfeo/2012/index.aspx" title="Business Forecast 2012">
-          <img src="/images/work/businessforecast.jpg" width="286" />
+        <a href="http://danielasloan.com/" title="Daniela Sloan Acoustic Soul">
+          <img class="thumbnail" src="/images/work/daniela.jpg" width="286" />
         </a>
       </div><!-- .work -->
     </div><!-- span -->
@@ -182,7 +149,7 @@
     <div class="span12">
       <br />
       <br />
-      <h2>Technologies I know <span>&darr;</span></h2>
+      <h2>Technologies <span>&darr;</span></h2>
       <br />
       <br />
     </div>
@@ -256,58 +223,6 @@
 <!-- ## FOOTER ## -->
 <?php include("$path2root/assets/inc/footer.inc.php"); ?>
 <!-- ## FOOTER ## -->
-<script type="text/javascript">
-  
-  // On window load. This waits until images have loaded which is essential
-  $(window).load(function(){
-    
-    // Fade in images so there isn't a color "pop" document load and then on window load
-    $(".work img").fadeIn(500);
-    
-    // clone image
-    $('.work img').each(function(){
-      var el = $(this);
-      el.css({"position":"absolute"}).wrap("<div class='img_wrapper' style='display: inline-block'>").clone().addClass('img_grayscale').css({"position":"absolute","z-index":"998","opacity":"0"}).insertBefore(el).queue(function(){
-        var el = $(this);
-        el.parent().css({"width":this.width,"height":this.height});
-        el.dequeue();
-      });
-      this.src = grayscale(this.src);
-    });
-    
-    // Fade image 
-    $('.work img').mouseover(function(){
-      $(this).parent().find('img:first').stop().animate({opacity:1}, 1000);
-    })
-    $('.img_grayscale').mouseout(function(){
-      $(this).stop().animate({opacity:0}, 1000);
-    });   
-  });
-  
-  // Grayscale w canvas method
-  function grayscale(src){
-    var canvas = document.createElement('canvas');
-    var ctx = canvas.getContext('2d');
-    var imgObj = new Image();
-    imgObj.src = src;
-    canvas.width = imgObj.width;
-    canvas.height = imgObj.height; 
-    ctx.drawImage(imgObj, 0, 0); 
-    var imgPixels = ctx.getImageData(0, 0, canvas.width, canvas.height);
-    for(var y = 0; y < imgPixels.height; y++){
-      for(var x = 0; x < imgPixels.width; x++){
-        var i = (y * 4) * imgPixels.width + x * 4;
-        var avg = (imgPixels.data[i] + imgPixels.data[i + 1] + imgPixels.data[i + 2]) / 3;
-        imgPixels.data[i] = avg; 
-        imgPixels.data[i + 1] = avg; 
-        imgPixels.data[i + 2] = avg;
-      }
-    }
-    ctx.putImageData(imgPixels, 0, 0, 0, 0, imgPixels.width, imgPixels.height);
-    return canvas.toDataURL();
-    }
-      
-</script>
 <script>
 // Text fadeIn()
 $('.hero-unit a.web').click(function() {
