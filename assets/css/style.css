@@ -30,18 +30,6 @@
   Code:
   font-family: 'CodeBoldRegular';
   font-family: 'CodeLightRegular';
-  
-  Quicksand:
-  font-family: 'QuicksandBook';
-  font-family: 'QuicksandLight';
-  
-  Sansation:
-  font-family: 'SansationBold';
-  font-family: 'SansationRegular';
-  font-family: 'SansationLight';
-
-  Pictograms:
-  font-family: 'ModernPictogramsNormal';
 
 
 /* ==|== Misc Styles 
@@ -483,18 +471,8 @@ footer .copy {
 }
 #home .well {
   background-color:#fff;
-  border-radius:0px;
-  box-shadow:inset 0px 0px 15px rgba(0, 0, 0, .35);
-  border:5px solid #555;
-  -webkit-transition: all .75s ease-in-out;
-  -moz-transition: all .75s ease-in-out;
-  -ms-transition: all .75s ease-in-out;
-  -o-transition: all .75s ease-in-out;
-  transition: all .75s ease-in-out;
-}
-#home .well:hover {
-  border-color:#06E;
-  box-shadow:inset 0px 0px 25px 3px rgba(0, 0, 0, .35);
+  border-radius:10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, .35);
 }
 #home .main h2 {
   color:#ccc;
@@ -584,17 +562,9 @@ footer .copy {
   transform: scale(1.1) rotate(5deg) translate(0px, 0px) skew(0deg, 0deg);
 }
 #sandbox .well {
-  border-radius:0px;
-  box-shadow:inset 0px 0px 7px 0px rgba(0, 0, 0, .5);
-  border:3px solid #555;
-  -webkit-transition: all .15s ease-in-out;
-  -moz-transition: all .15s ease-in-out;
-  -ms-transition: all .15s ease-in-out;
-  -o-transition: all .15s ease-in-out;
-  transition: all .15s ease-in-out;
-}
-#sandbox .well:hover {
-  box-shadow:inset 0px 0px 15px 2px rgba(0, 0, 0, .6);
+  background:#fff;
+  border-radius:10px;
+  box-shadow:0px 0px 7px 0px rgba(0, 0, 0, .5);
 }
 #sandbox .well h3 {
   font-size:25px;
@@ -604,13 +574,6 @@ footer .copy {
 #sandbox .well p {
   font-size:16px;
   line-height:120%;
-}
-#sandbox .main .well .btn {
-  position:relative;
-  left:-19px;
-  bottom:-19px;
-  width:102%;
-  border-radius:0px;
 }
 #sandbox .calvin {
   padding:10px;
@@ -627,18 +590,9 @@ footer .copy {
 
 #blog .post {
   background-color:#fff;
-  border:3px solid #555;
-  border-radius:0;
-  box-shadow:inset 0px 0px 7px 0px rgba(0, 0, 0, .5);
+  border-radius:10px;
+  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, .5);
   padding-bottom: 0;
-  -webkit-transition: all .15s ease-in-out;
-  -moz-transition: all .15s ease-in-out;
-  -ms-transition: all .15s ease-in-out;
-  -o-transition: all .15s ease-in-out;
-  transition: all .15s ease-in-out;
-}
-#blog .post:hover {
-  box-shadow:inset 0px 0px 15px 2px rgba(0, 0, 0, .6);
 }
 #blog .post h2 {
   font-size:35px;

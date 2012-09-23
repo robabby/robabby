@@ -3,12 +3,11 @@
   ob_start();
   try {
   include("$path2root/assets/inc/title.inc.php"); 
-  include("$path2root/assets/inc/user_agent.php");
   require_once("$path2root/assets/inc/connection.inc.php");
   require_once("$path2root/assets/inc/utility_funcs.inc.php");
 
   // create database connection
-  $conn = dbConnect('write');
+  $conn = dbConnect('read');
   // check for article_id in query string
   if (isset($_GET['article_id']) && is_numeric($_GET['article_id'])) {
     $article_id = (int) $_GET['article_id'];
@@ -48,6 +47,7 @@
 <html>
 <head>
   <?php include("$path2root/assets/inc/head.inc.php"); ?>
+  <link rel="stylesheet" href="<?php echo $path2root; ?>/assets/css/highlighter/dessert.css" />
   <style>
   #post h2 {
     font-size: 35px;
@@ -164,6 +164,9 @@
 <!-- ## FOOTER ## -->
 <?php include("$path2root/assets/inc/footer.inc.php"); ?>
 <!-- ## FOOTER ## -->
+
+<script src="<?php echo $path2root; ?>/assets/css/highlighter/prettify.js"></script>
+<script>prettyPrint();</script>
 
 <!-- ##### Social Scripts ##### -->
 <!-- Google +1 -->

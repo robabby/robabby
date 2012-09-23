@@ -3,11 +3,10 @@
   ob_start();
   try {
   include("$path2root/assets/inc/title.inc.php"); 
-  include("$path2root/assets/inc/user_agent.php");
   require_once("$path2root/assets/inc/connection.inc.php");
   // database connection info
-  $conn = mysql_connect('rawdesigns.db.7625389.hostedresource.com','rawdesigns','Forever#23') or trigger_error("SQL", E_USER_ERROR);
-  //$conn = mysql_connect('localhost','root','') or trigger_error("SQL", E_USER_ERROR);
+  //$conn = mysql_connect('rawdesigns.db.7625389.hostedresource.com','rawdesigns','Forever#23') or trigger_error("SQL", E_USER_ERROR);
+  $conn = mysql_connect('localhost','root','') or trigger_error("SQL", E_USER_ERROR);
   $db = mysql_select_db('rawdesigns',$conn) or trigger_error("SQL", E_USER_ERROR);
   // find out how many rows are in the table 
   $sql = "SELECT COUNT(*) FROM blog";
@@ -51,6 +50,11 @@
 <html>
 <head>
   <?php include("$path2root/assets/inc/head.inc.php"); ?>
+  <link rel="stylesheet" href="<?php echo $path2root; ?>/assets/css/highlighter/dessert.css" />
+  <style>
+  #blog .post pre {
+  }
+  </style>
 </head>
 <body id="blog">
 
@@ -69,7 +73,7 @@
       <br />
       <br />
       <?php while ($list = mysql_fetch_assoc($result)) { ?>
-        <div class="span12">
+        <div class="span6">
         <div class="well post">
           <div class="row-fluid">
             <span class="label label-inverse pull-right"><?php echo $list['created']; ?></span>
@@ -152,6 +156,8 @@ if ($currentpage != $totalpages) {
 <?php include("$path2root/assets/inc/footer.inc.php"); ?>
 <!-- ## FOOTER ## -->
 <!-- Place this tag after the last badge tag. -->
+<script src="<?php echo $path2root; ?>/assets/css/highlighter/prettify.js"></script>
+<script>prettyPrint();</script>
 <script type="text/javascript">
   (function() {
     var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
