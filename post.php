@@ -48,24 +48,6 @@
 <head>
   <?php include("$path2root/assets/inc/head.inc.php"); ?>
   <link rel="stylesheet" href="<?php echo $path2root; ?>/assets/css/highlighter/dessert.css" />
-  <style>
-  #post h2 {
-    font-size: 35px;
-    border-bottom:1px solid #333;
-    padding-bottom:5px;
-  }
-  #post p {
-    font-size:15px;
-  }
-  #post .social {
-    display:block;
-    clear:both;
-    margin:10px 0 10px 125px;
-  }
-  #post .thumbnail {
-    margin:0 0 0px 10px;
-  }
-  </style>
 </head>
 <body id="post">
 
