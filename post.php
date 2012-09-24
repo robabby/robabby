@@ -33,15 +33,6 @@
    return $pageURL;
   }
 
-  /* To Return Page Title only 
-  <?php
-  function curPageName() {
-   return substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1);
-  }
-
-  echo "The current page name is ".curPageName();
-  ?>
-  */
 ?>
 <!doctype html>
 <html>
