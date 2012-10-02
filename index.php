@@ -19,14 +19,11 @@
 <body id="home">
 <!-- ## IE CHECK ## -->
 <?php include("$path2root/assets/inc/iecheck.inc.php"); ?>
-<!-- ## IE CHECK ## -->
 
 <!-- ## HEADER & NAV ## -->
 <?php include("$path2root/assets/inc/nav.inc.php"); ?>
-<!-- ## HEADER & NAV ## -->
 
 <!-- #### MAIN CONTENT GOES HERE #### -->
-
 <div role="main" id="container" class="container main">
 <br />
 <br />
@@ -59,12 +56,8 @@
   </div><!-- .container -->
 </div><!-- #container -->
 
-
-<!-- #### MAIN CONTENT GOES HERE #### -->
-
 <!-- ## FOOTER ## -->
 <?php include("$path2root/assets/inc/footer.inc.php"); ?>
-<!-- ## FOOTER ## -->
 <script>
 // Text fadeIn()
 $('.hero-unit a.web').click(function() {
