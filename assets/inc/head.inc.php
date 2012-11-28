@@ -2,7 +2,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="description" content="Web & New Media Design + Development" />
+  <meta name="description" content="Web + Development" />
   <meta name="keywords" content="Rob, Abby, Web, Design, Development, Chicago, Blog, HTML5, CSS3, jQuery, PHP, MySQL, Ruby, Rails"/>
   <meta name="viewport" content="width=device-width">
 
@@ -23,4 +23,4 @@
   <link rel="stylesheet" href="/assets/css/style.css">
 
   <script src="/assets/js/libs/modernizr-2.5.3.min.js"></script>
-  <script src="/assets/js/libs/jquery-1.7.1.min.js"></script>
+  <script src="/assets/js/libs/jquery.js"></script>

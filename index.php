@@ -24,7 +24,7 @@
 <?php include("$path2root/assets/inc/nav.inc.php"); ?>
 
 <!-- #### MAIN CONTENT GOES HERE #### -->
-<div role="main" id="container" class="container main">
+<div role="main" id="container" class="container main content">
 <br />
 <br />
   <div class="row">
@@ -58,24 +58,6 @@
 
 <!-- ## FOOTER ## -->
 <?php include("$path2root/assets/inc/footer.inc.php"); ?>
-<script>
-// Text fadeIn()
-$('.hero-unit a.web').click(function() {
-  $('p.web').fadeToggle('slow', function() {
-    // Animation complete
-  });
-});
-$('.hero-unit a.mobile').click(function() {
-  $('p.mobile').fadeToggle('slow', function() {
-    // Animation complete
-  });
-});
-$('.hero-unit a.social').click(function() {
-  $('p.social').fadeToggle('slow', function() {
-    // Animation complete
-  });
-});
-</script>
 </body>
 </html>
 <?php
