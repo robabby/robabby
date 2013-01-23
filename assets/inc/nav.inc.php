@@ -9,10 +9,10 @@
           echo 'class="active"';} ?>><a href="<?php echo $path2root ?>/about.php">About</a></li>-->
         <li <?php if ($currentPage == 'sandbox.php') {
           echo 'class="active"';} ?>><a href="<?php echo $path2root ?>/sandbox.php">Sandbox</a></li>
-          <li <?php if ($currentPage == 'blog.php') {
-          echo 'class="active"';} ?>><a href="<?php echo $path2root ?>/blog.php">Blog</a></li>
+        <!--<li <?php if ($currentPage == 'blog.php') {
+          echo 'class="active"';} ?>><a href="<?php echo $path2root ?>/blog.php">Blog</a></li>-->
         <li class="last <?php if ($currentPage == 'contact.php') {
-          echo 'active';} ?>"><a href="<?php echo $path2root ?>/contact.php">Contact</a></li>
+          echo 'active';} ?>"><a  data-toggle="modal" href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
