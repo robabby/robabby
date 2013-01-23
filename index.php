@@ -4,6 +4,13 @@
   try {
   include("$path2root/assets/inc/title.inc.php"); 
   include("$path2root/assets/inc/user_agent.php");
+  //require_once("$path2root/assets/inc/connection.inc.php");
+  //database connection info
+  //$conn = mysql_connect('rawdesigns.db.7625389.hostedresource.com','rawdesigns','Forever#23') or trigger_error("SQL", E_USER_ERROR);
+  //$conn = mysql_connect('localhost','root','') or trigger_error("SQL", E_USER_ERROR);
+  //$db = mysql_select_db('rawdesigns',$conn) or trigger_error("SQL", E_USER_ERROR);
+  //$sql = "SELECT title, article, created, article_id FROM blog ORDER BY created DESC LIMIT 3";
+  //$result = mysql_query($sql, $conn) or trigger_error("SQL", E_USER_ERROR);
 ?>
 <!doctype html>
 <html>
@@ -24,32 +31,7 @@
 <!-- ## HEADER & NAV ## -->
 
 <!-- #### MAIN CONTENT GOES HERE #### -->
-<div class="hero-unit">
-  <div class="container">
-    <div class="row">
-      <h2>
-        <a class="web" href="#">Web</a> 
-        <span>/</span> 
-        <a class="mobile" href="#">Mobile</a> 
-        <span>/</span> 
-        <a class="social" href="#">Social</a>
-      </h2>
-      <br />
-      <p class="web animated fadeInLeftBig">
-        Using concepts from his earlier hypertext systems like ENQUIRE, British engineer and computer scientist Sir Tim Berners-Lee, now Director of the World Wide Web Consortium (W3C), wrote a proposal in March 1989 for what would eventually become the World Wide Web.  Here in <?php $thisYear = date('Y'); echo "{$thisYear}"; ?> I specialize in building products and services that take advantage of Mr. Berner-Lee's amazing contribution to society.
-      </p>
-      <p class="mobile animated fadeInRightBig">
-        The Mobile Web refers to access to the world wide web, i.e. the use of browser-based Internet services, from a handheld mobile device, such as a smartphone, a feature phone or a tablet computer, connected to a mobile network or other wireless network.  I take advantage of tactics such as Responsive Web Design to produce websites that scale to fit whatever mobile screen is viewing them, preserving both message and design.
-      </p>
-      <p class="social animated fadeInLeftBig">
-        Social networks and the analysis of them is an inherently interdisciplinary academic field which emerged from social psychology, sociology, statistics, and graph theory.  I can also take advantage of their services to let people follow you on twitter and like you on Facebook.  Cool, huh?
-      </p>
-    </div><!-- .row -->
-  </div><!-- .container -->
-</div><!-- .hero-unit -->
-
-
-<div role="main" id="container" class="container main">
+<div role="main" id="container" class="container main content">
 <br />
 <br />
   <div class="row">
@@ -108,68 +90,7 @@
     </div><!-- .span -->
   </div><!-- .row -->
 
-  <br />
-  <br />
-  <br />
-  <h2>Other work I have done <span>&darr;</span></h2>
-  <br />
-  <div class="row">  
-
-    <div class="span4">
-      <div class="work">
-        <h3><a href="http://mmconsultants-inc.com/" title="MMC Inc.">Management Meeting Consultants</a></h3>
-        <a class="thumbnail" href="http://mmconsultants-inc.com/" title="MMC Inc.">
-          <img src="/images/work/mmc.jpg" width="286" />
-        </a>
-      </div><!-- .work -->
-    </div><!-- span -->
-
-    <div class="span4">
-      <div class="work">
-        <h3><a href="http://imaginethis.ws" title="Imagine This">Imagine This</a></h3>
-        <a class="thumbnail" href="http://imaginethis.ws" title="Imagine This">
-          <img src="/images/work/imaginethis.jpg" width="286" />
-        </a>
-      </div><!-- .work -->
-    </div><!-- span -->
-
-    <div class="span4">
-      <div class="work">
-        <h3><a href="http://545north.com/" title="545 North Bar &amp; Grill">545 North</a></h3>
-        <a class="thumbnail" href="http://545north.com/" title="545 North Bar &amp; Grill">
-          <img src="/images/work/545.jpg" width="286" />
-        </a>
-      </div><!-- .work -->
-    </div><!-- span -->
-
-    <div class="span4">
-      <div class="work">
-        <h3><a href="http://danielasloan.com/" title="Daniela Sloan Acoustic Soul">Acoustic Soul</a></h3>
-        <a class="thumbnail" href="http://danielasloan.com/" title="Daniela Sloan Acoustic Soul">
-          <img src="/images/work/daniela.jpg" width="286" />
-        </a>
-      </div><!-- .work -->
-    </div><!-- span -->
-
-    <div class="span4">
-      <div class="work">
-        <h3><a href="http://shakousushi.com/" title="Shakou Sushi">Shakou Sushi</a></h3>
-        <a class="thumbnail" href="http://shakousushi.com/" title="Shakou Sushi">
-          <img src="/images/work/shakou.jpg" width="286" />
-        </a>
-      </div><!-- .work -->
-    </div><!-- span -->
-
-    <div class="span4">
-      <div class="work">
-        <h3><a href="http://www.chicagobooth.edu/bfeo/2012/index.aspx" title="Business Forecast 2012">Business Forecast 2012</a></h3>
-        <a class="thumbnail" href="http://www.chicagobooth.edu/bfeo/2012/index.aspx" title="Business Forecast 2012">
-          <img src="/images/work/businessforecast.jpg" width="286" />
-        </a>
-      </div><!-- .work -->
-    </div><!-- span -->
-
-    
+  <div class="row work">      
     <div class="span12">
       <br />
       <br />
@@ -190,10 +111,6 @@
       <div class="progress progress-striped active">
         <div class="bar" style="width: 45%;"></div>
       </div>
-      <h3>Ruby on Rails</h3>
-      <div class="progress progress-striped active">
-        <div class="bar" style="width: 15%;"></div>
-      </div>
     </div>
     <div class="span6">
       <h3>CSS3</h3>
@@ -204,14 +121,17 @@
       <div class="progress progress-striped active">
         <div class="bar" style="width: 30%;"></div>
       </div>
-      <h3>MySQL</h3>
+      <h3>JSON</h3>
       <div class="progress progress-striped active">
         <div class="bar" style="width: 40%;"></div>
       </div>
-      <h3>XML</h3>
-      <div class="progress progress-striped active">
-        <div class="bar" style="width: 30%;"></div>
-      </div>
+    </div>
+    <div class="other">
+      <h3>Other things I play with</h3>
+      <p>Ruby on Rails</p>
+      <p>Meteor.js</p>
+      <p>PhoneGap</p>
+      <p><small>Or just view my <a href="http://github.com/stat30fbliss">GitHub</a></small></p>
     </div>
 
     <div class="span12">
@@ -219,16 +139,9 @@
       <br />
       <br />
       <div class="contact">
-        <h2>Want even more? <span>&darr;</span></h2>
+        <h2>Want more? <span>&darr;</span></h2>
         <br />
         <a href="/sandbox.php" class="btn btn-inverse btn-large" title="">View my Sandbox</a>
-        <br />
-        <br />
-        <br />
-        <br />
-        <h2>Like what you see? <span>&darr;</span></h2>
-        <br />
-        <a href="/contact.php" class="btn btn-primary btn-large" title="">Contact Me</a>
         <br />
         <br />
         <br />
@@ -298,24 +211,6 @@
     return canvas.toDataURL();
     }
       
-</script>
-<script>
-// Text fadeIn()
-$('.hero-unit a.web').click(function() {
-  $('p.web').fadeToggle('slow', function() {
-    // Animation complete
-  });
-});
-$('.hero-unit a.mobile').click(function() {
-  $('p.mobile').fadeToggle('slow', function() {
-    // Animation complete
-  });
-});
-$('.hero-unit a.social').click(function() {
-  $('p.social').fadeToggle('slow', function() {
-    // Animation complete
-  });
-});
 </script>
 </body>
 </html>
