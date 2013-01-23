@@ -41,22 +41,10 @@
         </div>
       </div>
     </div>
-    <div class="span6">
-      <div class="well">
-        <h3>A Brief History</h3>
-        <p>My transition into web development was both swift &amp; profound.  Discovering HTML to customize the MySpace page of my band in 2005, I quickly fell in love with all things web.  Before long I was working with CSS, and then quickly thereafter JavaScript, PHP, and MySQL.  My first freelance jobs were naturally for musicians and dabbling artists, but my appetite soon took me to bigger and better places both on &amp; off the web.</p>
-      </div><!-- .well -->
-    </div><!-- .span6 -->
-    <div class="span6 textalign-right">
-      <div class="well">
-        <h3>A Preamble of Sorts</h3>
-        <p>As an avid internet enthusiast and web development artist for almost a decade, I offer a variety of web and technical services to a versatile client base. Working as a Freelancer in the Chicagoland area, I have formed a robust network of clientele with various businesses and individuals. From web development to graphic design, I can offer a comprehensive image for my clients to attract new customers, enthusiasts or marketplaces.</p>
-      </div><!-- .well -->
-    </div><!-- .span6 -->
   </div><!-- .row -->
   <br />
   <br />
-  <h2 id="work">Where I work now <span>&darr;</span></h2>
+  <h2 id="work">Where I work <span>&darr;</span></h2>
   <br />
 
   <div class="row">
@@ -125,7 +113,8 @@
         <div class="bar" style="width: 40%;"></div>
       </div>
     </div>
-    <div class="other">
+    <div class="span12 other">
+      <br>
       <h3>Other things I play with</h3>
       <p><a href="http://rubyonrails.org" target="_blank">Ruby on Rails</a></p>
       <p><a href="http://meteor.com" target="_blank">Meteor.js</a></p>
