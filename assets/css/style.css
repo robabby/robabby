@@ -498,6 +498,9 @@ footer .copy {
   #home .work {
     margin-bottom:25px;
   }
+  #home .work .other {
+    text-align:center;
+  }
   #home .well.work {
     margin-top:25px;
   }
