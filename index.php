@@ -2,32 +2,32 @@
   $path2root = ".";
   ob_start();
   try {
-  include("$path2root/assets/inc/title.inc.php"); 
-  include("$path2root/assets/inc/user_agent.php");
-  //require_once("$path2root/assets/inc/connection.inc.php");
-  //database connection info
-  //$conn = mysql_connect('rawdesigns.db.7625389.hostedresource.com','rawdesigns','Forever#23') or trigger_error("SQL", E_USER_ERROR);
-  //$conn = mysql_connect('localhost','root','') or trigger_error("SQL", E_USER_ERROR);
-  //$db = mysql_select_db('rawdesigns',$conn) or trigger_error("SQL", E_USER_ERROR);
-  //$sql = "SELECT title, article, created, article_id FROM blog ORDER BY created DESC LIMIT 3";
-  //$result = mysql_query($sql, $conn) or trigger_error("SQL", E_USER_ERROR);
+    include("assets/inc/title.inc.php"); 
+    //include("$path2root/assets/inc/user_agent.php");
+    //require_once("$path2root/assets/inc/connection.inc.php");
+    //database connection info
+    //$conn = mysql_connect('rawdesigns.db.7625389.hostedresource.com','rawdesigns','Forever#23') or trigger_error("SQL", E_USER_ERROR);
+    //$conn = mysql_connect('localhost','root','') or trigger_error("SQL", E_USER_ERROR);
+    //$db = mysql_select_db('rawdesigns',$conn) or trigger_error("SQL", E_USER_ERROR);
+    //$sql = "SELECT title, article, created, article_id FROM blog ORDER BY created DESC LIMIT 3";
+    //$result = mysql_query($sql, $conn) or trigger_error("SQL", E_USER_ERROR);
 ?>
 <!doctype html>
 <html>
 <head>
-  <?php include("$path2root/assets/inc/head.inc.php"); ?>
+  <?php include("assets/inc/head.inc.php"); ?>
 </head>
 <body id="home">
 <!-- ## IE CHECK ## -->
-<?php include("$path2root/assets/inc/iecheck.inc.php"); ?>
+<?php include("assets/inc/iecheck.inc.php"); ?>
 <!-- ## IE CHECK ## -->
 
 <!-- ## CONTACT MODAL ## -->
-<?php include("$path2root/assets/inc/contactModal.inc.php"); ?>
+<?php include("assets/inc/contactModal.inc.php"); ?>
 <!-- ## CONTACT MODAL ## -->
 
 <!-- ## HEADER & NAV ## -->
-<?php include("$path2root/assets/inc/nav.inc.php"); ?>
+<?php include("assets/inc/nav.inc.php"); ?>
 <!-- ## HEADER & NAV ## -->
 
 <!-- #### MAIN CONTENT GOES HERE #### -->
@@ -154,11 +154,10 @@
   </div><!-- .row -->
 </div><!-- #container -->
 
-
 <!-- #### MAIN CONTENT GOES HERE #### -->
 
 <!-- ## FOOTER ## -->
-<?php include("$path2root/assets/inc/footer.inc.php"); ?>
+<?php include("assets/inc/footer.inc.php"); ?>
 <!-- ## FOOTER ## -->
 <script type="text/javascript">
   
@@ -212,25 +211,6 @@
     }
       
 </script>
-    </div><!-- .span -->
-    <div class="span6 textalign-right">
-      <div class="well">
-        <h3>A Preamble of Sorts</h3>
-        <p>As an avid internet enthusiast and web development artist for almost a decade, I offer a variety of web and technical services to a versatile client base. Working as a Freelancer in the Chicagoland area, I have formed a robust network of clientele with various businesses and individuals. From web development to graphic design, I can offer a comprehensive image for my clients to attract new customers.</p>
-      </div><!-- .well -->
-    </div><!-- .span -->
-    <div class="span12">
-      <div class="well">
-        
-      </div><!-- .well -->
-    </div><!-- .span -->
-  </div><!-- .row -->    
-  </div><!-- .container -->
-</div><!-- #container -->
-
-<!-- ## FOOTER ## -->
-<?php include("$path2root/assets/inc/footer.inc.php"); ?>
->>>>>>> 240ec12965ff2c9b70ea505199979c797633ce82
 </body>
 </html>
 <?php
