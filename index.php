@@ -21,10 +21,6 @@
 <?php include("$path2root/assets/inc/iecheck.inc.php"); ?>
 <!-- ## IE CHECK ## -->
 
-<!-- ## CONTACT MODAL ## -->
-<?php include("$path2root/assets/inc/contactModal.inc.php"); ?>
-<!-- ## CONTACT MODAL ## -->
-
 <!-- ## HEADER & NAV ## -->
 <?php include("$path2root/assets/inc/nav.inc.php"); ?>
 <!-- ## HEADER & NAV ## -->
@@ -148,6 +144,10 @@
 <!-- ## FOOTER ## -->
 <?php include("$path2root/assets/inc/footer.inc.php"); ?>
 <!-- ## FOOTER ## -->
+
+<!-- ## CONTACT MODAL ## -->
+<?php include("$path2root/assets/inc/contactModal.inc.php"); ?>
+<!-- ## CONTACT MODAL ## -->
 <script type="text/javascript">
   
   // On window load. This waits until images have loaded which is essential

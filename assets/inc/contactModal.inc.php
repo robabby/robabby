@@ -4,7 +4,7 @@
     <h3>Feedback</h3>
   </div>
   <div class="modal-body">
-    <img class="pull-right" src="/images/logo_home.png" />
+    <img class="pull-right" src="/images/contact_modal.png" />
     <form name="msg" action="<?php echo $path2root ?>/assets/ops/sendmail.php" method="post">
       <p>
         <label>Name</label>
@@ -21,7 +21,7 @@
   </div>
   <div class="modal-footer">
     <button type="submit" class="btn btn-inverse">Submit</button>
-    <a href="#" data-dismiss="modal" class="btn">Cancel</a>
+    <a href="#" data-dismiss="modal" class="btn btn-danger">Cancel</a>
   </div>
   </form>
 </div>

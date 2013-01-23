@@ -175,10 +175,6 @@
 <?php include("./assets/inc/iecheck.inc.php"); ?>
 <!-- ## IE CHECK ## -->
 
-<!-- ## CONTACT MODAL ## -->
-<?php include('./assets/inc/contactModal.inc.php'); ?>
-<!-- ## CONTACT MODAL ## -->
-
 <!-- ## HEADER & NAV ## -->
 <?php include('./assets/inc/nav.inc.php'); ?>
 <!-- ## HEADER & NAV ## -->

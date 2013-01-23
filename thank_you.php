@@ -20,17 +20,11 @@
   </style>
 </head>
 <body id="thank_you">
-
-<!-- ## CONTACT MODAL ## -->
-<?php include("$path2root/assets/inc/contactModal.inc.php"); ?>
-<!-- ## CONTACT MODAL ## -->
-
 <!-- ## HEADER & NAV ## -->
 <?php include("$path2root/assets/inc/nav.inc.php"); ?>
 <!-- ## HEADER & NAV ## -->
 
 <!-- #### MAIN CONTENT GOES HERE #### -->
-
 <div class="container">
   <br />
   <div class="hero-unit">
@@ -39,9 +33,7 @@
       <br />
       <p><a class="btn btn-inverse btn-large" href="index.php">Back to Home</a></p>
   </div>
-
 </div><!-- .container -->
-
 <!-- #### MAIN CONTENT GOES HERE #### -->
 
 <!-- ## FOOTER ## -->

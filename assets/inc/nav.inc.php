@@ -12,7 +12,7 @@
         <!--<li <?php if ($currentPage == 'blog.php') {
           echo 'class="active"';} ?>><a href="<?php echo $path2root ?>/blog.php">Blog</a></li>-->
         <li class="last <?php if ($currentPage == 'contact.php') {
-          echo 'active';} ?>"><a  data-toggle="modal" href="#contact">Contact</a></li>
+          echo 'active';} ?>"><a href="<?php echo $path2root ?>/contact.php">Contact</a></li>
       </ul>
     </nav>
   </header>
