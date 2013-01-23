@@ -214,17 +214,13 @@
       <div class="jms-content">
         <h3>Welcome</h3>
         <p>To my CSS3 powered solar system</p>
-        <!--<a class="jms-link" href="#">Read more</a>-->
       </div>
-      <!--<img class="inset" src="images/rd_logo.png" width="300" height="300" />-->
-      <img src="/images/earth_icon.png" width="300" height="300" />
     </div>
     <div class="step" data-color="color-2" data-y="500" data-scale="0.4" data-rotate-x="30">
       <div class="jms-content">
         <h3>Notice</h3>
         <p>The flickering stars in the background</p>
       </div>
-      <img src="/images/captain_icon.png" />
     </div>
     <div class="step" data-color="color-3" data-x="2000" data-z="3000" data-rotate="170">
       <div class="jms-content">
@@ -232,14 +228,12 @@
         <p>Is where I got this slider from</p>
         <a class="jms-link" href="http://tympanus.net/codrops/2012/04/05/slideshow-with-jmpress-js/">Read more</a>
       </div>
-      <img src="images/ipad_happy.png" />
     </div>
     <div class="step" data-color="color-4" data-x="3000">
       <div class="jms-content">
         <h3>WebKit Only</h3>
         <p>This demo only works in Chrome or Safari</p>
       </div>
-      <img src="images/browsers.png" />
     </div>
     <div class="step" data-color="color-5" data-x="4500" data-z="1000" data-rotate-y="45">
       <div class="jms-content">
