@@ -58,7 +58,6 @@
 <head>
   <?php include('./assets/inc/head.inc.php'); ?>
   <style>
-<<<<<<< HEAD
   #contact .hero-unit {
     border-radius:0px;
     box-shadow:inset 0px 0px 10px 1px rgba(0, 0, 0, .5);
@@ -164,17 +163,6 @@
     vertical-align: middle;
   }
   </style>
-  <script type="text/javascript">
-   var RecaptchaOptions = {
-      theme : 'white'
-=======
-  </style>
-  <script type="text/javascript">
-   var RecaptchaOptions = {
-      theme : 'clean'
->>>>>>> 240ec12965ff2c9b70ea505199979c797633ce82
-   };
-   </script>
 </head>
 <body id="contact">
 
@@ -182,13 +170,10 @@
 <?php include("./assets/inc/iecheck.inc.php"); ?>
 <!-- ## IE CHECK ## -->
 
-<<<<<<< HEAD
 <!-- ## CONTACT MODAL ## -->
 <?php include('./assets/inc/contactModal.inc.php'); ?>
 <!-- ## CONTACT MODAL ## -->
 
-=======
->>>>>>> 240ec12965ff2c9b70ea505199979c797633ce82
 <!-- ## HEADER & NAV ## -->
 <?php include('./assets/inc/nav.inc.php'); ?>
 <!-- ## HEADER & NAV ## -->
@@ -316,10 +301,6 @@
       });
     });
 </script>
-<<<<<<< HEAD
-
-=======
->>>>>>> 240ec12965ff2c9b70ea505199979c797633ce82
 </body>
 </html>
 <?php
