@@ -6,7 +6,6 @@
   include("$path2root/assets/inc/user_agent.php");
   //require_once("$path2root/assets/inc/connection.inc.php");
   //database connection info
-  //$conn = mysql_connect('rawdesigns.db.7625389.hostedresource.com','rawdesigns','Forever#23') or trigger_error("SQL", E_USER_ERROR);
   //$conn = mysql_connect('localhost','root','') or trigger_error("SQL", E_USER_ERROR);
   //$db = mysql_select_db('rawdesigns',$conn) or trigger_error("SQL", E_USER_ERROR);
   //$sql = "SELECT title, article, created, article_id FROM blog ORDER BY created DESC LIMIT 3";
