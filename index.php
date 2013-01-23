@@ -128,9 +128,9 @@
     </div>
     <div class="other">
       <h3>Other things I play with</h3>
-      <p>Ruby on Rails</p>
-      <p>Meteor.js</p>
-      <p>PhoneGap</p>
+      <p><a href="http://rubyonrails.org" target="_blank">Ruby on Rails</a></p>
+      <p><a href="http://meteor.com" target="_blank">Meteor.js</a></p>
+      <p><a href="http://phonegap.com" target="_blank">PhoneGap</a></p>
       <p><small>Or just view my <a href="http://github.com/stat30fbliss">GitHub</a></small></p>
     </div>
 
