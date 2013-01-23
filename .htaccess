@@ -325,6 +325,14 @@ FileETag None
 <IfModule mod_rewrite.c>
   Options +FollowSymlinks
   RewriteEngine On
+<<<<<<< HEAD
+=======
+
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+   
+  RewriteRule . index.php [L]
+>>>>>>> 240ec12965ff2c9b70ea505199979c797633ce82
 </IfModule>
 
 

@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <info>
 	<infoitem key="fw_source" value="file:///C|/wamp/www/websites/outer_space/images/planet2.png" />
 </info>
+=======
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="fw_source" value="file:///C|/wamp/www/websites/outer_space/images/planet2.png" />
+</info>
+>>>>>>> 240ec12965ff2c9b70ea505199979c797633ce82

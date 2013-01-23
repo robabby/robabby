@@ -3,7 +3,10 @@
   ob_start();
   try {
   include("$path2root/assets/inc/title.inc.php"); 
+<<<<<<< HEAD
   include("$path2root/assets/inc/user_agent.php");
+=======
+>>>>>>> 240ec12965ff2c9b70ea505199979c797633ce82
   require_once("$path2root/assets/inc/connection.inc.php");
 
   // initialize flags
@@ -63,6 +66,7 @@
   <?php include("$path2root/assets/inc/head.inc.php"); ?>
 </head>
 <body id="blank">
+<<<<<<< HEAD
 <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
      chromium.org/developers/how-tos/chrome-frame-getting-started -->
 <!--[if lt IE 9]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
@@ -70,6 +74,8 @@
 <!-- ## CONTACT MODAL ## -->
 <?php include("$path2root/assets/inc/contactModal.inc.php"); ?>
 <!-- ## CONTACT MODAL ## -->
+=======
+>>>>>>> 240ec12965ff2c9b70ea505199979c797633ce82
 
 <!-- ## HEADER & NAV ## -->
 <?php include("$path2root/assets/inc/nav.inc.php"); ?>

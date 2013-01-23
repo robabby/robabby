@@ -3,7 +3,17 @@
   ob_start();
   try {
   include("$path2root/assets/inc/title.inc.php"); 
+<<<<<<< HEAD
   include("$path2root/assets/inc/user_agent.php");
+=======
+  require_once("$path2root/assets/inc/connection.inc.php");
+  //database connection info
+  //$conn = mysql_connect('rawdesigns.db.7625389.hostedresource.com','rawdesigns','Forever#23') or trigger_error("SQL", E_USER_ERROR);
+  $conn = mysql_connect('localhost','root','') or trigger_error("SQL", E_USER_ERROR);
+  $db = mysql_select_db('rawdesigns',$conn) or trigger_error("SQL", E_USER_ERROR);
+  $sql = "SELECT title, article, created, article_id FROM blog ORDER BY created DESC LIMIT 3";
+  $result = mysql_query($sql, $conn) or trigger_error("SQL", E_USER_ERROR);
+>>>>>>> 240ec12965ff2c9b70ea505199979c797633ce82
 ?>
 <!doctype html>
 <html>
@@ -13,6 +23,7 @@
 <body id="home">
 <!-- ## IE CHECK ## -->
 <?php include("$path2root/assets/inc/iecheck.inc.php"); ?>
+<<<<<<< HEAD
 <!-- ## IE CHECK ## -->
 
 <!-- ## CONTACT MODAL ## -->
@@ -25,21 +36,37 @@
 
 <!-- #### MAIN CONTENT GOES HERE #### -->
 <div role="main" id="container" class="container main">
+=======
+
+<!-- ## HEADER & NAV ## -->
+<?php include("$path2root/assets/inc/nav.inc.php"); ?>
+
+<!-- #### MAIN CONTENT GOES HERE #### -->
+<div role="main" id="container" class="container main content">
+>>>>>>> 240ec12965ff2c9b70ea505199979c797633ce82
 <br />
 <br />
   <div class="row">
     <div class="span12">
       <div class="well">
         <div itemscope itemtype="http://www.schema.org/Person">
+<<<<<<< HEAD
           <h1>Hey there!  My Name is <span itemprop="name">Rob Abby</span>, and I'm a <span itemprop="jobTitle">Web Developer</span>.</h1>
         </div>
       </div>
     </div>
+=======
+          <h1>Hey there!  My Name is <a href="http://twitter.com/stat30fbliss"><span itemprop="name">Rob Abby</span></a>, and I'm a <span itemprop="jobTitle">Web Developer</span>.</h1>
+        </div><!-- itemscope -->
+      </div><!-- .well -->
+    </div><!-- .span -->
+>>>>>>> 240ec12965ff2c9b70ea505199979c797633ce82
     <div class="span6">
       <div class="well">
         <h3>A Brief History</h3>
         <p>My transition into web development was both swift &amp; profound.  Discovering HTML to customize the MySpace page of my band in 2005, I quickly fell in love with all things web.  Before long I was working with CSS, and then quickly thereafter JavaScript, PHP, and MySQL.  My first freelance jobs were naturally for musicians and dabbling artists, but my appetite soon took me to bigger and better places both on &amp; off the web.</p>
       </div><!-- .well -->
+<<<<<<< HEAD
     </div><!-- .span6 -->
     <div class="span6 textalign-right">
       <div class="well">
@@ -223,6 +250,26 @@ $('.hero-unit a.social').click(function() {
   });
 });
 </script>
+=======
+    </div><!-- .span -->
+    <div class="span6 textalign-right">
+      <div class="well">
+        <h3>A Preamble of Sorts</h3>
+        <p>As an avid internet enthusiast and web development artist for almost a decade, I offer a variety of web and technical services to a versatile client base. Working as a Freelancer in the Chicagoland area, I have formed a robust network of clientele with various businesses and individuals. From web development to graphic design, I can offer a comprehensive image for my clients to attract new customers.</p>
+      </div><!-- .well -->
+    </div><!-- .span -->
+    <div class="span12">
+      <div class="well">
+        
+      </div><!-- .well -->
+    </div><!-- .span -->
+  </div><!-- .row -->    
+  </div><!-- .container -->
+</div><!-- #container -->
+
+<!-- ## FOOTER ## -->
+<?php include("$path2root/assets/inc/footer.inc.php"); ?>
+>>>>>>> 240ec12965ff2c9b70ea505199979c797633ce82
 </body>
 </html>
 <?php

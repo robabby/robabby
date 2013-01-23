@@ -3,11 +3,18 @@
   ob_start();
   try {
   include("$path2root/assets/inc/title.inc.php"); 
+<<<<<<< HEAD
   include("$path2root/assets/inc/user_agent.php");
   require_once("$path2root/assets/inc/connection.inc.php");
   // database connection info
   $conn = mysql_connect('rawdesigns.db.7625389.hostedresource.com','rawdesigns','Forever#23') or trigger_error("SQL", E_USER_ERROR);
   //$conn = mysql_connect('localhost','root','') or trigger_error("SQL", E_USER_ERROR);
+=======
+  require_once("$path2root/assets/inc/connection.inc.php");
+  // database connection info
+  //$conn = mysql_connect('rawdesigns.db.7625389.hostedresource.com','rawdesigns','Forever#23') or trigger_error("SQL", E_USER_ERROR);
+  $conn = mysql_connect('localhost','root','') or trigger_error("SQL", E_USER_ERROR);
+>>>>>>> 240ec12965ff2c9b70ea505199979c797633ce82
   $db = mysql_select_db('rawdesigns',$conn) or trigger_error("SQL", E_USER_ERROR);
   // find out how many rows are in the table 
   $sql = "SELECT COUNT(*) FROM blog";
@@ -51,6 +58,7 @@
 <html>
 <head>
   <?php include("$path2root/assets/inc/head.inc.php"); ?>
+<<<<<<< HEAD
   <style>
   #blog .post {
     background-color:#fff;
@@ -107,6 +115,11 @@
     position: relative;
     width:166px;
     margin:0 auto;
+=======
+  <link rel="stylesheet" href="<?php echo $path2root; ?>/assets/css/highlighter/dessert.css" />
+  <style>
+  #blog .post pre {
+>>>>>>> 240ec12965ff2c9b70ea505199979c797633ce82
   }
   </style>
 </head>
@@ -116,10 +129,13 @@
 <?php include("$path2root/assets/inc/iecheck.inc.php"); ?>
 <!-- ## IE CHECK ## -->
 
+<<<<<<< HEAD
 <!-- ## CONTACT MODAL ## -->
 <?php include("$path2root/assets/inc/contactModal.inc.php"); ?>
 <!-- ## CONTACT MODAL ## -->
 
+=======
+>>>>>>> 240ec12965ff2c9b70ea505199979c797633ce82
 <!-- ## HEADER & NAV ## -->
 <?php include("$path2root/assets/inc/nav.inc.php"); ?>
 <!-- ## HEADER & NAV ## -->
@@ -130,6 +146,7 @@
   <div class="row">
       <br />
       <br />
+<<<<<<< HEAD
       <div class="span12">
         <div class="well post">
           <h1>Blog Coming Soon!</h1>
@@ -149,10 +166,15 @@
       <!--
       <?php while ($list = mysql_fetch_assoc($result)) { ?>
         <div class="span12">
+=======
+      <?php while ($list = mysql_fetch_assoc($result)) { ?>
+        <div class="span6">
+>>>>>>> 240ec12965ff2c9b70ea505199979c797633ce82
         <div class="well post">
           <div class="row-fluid">
             <span class="label label-inverse pull-right"><?php echo $list['created']; ?></span>
             <h2><a href="post.php?article_id=<?php echo $list['article_id']; ?>"><?php echo $list['title']; ?></a></h2>
+<<<<<<< HEAD
             <a class="thumbnail pull-left" href="post.php?article_id=<?php echo $list['article_id']; ?>">
               <img src="http://placehold.it/125x125" alt="" />
             </a>
@@ -161,12 +183,25 @@
             <p>
               <a class="btn btn-inverse btn-large" href="post.php?article_id=<?php echo $list['article_id']; ?>">Read Article &raquo;</a>
             </p>
+=======
+            <p><?php echo substr($list['article'], 0, 350); ?>...</p>
+            <br />
+            <p>
+              <a class="btn btn-inverse btn-large pull-right" href="post.php?article_id=<?php echo $list['article_id']; ?>">Read Article &raquo;</a>
+            </p>
+            <br>
+            <br>
+            <br>
+>>>>>>> 240ec12965ff2c9b70ea505199979c797633ce82
           </div>
         </div>
         </div>
       <?php } // end while  ?>
+<<<<<<< HEAD
     -->
 
+=======
+>>>>>>> 240ec12965ff2c9b70ea505199979c797633ce82
   </div><!-- .row -->
 
   <!-- Start Pagination -->
@@ -233,6 +268,11 @@ if ($currentpage != $totalpages) {
 <?php include("$path2root/assets/inc/footer.inc.php"); ?>
 <!-- ## FOOTER ## -->
 <!-- Place this tag after the last badge tag. -->
+<<<<<<< HEAD
+=======
+<script src="<?php echo $path2root; ?>/assets/css/highlighter/prettify.js"></script>
+<script>prettyPrint();</script>
+>>>>>>> 240ec12965ff2c9b70ea505199979c797633ce82
 <script type="text/javascript">
   (function() {
     var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;

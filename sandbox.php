@@ -8,6 +8,7 @@
 <html>
 <head>
   <?php include('./assets/inc/head.inc.php'); ?>
+<<<<<<< HEAD
   <style>
   #sandbox .hero-unit {
     border-radius:0px;
@@ -112,6 +113,20 @@
       <h2>APIs <small>Google, YouTube, Twitter, &amp; etc.</small></h2>
       <hr />
     </div><!-- .span -->
+=======
+</head>
+<body id="sandbox">
+<!-- ## IE CHECK ## -->
+<?php include("$path2root/assets/inc/iecheck.inc.php"); ?>
+<!-- ## IE CHECK ## -->
+<!-- ## HEADER & NAV ## -->
+<?php include('./assets/inc/nav.inc.php'); ?>
+<!-- ## HEADER & NAV ## -->
+<br>
+<br>
+<div role="main" id="container" class="container main">
+  <div class="row">
+>>>>>>> 240ec12965ff2c9b70ea505199979c797633ce82
 
     <div class="span6">
       <div class="well">
@@ -129,6 +144,7 @@
       </div><!-- span -->
     </div><!-- .well -->
 
+<<<<<<< HEAD
     <!--
     <div class="span3">
       <div class="well">
@@ -157,10 +173,17 @@
       <div class="well">
         <h3><a href="/outer_space.php" title="">Outer Space Concept</a></h3>
         <p>Spinning planets and flickering stars achieved entirely through CSS3. <b>WebKit only</b>.</p>
+=======
+    <div class="span6">
+      <div class="well">
+        <h3><a href="/outer_space.php" title="">Outer Space Concept</a></h3>
+        <p>Spinning planets and flickering stars achieved entirely through CSS3. <b>WebKit</b>.</p>
+>>>>>>> 240ec12965ff2c9b70ea505199979c797633ce82
         <a class="btn btn-inverse btn-large" href="/outer_space.php" title="">View Project</a>
       </div><!-- span -->
     </div><!-- .well -->
 
+<<<<<<< HEAD
     <!--
     <div class="span4">
       <div class="well">
@@ -213,6 +236,8 @@
       <hr />
     </div><!-- .span -->
 
+=======
+>>>>>>> 240ec12965ff2c9b70ea505199979c797633ce82
     <div class="span6">
       <div class="well">
         <h3><a href="drag_drop.php" title="">HTML5 Drag &amp; Drop</a></h3>
@@ -221,6 +246,7 @@
       </div><!-- span -->
     </div><!-- .well -->
 
+<<<<<<< HEAD
     <!--
     <div class="span3">
       <div class="well">
@@ -251,6 +277,8 @@
       </div><!-- span --
     </div><!-- .well -->
 
+=======
+>>>>>>> 240ec12965ff2c9b70ea505199979c797633ce82
   </div><!-- .row -->
 </div><!-- #container -->
 

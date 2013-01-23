@@ -9,7 +9,11 @@
 <!doctype html>
 <html>
 <head>
+<<<<<<< HEAD
   <?php include($_SERVER['DOCUMENT_ROOT'] . "/assets/inc/head.inc.php"); ?>
+=======
+  <?php include($_SERVER['DOCUMENT_ROOT']."/assets/inc/head.inc.php"); ?>
+>>>>>>> 240ec12965ff2c9b70ea505199979c797633ce82
   <style>
   @media all and (max-width: 1024px) {
     
@@ -62,6 +66,12 @@
     <?php
       echo $_SERVER['SCRIPT_FILENAME'];
     ?>
+<<<<<<< HEAD
+=======
+
+    <iframe width="160" height="400" src="https://leanpub.com/codehappy/embed" frameborder="0" allowtransparency="true"></iframe>
+
+>>>>>>> 240ec12965ff2c9b70ea505199979c797633ce82
   </div>
 </div>
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   <meta charset="utf-8">
 
   <!-- Use the .htaccess and remove these lines to avoid edge case issues.
@@ -9,6 +10,14 @@
   <meta name="keywords" content="Rob, Abby, Web, Design, Development, Chicago, Blog, HTML5, CSS3, jQuery, PHP, MySQL, Ruby, Rails"/>
 
   <!-- Mobile viewport optimized: h5bp.com/viewport -->
+=======
+  <title>Rob Abby | <?php if (isset($title)) {echo "{$title}";} ?></title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="Web + Development" />
+  <meta name="keywords" content="Rob, Abby, Web, Design, Development, Chicago, Blog, HTML5, CSS3, jQuery, PHP, MySQL, Ruby, Rails"/>
+>>>>>>> 240ec12965ff2c9b70ea505199979c797633ce82
   <meta name="viewport" content="width=device-width">
 
   <!-- Fonts -->
@@ -19,14 +28,25 @@
   <link rel="stylesheet" href="/assets/fonts/Quicksand/stylesheet.css">
   <link rel="stylesheet" href="/assets/fonts/Sansation/stylesheet.css">
   <link rel="stylesheet" href="/assets/fonts/Delicious/stylesheet.css">
+<<<<<<< HEAD
   <link rel="stylesheet" href="/assets/fonts/Pictograms/stylesheet.css">
+=======
+>>>>>>> 240ec12965ff2c9b70ea505199979c797633ce82
 
   <!-- Styles & Frameworks -->
   <link rel="stylesheet" href="/assets/css/reset.css">
   <link rel="stylesheet" href="/assets/css/bootstrap.css">
+<<<<<<< HEAD
+=======
+  <link rel="stylesheet" href="/assets/css/bootstrap-responsive.css">
+>>>>>>> 240ec12965ff2c9b70ea505199979c797633ce82
   <link rel="stylesheet" href="/assets/css/animate.css">
   <link rel="stylesheet" href="/assets/css/style.css">
 
   <script src="/assets/js/libs/modernizr-2.5.3.min.js"></script>
+<<<<<<< HEAD
   <script src="/assets/js/libs/jquery-1.7.1.min.js"></script>
   
+=======
+  <script src="/assets/js/libs/jquery.js"></script>
+>>>>>>> 240ec12965ff2c9b70ea505199979c797633ce82
