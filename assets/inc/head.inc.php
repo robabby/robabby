@@ -5,16 +5,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
   <title>Rob Abby | <?php if (isset($title)) {echo "{$title}";} ?></title>
-  <meta name="description" content="Web &amp; New Media Design + Development" />
+  <meta name="description" content="Web & New Media Design + Development" />
   <meta name="keywords" content="Rob, Abby, Web, Design, Development, Chicago, Blog, HTML5, CSS3, jQuery, PHP, MySQL, Ruby, Rails"/>
 
-  <!-- Mobile viewport optimized: h5bp.com/viewport --
+  <!-- Mobile viewport optimized: h5bp.com/viewport -->
   <meta name="viewport" content="width=device-width">
 
   <!-- Fonts -->
   <link rel="stylesheet" href="/assets/fonts/BigNoodle/stylesheet.css">
   <link rel="stylesheet" href="/assets/fonts/TradeGothic/stylesheet.css">
   <link rel="stylesheet" href="/assets/fonts/Swiss/stylesheet.css">
+  <link rel="stylesheet" href="/assets/fonts/Code/stylesheet.css">
+  <link rel="stylesheet" href="/assets/fonts/Quicksand/stylesheet.css">
+  <link rel="stylesheet" href="/assets/fonts/Sansation/stylesheet.css">
+  <link rel="stylesheet" href="/assets/fonts/Delicious/stylesheet.css">
+  <link rel="stylesheet" href="/assets/fonts/Pictograms/stylesheet.css">
 
   <!-- Styles & Frameworks -->
   <link rel="stylesheet" href="/assets/css/reset.css">

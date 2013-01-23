@@ -1,21 +1,26 @@
 <?php
 function dbConnect($usertype, $connectionType = 'mysqli') {
-  $host = 'rawdesigns.db.7625389.hostedresource.com';
-  //$host = 'localhost';  
-  $db = 'rawdesigns';
+  $host = 'somehost.com'; // Database host path
+  $db = 'somedb'; // name of your database
+  
+  // If user is read-ony
   if ($usertype  == 'read') {
-	$user = 'rawdesigns';
-	$pwd = 'Forever#23';
-  } elseif ($usertype == 'write') {
+  	$user = 'root'; //username
+  	$pwd = 'pass'; // password
+  } 
+  // If user is read-write
+  elseif ($usertype == 'write') {
   	$user = 'rawdesigns';
-	$pwd = 'Forever#23';
-  } else {
-	exit('Unrecognized connection type');
+	  $pwd = 'Forever#23';
+  } 
+  // Unrecognized user or connection type
+  else {
+	  exit('Unrecognized connection type');
   }
   if ($connectionType == 'mysqli') {
-	$result = new mysqli($host, $user, $pwd, $db) ;
-	if (!$result) die ('Cannot connect to database');
-	return $result;
+	  $result = new mysqli($host, $user, $pwd, $db) ;
+	  if (!$result) die ('Cannot connect to database');
+	    return $result;
   } else {
     try {
       return new PDO("mysql:host=$host;dbname=$db", $user, $pwd);
