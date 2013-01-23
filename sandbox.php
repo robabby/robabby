@@ -89,30 +89,9 @@
 <?php include('./assets/inc/contactModal.inc.php'); ?>
 <!-- ## CONTACT MODAL ## -->
 
-<div class="hero-unit">
-  <div class="container">
-    <div class="row-fluid">
-      <div class="span12">
-        <div class="row-fluid">
-          <img class="calvin pull-right" src="/images/calvin_sandbox.jpg" />
-          <h1>The Sandbox</h1>
-          <p>Remember how much fun we all used to have playing in the sandbox as a kid?  No? Well I do, and I had a blast!  This page is herby dedicated to all of the fun, new interesting Sand Castles that I love to build from time to time.</p>
-          <p>Please keep in mind that these are experiments only.  Do not expect anything to be completely finished, or perfect.  Once a project is finished, I will publish it to <a href="http://github.com/stat30fbliss" title="My GitHub Page">GitHub</a> for you to grab a copy of the .zip file.</p>
-          <p>Cheers!</p>
-        </div>
-      </div><!-- .hero-unit -->
-    </div><!-- .span8 -->
-  </div><!-- .row -->
-</div>
-
 <div role="main" id="container" class="container main">
+  <br>
   <div class="row">
-    <!--
-    <div class="span12">
-      <h2>APIs <small>Google, YouTube, Twitter, &amp; etc.</small></h2>
-      <hr />
-    </div><!-- .span -->
-
     <div class="span6">
       <div class="well">
         <h3><a href="/map.php" title="">Google Map</a></h3>
@@ -120,7 +99,6 @@
         <a class="btn btn-inverse btn-large" href="/map.php" title="">View Project</a>
       </div><!-- .well -->
     </div><!-- .span -->
-
     <div class="span6">
       <div class="well">
         <h3><a href="/geolocate.php" title="">Geolocate</a></h3>
@@ -128,31 +106,6 @@
         <a class="btn btn-inverse btn-large" href="/geolocate.php" title="">View Project</a>
       </div><!-- span -->
     </div><!-- .well -->
-
-    <!--
-    <div class="span3">
-      <div class="well">
-        <h3><a href="/youtube.php" title="">YouTube API</a></h3>
-        <p>Introductory implementation of the YouTube video player and search API.</p>
-        <a class="btn btn-inverse btn-large" href="/youtube.php" title="">View Project</a>
-      </div><!-- span --
-    </div><!-- .well -->
-
-    <!--
-    <div class="span12">
-      <h2>Websites <small>Layouts and concepts</small></h2>
-      <hr />
-    </div><!-- .span -->
-
-    <!--
-    <div class="span4">
-      <div class="well">
-        <h3><a href="/isotope.php" title="">Isotope Site</a></h3>
-        <p>Fun with the isotope jQuery plugin.  Fluid layout excitement for the whole family!</p>
-        <a class="btn btn-inverse btn-large" href="/isotope.php" title="">View Project</a>
-      </div><!-- span --
-    </div><!-- .well -->
-
     <div class="span6">
       <div class="well">
         <h3><a href="/outer_space.php" title="">Outer Space Concept</a></h3>
@@ -160,59 +113,6 @@
         <a class="btn btn-inverse btn-large" href="/outer_space.php" title="">View Project</a>
       </div><!-- span -->
     </div><!-- .well -->
-
-    <!--
-    <div class="span4">
-      <div class="well">
-        <h3><a href="/stars.php" title="">Moving Stars</a></h3>
-        <p>A stab at the parallax effect with three backgrounds moving simultaneously.</p>
-        <a class="btn btn-inverse btn-large" href="/stars.php" title="">View Project</a>
-      </div><!-- span --
-    </div><!-- .well -->
-
-    <!--
-    <div class="span12">
-      <h2>Mobile <small>Featuring both responsive CSS or JavaScript frameworks</small></h2>
-      <hr />
-    </div><!-- .span --
-
-    <div class="span3">
-      <div class="well">
-        <h3><a href="/mobile/sencha/" title="">Sencha Touch</a></h3>
-        <p>An introductory application using Sencha Touch with an MVC architecture.</p>
-        <a class="btn btn-inverse btn-large" href="/mobile/sencha/" title="">View Project</a>
-      </div><!-- span --
-    </div><!-- .well --
-
-    <div class="span3">
-      <div class="well">
-        <h3><a href="/mobile/jquery/" title="">jQuery Touch</a></h3>
-        <p>An introductory application using Sencha Touch with an MVC architecture.</p>
-        <a class="btn btn-inverse btn-large" href="/mobile/jquery/" title="">View Project</a>
-      </div><!-- span --
-    </div><!-- .well --
-
-    <div class="span3">
-      <div class="well">
-        <h3><a href="/mobile/bootstrap/" title="">Bootstrap</a></h3>
-        <p>An introductory application using Sencha Touch with an MVC architecture.</p>
-        <a class="btn btn-inverse btn-large" href="/mobile/bootstrap/" title="">View Project</a>
-      </div><!-- span --
-    </div><!-- .well --
-
-    <div class="span3">
-      <div class="well">
-        <h3><a href="/mobile/lungo/" title="">Lungo</a></h3>
-        <p>An introductory application using Sencha Touch with an MVC architecture.</p>
-        <a class="btn btn-inverse btn-large" href="/mobile/lungo/" title="">View Project</a>
-      </div><!-- span --
-    </div><!-- .well --
-
-    <div class="span12">
-      <h2>File Handling <small>Demos that utilize the power of PHP, AJAX or MySQL</small></h2>
-      <hr />
-    </div><!-- .span -->
-
     <div class="span6">
       <div class="well">
         <h3><a href="drag_drop.php" title="">HTML5 Drag &amp; Drop</a></h3>
@@ -220,37 +120,6 @@
         <a class="btn btn-inverse btn-large" href="/drag_drop.php" title="">View Project</a>
       </div><!-- span -->
     </div><!-- .well -->
-
-    <!--
-    <div class="span3">
-      <div class="well">
-        <h3><a href="scan_dir.php" title="">View Folder</a></h3>
-        <p>Scan and represent the contents of the uploads folder with PHP.</p>
-        <a class="btn btn-inverse btn-large" href="/scan_dir.php" title="">View Project</a>
-      </div><!-- span --
-    </div><!-- .well -->
-
-    <!--
-    <div class="span12">
-      <h2>Blog &amp; CMS <small>A lightweight CMS I am working on for small Blogs</small></h2>
-      <hr />
-    </div><!-- .span --
-
-    <div class="span3">
-      <div class="well">
-        <h3><a href="/blog/blog_list.php" title="">Article Manager</a></h3>
-        <br />
-        <a class="btn btn-inverse btn-large" href="/blog/blog_list.php" title="">View Project</a>
-      </div><!-- span --
-    </div><!-- .well --
-    <div class="span3">
-      <div class="well">
-        <h3><a href="/blog/new_post.php" title="">New Post</a></h3>
-        <br />
-        <a class="btn btn-inverse btn-large" href="/blog/new_post.php" title="">View Project</a>
-      </div><!-- span --
-    </div><!-- .well -->
-
   </div><!-- .row -->
 </div><!-- #container -->
 
