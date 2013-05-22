@@ -1,5 +1,5 @@
 <?php 
-  $path2root = "";
+  $path2root = ".";
   ob_start();
   try {
   include('./assets/inc/title.inc.php'); 
@@ -144,29 +144,32 @@
   .planet2 {
     display:block;
     position:absolute;
-    bottom:-620px;
-    left:-500px;
+    bottom:-700px;
+    left:-550px;
     width:1320px;
     height:1324px;
     background-image:url('/images/planet2.png');
     background-position: 0px 0px;
     background-repeat: no-repeat;
     -webkit-animation-name: rotate;
-    -webkit-animation-duration: 1000s;
+    -webkit-animation-duration: 1500s;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
   }
   @-webkit-keyframes pulse {
     from {
-      -webkit-transform: rotate(0deg);
       opacity:0;
     }
+    25% {
+      opacity:.50;
+    }
     50% {
-      -webkit-transform: rotate(360deg);
+      opacity:.25;
+    }
+    75% {
       opacity:1;
     }
     to {
-      -webkit-transform: rotate(0deg);
       opacity:0;
     }
   }
@@ -236,7 +239,6 @@
 
 <script type="text/javascript" src="/assets/js/jmpress.min.js"></script>
 <script type="text/javascript" src="/assets/js/jquery.jmslideshow.js"></script>
-<script type="text/javascript" src="js/modernizr.custom.48780.js"></script>
 <script type="text/javascript">
   $(function() {
     $( '#jms-slideshow' ).jmslideshow();
