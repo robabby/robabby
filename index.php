@@ -218,7 +218,7 @@
         <p>I am currently cleaning some things up...</p>
       </div>
     </div>
-    <div class="step" data-color="color-2" data-y="500" data-scale="0.4" data-rotate-x="30">
+    <div class="step" data-color="color-2" data-x="350" data-y="1500" data-scale="0.25" data-rotate-x="360">
       <div class="jms-content">
         <h3>Questions?</h3>
         <p>Click the gear in the bottom left to send me a message</p>
@@ -236,8 +236,6 @@
 
 <?php include('./assets/inc/footer.inc.php'); ?>
 
-<script type="text/javascript" src="/assets/js/jmpress.min.js"></script>
-<script type="text/javascript" src="/assets/js/jquery.jmslideshow.js"></script>
 <script type="text/javascript">
   $(function() {
     $( '#jms-slideshow' ).jmslideshow();
