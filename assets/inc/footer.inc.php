@@ -44,8 +44,21 @@
       </div><!-- #drawer -->
   </footer>
 
-  <script src="/assets/js/bootstrap.js"></script>
-  <script src="/assets/js/jquery.easing.js"></script>
+<?php
+// Collect all of the scripts and render them on the page
+if ($handle = opendir("$path2root/assets/js")) {
+
+    /* This is the correct way to loop over the directory. */
+    while (false !== ($entry = readdir($handle))) {
+      // only collect the necessary files
+        if (($entry != "." && $entry != ".." && $entry != "modernizr.custom.48780.js") && strpos($entry, ".js")) {
+            echo "<script src=\"/assets/js/".$entry."\"></script>\n";
+        }
+    }
+
+    closedir($handle);
+}
+?>
   <script>
     $('#drawer ul li a').tooltip('show');
     $("#toggle").click(function () {
@@ -68,12 +81,4 @@
     })();
 
   </script>
-  <!--
-  <script>
-    var _gaq=[['_setAccount','UA-15363114-5'],['_trackPageview']];
-    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-    s.parentNode.insertBefore(g,s)}(document,'script'));
-  </script>
-  -->
   
