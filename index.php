@@ -1,5 +1,5 @@
 <?php 
-  $path2root = ".";
+  $path2root = $_SERVER['DOCUMENT_ROOT'];
   ob_start();
   try {
   include('./assets/inc/title.inc.php'); 
@@ -16,7 +16,7 @@
     <link rel="stylesheet" type="text/css" href="/assets/css/style_ie.css" />
 <![endif]-->
 <head>
-  <?php include('./assets/inc/head.inc.php'); ?>
+  <?php include('/assets/inc/head.inc.php'); ?>
   <link rel="stylesheet" href="/assets/css/queryLoader.css" type="text/css" />
   <noscript>
     <style>
