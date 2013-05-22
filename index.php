@@ -1,204 +1,258 @@
 <?php 
-  $path2root = ".";
+  $path2root = "";
   ob_start();
   try {
-  include("$path2root/assets/inc/title.inc.php"); 
-  include("$path2root/assets/inc/user_agent.php");
-  //require_once("$path2root/assets/inc/connection.inc.php");
-  //database connection info
-  //$conn = mysql_connect('localhost','root','') or trigger_error("SQL", E_USER_ERROR);
-  //$db = mysql_select_db('rawdesigns',$conn) or trigger_error("SQL", E_USER_ERROR);
-  //$sql = "SELECT title, article, created, article_id FROM blog ORDER BY created DESC LIMIT 3";
-  //$result = mysql_query($sql, $conn) or trigger_error("SQL", E_USER_ERROR);
+  include('./assets/inc/title.inc.php'); 
+  include('./assets/inc/user_agent.php');
 ?>
 <!doctype html>
-<html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="/assets/css/style_ie.css" />
+<![endif]-->
 <head>
-  <?php include("$path2root/assets/inc/head.inc.php"); ?>
+  <?php include('./assets/inc/head.inc.php'); ?>
+  <link rel="stylesheet" href="/assets/css/queryLoader.css" type="text/css" />
+  <noscript>
+    <style>
+    .step {
+      width: 100%;
+      position: relative;
+    }
+    .step:not(.active) {
+      opacity: 1;
+      filter: alpha(opacity=99);
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=99)";
+    }
+    .step:not(.active) a.jms-link{
+      opacity: 1;
+      margin-top: 40px;
+    }
+    </style>
+  </noscript>
+  <style>
+  .star-1 {
+    display:block;
+    position:absolute;
+    background-color:#fff;
+    top:190px;
+    left:142px;
+    width:3px;
+    height:3px;
+    border-radius:3px;
+    box-shadow:0px 0px 50px 7px rgba(100, 175, 255, 1);
+    -webkit-animation-name: pulse;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+  }
+  .star-2 {
+    display:block;
+    position:absolute;
+    background-color:#fff;
+    top:45%;
+    left:55%;
+    width:3px;
+    height:3px;
+    border-radius:3px;
+    box-shadow:0px 0px 50px 15px rgba(100, 175, 255, 1);
+    -webkit-animation-name: pulse;
+    -webkit-animation-duration: 10s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+  }
+  .star-3 {
+    display:block;
+    position:absolute;
+    background-color:#fff;
+    top:85%;
+    left:25%;
+    width:3px;
+    height:3px;
+    border-radius:3px;
+    box-shadow:0px 0px 50px 15px rgba(100, 175, 255, 1);
+    -webkit-animation-name: pulse;
+    -webkit-animation-duration: 8s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+  }
+  .star-4 {
+    display:block;
+    position:absolute;
+    background-color:#fff;
+    top:70%;
+    left:85%;
+    width:3px;
+    height:3px;
+    border-radius:3px;
+    box-shadow:0px 0px 50px 15px rgba(100, 175, 255, 1);
+    -webkit-animation-name: pulse;
+    -webkit-animation-duration: 7s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+  }
+  .star-5 {
+    display:block;
+    position:absolute;
+    background-color:#fff;
+    top:10%;
+    left:75%;
+    width:3px;
+    height:3px;
+    border-radius:3px;
+    box-shadow:0px 0px 50px 15px rgba(100, 175, 255, 1);
+    -webkit-animation-name: pulse;
+    -webkit-animation-duration: 12s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+  }
+  .moon {
+    display:block;
+    position:absolute;
+    top:-250px;
+    right:-250px;
+    width:544px;
+    height:544px;
+    background-image:url('/images/moon.png');
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    -webkit-animation-name: rotate;
+    -webkit-animation-duration: 240s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+  }
+  .planet {
+    display:none;
+    position:absolute;
+    bottom:-500px;
+    left:-350px;
+    width:921px;
+    height:921px;
+    background-image:url('/images/planet.png');
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    -webkit-animation-name: rotate;
+    -webkit-animation-duration: 1000s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+  }
+  .planet2 {
+    display:block;
+    position:absolute;
+    bottom:-620px;
+    left:-500px;
+    width:1320px;
+    height:1324px;
+    background-image:url('/images/planet2.png');
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    -webkit-animation-name: rotate;
+    -webkit-animation-duration: 1000s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+  }
+  @-webkit-keyframes pulse {
+    from {
+      -webkit-transform: rotate(0deg);
+      opacity:0;
+    }
+    50% {
+      -webkit-transform: rotate(360deg);
+      opacity:1;
+    }
+    to {
+      -webkit-transform: rotate(0deg);
+      opacity:0;
+    }
+  }
+  @-webkit-keyframes rotate {
+    from {
+      -webkit-transform: rotate(0deg);
+    }
+    50% {
+      -webkit-transform: rotate(180deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  </style>
 </head>
-<body id="home">
-<!-- ## IE CHECK ## -->
-<?php include("$path2root/assets/inc/iecheck.inc.php"); ?>
-<!-- ## IE CHECK ## -->
-
-<!-- ## HEADER & NAV ## -->
-<?php include("$path2root/assets/inc/nav.inc.php"); ?>
-<!-- ## HEADER & NAV ## -->
-
-<!-- #### MAIN CONTENT GOES HERE #### -->
-<div role="main" id="container" class="container main content">
-<br />
-<br />
-  <div class="row">
-    <div class="span12">
-      <div class="well">
-        <div itemscope itemtype="http://www.schema.org/Person">
-          <h1>Hey there!  My Name is <span itemprop="name">Rob Abby</span>, and I'm a <span itemprop="jobTitle">Web Developer</span>.</h1>
-        </div>
-      </div>
-    </div>
-  </div><!-- .row -->
-  <br />
-  <br />
-  <h2 id="work">Where I work <span>&darr;</span></h2>
-  <br />
-
-  <div class="row">
-    <div class="span12 work">
-      <h3><a href="http://web2carz.com" title="Web2Carz.com">Web2Carz.com</a></h3>
-      <a class="thumbnail" href="http://web2carz.com" title="Web2Carz.com">
-        <img src="/images/work/web2carz.jpg" />
-      </a>
-    </div><!-- .span -->
-  </div><!-- .row -->
-
-  <br />
-  <br />
-  <br />
-  <h2>Where I have worked <span>&darr;</span></h2>
-  <br />
-
-  <div class="row">
-    <div class="span6 work">
-      <h3><a href="http://chicagobooth.edu" title="University of Chicago Booth">University of Chicago Booth</a></h3>
-      <a class="thumbnail" href="http://chicagobooth.edu" title="University of Chicago Booth">
-        <img src="/images/work/booth.jpg" />
-      </a>
-    </div><!-- .span -->
-    <div class="span6 work">
-      <h3><a href="http://www.artversion.com/" title="ArtVersion Interactive Agency">ArtVersion Interactive Agency</a></h3>
-      <a class="thumbnail" href="http://www.artversion.com/" title="ArtVersion Interactive Agency">
-        <img src="/images/work/artversion.jpg" />
-      </a>
-    </div><!-- .span -->
-  </div><!-- .row -->
-
-  <div class="row work">      
-    <div class="span12">
-      <br />
-      <br />
-      <h2>Technologies I know <span>&darr;</span></h2>
-      <br />
-      <br />
-    </div>
-    <div class="span6">
-      <h3>HTML5</h3>
-      <div class="progress progress-striped active">
-        <div class="bar" style="width: 90%;"></div>
-      </div>
-      <h3>jQuery</h3>
-      <div class="progress progress-striped active">
-        <div class="bar" style="width: 75%;"></div>
-      </div>
-      <h3>PHP</h3>
-      <div class="progress progress-striped active">
-        <div class="bar" style="width: 45%;"></div>
-      </div>
-    </div>
-    <div class="span6">
-      <h3>CSS3</h3>
-      <div class="progress progress-striped active">
-        <div class="bar" style="width: 92%;"></div>
-      </div>
-      <h3>AJAX</h3>
-      <div class="progress progress-striped active">
-        <div class="bar" style="width: 30%;"></div>
-      </div>
-      <h3>JSON</h3>
-      <div class="progress progress-striped active">
-        <div class="bar" style="width: 40%;"></div>
-      </div>
-    </div>
-    <div class="span12 other">
-      <br>
-      <h3>Other things I play with</h3>
-      <p><a href="http://rubyonrails.org" target="_blank">Ruby on Rails</a></p>
-      <p><a href="http://meteor.com" target="_blank">Meteor.js</a></p>
-      <p><a href="http://phonegap.com" target="_blank">PhoneGap</a></p>
-      <p><small>Or just view my <a href="http://github.com/stat30fbliss">GitHub</a></small></p>
-    </div>
-
-    <div class="span12">
-      <br />
-      <br />
-      <br />
-      <div class="contact">
-        <h2>Want more? <span>&darr;</span></h2>
-        <br />
-        <a href="/sandbox.php" class="btn btn-inverse btn-large" title="">View my Sandbox</a>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-      </div><!-- .contact -->
-    </div><!-- span -->
-    
-  </div><!-- .row -->
-</div><!-- #container -->
-
-
-<!-- #### MAIN CONTENT GOES HERE #### -->
-
-<!-- ## FOOTER ## -->
-<?php include("$path2root/assets/inc/footer.inc.php"); ?>
-<!-- ## FOOTER ## -->
+<body id="outer_space">
+  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+  <!--[if lt IE 9]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
 <!-- ## CONTACT MODAL ## -->
-<?php include("$path2root/assets/inc/contactModal.inc.php"); ?>
+<?php include('./assets/inc/contactModal.inc.php'); ?>
 <!-- ## CONTACT MODAL ## -->
+
+<!-- ## HEADER & NAV ## -->
+<?php //include('./assets/inc/nav.inc.php'); ?>
+<!-- ## HEADER & NAV ## -->
+
+<div id="container" class="container">
+  
+  <!-- ##### SOLAR SYSTEM ##### -->
+  <div id="star" class="star-1"></div>
+  <div id="star" class="star-2"></div>
+  <div id="star" class="star-3"></div>
+  <div id="star" class="star-4"></div>
+  <div id="star" class="star-5"></div>
+  <div id="moon" class="moon"></div>
+  <div id="planet" class="planet"></div>
+  <div id="planet2" class="planet2"></div>
+  <!-- ##### SOLAR SYSTEM ##### -->
+  
+  <section id="jms-slideshow" class="jms-slideshow">
+    <div class="step" data-color="color-1">
+      <div class="jms-content">
+        <h3>Welcome!</h3>
+        <p>I am currently cleaning some things up...</p>
+      </div>
+    </div>
+    <div class="step" data-color="color-2" data-y="500" data-scale="0.4" data-rotate-x="30">
+      <div class="jms-content">
+        <h3>Questions?</h3>
+        <p>Click the gear in the bottom left to send me a message</p>
+      </div>
+    </div>
+    <div class="step" data-color="color-5" data-x="4500" data-z="1000" data-rotate-y="45">
+      <div class="jms-content">
+        <h3>Follow me</h3>
+        <a class="jms-link" href="http://twitter.com/stat30fbliss">@stat30fbliss</a>
+      </div>
+      <img class="inset2" src="images/calvin_sandbox.jpg" />
+    </div>
+  </section>
+</div>
+
+<?php include('./assets/inc/footer.inc.php'); ?>
+
+<script type="text/javascript" src="/assets/js/jmpress.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.jmslideshow.js"></script>
+<script type="text/javascript" src="js/modernizr.custom.48780.js"></script>
 <script type="text/javascript">
-  
-  // On window load. This waits until images have loaded which is essential
-  $(window).load(function(){
-    
-    // Fade in images so there isn't a color "pop" document load and then on window load
-    $(".work img").fadeIn(500);
-    
-    // clone image
-    $('.work img').each(function(){
-      var el = $(this);
-      el.css({"position":"absolute"}).wrap("<div class='img_wrapper' style='display: inline-block'>").clone().addClass('img_grayscale').css({"position":"absolute","z-index":"998","opacity":"0"}).insertBefore(el).queue(function(){
-        var el = $(this);
-        el.parent().css({"width":this.width,"height":this.height});
-        el.dequeue();
-      });
-      this.src = grayscale(this.src);
-    });
-    
-    // Fade image 
-    $('.work img').mouseover(function(){
-      $(this).parent().find('img:first').stop().animate({opacity:1}, 1000);
-    })
-    $('.img_grayscale').mouseout(function(){
-      $(this).stop().animate({opacity:0}, 1000);
-    });   
+  $(function() {
+    $( '#jms-slideshow' ).jmslideshow();
   });
-  
-  // Grayscale w canvas method
-  function grayscale(src){
-    var canvas = document.createElement('canvas');
-    var ctx = canvas.getContext('2d');
-    var imgObj = new Image();
-    imgObj.src = src;
-    canvas.width = imgObj.width;
-    canvas.height = imgObj.height; 
-    ctx.drawImage(imgObj, 0, 0); 
-    var imgPixels = ctx.getImageData(0, 0, canvas.width, canvas.height);
-    for(var y = 0; y < imgPixels.height; y++){
-      for(var x = 0; x < imgPixels.width; x++){
-        var i = (y * 4) * imgPixels.width + x * 4;
-        var avg = (imgPixels.data[i] + imgPixels.data[i + 1] + imgPixels.data[i + 2]) / 3;
-        imgPixels.data[i] = avg; 
-        imgPixels.data[i + 1] = avg; 
-        imgPixels.data[i + 2] = avg;
-      }
-    }
-    ctx.putImageData(imgPixels, 0, 0, 0, 0, imgPixels.width, imgPixels.height);
-    return canvas.toDataURL();
-    }
-      
+</script>
+<script type="text/javascript" src="/assets/js/queryloader2.js"></script>
+<script type='text/javascript'>
+  $(document).ready(function () {
+      $("body").queryLoader2({
+        percentage: false,
+        backgroundColor: '#121212',
+        barHeight: 5,
+        barColor: '#FFF',
+        completeAnimation: 'grow'
+      });
+  });
 </script>
 </body>
 </html>
