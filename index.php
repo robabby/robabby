@@ -49,6 +49,10 @@
     -webkit-animation-duration: 5s;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-name: pulse;
+    -moz-animation-duration: 5s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
   }
   .star-2 {
     display:block;
@@ -64,6 +68,10 @@
     -webkit-animation-duration: 10s;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-name: pulse;
+    -moz-animation-duration: 10s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
   }
   .star-3 {
     display:block;
@@ -79,6 +87,10 @@
     -webkit-animation-duration: 8s;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-name: pulse;
+    -moz-animation-duration: 8s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
   }
   .star-4 {
     display:block;
@@ -94,6 +106,10 @@
     -webkit-animation-duration: 7s;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-name: pulse;
+    -moz-animation-duration: 7s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
   }
   .star-5 {
     display:block;
@@ -109,6 +125,10 @@
     -webkit-animation-duration: 12s;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-name: pulse;
+    -moz-animation-duration: 12s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
   }
   .moon {
     display:block;
@@ -124,6 +144,10 @@
     -webkit-animation-duration: 240s;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
+    -moz-animation-name: rotate;
+    -moz-animation-duration: 240s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
   }
   .planet {
     display:none;
@@ -139,6 +163,10 @@
     -webkit-animation-duration: 1000s;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
+    -moz-animation-name: rotate;
+    -moz-animation-duration: 1000s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
   }
   .planet2 {
     display:block;
@@ -154,6 +182,10 @@
     -webkit-animation-duration: 1500s;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
+    -moz-animation-name: rotate;
+    -moz-animation-duration: 1500s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
   }
   @-webkit-keyframes pulse {
     from {
@@ -181,6 +213,34 @@
     }
     to {
       -webkit-transform: rotate(360deg);
+    }
+  }
+  @-moz-keyframes pulse {
+    from {
+      opacity:0;
+    }
+    25% {
+      opacity:.50;
+    }
+    50% {
+      opacity:.25;
+    }
+    75% {
+      opacity:1;
+    }
+    to {
+      opacity:0;
+    }
+  }
+  @-moz-keyframes rotate {
+    from {
+      -moz-transform: rotate(0deg);
+    }
+    50% {
+      -moz-transform: rotate(180deg);
+    }
+    to {
+      -moz-transform: rotate(360deg);
     }
   }
   </style>
