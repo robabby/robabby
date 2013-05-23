@@ -3,7 +3,7 @@
   ob_start();
   try {
   include('/assets/inc/title.inc.php'); 
-  require_once('./assets/inc/recaptchalib.php');
+  require_once('/assets/inc/recaptchalib.php');
   $public_key = '6Le94s0SAAAAAO8OAEo_r6LJCbV5NuHgPk_lI15n';
   $private_key = '6Le94s0SAAAAAEiGVQDaX_4uMnP3YTaSbNgDfoC-';
   $errors = array();
@@ -12,7 +12,7 @@
   if (isset($_POST['send'])) {
     //email processing script
     include('./assets/inc/nuke_magic_quotes.php');
-    $to = 'rob@rawdesigns.net'; // Use your own email address
+    $to = 'robabby23@gmail.com'; // Use your own email address
     $subject = 'Feedback Form';
 
     // List expected fields 
