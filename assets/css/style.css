@@ -561,7 +561,7 @@ footer .copy {
   height:100%;
   width:100%;
   background-color: #000;
-  background-image:url('/images/stars.jpg');
+  background-image:url('/assets/img/stars.jpg');
   background-position:top center;
   background-repeat:no-repeat;
 }
@@ -699,8 +699,8 @@ a.jms-link:hover {
   position: absolute;
   text-align: center;
   left: 0px;
-  bottom: 42px;
-  z-index: 1000;
+  top: -2px;
+  z-index: 10000;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;

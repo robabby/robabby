@@ -3,7 +3,53 @@
   ob_start();
   try {
   include('/assets/inc/title.inc.php'); 
-  include('/assets/inc/user_agent.php');
+  require_once('./assets/inc/recaptchalib.php');
+  $public_key = '6Le94s0SAAAAAO8OAEo_r6LJCbV5NuHgPk_lI15n';
+  $private_key = '6Le94s0SAAAAAEiGVQDaX_4uMnP3YTaSbNgDfoC-';
+  $errors = array();
+  $missing = array();
+  // Check if the form is submitted
+  if (isset($_POST['send'])) {
+    //email processing script
+    include('./assets/inc/nuke_magic_quotes.php');
+    $to = 'rob@rawdesigns.net'; // Use your own email address
+    $subject = 'Feedback Form';
+
+    // List expected fields 
+    $expected = array('name', 'email', 'comments', 'website', 'twitter');
+    //$expected = array('name', 'email', 'comments', 'subscribe', 'interests');
+
+    // Set required fields
+    $required = array ('name', 'email', 'comments');
+    //$required = array ('name', 'email', 'comments', 'subscribe', 'interests');
+
+    // set default values for variables that might not exist
+    if (!isset($_POST['subscribe'])) {
+      $_POST['subscribe'] = '';
+    }
+    if (!isset($_POST['interests'])) {
+      $_POST['interests'] = array();
+    }
+    // Require a minimum number of checkboxes
+    $minCheckboxes = 1;
+    if (count($_POST['interests'])) {
+      $_POST['interests'] = array();
+    }
+    // Create additional headers
+    $headers = "From: Raw Designs<rob@rawdesigns.net>\r\n";
+    $headers .= "Cc: robabby23@gmail.com\r\n";
+    $headers .= 'Content-Type: text/plain; charset=utf-8';
+    $response = recaptcha_check_answer($private_key, $_SERVER['REMOTE_ADDR'],
+      $_POST['recaptcha_challenge_field'], $_POST['recaptcha_response_field']);
+    if (!$response->is_valid) {
+      $errors['recaptcha'] = true;
+    }
+    require('./assets/inc/processmail.inc.php');
+    if ($mailSent) {
+      header('Location: thank_you.php');
+      exit;
+    }
+  }
 ?>
 <!doctype html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
@@ -137,7 +183,7 @@
     right:-250px;
     width:544px;
     height:544px;
-    background-image:url('/images/moon.png');
+    background-image:url('/assets/img/moon.png');
     background-position: 0px 0px;
     background-repeat: no-repeat;
     -webkit-animation-name: rotate;
@@ -156,7 +202,7 @@
     left:-350px;
     width:921px;
     height:921px;
-    background-image:url('/images/planet.png');
+    background-image:url('/assets/img/planet.png');
     background-position: 0px 0px;
     background-repeat: no-repeat;
     -webkit-animation-name: rotate;
@@ -175,7 +221,7 @@
     left:-550px;
     width:1320px;
     height:1324px;
-    background-image:url('/images/planet2.png');
+    background-image:url('/assets/img/planet2.png');
     background-position: 0px 0px;
     background-repeat: no-repeat;
     -webkit-animation-name: rotate;
@@ -244,6 +290,11 @@
     }
   }
   </style>
+  <script type="text/javascript">
+   var RecaptchaOptions = {
+      theme : 'white'
+   };
+   </script>
 </head>
 <body id="outer_space">
 <!-- ## IE CHECK ## -->
@@ -289,7 +340,7 @@
         <h3>Follow me</h3>
         <a class="jms-link" href="http://twitter.com/stat30fbliss">@stat30fbliss</a>
       </div>
-      <img class="inset2" src="images/calvin_sandbox.jpg" />
+      <img class="inset2" src="/assets/img/calvin_sandbox.jpg" />
     </div>
   </section>
 </div>
