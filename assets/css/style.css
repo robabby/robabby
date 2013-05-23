@@ -766,23 +766,35 @@ a.jms-link:hover {
 }
 .jms-arrows span.jms-arrows-prev{
   background-color: rgba(255, 255, 255, 0.75);
-  background-image: url(../../images/arrow_left.png);
+  background-image: url(/assets/img/arrow_left.png);
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  left: -5px;
+  left: -25px;
+  -webkit-transition: all .25s ease-in-out;
+  -moz-transition: all .25s ease-in-out;
+  -ms-transition: all .25s ease-in-out;
+  -o-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
 }
 .jms-arrows span.jms-arrows-prev:hover{
   background-color: rgba(255, 255, 255, 1);
+  left:-5px;
 }
 .jms-arrows span.jms-arrows-next{
   background-color: rgba(255, 255, 255, 0.75);
-  background-image: url(../../images/arrow_right.png);
+  background-image: url(/assets/img/arrow_right.png);
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  right: -5px;
+  right: -25px;
+  -webkit-transition: all .25s ease-in-out;
+  -moz-transition: all .25s ease-in-out;
+  -ms-transition: all .25s ease-in-out;
+  -o-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
 }
 .jms-arrows span.jms-arrows-next:hover{
   background-color: rgba(255, 255, 255, 1);
+  right:-5px;
 }
 /* Not supported style */
 .jms-wrapper.not-supported{
