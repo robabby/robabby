@@ -355,13 +355,13 @@
 <script type="text/javascript" src="/assets/js/queryloader2.js"></script>
 <script type='text/javascript'>
   $(document).ready(function () {
-      $("body").queryLoader2({
+      /*$("body").queryLoader2({
         percentage: false,
         backgroundColor: '#121212',
         barHeight: 5,
         barColor: '#FFF',
         completeAnimation: 'grow'
-      });
+      });*/
   });
 </script>
 </body>
