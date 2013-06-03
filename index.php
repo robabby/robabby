@@ -2,8 +2,8 @@
   $path2root = $_SERVER['DOCUMENT_ROOT'];
   ob_start();
   try {
-  include('/assets/inc/title.inc.php'); 
-  require_once('/assets/inc/recaptchalib.php');
+  include('./assets/inc/title.inc.php'); 
+  require_once('./assets/inc/recaptchalib.php');
   $public_key = '6Le94s0SAAAAAO8OAEo_r6LJCbV5NuHgPk_lI15n';
   $private_key = '6Le94s0SAAAAAEiGVQDaX_4uMnP3YTaSbNgDfoC-';
   $errors = array();
@@ -61,7 +61,7 @@
     <link rel="stylesheet" type="text/css" href="/assets/css/style_ie.css" />
 <![endif]-->
 <head>
-  <?php include('/assets/inc/head.inc.php'); ?>
+  <?php include('./assets/inc/head.inc.php'); ?>
   <link rel="stylesheet" href="/assets/css/queryLoader.css" type="text/css" />
   <noscript>
     <style>
@@ -329,12 +329,14 @@
         <p>I am currently cleaning some things up...</p>
       </div>
     </div>
+    <!--
     <div class="step" data-color="color-2" data-x="350" data-y="1500" data-scale="0.25" data-rotate-x="360">
       <div class="jms-content">
         <h3>Questions?</h3>
         <p>Click the gear in the bottom left to send me a message</p>
       </div>
     </div>
+    -->
     <div class="step" data-color="color-5" data-x="4500" data-z="1000" data-rotate-y="45">
       <div class="jms-content">
         <h3>Follow me</h3>
@@ -355,13 +357,13 @@
 <script type="text/javascript" src="/assets/js/queryloader2.js"></script>
 <script type='text/javascript'>
   $(document).ready(function () {
-      /*$("body").queryLoader2({
+      $("body").queryLoader2({
         percentage: false,
         backgroundColor: '#121212',
         barHeight: 5,
         barColor: '#FFF',
         completeAnimation: 'grow'
-      });*/
+      });
   });
 </script>
 </body>
