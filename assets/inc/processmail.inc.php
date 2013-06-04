@@ -37,11 +37,11 @@
 	// Validate the users email
 	if (!$suspect && !empty($email)) {
 		$validemail = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
-			if ($validemail) {
-				$headers .= "\r\nReply-to: $validemail";
-			} else {
-				$errors['email'] = true;
-			}
+		if ($validemail) {
+			$headers .= "\r\nReply-to: $validemail";
+		} else {
+			$errors['email'] = true;
+		}
 	}
 	
 	$mailSent = false;
