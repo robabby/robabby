@@ -1,7 +1,9 @@
 <?php
+
 function convertToParas($text) {
   return preg_replace('/[\r\n]+/', '</p><p>', $text);
 }
+
 function getFirst($text, $number=2) {
   // use regex to split into sentences
   $sentences = preg_split('/([.?!]["\']?\s)/', $text, $number+1, PREG_SPLIT_DELIM_CAPTURE);
@@ -15,6 +17,7 @@ function getFirst($text, $number=2) {
   $result[1] = $remainder;
   return $result;
 }
+
 function convertDateToMySQL($month, $day, $year) {
   $month = trim($month);
   $day = trim($day);
