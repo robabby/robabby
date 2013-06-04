@@ -45,10 +45,14 @@
       $errors['recaptcha'] = true;
     }
     require('./assets/inc/processmail.inc.php');
+    
+    /*
     if ($mailSent) {
       header('Location: thank_you.php');
       exit;
     }
+    */
+    
   }
 ?>
 <!doctype html>
