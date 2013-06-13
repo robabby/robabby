@@ -144,7 +144,7 @@
 
 <script type="text/javascript">
   $(function() {
-    $( '#jms-slideshow' ).jmslideshow();
+    $('#jms-slideshow').jmslideshow();
   });
 </script>
 <script type="text/javascript" src="/assets/js/queryloader2.js"></script>
