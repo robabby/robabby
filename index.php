@@ -52,7 +52,7 @@
       exit;
     }
     */
-    
+
   }
 ?>
 <!doctype html>
@@ -120,17 +120,16 @@
     <div class="step" data-color="color-1">
       <div class="jms-content">
         <h3>Welcome!</h3>
-        <p>I am currently cleaning some things up...</p>
+        <p>My name is Rob, and I am a Web Developer</p>
       </div>
     </div>
-    <!--
     <div class="step" data-color="color-2" data-x="350" data-y="1500" data-scale="0.25" data-rotate-x="360">
       <div class="jms-content">
-        <h3>Questions?</h3>
-        <p>Click the gear in the bottom left to send me a message</p>
+        <h3>Pardon My Dust</h3>
+        <p>I am currently doing some rearranging my website.  Please find me through my social networks, or:</p>
+        <a class="jms-link" data-toggle="modal" href="#contact">send me a direct message.</a>  </p>
       </div>
     </div>
-    -->
     <div class="step" data-color="color-5" data-x="4500" data-z="1000" data-rotate-y="45">
       <div class="jms-content">
         <h3>Follow me</h3>

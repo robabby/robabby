@@ -697,9 +697,9 @@ footer .copy {
     -moz-animation-timing-function: linear;
   }
   .planet {
-    display:none;
+    display:block;
     position:absolute;
-    bottom:-500px;
+    top:-500px;
     left:-350px;
     width:921px;
     height:921px;
