@@ -1,5 +1,5 @@
 <!--[if lt IE 9]>
-<div class="modal" id="contact">
+<div class="modal">
   <div class="modal-header">
     <a class="close" data-dismiss="modal">×</a>
     <h3>Woah there!</h3>

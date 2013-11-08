@@ -45,14 +45,12 @@
       $errors['recaptcha'] = true;
     }
     require('./assets/inc/processmail.inc.php');
-    
     /*
     if ($mailSent) {
       header('Location: thank_you.php');
       exit;
     }
     */
-
   }
 ?>
 <!doctype html>
@@ -61,105 +59,47 @@
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-<!--[if lt IE 9]>
-    <link rel="stylesheet" type="text/css" href="/assets/css/style_ie.css" />
-<![endif]-->
 <head>
   <?php include('./assets/inc/head.inc.php'); ?>
-  <link rel="stylesheet" href="/assets/css/queryLoader.css" type="text/css" />
-  <noscript>
-    <style>
-    .step {
-      width: 100%;
-      position: relative;
-    }
-    .step:not(.active) {
-      opacity: 1;
-      filter: alpha(opacity=99);
-      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=99)";
-    }
-    .step:not(.active) a.jms-link{
-      opacity: 1;
-      margin-top: 40px;
-    }
-    </style>
-  </noscript>
-  <script type="text/javascript">
-   var RecaptchaOptions = {
-      theme : 'white'
-   };
-   </script>
 </head>
-<body id="outer_space">
-<!-- ## IE CHECK ## -->
-<?php include("$path2root/assets/inc/iecheck.inc.php"); ?>
-<!-- ## IE CHECK ## -->
-
-<!-- ## CONTACT MODAL ## -->
-<?php include('./assets/inc/contactModal.inc.php'); ?>
-<!-- ## CONTACT MODAL ## -->
-
-<!-- ## HEADER & NAV ## -->
-<?php //include('./assets/inc/nav.inc.php'); ?>
-<!-- ## HEADER & NAV ## -->
-
-<div id="container" class="container">
-  
-  <!-- ##### SOLAR SYSTEM ##### -->
-  <div id="star" class="star-1"></div>
-  <div id="star" class="star-2"></div>
-  <div id="star" class="star-3"></div>
-  <div id="star" class="star-4"></div>
-  <div id="star" class="star-5"></div>
-  <div id="moon" class="moon"></div>
-  <div id="planet" class="planet"></div>
-  <div id="planet2" class="planet2"></div>
-  <!-- ##### SOLAR SYSTEM ##### -->
-  
-  <section id="jms-slideshow" class="jms-slideshow">
-    <div class="step" data-color="color-1">
-      <div class="jms-content">
-        <h3>Welcome!</h3>
-        <p>My name is Rob, and I am a Web Developer</p>
+  <body>
+    <!-- ## IE CHECK ## -->
+    <?php include("$path2root/assets/inc/iecheck.inc.php"); ?>
+    <!-- ## CONTACT MODAL ## -->
+    <?php include('./assets/inc/contactModal.inc.php'); ?>
+    <!-- ## HEADER & NAV ## -->
+    <?php include('./assets/inc/nav.inc.php'); ?>
+    <div class="stage-wrapper">
+      <div class="fullscreen img-overlay"></div>
+      <img id="bkgd" class="fullscreen" src="/assets/img/calvin_hobbes.jpg"/>
+      <div class="stage">
+        <img class="profile-img img-circle animated bounceInUp" src="/assets/img/profile.jpg" />
+        <ul class="social-wrapper">
+          <li class="social-icon">
+            <i class="icon-twitter icon-white icon-4x"></i>
+          </li>
+          <li class="social-icon">
+            <i class="icon-github icon-white icon-4x"></i>
+          </li>
+          <li class="social-icon">
+            <i class="icon-google-plus icon-white icon-4x"></i>
+          </li>
+        </ul>
       </div>
     </div>
-    <div class="step" data-color="color-2" data-x="350" data-y="1500" data-scale="0.25" data-rotate-x="360">
-      <div class="jms-content">
-        <h3>Pardon My Dust</h3>
-        <p>I am currently doing some rearranging my website.  Please find me through my social networks, or:</p>
-        <a class="jms-link" data-toggle="modal" href="#contact">send me a direct message.</a>  </p>
-      </div>
-    </div>
-    <div class="step" data-color="color-5" data-x="4500" data-z="1000" data-rotate-y="45">
-      <div class="jms-content">
-        <h3>Follow me</h3>
-        <a class="jms-link" href="http://twitter.com/stat30fbliss">@stat30fbliss</a>
-      </div>
-      <img class="inset2" src="/assets/img/calvin_sandbox.jpg" />
-    </div>
-  </section>
-</div>
+    <?php include('./assets/inc/footer.inc.php'); ?>
+    <script>
+    (function($) {
+      var $profileImg = $('.profile-img');
 
-<?php include('./assets/inc/footer.inc.php'); ?>
-
-<script type="text/javascript">
-  $(function() {
-    $('#jms-slideshow').jmslideshow();
-  });
-</script>
-<script type="text/javascript" src="/assets/js/queryloader2.js"></script>
-<script type='text/javascript'>
-  $(document).ready(function () {
-      $("body").queryLoader2({
-        percentage: false,
-        backgroundColor: '#121212',
-        barHeight: 5,
-        barColor: '#FFF',
-        completeAnimation: 'grow'
+      $profileImg.hover(function() {
+        $this = $(this);
+        $this.removeClass('bounceInUp');
+        $this.addClass('flip');
       });
-  });
-</script>
-</body>
+    })(jQuery);
+    </script>
+  </body>
 </html>
 <?php
   } catch (exception $e) {
