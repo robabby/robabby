@@ -27,4 +27,3 @@
   <script src="/assets/js/libs/modernizr-2.5.3.min.js"></script>
   <script src="/assets/js/libs/jquery.js"></script>
   <script src="/assets/js/libs/less.js"></script>
-  

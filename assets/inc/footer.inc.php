@@ -29,4 +29,3 @@ if ($handle = opendir("$path2root/assets/js")) {
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script>
-  

@@ -166,6 +166,7 @@ html, body {
   width:257px;
   margin:0 auto;
   padding:0;
+  background-color:transparent;
 
   .social-icon {
     display: inline-block;
@@ -173,9 +174,26 @@ html, body {
     opacity:0;
     color:#fff;
     text-shadow:0px 0px 5px #000;
+    transition:all 250ms ease-in-out;
 
     a {
+      display: block;
       color: inherit;
+    }
+
+    a i {
+      opacity:.6;
+      transition:all 250ms ease-in-out;
+    }
+    
+    &:hover,
+    &:active {
+      background-color:rgba(25, 150, 255, .7);
+    }
+    
+    &:hover a i,
+    &:active a i {
+      opacity:.8;
     }
   }
 }
