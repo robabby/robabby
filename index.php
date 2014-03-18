@@ -31,17 +31,17 @@
         <nav id="social">
           <ul class="social-wrapper">
             <li class="animated social-icon">
-              <a href="#">
+              <a href="http://twitter.com/stat30fbliss">
                 <i class="fa fa-twitter fa-5x"></i>
               </a>
             </li>
             <li class="animated social-icon">
-              <a href="#">
+              <a href="http://linkedin.com/in/robabby">
                 <i class="fa fa-linkedin-square fa-5x"></i>
               </a>
             </li>
             <li class="animated social-icon">
-              <a href="#">
+              <a href="http://github.com/stat30fbliss">
                 <i class="fa fa-github fa-5x"></i>
               </a>
             </li>
