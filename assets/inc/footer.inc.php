@@ -18,7 +18,6 @@ if ($handle = opendir("$path2root/assets/js")) {
 }
 ?>
 <script type="text/javascript">
-/*
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-32901659-1']);
   _gaq.push(['_setDomainName', 'robabby.com']);
@@ -29,6 +28,5 @@ if ($handle = opendir("$path2root/assets/js")) {
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
-*/
 </script>
   
