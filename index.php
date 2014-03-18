@@ -21,10 +21,10 @@
         <img class="profile-img img-circle animated bounceInUp" src="/assets/img/profile.jpg" />
         <div class="info animated">
           <h1 class="first-last">Rob Abby</h1>
-          <h2>Software Developer</h2>
+          <h2>Web Developer</h2>
           <br />
           <br />
-          <a href="#" class="more-info">
+          <a href="javascript:void(0)" class="more-info">
             <i class="fa fa-info-circle fa-2x"></i>
           </a>
         </div>
@@ -49,6 +49,36 @@
         </nav>
         <div class="bio animated">
           <a class="close" href="javascript:void(0)">x</a>
+          <h3>Hey there</h3>
+          <p>My name is Rob Abby, and I am a Web Developer.  I focus mostly on the front-end, but can traverse the whole stack.  
+          I am passionate about sexy interfaces and new technologies, and try to steer clear of things that hold back innovation.</p>
+          
+          <h4>Things I know:</h4>
+          <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript/jQuery</li>
+            <li>PHP</li>
+            <li>Responsive Design</li>
+            <li>Git</li>
+          </ul>
+          
+          <h4>Things I kind of know:</h4>
+          <ul>
+            <li>MEAN Stack (Mongo, Express, Angular, Node)</li>
+            <li>ASP.NET MVC</li>
+            <li>Ruby on Rails - Jekyll</li>
+            <li>PhoneGap - Android</li>
+          </ul>
+          
+          <h4>Tools I Use</h4>
+          <ul>
+            <li>Chrome Dev Tools</li>
+            <li>Sublime Text</li>
+            <li>Visual Studio 2013</li>
+            <li>Fireworks CS6</li>
+            <li>XAMPP &amp; IIS</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -62,6 +92,10 @@
           $bio = $('.bio'),
           $close = $('.close'),
           vanilla = true;
+
+      if(navigator.userAgent.match(/Android/i)){
+        window.scrollTo(0,1);
+      }
 
       $bio.hide();
 
@@ -81,47 +115,56 @@
       // Flip the profile image on hover
       $profileImg.hover(function() {
         $this = $(this);
-        $this.removeClass('bounceInUp');
-        $this.addClass('flip');
+        if($this.hasClass('bounceInUp')) {
+          $this.removeClass('bounceInUp');
+        }
+        if($this.hasClass('bounceInDown')) {
+          $this.removeClass('bounceInDown');  
+        }
+        $this.toggleClass('flip');
       });
 
       $moreInfo.on('click', function() {
         var $this = $(this);
         
+        // Handle profile image styles
         if($profileImg.hasClass('bounceInDown')) {
           $profileImg.removeClass('bounceInDown'); 
-        } else if ($profileImg.hasClass('flip')) {
+        }
+        if ($profileImg.hasClass('bounceInUp')) {
+          $profileImg.removeClass('bounceInUp');
+        }
+        if ($profileImg.hasClass('flip')) {
           $profileImg.removeClass('flip');
         }
-
         $profileImg.addClass('bounceOutUp');
 
         // Clean up the info element
         if ($info.hasClass('bounceInUp')) {
           $info.removeClass('bounceInUp');
         }
-
         // Animate out .info div
         $info.addClass('bounceOutDown');
 
+        
         // Clean up the .bio element
         if ($bio.hasClass('flipOutX')) {
           $bio.removeClass('flipOutX');
         }
-
         // Unhide the modal
         $bio.show(); 
-
-        setInterval(function() {
+        setTimeout(function() {
           $bio.addClass('flipInX visible');
         }, 250);
       });
 
-      $close.on('click', function(e) {
+      $close.on('click', function() {
+        $bio.removeClass('flipInX');
+
         // Remove the .bio element from the view
         $bio.addClass('flipOutX');
 
-        setInterval(function() {
+        setTimeout(function() {
           // Clean up elements
           $profileImg.removeClass('bounceOutUp');
           $info.removeClass('bounceOutDown');
@@ -130,6 +173,8 @@
           $profileImg.addClass('bounceInDown');
           $info.addClass('bounceInUp');
 
+
+          $bio.removeClass('visible');
           $bio.hide();
         }, 500);
       });
