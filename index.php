@@ -24,25 +24,6 @@
             <i class="fa fa-info-circle fa-2x"></i>
           </a>
         </div>
-        <nav id="social">
-          <ul class="social-wrapper">
-            <li class="animated social-icon">
-              <a href="http://twitter.com/stat30fbliss">
-                <i class="fa fa-twitter fa-5x"></i>
-              </a>
-            </li>
-            <li class="animated social-icon">
-              <a href="http://linkedin.com/in/robabby">
-                <i class="fa fa-linkedin-square fa-5x"></i>
-              </a>
-            </li>
-            <li class="animated social-icon">
-              <a href="http://github.com/stat30fbliss">
-                <i class="fa fa-github fa-5x"></i>
-              </a>
-            </li>
-          </ul>
-        </nav>
         <div class="bio animated">
           <a class="close" href="javascript:void(0)">x</a>
           <h3>Hey there</h3>
@@ -76,6 +57,25 @@
             <li>XAMPP &amp; IIS</li>
           </ul>
         </div>
+        <nav id="social">
+          <ul class="social-wrapper">
+            <li class="animated social-icon">
+              <a href="http://twitter.com/stat30fbliss">
+                <i class="fa fa-twitter fa-5x"></i>
+              </a>
+            </li>
+            <li class="animated social-icon">
+              <a href="http://linkedin.com/in/robabby">
+                <i class="fa fa-linkedin-square fa-5x"></i>
+              </a>
+            </li>
+            <li class="animated social-icon">
+              <a href="http://github.com/stat30fbliss">
+                <i class="fa fa-github fa-5x"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </section>
     <script type="text/javascript" src="/assets/js/index.js"></script>
