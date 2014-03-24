@@ -61,7 +61,7 @@
     
       // Unhide the modal
       $bio.show(); 
-      
+
       $bio.addClass('flipInX visible');
       bioOpen = true;
     }, 250);
@@ -98,6 +98,8 @@
       $bio.removeClass('visible');
       $bio.hide();
     }, 500);
+
+    bioOpen = false;
 
     return false;
   }
