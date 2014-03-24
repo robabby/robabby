@@ -10,10 +10,6 @@
   <?php include('./assets/inc/head.inc.php'); ?>
 </head>
   <body>
-    <!-- ## IE CHECK ## -->
-    <?php include("$path2root/assets/inc/iecheck.inc.php"); ?>
-    <!-- ## HEADER & NAV ## -->
-    <?php include('./assets/inc/nav.inc.php'); ?>
     <section class="stage-wrapper">
       <div class="fullscreen img-overlay"></div>
       <img id="bkgd" class="fullscreen" src="/assets/img/calvin_hobbes.jpg"/>
@@ -89,9 +85,9 @@
           $info = $('.info'),
           $moreInfo = $('.more-info'),
           $socialIcon = $('.social-icon'),
-          $bio = $('.bio'),
           $close = $('.close'),
-          vanilla = true;
+          $bio = $('.bio'),
+          bioOpen = false;
 
       if(navigator.userAgent.match(/Android/i)){
         window.scrollTo(0,1);
@@ -155,10 +151,20 @@
         $bio.show(); 
         setTimeout(function() {
           $bio.addClass('flipInX visible');
+          bioOpen = true;
         }, 250);
       });
 
+      $(document).on('click', function(e) {
+        if (bioOpen && (e.target != $bio) && (e.target != $close)) {
+          closeModal();
+        }
+      })
+
       $close.on('click', function() {
+        closeModal();
+      });
+      function closeModal() {
         $bio.removeClass('flipInX');
 
         // Remove the .bio element from the view
@@ -177,7 +183,7 @@
           $bio.removeClass('visible');
           $bio.hide();
         }, 500);
-      });
+      }
     })(jQuery);
     </script>
   </body>
