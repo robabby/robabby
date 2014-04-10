@@ -1,26 +1,31 @@
 (function($) {
-  var $profileImg = $('.profile-img'),
+  var $stage = $('.stage'),
+      $profileImg = $('.profile-img'),
       $info = $('.info'),
       $moreInfo = $('.more-info'),
       $socialIcon = $('.social-icon'),
       $close = $('.close'),
       $bio = $('.bio'),
-      bioOpen = false;
+      overlayHtml = '<div class="overlay"></div>',
+      bioOpen = false,
+      socialWidth = 0;
 
   $bio.hide();
 
-  // Dont show the social icons until 1.5 seconds after the DOM has loaded
-  setInterval(function() {
-    $socialIcon.each(function (i) {
-      // store the item around for use in the 'timeout' function
-      var $item = $(this); 
-      // execute this function sometime later:
-      setTimeout(function() { 
-        $item.addClass('slideInLeft visible');
-      }, 500 * i);
-      // each element should animate half a second after the last one.
-    });
-  }, 1500);
+  $socialIcon.each(function (i) {
+    // store the item around for use in the 'timeout' function
+    var $this = $(this);
+
+    socialWidth += $this.outerWidth(true);
+    console.log(socialWidth);
+    // execute this function sometime later:
+    setTimeout(function() { 
+      $this.addClass('slideInLeft visible');
+    }, 150 * i);
+    // each element should animate half a second after the last one.
+  });
+
+  console.log("outerWidth: " + socialWidth + " - width: " + $socialIcon.width());
 
   // Flip the profile image on hover
   $profileImg.hover(function() {
@@ -61,14 +66,17 @@
     
       // Unhide the modal
       $bio.show(); 
+      $stage.append(overlayHtml);
 
       $bio.addClass('flipInX visible');
       bioOpen = true;
     }, 250);
   });
 
+  // Close bio if open and clicking off of element
   $(document).on('click', function(e) {
-    if (bioOpen && (e.target != $bio) && (e.target != $close)) {
+    var $target = $(e.target);
+    if (bioOpen && $target.is('.overlay')) {
       closeModal();
     }
   })
@@ -94,13 +102,13 @@
       $profileImg.addClass('bounceInDown');
       $info.addClass('bounceInUp');
 
-
+      $('.overlay').remove();
       $bio.removeClass('visible');
       $bio.hide();
     }, 500);
 
     bioOpen = false;
 
-    return false;
+    return true;
   }
 })(jQuery);
