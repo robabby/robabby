@@ -1,5 +1,5 @@
 <?php 
-  $path2root = $_SERVER['DOCUMENT_ROOT'];
+  $root = $_SERVER['DOCUMENT_ROOT'];
   ob_start();
   try {
   include('./assets/inc/title.inc.php');
@@ -36,6 +36,7 @@
             <li>CSS3</li>
             <li>JavaScript/jQuery</li>
             <li>PHP</li>
+            <li>C#/Razor</li>
             <li>Responsive Design</li>
             <li>Git</li>
           </ul>
@@ -50,8 +51,7 @@
           
           <h4>Tools I Use</h4>
           <ul>
-            <li>Chrome Dev Tools</li>
-            <li>Sublime Text</li>
+            <li>Sublime Text 3</li>
             <li>Visual Studio 2013</li>
             <li>Fireworks CS6</li>
             <li>XAMPP &amp; IIS</li>
