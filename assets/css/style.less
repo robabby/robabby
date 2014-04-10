@@ -35,7 +35,6 @@
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   box-sizing:border-box;
-  .hardware-accel
 }
 html, body {
   position: relative;
@@ -214,7 +213,7 @@ and (orientation : portrait) {
     position: absolute;
     max-width:150px;
     left:50%;
-    top:15%;
+    top:20%;
     margin:-75px 0 0 -75px;
     padding:5px;
     background-color:rgba(255, 255, 255, .9);
@@ -222,7 +221,42 @@ and (orientation : portrait) {
   }
 
   .info {
-    top: 30%;
+    top: 32%;
+    position: relative;
+    text-align: center;
+    color:#fff;
+
+    h1 {
+      font-family:@tradeGotchic;
+      font-size:75px;
+      line-height:120%;
+    }
+    h2 {
+      font-family: @nixieOne;
+      font-size: 25px;
+      line-height: 1;
+    }
+  }
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px)
+and (orientation : landscape) {
+  .profile-img {
+    display: block;
+    position: absolute;
+    max-width:100px;
+    left:50%;
+    top:20%;
+    margin:-75px 0 0 -75px;
+    padding:5px;
+    background-color:rgba(255, 255, 255, .9);
+    border:1px solid #ccc;
+  }
+
+  .info {
+    top: 32%;
     position: relative;
     text-align: center;
     color:#fff;
