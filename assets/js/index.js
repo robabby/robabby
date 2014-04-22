@@ -25,7 +25,7 @@
     // each element should animate half a second after the last one.
   });
 
-  console.log("outerWidth: " + socialWidth + " - width: " + $socialIcon.width());
+  // console.log("outerWidth: " + socialWidth + " - width: " + $socialIcon.width());
 
   // Flip the profile image on hover
   $profileImg.hover(function() {
