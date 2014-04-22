@@ -28,22 +28,24 @@
           <a class="close" href="javascript:void(0)">x</a>
           <h3>Hey there</h3>
           <p>My name is Rob Abby, and I am a Web Developer.  I focus mostly on the front-end, but can traverse the whole stack.  
-          I am passionate about sexy interfaces and new technologies, and try to steer clear of things that hold back innovation.</p>
+          I am passionate about sexy interfaces and new technologies.</p>
+
+          <p>I am currently a Software Developer for <a href="http://savogroup.com">The Savo Group</a>.</p>
           
           <h4>Things I know:</h4>
           <ul>
             <li>HTML5</li>
             <li>CSS3</li>
             <li>JavaScript/jQuery</li>
-            <li>PHP</li>
-            <li>C#/Razor</li>
             <li>Responsive Design</li>
             <li>Git</li>
           </ul>
           
           <h4>Things I kind of know:</h4>
           <ul>
-            <li>MEAN Stack (Mongo, Express, Angular, Node)</li>
+            <li>Grunt.js</li>
+            <li>Node.js &amp; Express.js</li>
+            <li>PHP/Laravel</li>
             <li>ASP.NET MVC</li>
             <li>Ruby on Rails - Jekyll</li>
             <li>PhoneGap - Android</li>
