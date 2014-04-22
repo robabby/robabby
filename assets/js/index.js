@@ -17,12 +17,10 @@
     var $this = $(this);
 
     socialWidth += $this.outerWidth(true);
-    console.log(socialWidth);
-    // execute this function sometime later:
+    // console.log(socialWidth);
     setTimeout(function() { 
       $this.addClass('slideInLeft visible');
     }, 150 * i);
-    // each element should animate half a second after the last one.
   });
 
   // console.log("outerWidth: " + socialWidth + " - width: " + $socialIcon.width());
@@ -111,4 +109,4 @@
 
     return true;
   }
-})(jQuery);
+})(window.jQuery);

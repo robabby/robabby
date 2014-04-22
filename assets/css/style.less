@@ -60,7 +60,7 @@ html, body {
   z-index: -1;
 }
 .img-overlay {
-  background-color: rgba(0, 0, 0, .80);
+  background-color: rgba(0, 0, 0, .65);
   z-index: 0;
 }
 
@@ -98,6 +98,7 @@ html, body {
   position: relative;
   text-align: center;
   color:#fff;
+  text-shadow:0px 0px 5px rgba(0, 0, 0, .5);
 
   h1 {
     font-family:@tradeGotchic;
@@ -108,6 +109,12 @@ html, body {
     font-family: @nixieOne;
     font-size: 35px;
     line-height: 1;
+  }
+  .more-info {
+    color:#fff;
+    &:hover {
+      color:#ddd;
+    }
   }
 }
 .profile-img {
