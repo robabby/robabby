@@ -39,6 +39,8 @@
             <li>JavaScript/jQuery</li>
             <li>Responsive Design</li>
             <li>Git</li>
+            <li>Bootstrap</li>
+            <li>LESS</li>
           </ul>
           
           <h4>Things I kind of know:</h4>
