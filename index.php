@@ -36,18 +36,19 @@
           <ul>
             <li>HTML5</li>
             <li>CSS3</li>
+            <li><a href="http://lesscss.org">LESS</a></li>
             <li>JavaScript/jQuery</li>
             <li>Responsive Design</li>
-            <li>Git</li>
-            <li>Bootstrap</li>
-            <li>LESS</li>
+            <li>Git and <a href="http://github.com/stat30fbliss">Github</a></li>
+            <li><a href="http://yeoman.io">Yeoman</a></li>
+            <li><a href="http://gruntjs.com">Grunt</a></li>
+            <li><a href="http://bower.io">Bower</a></li>
+            <li><a href="http://getbootstrap.com">Bootstrap</a></li>
           </ul>
           
           <h4>Things I kind of know:</h4>
           <ul>
-            <li>Grunt</li>
-            <li>Bower</li>
-            <li>Node.js &amp; Express.js</li>
+            <li>Node &amp; Express</li>
             <li>PHP/Laravel</li>
             <li>ASP.NET MVC</li>
             <li>Ruby on Rails - Jekyll</li>
