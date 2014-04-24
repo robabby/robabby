@@ -45,7 +45,8 @@
           
           <h4>Things I kind of know:</h4>
           <ul>
-            <li>Grunt.js</li>
+            <li>Grunt</li>
+            <li>Bower</li>
             <li>Node.js &amp; Express.js</li>
             <li>PHP/Laravel</li>
             <li>ASP.NET MVC</li>
