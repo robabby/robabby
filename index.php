@@ -27,7 +27,7 @@
         <div class="bio animated">
           <a class="close" href="javascript:void(0)">x</a>
           <h3>Hey there</h3>
-          <p>My name is Rob Abby, and I am a Web Developer.  I focus mostly on the front-end, but can traverse the whole stack.  
+          <p>My name is Rob, and I am a Web Developer.  I focus mostly on the front-end, but can traverse the whole stack.  
           I am passionate about sexy interfaces and new technologies.</p>
 
           <p>I am currently a Software Developer for <a href="http://savogroup.com">The Savo Group</a>.</p>
