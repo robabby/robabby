@@ -51,7 +51,7 @@
             <li>Node &amp; Express</li>
             <li>PHP/Laravel</li>
             <li>ASP.NET MVC</li>
-            <li>Ruby on Rails - Jekyll</li>
+            <li>Ruby on Rails - <a href="http://jekyllrb.com/">Jekyll</a></li>
             <li>PhoneGap - Android</li>
           </ul>
           
