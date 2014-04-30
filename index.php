@@ -31,6 +31,8 @@
           I am passionate about sexy interfaces and new technologies.</p>
 
           <p>I am currently a Software Developer for <a href="http://savogroup.com">The Savo Group</a>.</p>
+
+          <p>You can also take a look at the CSS Resource I developed titled, <a href="http://stat30fbliss.github.io/lunch-and-learn/" title="CSS Lunch &amp; Learn">CSS Lunch &amp; Learn</a>.  The site offers tons of insights and resources for learning some of the more basic aspects of CSS.  It was originally made for co-workers, and I have decided to offer it to the general public.</p>
           
           <h4>Things I know:</h4>
           <ul>
@@ -62,6 +64,7 @@
             <li>Fireworks CS6</li>
             <li>XAMPP &amp; IIS</li>
           </ul>
+
         </div>
         <nav id="social">
           <ul class="social-wrapper">
