@@ -8,6 +8,7 @@ module.exports = function(grunt) {
 		clientViews: ['public/modules/**/views/**/*.html'],
 		clientJS: ['public/js/*.js', 'public/modules/**/*.js'],
 		clientCSS: ['public/modules/**/*.css'],
+		clientLESS: ['public/modules/**/*.less'],
 		mochaTests: ['app/tests/**/*.js']
 	};
 
@@ -47,6 +48,13 @@ module.exports = function(grunt) {
 				options: {
 					livereload: true
 				}
+			},
+			clientLESS: {
+				files: watchFiles.clientLESS,
+				tasks: ['less'],
+				options: {
+					livereload: true,
+				}
 			}
 		},
 		jshint: {
@@ -54,6 +62,16 @@ module.exports = function(grunt) {
 				src: watchFiles.clientJS.concat(watchFiles.serverJS),
 				options: {
 					jshintrc: true
+				}
+			}
+		},
+		less: {
+			development: {
+				options: {
+					paths: ['public/modules/**/styles/']
+				},
+				files: {
+					'public/styles/modules.css': 'public/modules/**/*.less'
 				}
 			}
 		},
@@ -158,7 +176,7 @@ module.exports = function(grunt) {
 	});
 
 	// Default task(s).
-	grunt.registerTask('default', ['lint', 'concurrent:default']);
+	grunt.registerTask('default', ['lint', 'concurrent:default', 'less']);
 
 	// Debug task.
 	grunt.registerTask('debug', ['lint', 'concurrent:debug']);
@@ -170,7 +188,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('lint', ['jshint', 'csslint']);
 
 	// Build task(s).
-	grunt.registerTask('build', ['lint', 'loadConfig', 'ngAnnotate', 'uglify', 'cssmin']);
+	grunt.registerTask('build', ['lint', 'loadConfig', 'ngAnnotate', 'uglify', 'cssmin', 'less']);
 
 	// Test task.
 	grunt.registerTask('test', ['env:test', 'mochaTest', 'karma:unit']);
