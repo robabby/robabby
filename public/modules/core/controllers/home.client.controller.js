@@ -1,9 +1,22 @@
 'use strict';
 
 
-angular.module('core').controller('HomeController', ['$scope', 'Authentication',
-	function($scope, Authentication) {
+angular.module('core').controller('HomeController', ['$scope', '$location', 'Authentication', 'Posts',
+	function($scope, $location, Authentication, Posts) {
 		// This provides Authentication context.
 		$scope.authentication = Authentication;
+		$scope.posts = Posts;
+
+		// Find a list of Posts
+		$scope.find = function() {
+			$scope.posts = Posts.query();
+		};
+
+		// Find existing Post
+		$scope.findOne = function() {
+			$scope.post = Posts.get({
+				postId: $stateParams.postId
+			});
+		};
 	}
 ]);
