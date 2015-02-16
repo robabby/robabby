@@ -22,3 +22,15 @@ Page Styles
 .ng-valid.ng-dirty {
 	border-color: #78FA89;
 }
+
+/*
+Home Page Styles
+*/
+#stage {
+	width:100%;
+	height:500px;
+	background-image:url("../img/el_tracks.jpeg");
+	background-position:center center;
+	background-repeat:no-repeat;
+	background-size:100%;
+}

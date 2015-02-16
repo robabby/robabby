@@ -1,14 +1,22 @@
 <section data-ng-controller="HomeController" data-ng-init="find()">
-	<div class="list-group">
-		<a data-ng-repeat="post in posts" data-ng-href="#!/posts/{{post._id}}" class="list-group-item">
-			<h2 data-ng-bind="post.title"></h2>
-			<small class="list-group-item-text">
-				Posted on
-				<span data-ng-bind="post.created | date:'medium'"></span>
-				by
-				<span data-ng-bind="post.user.displayName"></span>
-			</small>
-			<h4 class="list-group-item-heading" data-ng-bind="post.name"></h4>
-		</a>
+	<div class="row">
+		<div id="stage"></div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<div class="list-group">
+				<a data-ng-repeat="post in posts" data-ng-href="#!/posts/{{post._id}}" class="list-group-item">
+					<h2 data-ng-bind="post.title"></h2>
+					<small class="list-group-item-text">
+						Posted on
+						<span data-ng-bind="post.created | date:'medium'"></span>
+						by
+						<span data-ng-bind="post.user.displayName"></span>
+					</small>
+					<h4 class="list-group-item-heading" data-ng-bind="post.name"></h4>
+				</a>
+			</div>
+		</div>
 	</div>
 </section>
