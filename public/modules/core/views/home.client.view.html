@@ -12,7 +12,7 @@
 					<a data-ng-repeat="post in posts" data-ng-href="#!/posts/{{post._id}}" class="list-group-item">
 						<h2 class="list-group-item-heading" data-ng-bind="post.title"></h2>
 						<div>
-						{{post.post_body}}
+						{{ post.post_body | limitTo:300 }}
 						</div>
 						<small class="list-group-item-text">
 							Posted on
