@@ -1,7 +1,7 @@
 <section data-ng-controller="PostsController" data-ng-init="findOne()">
 	<div class="page-header">
 		<h1 data-ng-bind="post.title"></h1>
-		{{post.post_body}}
+		<div data-ng-bind-html="post.post_body"></div>
 	</div>
 	<div class="pull-right" data-ng-show="((authentication.user) && (authentication.user._id == post.user._id))">
 		<a class="btn btn-primary" href="/#!/posts/{{post._id}}/edit">
