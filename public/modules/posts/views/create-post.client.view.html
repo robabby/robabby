@@ -3,27 +3,28 @@
         <h1>New Post</h1>
     </div>
     <div class="col-md-12">
-        <form class="form-horizontal" data-ng-submit="create()" novalidate>
-            <fieldset>
-                <div class="form-group">
-                    <label class="control-label" for="title">Name</label>
-                    <div class="controls">
-                        <input type="text" data-ng-model="title" id="title" class="form-control" placeholder="Title" required>
-                    </div>
-                </div><!-- .form-group for 'title' -->
-                <div class="form-group">
-                    <label class="control-label" for="post_body">Article Body</label>
-                    <div class="controls">
-                        <textarea rows="7" type="text" data-ng-model="post_body" id="post_body" class="form-control" placeholder="Article Body" required></textarea>
-                    </div>
-                </div><!-- .form-group for 'post_body' -->
-                <div class="form-group">
-                    <input type="submit" class="btn btn-default">
-                </div>
-				<div data-ng-show="error" class="text-danger">
-					<strong data-ng-bind="error"></strong>
-				</div>
-            </fieldset>
-        </form>
+      <form class="form-horizontal" data-ng-submit="create()" novalidate>
+        <fieldset>
+          <div class="form-group">
+              <label class="control-label" for="title">Name</label>
+              <div class="controls">
+                  <input type="text" data-ng-model="title" id="title" class="form-control" placeholder="Title" required>
+              </div>
+          </div><!-- .form-group for 'title' -->
+          <div class="form-group">
+              <label class="control-label" for="post_body">Article Body</label>
+              <div class="controls">
+                  <!-- <textarea rows="7" type="text" data-ng-model="post_body" id="post_body" class="form-control" placeholder="Article Body" required></textarea> -->
+                  <text-angular data-ng-model="post_body" id="post_body"></text-angular>
+              </div>
+          </div><!-- .form-group for 'post_body' -->
+          <div class="form-group">
+              <input type="submit" class="btn btn-default">
+          </div>
+  				<div data-ng-show="error" class="text-danger">
+  					<strong data-ng-bind="error"></strong>
+  				</div>
+        </fieldset>
+      </form>
     </div>
 </section>
