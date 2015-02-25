@@ -1,6 +1,5 @@
 /*
 font-family: 'Abel', sans-serif;
-font-family: 'Poiret One', cursive;
 font-family: 'Pontano Sans', sans-serif;
 */
 /*
@@ -59,7 +58,7 @@ Home Page Styles
   left: 0;
   background-color: rgba(0, 0, 0, 0.25);
 }
-#stage .stage-text {
+#stage .stage-content {
   display: block;
   position: absolute;
   top: 50%;
@@ -68,12 +67,12 @@ Home Page Styles
   left: 5%;
   color: #fff;
 }
-#stage .stage-text h1 {
+#stage .stage-content h1 {
   font-family: 'Abel', sans-serif;
   font-size: 1000%;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
-#stage .stage-text h2 {
+#stage .stage-content h2 {
   font-size: 500%;
   font-family: 'Pontano Sans', sans-serif;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);

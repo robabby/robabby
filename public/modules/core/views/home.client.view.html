@@ -2,7 +2,8 @@
 	<div class="row">
 		<div id="stage">
 			<div class="overlay"></div>
-			<div class="stage-text">
+			<div class="stage-content">
+				<!-- <img class="img-circle" src="http://placehold.it/150x150" /> -->
 				<h1>Rob Abby</h1>
 				<h2>Software Developer</h2>
 				<hr />
@@ -13,23 +14,21 @@
 		<div class="col-md-6 col-sm-6">
 
 		</div>
-		<div class="col-md-6 col-sm-6" data-ng-init="find()">
-			<div class="col-md-12">
-				<div class="list-group">
-					<a data-ng-repeat="post in posts | limitTo:3" data-ng-href="#!/posts/{{post._id}}" class="list-group-item">
-						<h2 class="list-group-item-heading" data-ng-bind="post.title"></h2>
-						<div>
-							<div data-ng-bind-html="post.post_body | limitTo:300"></div>
-						</div>
-						<small class="list-group-item-text">
-							Posted on
-							<span data-ng-bind="post.created | date:'medium'"></span>
-							by
-							<span data-ng-bind="post.user.displayName"></span>
-						</small>
-						<h4 class="list-group-item-heading" data-ng-bind="post.name"></h4>
-					</a>
-				</div>
+		<div class="col-md-12" data-ng-init="find()">
+			<div class="list-group">
+				<a data-ng-repeat="post in posts | limitTo:3" data-ng-href="#!/posts/{{post._id}}" class="list-group-item">
+					<h2 class="list-group-item-heading" data-ng-bind="post.title"></h2>
+					<div>
+						<div data-ng-bind-html="post.post_body | limitTo:300"></div>
+					</div>
+					<small class="list-group-item-text">
+						Posted on
+						<span data-ng-bind="post.created | date:'medium'"></span>
+						by
+						<span data-ng-bind="post.user.displayName"></span>
+					</small>
+					<h4 class="list-group-item-heading" data-ng-bind="post.name"></h4>
+				</a>
 			</div>
 		</div>
 	</div>
