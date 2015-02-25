@@ -1,6 +1,8 @@
 /*
 font-family: 'Abel', sans-serif;
 font-family: 'Pontano Sans', sans-serif;
+font-family: 'Source Sans Pro', sans-serif;
+font-family: 'Lato', sans-serif;
 */
 /*
 Reset Styles
@@ -61,16 +63,20 @@ Home Page Styles
 #stage .stage-content {
   display: block;
   position: absolute;
-  top: 50%;
+  top: 70%;
   right: 5%;
   bottom: 5%;
   left: 5%;
   color: #fff;
 }
 #stage .stage-content h1 {
-  font-family: 'Abel', sans-serif;
-  font-size: 1000%;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 6.5vw;
+  font-weight: 200;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+#stage .stage-content h1 strong {
+  font-family: 'Abel', sans-serif;
 }
 #stage .stage-content h2 {
   font-size: 500%;
