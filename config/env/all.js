@@ -31,7 +31,8 @@ module.exports = {
 				'public/lib/angular-truncate-original/src/truncate.js',
 				'public/lib/textAngular/dist/textAngular-rangy.min.js',
 				'public/lib/textAngular/dist/textAngular-sanitize.min.js',
-				'public/lib/textAngular/dist/textAngular.min.js'
+				'public/lib/textAngular/dist/textAngular.min.js',
+				'public/lib/jquery/dist/jquery.min.js'
 			]
 		},
 		css: [
