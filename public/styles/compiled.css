@@ -109,8 +109,6 @@ nav.ng-scope {
   z-index: 9999;
 }
 .cubic-bezier-animation {
-  -webkit-transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78);
-  -moz-transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78);
   transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78);
 }
 #global-nav {
@@ -121,8 +119,6 @@ nav.ng-scope {
   height: 54px;
   background-color: rgba(0, 0, 0, 0);
   transition: all 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78);
-  -moz-transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78);
   transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78);
   /*
   // STYLES FOR /OPEN/ STATE
@@ -192,8 +188,6 @@ nav.ng-scope {
   width: 25%;
   background-color: #333333;
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.35);
-  -webkit-transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78);
-  -moz-transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78);
   transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78);
   transition: all 500ms;
 }
