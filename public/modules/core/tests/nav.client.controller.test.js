@@ -45,7 +45,7 @@
 			$location = _$location_;
 
 			// Initialize the Nav controller controller.
-			NavControllerController = $controller('NavControllerController', {
+			NavControllerController = $controller('NavController', {
 				$scope: scope
 			});
 		}));
