@@ -19,14 +19,5 @@ angular.module('core').controller('NavController', ['$scope', '$window',
 				$el.removeClass(activeClass);
 			}
 		};
-
-		$(window).on('scroll', function() {
-
-			if ($(window).scrollTop() > 100) {
-				$el.addClass('active');
-			} else {
-				$el.removeClass('active');
-			}
-		});
 	}
 ]);
