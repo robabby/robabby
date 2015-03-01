@@ -98,6 +98,11 @@ Home Page Styles
 #social a:hover {
   color: #333333;
 }
+@media screen and (max-width: 640px) {
+  #about {
+    font-size: 4.5vw;
+  }
+}
 
 /* Basscss Utility White Space */
 .m0 {
