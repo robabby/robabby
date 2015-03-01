@@ -1,0 +1,27 @@
+#global-nav {
+
+  .nav-trigger {
+    position:absolute;
+    top:10px;
+    left:10px;
+    width:50px;
+    z-index:3;
+
+    &:hover {
+      cursor:pointer;
+    }
+
+    & > span {
+      display:block;
+      position:relative;
+      width:100%;
+      height:5px;
+      margin-top:3px;
+      background-color:rgba(255, 255, 255, .75);
+
+      &:first-child {
+        margin-top:0;
+      }
+    }
+  }
+}
