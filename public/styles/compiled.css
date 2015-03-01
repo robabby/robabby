@@ -126,7 +126,7 @@ nav.ng-scope {
   transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78);
   /*
   // STYLES FOR /OPEN/ STATE
-  // */
+  */
 }
 #global-nav .nav-trigger {
   position: absolute;
@@ -158,10 +158,6 @@ nav.ng-scope {
   top: 50%;
   bottom: auto;
   right: auto;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   width: 22px;
   height: 2px;
@@ -218,8 +214,6 @@ nav.ng-scope {
 }
 #global-nav.is-open .nav-trigger svg circle {
   stroke-dashoffset: 0;
-  -webkit-transition: stroke-dashoffset 0.4s 0.3s;
-  -moz-transition: stroke-dashoffset 0.4s 0.3s;
   transition: stroke-dashoffset 0.4s 0.3s;
 }
 #global-nav.is-open .nav-drawer {
