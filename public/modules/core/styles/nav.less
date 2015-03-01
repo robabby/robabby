@@ -2,29 +2,33 @@ nav.ng-scope {
   position:relative;
   z-index:9999;
 }
+.cubic-bezier-animation {
+  -webkit-transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78);
+  -moz-transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78);
+  transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78);
+}
 #global-nav {
   position:fixed;
   top:0;
   left:0;
   right:0;
-  height:50px;
+  height:54px;
   background-color:rgba(0, 0, 0, 0);
-  transition:all 250ms linear;
+  transition:all 250ms;
+  .cubic-bezier-animation();
 
   &.active {
-    background-color:rgba(0, 0, 0, .5);
-    box-shadow:0px 0px 0px 3px rgba(0, 0, 0, .25);
-  }
-
-  &.is-open .nav-trigger {
-    transform: rotate(180deg);
+    // TODO: Provide an /active/ behavior for header bar.
   }
 
   .nav-trigger {
     position:absolute;
     top:12px;
     left:10px;
-    width:50px;
+    width:54px;
+    height:54px;
+    background-color:rgb(51,153,255);
+    border-radius:50%;
     transition:transform 500ms;
     z-index:3;
 
@@ -32,17 +36,63 @@ nav.ng-scope {
       cursor:pointer;
     }
 
+    & > svg {
+      position:absolute;
+      top:0;
+      left:0;
+
+      circle {
+        -webkit-transition: stroke-dashoffset 0.4s 0s;
+        -moz-transition: stroke-dashoffset 0.4s 0s;
+        transition: stroke-dashoffset 0.4s 0s;
+      }
+    }
+
     & > span {
-      display:block;
-      position:relative;
-      width:100%;
-      height:5px;
-      margin-top:5px;
-      background-color:rgba(255, 255, 255, .75);
+      // display:block;
+      // position:relative;
+      // width:100%;
+      // height:5px;
+      // margin-top:5px;
+      // background-color:rgba(255, 255, 255, .75);
 
       &:first-child {
         margin-top:0;
       }
     }
   }
+
+  .nav-drawer {
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:-25%;
+    width:25%;
+    background-color:rgb(51,51,51);
+    box-shadow:0px 0px 5px 1px rgba(0, 0, 0, .35);
+
+    .cubic-bezier-animation();
+    transition:all 500ms;
+  }
+
+  /*
+  // STYLES FOR /OPEN/ STATE
+  // */
+  &.is-open {
+    .nav-trigger {
+      box-shadow:inset 0 0 3px 1px rgba(0, 0, 0, .15);
+      transform: rotate(180deg);
+
+      svg circle {
+        stroke-dashoffset: 0;
+        -webkit-transition: stroke-dashoffset 0.4s 0.3s;
+        -moz-transition: stroke-dashoffset 0.4s 0.3s;
+        transition: stroke-dashoffset 0.4s 0.3s;
+      }
+    }
+    .nav-drawer {
+      left:0%;
+    }
+  }
+
 }

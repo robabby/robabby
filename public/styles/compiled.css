@@ -108,43 +108,78 @@ nav.ng-scope {
   position: relative;
   z-index: 9999;
 }
+.cubic-bezier-animation {
+  -webkit-transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78);
+  -moz-transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78);
+  transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78);
+}
 #global-nav {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 50px;
+  height: 54px;
   background-color: rgba(0, 0, 0, 0);
-  transition: all 250ms linear;
-}
-#global-nav.active {
-  background-color: rgba(0, 0, 0, 0.5);
-  box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.25);
-}
-#global-nav.is-open .nav-trigger {
-  transform: rotate(180deg);
+  transition: all 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78);
+  -moz-transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78);
+  transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78);
+  /*
+  // STYLES FOR /OPEN/ STATE
+  // */
 }
 #global-nav .nav-trigger {
   position: absolute;
   top: 12px;
   left: 10px;
-  width: 50px;
+  width: 54px;
+  height: 54px;
+  background-color: #3399ff;
+  border-radius: 50%;
   transition: transform 500ms;
   z-index: 3;
 }
 #global-nav .nav-trigger:hover {
   cursor: pointer;
 }
-#global-nav .nav-trigger > span {
-  display: block;
-  position: relative;
-  width: 100%;
-  height: 5px;
-  margin-top: 5px;
-  background-color: rgba(255, 255, 255, 0.75);
+#global-nav .nav-trigger > svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#global-nav .nav-trigger > svg circle {
+  -webkit-transition: stroke-dashoffset 0.4s 0s;
+  -moz-transition: stroke-dashoffset 0.4s 0s;
+  transition: stroke-dashoffset 0.4s 0s;
 }
 #global-nav .nav-trigger > span:first-child {
   margin-top: 0;
+}
+#global-nav .nav-drawer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -25%;
+  width: 25%;
+  background-color: #333333;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.35);
+  -webkit-transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78);
+  -moz-transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78);
+  transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78);
+  transition: all 500ms;
+}
+#global-nav.is-open .nav-trigger {
+  box-shadow: inset 0 0 3px 1px rgba(0, 0, 0, 0.15);
+  transform: rotate(180deg);
+}
+#global-nav.is-open .nav-trigger svg circle {
+  stroke-dashoffset: 0;
+  -webkit-transition: stroke-dashoffset 0.4s 0.3s;
+  -moz-transition: stroke-dashoffset 0.4s 0.3s;
+  transition: stroke-dashoffset 0.4s 0.3s;
+}
+#global-nav.is-open .nav-drawer {
+  left: 0%;
 }
 
 /* Basscss Utility White Space */
