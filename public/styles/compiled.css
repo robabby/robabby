@@ -104,9 +104,22 @@ Home Page Styles
   }
 }
 
+#global-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0);
+  transition: all 250ms linear;
+}
+#global-nav.active {
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 1px 5px rgba(0, 0, 0, 0.5);
+}
 #global-nav .nav-trigger {
   position: absolute;
-  top: 10px;
+  top: 12px;
   left: 10px;
   width: 50px;
   z-index: 3;
@@ -119,7 +132,7 @@ Home Page Styles
   position: relative;
   width: 100%;
   height: 5px;
-  margin-top: 3px;
+  margin-top: 5px;
   background-color: rgba(255, 255, 255, 0.75);
 }
 #global-nav .nav-trigger > span:first-child {
