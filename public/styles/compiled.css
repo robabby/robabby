@@ -104,6 +104,10 @@ Home Page Styles
   }
 }
 
+nav.ng-scope {
+  position: relative;
+  z-index: 9999;
+}
 #global-nav {
   position: fixed;
   top: 0;
@@ -117,11 +121,15 @@ Home Page Styles
   background-color: rgba(0, 0, 0, 0.5);
   box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.25);
 }
+#global-nav.is-open .nav-trigger {
+  transform: rotate(180deg);
+}
 #global-nav .nav-trigger {
   position: absolute;
   top: 12px;
   left: 10px;
   width: 50px;
+  transition: transform 500ms;
   z-index: 3;
 }
 #global-nav .nav-trigger:hover {
