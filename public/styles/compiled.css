@@ -203,11 +203,19 @@ section[role="main"].is-open {
 #global-nav .nav-drawer .drawer-inner ul li a {
   display: block;
   position: relative;
+  padding: 1rem 2rem;
+  border-right: 5px solid #333333;
   font-size: 3rem;
   font-family: 'Abel', sans-serif;
   color: #ffffff;
-  padding: 1rem 2rem;
   text-decoration: none;
+  text-align: right;
+  transition: all 500ms;
+}
+#global-nav .nav-drawer .drawer-inner ul li a:hover,
+#global-nav .nav-drawer .drawer-inner ul li a:active {
+  padding-right: 1.5rem;
+  border-right: 5px solid #3399ff;
 }
 #global-nav .nav-drawer .drawer-inner .social-wrapper {
   position: absolute;
