@@ -4,7 +4,8 @@ angular.module('core').controller('NavController', ['$scope', '$window',
 	function($scope, $window) {
 
 		var $ = $window.jQuery;
-		var $el = $('#global-nav');
+		var $nav = $('#global-nav');
+		var $main = $('[role="main"]');
 
 		$scope.isActive = false;
 
@@ -13,10 +14,12 @@ angular.module('core').controller('NavController', ['$scope', '$window',
 
 			if(!$scope.isActive) {
 				$scope.isActive = true;
-				$el.addClass(activeClass);
+				$nav.addClass(activeClass);
+				$main.addClass(activeClass);
 			} else {
 				$scope.isActive = false;
-				$el.removeClass(activeClass);
+				$nav.removeClass(activeClass);
+				$main.removeClass(activeClass);
 			}
 		};
 	}

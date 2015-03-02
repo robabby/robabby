@@ -70,7 +70,7 @@ Home Page Styles
   top: 70%;
   right: 5%;
   bottom: 5%;
-  left: 5%;
+  left: 10%;
   color: #fff;
 }
 #stage > div .stage-content h1 {
@@ -111,6 +111,13 @@ nav.ng-scope {
 .cubic-bezier-animation {
   transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78);
 }
+section[role="main"] {
+  transition: all 500ms;
+  transform: translate3d(0, 0, 0);
+}
+section[role="main"].is-open {
+  transform: translate3d(25%, 0, 0);
+}
 #global-nav {
   position: fixed;
   top: 0;
@@ -119,7 +126,6 @@ nav.ng-scope {
   height: 54px;
   background-color: rgba(0, 0, 0, 0);
   transition: all 250ms;
-  transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78);
   /*
   // STYLES FOR /OPEN/ STATE
   */
@@ -184,15 +190,15 @@ nav.ng-scope {
   position: fixed;
   top: 0;
   bottom: 0;
-  left: -25%;
   width: 25%;
   background-color: #333333;
-  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.35);
+  padding-top: 80px;
+  transform: translate3d(-100%, 0, 0);
   transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78);
   transition: all 500ms;
 }
 #global-nav.is-open .nav-trigger {
-  box-shadow: inset 0 0 3px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 0 3px 1px rgba(0, 0, 0, 0.15), 0 0 5px 1px rgba(51, 153, 255, 0.35);
   transform: rotate(180deg);
 }
 #global-nav.is-open .nav-trigger .nav-icon::before,
@@ -211,7 +217,7 @@ nav.ng-scope {
   transition: stroke-dashoffset 0.4s 0.3s;
 }
 #global-nav.is-open .nav-drawer {
-  left: 0%;
+  transform: translate3d(0%, 0, 0);
 }
 
 /* Basscss Utility White Space */
