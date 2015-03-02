@@ -115,7 +115,7 @@ section[role="main"] {
   transform: translate3d(0, 0, 0);
 }
 section[role="main"].is-open {
-  transform: translate3d(25%, 0, 0);
+  transform: translate3d(20%, 0, 0);
 }
 #global-nav {
   position: fixed;
@@ -136,12 +136,14 @@ section[role="main"].is-open {
   width: 54px;
   height: 54px;
   background-color: #3399ff;
+  box-shadow: none;
   border-radius: 50%;
-  transition: transform 500ms;
+  transition: all 500ms;
   z-index: 3;
 }
 #global-nav .nav-trigger:hover {
   cursor: pointer;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.35);
 }
 #global-nav .nav-trigger > svg {
   position: absolute;
@@ -189,7 +191,7 @@ section[role="main"].is-open {
   position: fixed;
   top: 0;
   bottom: 0;
-  width: 25%;
+  width: 20%;
   background-color: #333333;
   transform: translate3d(-100%, 0, 0);
   transition: all 500ms;
