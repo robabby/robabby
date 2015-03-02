@@ -91,6 +91,14 @@ Home Page Styles
   font-size: 2.5vw;
   color: #333;
 }
+#social a {
+  color: rgba(51, 51, 51, 0.75);
+  transition: color 250ms linear;
+  font-size: 4vw;
+}
+#social a:hover {
+  color: #333333;
+}
 @media screen and (max-width: 640px) {
   #about {
     font-size: 4.5vw;

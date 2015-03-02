@@ -13,27 +13,34 @@
 		<div class="col-md-12 py3">
 			<p>
 				Hey there! My name is Rob and I am a Chicago based Software Developer with a focus on the front-end.
-				You can learn more about me by following one of the links below. You can also shoot me an email directly.
+				You can learn more about me by following one of the social links below. You can also shoot me an email directly.
 			</p>
 		</div>
 	</div>
+	<div id="social">
+		<a href="mailto:robabby23@gmail.com"><i class="fa fa-envelope-square"></i></a>
+		<a class="ml1" href="https://github.com/robabby"><i class="fa fa-github"></i></a>
+		<a class="ml1" href="https://stackoverflow.com/users/977203/robabby"><i class="fa fa-stack-overflow"></i></a>
+		<a class="ml1" href="https://linkedin.com/in/robabby"><i class="fa fa-linkedin"></i></a>
+	</div>
+	<hr />
 	<div id="posts" class="row">
 		<div class="col-md-12" data-ng-init="find()">
-			<div class="list-group">
-				<a data-ng-repeat="post in posts | limitTo:3" data-ng-href="#!/posts/{{post._id}}" class="list-group-item">
-					<h2 class="list-group-item-heading" data-ng-bind="post.title"></h2>
+
+				<div data-ng-repeat="post in posts | limitTo:3" data-ng-href="#!/posts/{{post._id}}">
+					<h2 data-ng-bind="post.title"></h2>
 					<div>
 						<div data-ng-bind-html="post.post_body | limitTo:300"></div>
 					</div>
-					<small class="list-group-item-text">
+					<small>
 						Posted on
 						<span data-ng-bind="post.created | date:'medium'"></span>
 						by
 						<span data-ng-bind="post.user.displayName"></span>
 					</small>
-					<h4 class="list-group-item-heading" data-ng-bind="post.name"></h4>
-				</a>
-			</div>
+					<h4 data-ng-bind="post.name"></h4>
+				</div>
+
 		</div>
 	</div>
 </section>
