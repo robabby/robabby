@@ -9,7 +9,7 @@ angular.module('core').controller('NavController', ['$scope', '$window',
 
 		$scope.isActive = false;
 
-		$scope.triggerNav = function() {
+		$scope.navTrigger = function() {
 			var activeClass = 'is-open';
 
 			if(!$scope.isActive) {
@@ -22,5 +22,16 @@ angular.module('core').controller('NavController', ['$scope', '$window',
 				$main.removeClass(activeClass);
 			}
 		};
+
+		$(window).on('scroll', function() {
+			var y = $(this).scrollTop(),
+					h = $(window).height();
+
+			if(y > h - 200) {
+				$nav.addClass('active');
+			} else {
+				$nav.removeClass('active');
+			}
+		});
 	}
 ]);
