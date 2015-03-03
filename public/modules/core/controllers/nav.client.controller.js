@@ -5,6 +5,7 @@ angular.module('core').controller('NavController', ['$scope', '$window',
 
 		var $ = $window.jQuery;
 		var $nav = $('#global-nav');
+		var $navbar = $('.nav-bar');
 		var $main = $('[role="main"]');
 
 		$scope.isActive = false;
@@ -27,10 +28,10 @@ angular.module('core').controller('NavController', ['$scope', '$window',
 			var y = $(this).scrollTop(),
 					h = $(window).height();
 
-			if(y > h - 200) {
-				$nav.addClass('active');
+			if (y > h - 200) {
+				$navbar.addClass('active');
 			} else {
-				$nav.removeClass('active');
+				$navbar.removeClass('active');
 			}
 		});
 	}
