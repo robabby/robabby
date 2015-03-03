@@ -89,12 +89,13 @@ Home Page Styles
 }
 #about {
   font-size: 2.5vw;
-  color: #333;
+  color: #fff;
+  background-color: #3399ff;
 }
 #social a {
   color: rgba(51, 51, 51, 0.75);
   transition: color 250ms linear;
-  font-size: 4vw;
+  font-size: 3.25vw;
 }
 #social a:hover {
   color: #333333;
