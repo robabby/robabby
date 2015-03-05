@@ -101,6 +101,9 @@ Home Page Styles
   color: #333333;
 }
 @media screen and (max-width: 640px) {
+  #stage.splash > div {
+    transition: height 999999s;
+  }
   #about {
     font-size: 4.5vw;
   }

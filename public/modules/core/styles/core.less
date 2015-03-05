@@ -111,7 +111,10 @@ Home Page Styles
 }
 
 @media screen and (max-width: 640px) {
-		#about {
-			font-size:4.5vw;
-		}
+	#stage.splash > div {
+		transition:height 999999s; // Hack to not cause popping on Android when the URL bar hides
+	}
+	#about {
+		font-size:4.5vw;
+	}
 }
