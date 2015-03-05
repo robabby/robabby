@@ -40,8 +40,9 @@ Home Page Styles
   width: 100%;
   height: 100vh;
   position: relative;
+  background: transparent;
 }
-#stage.splash > div:after {
+#stage.splash > div:before {
   content: "";
   position: absolute;
   top: 0;
@@ -52,16 +53,17 @@ Home Page Styles
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  z-index: -1;
+  z-index: -2;
   opacity: .75;
 }
-#stage.splash > div .overlay {
+#stage.splash > div:after {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.25);
+  z-index: -1;
 }
 #stage.splash > div .stage-content {
   display: block;
