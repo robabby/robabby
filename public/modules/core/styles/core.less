@@ -111,6 +111,7 @@ Home Page Styles
 #posts {
 	display:block;
 	width:100%;
+	padding:3rem 0;
 
 	.post {
 		display:inline-block;
@@ -122,18 +123,23 @@ Home Page Styles
 #social {
 	display:flex;
 	flex-direction:row;
-	padding:2%;
-	background-color:rgb(127, 132, 135);
+	padding:2% 3%;
+	background-color:rgb(154, 209, 245);
 	margin:0 -15px;
 
 	div {
-		a {
-			color:rgba(51,51,51,.75);
-			transition:color 250ms linear;
-			font-size:3.25vw;
+		&:not(:first-child) {
+			margin-left:10px;
+		}
 
+		a {
+			color:rgb(243, 250, 254);
+			color:rgba(243, 250, 254, 0.6);
+			transition:color 250ms linear;
+			font-size:5vw;
+			
 			&:hover {
-				color:rgba(51,51,51,1);
+				color:rgba(243, 250, 254, 1);
 			}
 		}
 	}
