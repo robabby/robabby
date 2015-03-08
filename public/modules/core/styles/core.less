@@ -102,20 +102,39 @@ Home Page Styles
 }
 
 #about {
-	padding:20px 4%;
-	font-size:2.3vw;
+	padding:4%;
+	font-size:2vw;
 	color:rgb(243, 250, 254);
 	background-color:rgb(93, 183, 242);
 }
 
-#social {
-	a {
-		color:rgba(51,51,51,.75);
-		transition:color 250ms linear;
-		font-size:3.25vw;
+#posts {
+	display:block;
+	width:100%;
 
-		&:hover {
-			color:rgba(51,51,51,1);
+	.post {
+		display:inline-block;
+		width:50%;
+		padding:2rem;
+	}
+}
+
+#social {
+	display:flex;
+	flex-direction:row;
+	padding:2%;
+	background-color:rgb(127, 132, 135);
+	margin:0 -15px;
+
+	div {
+		a {
+			color:rgba(51,51,51,.75);
+			transition:color 250ms linear;
+			font-size:3.25vw;
+
+			&:hover {
+				color:rgba(51,51,51,1);
+			}
 		}
 	}
 }

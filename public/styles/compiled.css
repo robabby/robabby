@@ -97,17 +97,33 @@ Home Page Styles
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 #about {
-  padding: 20px 4%;
-  font-size: 2.3vw;
+  padding: 4%;
+  font-size: 2vw;
   color: #f3fafe;
   background-color: #5db7f2;
 }
-#social a {
+#posts {
+  display: block;
+  width: 100%;
+}
+#posts .post {
+  display: inline-block;
+  width: 50%;
+  padding: 2rem;
+}
+#social {
+  display: flex;
+  flex-direction: row;
+  padding: 2%;
+  background-color: #7f8487;
+  margin: 0 -15px;
+}
+#social div a {
   color: rgba(51, 51, 51, 0.75);
   transition: color 250ms linear;
   font-size: 3.25vw;
 }
-#social a:hover {
+#social div a:hover {
   color: #333333;
 }
 @media screen and (max-width: 640px) {
