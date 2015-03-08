@@ -7,7 +7,6 @@ angular.module('core').controller('HomeController',
 		// This provides Authentication context.
 		$scope.authentication = Authentication;
 		$scope.posts = Posts;
-		$scope.elementStates.splashScreen = true;
 
 		// Find a list of Posts
 		$scope.find = function() {

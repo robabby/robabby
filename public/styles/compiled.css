@@ -11,6 +11,7 @@ html,
 body {
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
 }
 body {
   font-family: 'Source Sans Pro', sans-serif;
@@ -41,14 +42,14 @@ Page Styles
 /*
 Home Page Styles
 */
-#stage.splash > div {
+#stage > div {
   width: 100%;
-  height: 100vh;
+  height: 75vh;
   position: relative;
   background: transparent;
   overflow: hidden;
 }
-#stage.splash > div:before {
+#stage > div:before {
   content: "";
   position: absolute;
   top: 0;
@@ -62,7 +63,7 @@ Home Page Styles
   z-index: -2;
   opacity: .75;
 }
-#stage.splash > div:after {
+#stage > div:after {
   position: absolute;
   top: 0;
   right: 0;
@@ -71,33 +72,35 @@ Home Page Styles
   background-color: rgba(0, 0, 0, 0.25);
   z-index: -1;
 }
-#stage.splash > div .stage-content {
+#stage > div .stage-content {
   display: block;
   position: absolute;
-  top: 70%;
+  top: 55%;
   right: 5%;
   bottom: 5%;
   left: 5%;
   color: #fff;
 }
-#stage.splash > div .stage-content h1 {
+#stage > div .stage-content h1 {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 6.5vw;
   font-weight: 200;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
 }
-#stage.splash > div .stage-content h1 strong {
+#stage > div .stage-content h1 strong {
   font-family: 'Abel', sans-serif;
 }
-#stage.splash > div .stage-content h2 {
+#stage > div .stage-content h2 {
   font-size: 500%;
   font-family: 'Pontano Sans', sans-serif;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 #about {
-  font-size: 2.5vw;
-  color: #fff;
-  background-color: #3399ff;
+  padding: 20px 4%;
+  font-size: 2.3vw;
+  color: #f3fafe;
+  background-color: #5db7f2;
 }
 #social a {
   color: rgba(51, 51, 51, 0.75);
@@ -149,7 +152,6 @@ section[role="main"].is-open {
   height: 54px;
   background-color: rgba(255, 255, 255, 0);
   transition: all 250ms;
-  visibility: hidden;
   z-index: 9999;
 }
 #global-nav .nav-bar.active {
