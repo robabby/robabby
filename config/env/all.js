@@ -19,6 +19,7 @@ module.exports = {
 				'public/lib/textAngular/src/textAngular.css'
 			],
 			js: [
+				'public/lib/firebase/firebase.js',
 				'public/lib/angular/angular.js',
 				'public/lib/angular-resource/angular-resource.js',
 				'public/lib/angular-cookies/angular-cookies.js',
