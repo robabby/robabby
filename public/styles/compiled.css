@@ -146,10 +146,6 @@ font-family: 'Pontano Sans', sans-serif;
 font-family: 'Source Sans Pro', sans-serif;
 font-family: 'Lato', sans-serif;
 */
-nav.ng-scope {
-  position: relative;
-  z-index: 9999;
-}
 .cubic-bezier-animation {
   transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78);
 }
