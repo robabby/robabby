@@ -102,15 +102,8 @@ Home Page Styles
   color: #f3fafe;
   background-color: #384045;
 }
-#posts {
-  display: block;
-  width: 100%;
-  padding: 3rem 0;
-}
 #posts .post {
-  display: inline-block;
-  width: 50%;
-  padding: 2rem;
+  padding: 5rem 2.5rem;
 }
 #social {
   display: flex;
