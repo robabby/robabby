@@ -1,5 +1,5 @@
 {
-  "name": "robabby-server",
+  "name": "robabby-api",
   "version": "0.0.1",
   "description": "A server for my website blog",
   "main": "index.js",
