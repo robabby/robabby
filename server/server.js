@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
+var port = process.env.PORT || 4500;
 var mongoose = require('mongoose');
 var dbURI = 'mongodb://rabby:root@ds030827.mongolab.com:30827/robabby';
 if (process.env.NODE_ENV === 'production') {
