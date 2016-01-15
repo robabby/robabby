@@ -1,4 +1,6 @@
 var express = require('express');
+var app = express();
+var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var dbURI = 'mongodb://rabby:root@ds030827.mongolab.com:30827/robabby';
 if (process.env.NODE_ENV === 'production') {
@@ -6,7 +8,6 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 var ObjectId = mongoose.Schema.Types.ObjectId;
-var app = express();
 
 mongoose.connect(dbURI);
 
