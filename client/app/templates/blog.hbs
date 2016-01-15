@@ -1,7 +1,9 @@
 <h1>Blog</h1>
 
 {{#each model as |item|}}
-	{{item.content}}
+	<div>
+		{{item.content}}
+	</div>
 {{/each}}
 
 {{outlet}}
