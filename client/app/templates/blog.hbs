@@ -2,7 +2,7 @@
 
 {{#each model as |item|}}
 	<div>
-		{{item.content}}
+		{{#link-to 'blog.post' item.id}}{{item.content}}{{/link-to}}
 	</div>
 {{/each}}
 
