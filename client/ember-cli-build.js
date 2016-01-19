@@ -23,7 +23,7 @@ module.exports = function(defaults) {
   // JS Files
   app.import('bower_components/trianglify/dist/trianglify.min.js');
   // CSS Files
-  app.import('bower_components/normalize-css/normalize.css')
+  app.import('bower_components/normalize-css/normalize.css');
 
   return app.toTree();
 };
