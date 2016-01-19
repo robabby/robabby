@@ -1,8 +1,13 @@
-{{#link-to 'home'}}Home{{/link-to}}
-{{#link-to 'about'}}About{{/link-to}}
-{{#link-to 'blog'}}Blog{{/link-to}}
+<div class="sidebar">
+  <h2 id="title">Rob Abby</h2>
+  <h3>Front End Developer</h3>
 
-<h2 id="title">Rob Abby</h2>
-<h3>Front End Developer</h3>
-
-{{outlet}}
+  <nav>
+    {{#link-to 'home'}}Home{{/link-to}}
+    {{#link-to 'about'}}About{{/link-to}}
+    {{#link-to 'blog'}}Blog{{/link-to}}
+  </nav>
+</div>
+<div role="main">
+  {{outlet}}
+</div>
