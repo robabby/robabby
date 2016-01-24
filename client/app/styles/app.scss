@@ -9,6 +9,9 @@ html {
   margin:0;
   padding:0;
   font-size:$primaryFontSize;
+  height:100%;
+
+  @include clearfix();
 }
 body {
   background-color:#fff;
@@ -18,8 +21,7 @@ header {
   top:0;
   right:0;
   left:0;
-  height:50px;
-  border-bottom:1px solid #ccc;
+  height:$headerHeight;
   background-color:#fff;
   z-index: 9999;
 
@@ -45,7 +47,6 @@ header {
         color:$primaryFontColor;
         font-size: 20px;
         text-decoration: none;
-        vertical-align: middle;
 
         &.active {
           border-bottom: 3px solid $headerNavActiveBorderColor;
@@ -55,13 +56,18 @@ header {
     @include clearfix();
   }
 }
-[role="main"] {
-  position: absolute;
-  left:0;
-  top:0;
-  right:0;
-  bottom:0;
-  padding-top:50px;
+.stage {
+  height:100vh;
+  background-color:#333;
+  background: url(images/bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  h2 {
+    margin-top:0;
+  }
 }
 .circle {
   width: 400px;
