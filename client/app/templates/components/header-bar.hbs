@@ -1,4 +1,7 @@
-<button type="button" class="toggle-menu">
-  x
-</button>
+<nav>
+  {{#link-to 'home'}}Home{{/link-to}}
+  {{#link-to 'about'}}About{{/link-to}}
+  {{#link-to 'blog'}}Blog{{/link-to}}
+</nav>
+
 {{yield}}

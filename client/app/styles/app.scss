@@ -1,20 +1,30 @@
+@import 'mixins';
+
+
 body,
 html,
 .ember-view {
   margin:0;
   padding:0;
-  height:100%;
 }
 body {
   background-color:#fff;
 }
-.sidebar {
-  position:absolute;
-  width:250px;
+header {
+  position:fixed;
   top:0;
-  left:-250px;
-  bottom:0;
-  background-color: #555;
+  right:0;
+  left:0;
+  height:50px;
+  border-bottom:1px solid #ccc;
+  background-color:#fff;
+  z-index: 9999;
+
+  nav {
+    float:right;
+
+    @include clearfix();
+  }
 }
 [role="main"] {
   position: absolute;
@@ -22,6 +32,7 @@ body {
   top:0;
   right:0;
   bottom:0;
+  padding-top:50px;
 }
 .circle {
   width: 400px;
