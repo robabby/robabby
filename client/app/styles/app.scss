@@ -1,11 +1,14 @@
 @import 'mixins';
+@import 'variables';
 
-
+* {
+  box-sizing: border-box;
+}
 body,
-html,
-.ember-view {
+html {
   margin:0;
   padding:0;
+  font-size:$primaryFontSize;
 }
 body {
   background-color:#fff;
@@ -21,8 +24,34 @@ header {
   z-index: 9999;
 
   nav {
-    float:right;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: stretch;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    height:100%;
 
+    > li {
+      flex: 1 0 auto;
+      text-align: center;
+      list-style: none;
+      height: 100%;
+      line-height: 100%;
+
+      > a {
+        display:block;
+        height: 100%;
+        color:$primaryFontColor;
+        font-size: 20px;
+        text-decoration: none;
+        vertical-align: middle;
+
+        &.active {
+          border-bottom: 3px solid $headerNavActiveBorderColor;
+        }
+      }
+    }
     @include clearfix();
   }
 }
