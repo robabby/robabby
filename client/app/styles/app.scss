@@ -1,0 +1,101 @@
+@import 'mixins';
+@import 'variables';
+
+* {
+  box-sizing: border-box;
+}
+body,
+html {
+  margin:0;
+  padding:0;
+  font-size:$primaryFontSize;
+  height:100%;
+
+  @include clearfix();
+}
+body {
+  background-color:#fff;
+}
+header {
+  position:fixed;
+  top:0;
+  right:0;
+  left:0;
+  height:$headerHeight;
+  background-color:#fff;
+  z-index: 9999;
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: stretch;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    height:100%;
+
+    > li {
+      flex: 1 0 auto;
+      text-align: center;
+      list-style: none;
+      height: 100%;
+      line-height: 100%;
+
+      > a {
+        display:block;
+        height: 100%;
+        color:$primaryFontColor;
+        font-size: 20px;
+        text-decoration: none;
+
+        &.active {
+          border-bottom: 3px solid $headerNavActiveBorderColor;
+        }
+      }
+    }
+    @include clearfix();
+  }
+}
+.stage {
+  height:$stageHeight;
+  background-color:#333;
+  background: url(images/bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    background-color: rgba(0, 0, 0, .30);
+  }
+
+  h2 {
+    margin-top:0;
+  }
+}
+.circle {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  border: 10px solid white;
+  opacity: 0.1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+path {
+  fill: transparent;
+  transform-origin: center bottom;
+  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+}
+.invisible {
+  opacity: 0;
+  transform: scale(0);
+}
