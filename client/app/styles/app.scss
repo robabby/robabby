@@ -16,58 +16,10 @@ html {
 body {
   background-color:#fff;
 }
-header {
-  position:fixed;
-  top:0;
-  right:0;
-  left:0;
-  height:$headerHeight;
-  background-color:#fff;
-  z-index: 9999;
-
-  nav {
-    display: flex;
-    height:100%;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-content: stretch;
-    flex-wrap: nowrap;
-    -ms-flex-align: center;
-  	-webkit-align-items: center;
-  	-webkit-box-align: center;
-  	align-items: center;
-
-    > li {
-      flex: 1 0 auto;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      list-style: none;
-      line-height: 100%;
-
-      > a {
-        display:flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        color:$primaryFontColor;
-        font-size: 20px;
-        text-decoration: none;
-        text-align:center;
-
-        &.active {
-          border-bottom: 3px solid $headerNavActiveBorderColor;
-        }
-      }
-    }
-    @include clearfix();
-  }
-}
 .stage {
   height:$stageHeight;
   background-color:#333;
-  background: url(images/bg-2.jpg) no-repeat center center fixed;
+  background: url(images/bg.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -95,4 +47,76 @@ path {
 .invisible {
   opacity: 0;
   transform: scale(0);
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : $customScreen) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : $extraSmallScreen) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : $smallScreen) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : $mediumScreen) {
+  header {
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    height:$headerHeightDesktop;
+    background-color:#fff;
+    z-index: 9999;
+
+    nav {
+      display: flex;
+      height:100%;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-content: stretch;
+      flex-wrap: nowrap;
+      -ms-flex-align: center;
+    	-webkit-align-items: center;
+    	-webkit-box-align: center;
+    	align-items: center;
+
+      > li {
+        flex: 1 1 auto;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        list-style: none;
+        line-height: 100%;
+
+        > a {
+          display:flex;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+          color:$primaryFontColor;
+          font-size: 20px;
+          text-decoration: none;
+          text-align:center;
+
+          &.active {
+            border-bottom: 3px solid $headerNavActiveBorderColor;
+          }
+        }
+      }
+      @include clearfix();
+    }
+  }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : $largeScreen) {
+
 }
