@@ -1,5 +1,6 @@
 @import 'mixins';
 @import 'variables';
+@import 'animations';
 
 * {
   box-sizing: border-box;
@@ -34,9 +35,38 @@ body {
     left:0;
     background-color: rgba(0, 0, 0, .30);
   }
+  .cloud {
+    position: absolute;
+    width:300%;
+    height:100%;
+    left:-100%;
+    top:0;
+    transform: translate3d(0);
 
-  h2 {
-    margin-top:0;
+    &.one {
+      background-image: url(images/cloud_one.png);
+      background-position: center center;
+      background-repeat: no-repeat;
+      animation-name: cloudOne;
+      animation-duration: 10000ms;
+      opacity: 0;
+    }
+    &.two {
+      background: url(images/cloud_two.png);
+      background-position: center center;
+      background-repeat: no-repeat;
+      animation-name: cloudOne;
+      animation-duration: 10000ms;
+      opacity: 0;
+    }
+    &.three {
+      background: url(images/cloud_three.png);
+      background-position: center center;
+      background-repeat: no-repeat;
+      animation-name: cloudOne;
+      animation-duration: 10000ms;
+      opacity: 0;
+    }
   }
 }
 path {
