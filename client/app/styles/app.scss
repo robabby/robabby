@@ -20,7 +20,9 @@ body {
 .stage {
   height:$stageHeight;
   background-color:#333;
-  background: url(images/bg.jpg) no-repeat center center fixed;
+  background: url(images/el-tracks.jpg) no-repeat center center fixed;
+  filter:grayscale(1) blur(4px);
+  -webkit-filter:grayscale(1) blur(4px);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
