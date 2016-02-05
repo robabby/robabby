@@ -51,14 +51,18 @@ body {
     z-index: -1;
   }
 }
-path {
-  fill: transparent;
-  transform-origin: center bottom;
-  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
-}
-.invisible {
-  opacity: 0;
-  transform: scale(0);
+.trianglify {
+  path {
+    fill: transparent;
+    transform-origin: center bottom;
+    transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+  }
+
+
+  .invisible {
+    opacity: 0;
+    transform: scale(0);
+  }
 }
 
 /* Custom, iPhone Retina */
