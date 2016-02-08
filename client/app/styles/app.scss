@@ -1,5 +1,6 @@
 @import 'mixins';
 @import 'variables';
+@import 'components/site-nav';
 
 * {
   box-sizing: border-box;
@@ -82,54 +83,7 @@ body {
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : $mediumScreen) {
-  header {
-    position:fixed;
-    top:0;
-    bottom:0;
-    left:0;
-    height:$headerHeightDesktop;
-    background-color:#fff;
-    z-index: 9999;
 
-    nav {
-      display: flex;
-      height:100%;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-content: stretch;
-      flex-wrap: nowrap;
-      -ms-flex-align: center;
-    	-webkit-align-items: center;
-    	-webkit-box-align: center;
-    	align-items: center;
-
-      > li {
-        flex: 1 1 auto;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        list-style: none;
-        line-height: 100%;
-
-        > a {
-          display:flex;
-          align-items: center;
-          justify-content: center;
-          height: 100%;
-          color:$primaryFontColor;
-          font-size: 20px;
-          text-decoration: none;
-          text-align:center;
-
-          &.active {
-            border-bottom: 3px solid $headerNavActiveBorderColor;
-          }
-        }
-      }
-      @include clearfix();
-    }
-  }
 }
 
 /* Large Devices, Wide Screens */
