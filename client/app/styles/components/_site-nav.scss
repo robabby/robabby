@@ -90,7 +90,8 @@
   height: 2px;
   background-color: #ffffff;
 }
-.cd-nav-trigger .cd-nav-icon::before, .cd-nav-trigger .cd-nav-icon:after {
+.cd-nav-trigger .cd-nav-icon::before,
+.cd-nav-trigger .cd-nav-icon:after {
   /* upper and lower lines of the menu icon */
   content: '';
   position: absolute;
