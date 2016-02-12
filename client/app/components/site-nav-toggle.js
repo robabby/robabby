@@ -5,12 +5,15 @@ export default Ember.Component.extend({
   classNames: 'cd-nav-trigger',
   siteNavState: Ember.inject.service('site-nav-state'),
   click() {
-    var currentNavState = this.get('siteNavState');
+    // if(this.get('siteNavState').getState()) {
+    //   this.get('siteNavState').setState(false);
+    // } else {
+    //   this.get('siteNavState').setState(true);
+    // }
+    // console.log(this.get('siteNavState').getState());
 
-    if(currentNavState.isOpen) {
-      currentNavState.set('isOpen', false);
-    } else {
-      currentNavState.set('isOpen', true);
-    }
+    this.toggleProperty('siteNavState.isOpen');
+
+    console.log(this.get('siteNavState.isOpen'));
   }
 });

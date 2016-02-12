@@ -1,5 +1,7 @@
-{{site-nav}}
+{{#site-wrap}}
+  {{site-nav}}
 
-<div role="main" class="main-content">
-  {{liquid-outlet}}
-</div>
+  <div role="main" class="main-content {{navigationIsOpen}}">
+    {{liquid-outlet}}
+  </div>
+{{/site-wrap}}
