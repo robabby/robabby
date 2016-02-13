@@ -1,4 +1,4 @@
-{{site-nav-toggle}}
+{{site-nav-toggle toggleNav=(action 'toggleNav')}}
 
 <div id="cd-nav" class="cd-nav">
 	<div class="cd-navigation-wrapper">
@@ -7,7 +7,8 @@
 
 			<nav>
 				<ul class="cd-primary-nav">
-					<li><a href="#0" class="selected">The team</a></li>
+					<li>{{#link-to 'home'}}Home{{/link-to}}</li>
+					<li>{{#link-to 'about'}}About{{/link-to}}</li>
 					<!-- list items here -->
 				</ul>
 			</nav>
@@ -23,15 +24,5 @@
 		</div> <!-- .cd-half-block -->
 	</div> <!-- .cd-navigation-wrapper -->
 </div> <!-- .cd-nav -->
-
-{{!-- <nav>
-  <li>
-    {{#link-to 'home'}}
-      <span>Home</span>
-    {{/link-to}}
-  </li>
-  <li>{{#link-to 'about'}}About{{/link-to}}</li>
-  <li>{{#link-to 'blog'}}Blog{{/link-to}}</li>
-</nav> --}}
 
 {{yield}}
