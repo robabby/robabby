@@ -1,7 +1,5 @@
-{{#site-wrap}}
-  {{site-nav}}
+{{site-nav isOpen=isOpen toggleNav=(action 'toggleNav')}}
 
-  <div role="main" class="main-content {{navigationIsOpen}}">
-    {{liquid-outlet}}
-  </div>
-{{/site-wrap}}
+<div role="main" class="main-content {{if isOpen 'navigation-is-open'}}">
+  {{liquid-outlet}}
+</div>
