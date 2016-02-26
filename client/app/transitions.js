@@ -5,4 +5,22 @@ export default function(){
     this.use('toUp'),
     this.reverse('toDown')
   );
+  this.transition(
+    this.fromRoute('home'),
+    this.toRoute('blog'),
+    this.use('toUp'),
+    this.reverse('toDown')
+  );
+  this.transition(
+    this.fromRoute('about'),
+    this.toRoute('blog'),
+    this.use('toUp'),
+    this.reverse('toDown')
+  );
+  this.transition(
+    this.fromRoute('blog'),
+    this.toRoute('post'),
+    this.use('fade'),
+    this.reverse('fade')
+  );
 }
