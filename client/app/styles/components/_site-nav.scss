@@ -253,11 +253,12 @@ main {
 .cd-nav .cd-primary-nav a.selected {
   color: #ffffff;
 }
-.no-touch .cd-nav .cd-primary-nav a:hover {
+.cd-nav .cd-primary-nav a:hover {
   color: #ffffff;
 }
 .cd-nav .cd-contact-info {
   margin-top: 80px;
+  list-style: none;
 }
 .cd-nav .cd-contact-info li {
   font-family: "Merriweather", serif;
@@ -274,7 +275,7 @@ main {
 .cd-nav .cd-contact-info li,
 .cd-nav .cd-contact-info a,
 .cd-nav .cd-contact-info span {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
 }
 
 @media only screen and (min-width: 1170px) {
