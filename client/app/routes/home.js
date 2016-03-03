@@ -1,14 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  activate: function() {
-    Ember.$('[role="main"]').addClass('home');
-  },
-  deactivate: function() {
-    Ember.$('[role="main"]').removeClass('home');
-  },
   didInsertElement: function() {
-
     var container = document.getElementsByClassName('main-content')[0];
     console.log(container);
     container.insertBefore(pattern, container.firstChild);
