@@ -39,9 +39,17 @@ Make use of the many generators for code, try `ember help generate` for more det
 * `ember build` (development)
 * `ember build --environment production` (production)
 
-### Deploying
+### Deploying to Heroku.
 
-Specify what it takes to deploy your app.
+* `heroku create --buildpack https://github.com/tonycoco/heroku-buildpack-ember-cli.git`
+* `heroku git:remote -a <name-of-heroku-app>`
+* `git push heroku master`
+
+#### Helpful commands
+
+* `heroku config:set EMBER_ENV=production`
+* `heroku config:set NGINX_WORKERS=4`
+* `heroku config:set API_URL=http://api.example.com/`
 
 ## Further Reading / Useful Links
 
@@ -50,4 +58,3 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
