@@ -20,8 +20,6 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
   //
-  // JS Files
-  app.import('bower_components/trianglify/dist/trianglify.min.js');
   // CSS Files
   app.import('bower_components/normalize-css/normalize.css');
 

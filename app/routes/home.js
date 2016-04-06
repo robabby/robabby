@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import Trianglify from 'npm:trianglify';
 
 export default Ember.Route.extend({
   didInsertElement: function() {
