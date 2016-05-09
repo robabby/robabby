@@ -1,36 +1,36 @@
 import Ember from 'ember';
 import Trianglify from 'npm:trianglify';
 
-var pattern = new Trianglify({
-  width: Ember.$(window).innerWidth(),
-  height: Ember.$(window).innerHeight(),
-  cell_size: 90,
-  variance: 1,
-  stroke_width: 0.6,
-  color_function : function() {
-    return '#de6551';
-  }
-}).svg();
-
 export default Ember.Component.extend({
   classNames: ['trianglify-container'],
-
   didInsertElement() {
+
+    let pattern = new Trianglify({
+      width: Ember.$(window).innerWidth(),
+      height: Ember.$(window).innerHeight(),
+      cell_size: 90,
+      variance: 1,
+      stroke_width: 0.6,
+      color_function : function() {
+        return '#de6551';
+      }
+    }).svg();
+
     // Add pattern to DOM.
-    var container = document.querySelector('.trianglify-container');
+    let container = document.querySelector('.trianglify-container');
     container.insertBefore(pattern, container.firstChild);
 
     // Get all pattern polygons.
-    var polyArray = [].slice.call(pattern.children);
+    let polyArray = [].slice.call(pattern.children);
 
     // Get polygon coords and hide them.
-    var polyPoints = polyArray.map(function(poly) {
+    let polyPoints = polyArray.map(function(poly) {
 
       poly.classList.add('poly', 'invisible');
 
-      var rect = poly.getBoundingClientRect();
+      let rect = poly.getBoundingClientRect();
 
-      var point = {
+      let point = {
         x: rect.left + rect.width / 2,
         y: rect.top + rect.height / 2
       };
@@ -39,7 +39,7 @@ export default Ember.Component.extend({
     });
 
     // Get circle for hover.
-    var circle = document.querySelector('.circle');
+    let circle = document.querySelector('.circle');
 
     circle.addEventListener('mouseenter', function() {
       document.addEventListener('mousemove', onMouseMove);

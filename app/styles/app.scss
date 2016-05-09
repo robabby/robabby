@@ -36,7 +36,6 @@ body {
   align-items: center;
   height:$stageHeight;
   background-color:transparent;
-  text-align: center;
   color:#fff;
 
   &:before {
@@ -67,6 +66,14 @@ body {
     background-color: rgba(0, 0, 0, .30);
     z-index: -1;
   }
+  .container {
+    padding:10px;
+
+    h2 {
+      padding-left:5rem;
+      padding-right:5rem;
+    }
+  }
 }
 .container {
   padding:5px;
@@ -80,7 +87,7 @@ body {
     width: 400px;
     height: 400px;
     border-radius: 50%;
-    border: 10px solid white;
+    border: 10px solid #333;
     opacity: 0.1;
     position: absolute;
     top: 0;
