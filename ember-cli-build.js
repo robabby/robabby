@@ -23,5 +23,9 @@ module.exports = function(defaults) {
   // CSS Files
   app.import('bower_components/normalize-css/normalize.css');
 
+  // JS Files
+  app.import('bower_components/three.js/build/three.min.js');
+  app.import('bower_components/threex.planets/threex.planets.js');
+
   return app.toTree();
 };
