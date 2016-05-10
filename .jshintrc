@@ -3,7 +3,9 @@
     "document",
     "window",
     "-Promise",
-    "Trianglify"
+    "Trianglify",
+    "THREE",
+    "THREEx"
   ],
   "browser": true,
   "boss": true,
