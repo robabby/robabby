@@ -8,7 +8,7 @@ export default Ember.Component.extend({
       alpha: true
   	});
   	renderer.setSize( window.innerWidth, window.innerHeight );
-  	document.body.appendChild( renderer.domElement );
+  	document.getElementsByClassName('scene-container')[0].appendChild( renderer.domElement );
   	renderer.shadowMap.enabled	= true;
 
   	var updateFcts	= [];
@@ -29,10 +29,10 @@ export default Ember.Component.extend({
   	light.shadow.camera.right	=  1;
   	light.shadow.camera.top	=  1;
   	light.shadow.camera.bottom= -1;
-  	light.shadowBias	= 0.001;
-  	light.shadowDarkness	= 0.2;
-  	light.shadowMapWidth	= 1024;
-  	light.shadowMapHeight	= 1024;
+  	light.shadow.bias	= 0.001;
+  	//light.shadowDarkness	= 0.2; TODO: Deprecated. Find alternative.
+  	light.shadow.mapSize.width	= 1024;
+  	light.shadow.mapSize.height	= 1024;
   	//////////////////////////////////////////////////////////////////////////////////
   	//		add an object and make it move					//
   	//////////////////////////////////////////////////////////////////////////////////
