@@ -19,7 +19,6 @@ You will need the following things properly installed on your computer.
 * change into the new directory
 * `npm install`
 * `bower install`
-* `bower install -S threex.planets=https://github.com/jeromeetienne/threex.planets/archive/master.zip`
 
 ## Running / Development
 
