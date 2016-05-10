@@ -13,57 +13,57 @@ export default Ember.Component.extend({
 
   	var updateFcts	= [];
   	var scene	= new THREE.Scene();
-  	var camera	= new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.01, 100 );
-  	camera.position.z = 3;
-  	var ambientLight	= new THREE.AmbientLight( 0x888888 );
+
+    var camera	= new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.01, 100 );
+  	camera.position.z = 2;
+
+    var ambientLight	= new THREE.AmbientLight( 0x888888 );
   	scene.add( ambientLight );
 
-  	var light	= new THREE.DirectionalLight( 0xcccccc, 1 );
-  	light.position.set(5,5,5);
-  	scene.add( light );
-  	light.castShadow	= true;
-  	light.shadow.camera.near	= 0.01;
-  	light.shadow.camera.far	= 15;
-  	light.shadow.camera.fov	= 45;
-  	light.shadow.camera.left	= -1;
-  	light.shadow.camera.right	=  1;
-  	light.shadow.camera.top	=  1;
-  	light.shadow.camera.bottom= -1;
-  	light.shadow.bias	= 0.001;
+  	var directionalLight	= new THREE.DirectionalLight( 0xcccccc, 1 );
+  	directionalLight.position.set(5,5,5);
+  	scene.add( directionalLight );
+  	directionalLight.castShadow	= true;
+  	directionalLight.shadow.camera.near	= 0.01;
+  	directionalLight.shadow.camera.far	= 15;
+  	directionalLight.shadow.camera.fov	= 45;
+  	directionalLight.shadow.camera.left	= -1;
+  	directionalLight.shadow.camera.right	=  1;
+  	directionalLight.shadow.camera.top	=  1;
+  	directionalLight.shadow.camera.bottom= -1;
+  	directionalLight.shadow.bias	= 0.001;
   	//light.shadowDarkness	= 0.2; TODO: Deprecated. Find alternative.
-  	light.shadow.mapSize.width	= 1024;
-  	light.shadow.mapSize.height	= 1024;
+  	directionalLight.shadow.mapSize.width	= 1024;
+  	directionalLight.shadow.mapSize.height	= 1024;
   	//////////////////////////////////////////////////////////////////////////////////
   	//		add an object and make it move					//
   	//////////////////////////////////////////////////////////////////////////////////
 
   	var earthMesh	= THREEx.Planets.createEarth();
   	scene.add(earthMesh);
+    updateFcts.push(function(delta) {
+      earthMesh.rotation.y += 1/16 * delta;
+    });
+
   	var mesh	= THREEx.Planets.createEarthCloud();
   	scene.add(mesh);
   	updateFcts.push(function(delta) {
   		mesh.rotation.y += 1/8 * delta;
   	});
 
-
-  	updateFcts.push(function(delta) {
-  		//mesh.rotation.x += 1 * delta;
-  		//mesh.rotation.y += 1/2 * delta;
-  	});
-
   	//////////////////////////////////////////////////////////////////////////////////
   	//		Camera Controls							//
   	//////////////////////////////////////////////////////////////////////////////////
-  	var mouse	= {x : 0, y : 0};
-  	document.addEventListener('mousemove', function(event){
-  		mouse.x	= (event.clientX / window.innerWidth ) - 0.5;
-  		mouse.y	= (event.clientY / window.innerHeight) - 0.5;
-  	}, false);
-  	updateFcts.push(function(delta) {
-  		camera.position.x += (mouse.x*5 - camera.position.x) * (delta*3);
-  		camera.position.y += (mouse.y*5 - camera.position.y) * (delta*3);
-  		camera.lookAt( scene.position );
-  	});
+  	// var mouse	= {x : 0, y : 0};
+  	// document.addEventListener('mousemove', function(event){
+  	// 	mouse.x	= (event.clientX / window.innerWidth ) - 0.5;
+  	// 	mouse.y	= (event.clientY / window.innerHeight) - 0.5;
+  	// }, false);
+  	// updateFcts.push(function(delta) {
+  	// 	camera.position.x += (mouse.x*5 - camera.position.x) * (delta*3);
+  	// 	camera.position.y += (mouse.y*5 - camera.position.y) * (delta*3);
+  	// 	camera.lookAt( scene.position );
+  	// });
   	//////////////////////////////////////////////////////////////////////////////////
   	//		render the scene						//
   	//////////////////////////////////////////////////////////////////////////////////
