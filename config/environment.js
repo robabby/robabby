@@ -1,18 +1,19 @@
-/* jshint node: true */
+/* eslint-env node */
 
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'robabby',
     environment: environment,
-    baseURL: '/',
+    rootURL: '/',
     locationType: 'auto',
-    contentSecurityPolicy: {
-     'connect-src' : "'self' http://localhost:4500"
-    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
+      },
+      EXTEND_PROTOTYPES: {
+        // Prevent Ember Data from overriding Date.parse.
+        Date: false
       }
     },
 
@@ -32,7 +33,6 @@ module.exports = function(environment) {
 
   if (environment === 'test') {
     // Testem prefers this...
-    ENV.baseURL = '/';
     ENV.locationType = 'none';
 
     // keep test console output quieter

@@ -1,7 +1,5 @@
-{{#site-wrap isOpen=isOpen toggleNav=(action 'toggleNav')}}
-  {{site-nav toggleNav=(action 'toggleNav')}}
+{{!-- The following component displays Ember's default welcome message. --}}
+{{welcome-page}}
+{{!-- Feel free to remove this! --}}
 
-  <main>
-    {{liquid-outlet}}
-  </main>
-{{/site-wrap}}
+{{outlet}}
