@@ -1,9 +1,0 @@
-{
-  "name": "robabby",
-  "dependencies": {
-    "jquery": "1.11.3",
-    "normalize-css": "~3.0.3",
-    "three.js": "threejs#*",
-    "threex.planets": "https://github.com/jeromeetienne/threex.planets/archive/master.zip"
-  }
-}

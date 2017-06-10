@@ -1,0 +1,29 @@
+{{site-nav-toggle toggleNav=(action 'toggleNav')}}
+
+<div id="cd-nav" class="cd-nav">
+	<div class="cd-navigation-wrapper">
+		<div class="cd-half-block">
+			<h2>Navigation</h2>
+
+			<nav>
+				<ul class="cd-primary-nav">
+					<li>{{#link-to 'home'}}Home{{/link-to}}</li>
+					<li>{{#link-to 'about'}}About{{/link-to}}</li>
+					<li>{{#link-to 'blog'}}Blog{{/link-to}}</li>
+					<!-- list items here -->
+				</ul>
+			</nav>
+		</div><!-- .cd-half-block -->
+
+		<div class="cd-half-block">
+			<address>
+				<ul class="cd-contact-info">
+					<li><a href="mailto:hello@robabby.com">hello@robabby.com</a></li>
+					<!-- other contact info here -->
+				</ul>
+			</address>
+		</div> <!-- .cd-half-block -->
+	</div> <!-- .cd-navigation-wrapper -->
+</div> <!-- .cd-nav -->
+
+{{yield}}
