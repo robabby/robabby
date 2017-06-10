@@ -38,18 +38,28 @@ export default Ember.Component.extend({
   	//////////////////////////////////////////////////////////////////////////////////
   	//		add an object and make it move					//
   	//////////////////////////////////////////////////////////////////////////////////
+    var earth = new THREE.Object3D();
+    // earth.position.x = -0.8;
+    // earth.position.y = -0.8;
 
-  	var earthMesh	= THREEx.Planets.createEarth();
-  	scene.add(earthMesh);
+    earth.position.set(-0.6, -0.6, 0);
+
+  	var terrainMesh	= THREEx.Planets.createEarth();
+  	earth.add(terrainMesh);
     updateFcts.push(function(delta) {
-      earthMesh.rotation.y += 1/16 * delta;
+      terrainMesh.rotation.y += 1/24 * delta;
     });
 
-  	var mesh	= THREEx.Planets.createEarthCloud();
-  	scene.add(mesh);
+  	var cloudMesh	= THREEx.Planets.createEarthCloud();
+  	earth.add(cloudMesh);
   	updateFcts.push(function(delta) {
-  		mesh.rotation.y += 1/8 * delta;
+  		cloudMesh.rotation.y += 1/16 * delta;
+
   	});
+
+    console.log(earth.position.x);
+
+    scene.add(earth);
 
   	//////////////////////////////////////////////////////////////////////////////////
   	//		Camera Controls							//
