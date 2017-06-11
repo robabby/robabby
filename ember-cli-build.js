@@ -21,7 +21,7 @@ module.exports = function(defaults) {
 
   // Kube UI framework
   app.import('vendor/libs/kube/kube.min.js');
-  // app.import('vendor/libs/kube/kube.min.css');
+  app.import('vendor/libs/kube/kube.min.css');
 
   return app.toTree();
 };
