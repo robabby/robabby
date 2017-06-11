@@ -1,9 +1,12 @@
-@import 'mixins';
-@import 'variables';
-@import 'fonts';
-@import 'components/site-nav';
+@import "libs/kube/kube.scss";
+@import "mixins";
+@import "variables";
+@import "fonts";
+@import "components/site-nav";
 
 /*
+font-family: 'raleway';
+
 font-family: 'open_sansbold';
 font-family: 'open_sansbold_italic';
 font-family: 'open_sanslight';
@@ -12,6 +15,11 @@ font-family: 'open_sansregular';
 font-family: 'open_sansitalic';
 font-family: 'open_sanssemibold';
 font-family: 'open_sanssemibold_italic';
+
+font-family: 'roboto_slabbold';
+font-family: 'roboto_slablight';
+font-family: 'roboto_slabregular';
+font-family: 'roboto_slabthin';
 */
 
 * {
@@ -28,7 +36,7 @@ html {
   @include clearfix();
 }
 body {
-  background-color:#fff;
+  background-color: mix(#3f3251, #002025, 70%);
 }
 .stage {
   display:flex;
@@ -37,39 +45,21 @@ body {
   height:$stageHeight;
   background-color:transparent;
   color:#fff;
+  overflow: hidden;
+}
+.stage__content {
+  position: relative;
+  z-index: 10;
 
-  &:before {
-    content:'';
-    display: block;
-    position: absolute;
-    top:0;
-    right:0;
-    bottom:0;
-    left:0;
-    // background: url(images/el-tracks.jpg) no-repeat center center fixed;
-    background-color:#333;
-    filter:grayscale(1) blur(4px);
-    -webkit-filter:grayscale(1) blur(4px);
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    z-index: -1;
-  }
-  &:after {
-    content: '';
-    display: block;
-    position: absolute;
-    top:0;
-    right:0;
-    bottom:0;
-    left:0;
-    background-color: rgba(0, 0, 0, .30);
-    z-index: -1;
-  }
-  .scene-container {
-    width:100%;
-    height:100%;
+  h1 {
+    font-size: 12vw;
+    font-family: 'raleway';
+    color:$color-aluminum;
+    text-transform: uppercase;
+
+    span {
+      font-weight: 300;
+    }
   }
 }
 .container {
@@ -101,6 +91,36 @@ body {
   .invisible {
     opacity: 0;
     transform: scale(0);
+  }
+}
+
+.vertical-centered-box {
+  position: absolute;
+  width:100%;
+  height:100%;
+  text-align: center;
+}
+#particles-background, #particles-foreground {
+  left: -51%;
+  top: -51%;
+  width:202%;
+  height:202%;
+  transform: scale3d(0.5, 0.5, 1);
+}
+
+#particles-background {
+  background: mix(#3f3251, #002025, 70%);
+  background-image: -moz-linear-gradient(45deg, #3f3251 2%, #002025 100%);
+  background-image: -webkit-linear-gradient(45deg, #3f3251 2%, #002025 100%);
+  background-image: linear-gradient(45deg, #3f3251 2%, #002025 100%);
+}
+
+.sub-stage {
+  padding:20px;
+  background-color:#009fc2;
+
+  h3 {
+    color:$color-aluminum;
   }
 }
 
