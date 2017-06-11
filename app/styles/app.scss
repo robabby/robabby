@@ -1,4 +1,5 @@
-@import "libs/kube/kube.scss";
+@import "libs/kube";
+@import "libs/black-tie";
 @import "mixins";
 @import "variables";
 @import "fonts";
@@ -7,7 +8,8 @@
 @import "components/trianglify-container";
 
 /*
-font-family: 'raleway';
+font-family: 'Raleway';
+font-family: 'RobotoSlab';
 
 font-family: 'open_sansbold';
 font-family: 'open_sansbold_italic';
@@ -17,11 +19,6 @@ font-family: 'open_sansregular';
 font-family: 'open_sansitalic';
 font-family: 'open_sanssemibold';
 font-family: 'open_sanssemibold_italic';
-
-font-family: 'roboto_slabbold';
-font-family: 'roboto_slablight';
-font-family: 'roboto_slabregular';
-font-family: 'roboto_slabthin';
 */
 body,
 html {
@@ -33,21 +30,29 @@ html {
 body {
   background-color: mix(#3f3251, #002025, 70%);
 }
+@include buttons-font("Lato, 'Helvetica Neue', sans-serif");
 .stage {
   display:flex;
+  position: relative;
   justify-content: center;
   align-items: center;
   height:$stageHeight;
   background-color:transparent;
   color:#fff;
   overflow: hidden;
+
+  .call-to-action {
+    position: absolute;
+    top:30px;
+    right:2%;
+  }
 }
 .stage__content {
   position: relative;
   z-index: 10;
 
   h1 {
-    font-size: 15vw;
+    font-size: 12.5vw;
     line-height: 90%;
     font-family: 'raleway';
     color:$color-aluminum;
@@ -58,7 +63,7 @@ body {
     }
   }
   h2 {
-    font-size:3vw;
+    font-size:4vw;
     color:$color-aluminum;
     font-weight:300;
   }
@@ -84,9 +89,31 @@ body {
     line-height: 1;
     color: $color-text;
     margin-bottom:50px;
+    font-weight:300;
   }
   .button {
     font-family:'Raleway';
+  }
+}
+.services-offered {
+  padding:80px 60px;
+  background-color:$color-darkgray;
+
+  .service {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:0 15px;
+
+
+    h4 {
+      font-family: 'RobotoSlab';
+      color:$color-aluminum;
+      border-bottom: 1px solid #555;
+    }
+    p {
+      color:$color-aluminum;
+    }
   }
 }
 
@@ -102,17 +129,22 @@ body {
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : $smallScreen) {
-
+  .stage .stage__content h1 {
+    font-size:9vw;
+  }
+  .stage .stage__content h2 {
+    font-size:2.5vw;
+  }
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : $mediumScreen) {
   .stage .stage__content h1 {
-    font-size:10vw;
+    font-size:8vw;
     line-height: 100%;
   }
-  .stage .stage__content h3 {
-    font-size:2.75vw;
+  .stage .stage__content h2 {
+    font-size:2.25vw;
     line-height: 100%;
   }
 }
