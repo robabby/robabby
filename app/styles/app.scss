@@ -31,6 +31,9 @@ body {
   background-color: mix(#3f3251, #002025, 70%);
 }
 @include buttons-font("Lato, 'Helvetica Neue', sans-serif");
+
+/* Home Page
+/////////////////////////////// */
 .stage {
   display:flex;
   position: relative;
