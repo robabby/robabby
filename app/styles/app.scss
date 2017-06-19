@@ -30,9 +30,15 @@ html {
 }
 body {
   background-color: mix(#3f3251, #002025, 70%);
+  font-family: 'Raleway';
 }
 @include buttons-font("Lato, 'Helvetica Neue', sans-serif");
-
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'RobotoSlab';
+}
+p, a {
+  font-family: 'Raleway';
+}
 /* Home Page
 /////////////////////////////// */
 .stage {
