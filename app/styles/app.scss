@@ -99,10 +99,24 @@ body {
     font-family:'Raleway';
   }
 }
-.services-list {
+.thumbnail {
+  padding:5px;
+  border:1px solid #ececec;
+  border-radius: 3px;
+  max-width: 100%;
+}
+.services-list,
+.benefits-list {
   list-style: none;
   margin-left: 0;
 }
+.services-list li i {
+  color:$color-success;
+}
+.benefits-list li i {
+  color:$color-focus;
+}
+
 .services-offered {
   padding:80px 60px;
   background-color:$color-darkgray;
@@ -112,11 +126,6 @@ body {
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    width:250px;
-    height:250px;
-    padding:25px;
-    background-color:$color-blue;
-    border-radius:50%;
 
     h4 {
       font-family: 'RobotoSlab';
