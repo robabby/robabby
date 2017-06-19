@@ -99,23 +99,31 @@ body {
     font-family:'Raleway';
   }
 }
+.services-list {
+  list-style: none;
+  margin-left: 0;
+}
 .services-offered {
   padding:80px 60px;
   background-color:$color-darkgray;
 
   .service {
     display: flex;
-    flex-direction: column;
+    flex-flow: column;
     justify-content: center;
-    padding:0 15px;
-
+    align-items: center;
+    width:250px;
+    height:250px;
+    padding:25px;
+    background-color:$color-blue;
+    border-radius:50%;
 
     h4 {
       font-family: 'RobotoSlab';
       color:$color-aluminum;
-      border-bottom: 1px solid #555;
+      margin:10px 0 0;
     }
-    p {
+    i {
       color:$color-aluminum;
     }
   }
