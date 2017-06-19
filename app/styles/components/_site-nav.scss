@@ -1,3 +1,10 @@
+@import "../libs/kube";
+@import "../libs/black-tie";
+@import "../mixins";
+@import "../variables";
+@import "../fonts";
+@import "../spacing";
+
 /* Medium Devices, Desktops */
 
 main {
@@ -26,8 +33,8 @@ main {
 .cd-nav-trigger {
   position: fixed;
   z-index: 3;
-  left: 3%;
-  top: 20px;
+  left: 20px;
+  top: 30px;
   height: 54px;
   width: 54px;
   background-color: #243040;
@@ -140,20 +147,14 @@ main {
     height: 100%;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-    padding: 25px 5% 40px calc(5% + 80px);
+    padding: 30px 20px 40px;
     background-color: #1B2025;
     /* Force Hardware Acceleration in WebKit */
-    -webkit-transform: translateZ(0);
-    -moz-transform: translateZ(0);
     -ms-transform: translateZ(0);
-    -o-transform: translateZ(0);
     transform: translateZ(0);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    -webkit-transform: translateX(-100%);
-    -moz-transform: translateX(-100%);
     -ms-transform: translateX(-100%);
-    -o-transform: translateX(-100%);
     transform: translateX(-100%);
     -webkit-transition: -webkit-transform 0.7s;
     -moz-transition: -moz-transform 0.7s;
@@ -163,17 +164,16 @@ main {
     transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78);
 
     h2 {
+      margin:12px 0 20px 70px;
       color:#EEF2FF;
+      border-bottom:1px solid #555;
     }
   }
 }
 
 .navigation-is-open {
   main {
-    -webkit-transform: translateX(50%);
-    -moz-transform: translateX(50%);
     -ms-transform: translateX(50%);
-    -o-transform: translateX(50%);
     transform: translateX(50%);
   }
 
@@ -245,13 +245,18 @@ main {
   list-style: none;
 }
 .cd-nav .cd-primary-nav li {
-  margin: 1.6em 0;
+  display:block;
+  text-align: center;
+  margin: 3em 0;
 }
 .cd-nav .cd-primary-nav a {
-  color: rgba(255, 255, 255, 0.3);
+  font-size:2rem;
+  font-weight:100;
+  color: $color-lightgray;
   display: inline-block;
+  text-decoration: none;
 }
-.cd-nav .cd-primary-nav a.selected {
+.cd-nav .cd-primary-nav a.active {
   color: #ffffff;
 }
 .cd-nav .cd-primary-nav a:hover {
@@ -280,11 +285,5 @@ main {
 }
 
 @media only screen and (min-width: 1170px) {
-  .cd-nav-trigger {
-    top: 40px;
-  }
-  .cd-nav .cd-half-block {
-    width: 50%;
-    float: left;
-  }
+
 }
