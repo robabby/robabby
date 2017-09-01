@@ -64,7 +64,7 @@ p, a {
   h1 {
     font-size: 12.5vw;
     line-height: 90%;
-    font-family: 'raleway';
+    font-family: 'Raleway';
     color:$color-aluminum;
     text-transform: uppercase;
 
@@ -76,7 +76,23 @@ p, a {
     font-size:4vw;
     color:$color-aluminum;
     font-weight:300;
-    font-family: 'Raleway';
+    font-family: 'Raleway'
+  }
+
+  .social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top:40px;
+
+    a {
+      color:$color-aluminum;
+      text-decoration: none;
+
+      i {
+        margin-bottom: 10px;
+      }
+    }
   }
 }
 .scroll-down {
@@ -135,6 +151,10 @@ p, a {
     flex-flow: column;
     justify-content: center;
     align-items: center;
+
+    a {
+      text-decoration: none;
+    }
 
     h4 {
       font-family: 'RobotoSlab';

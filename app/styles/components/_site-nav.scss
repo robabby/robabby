@@ -33,8 +33,8 @@ main {
 .cd-nav-trigger {
   position: fixed;
   z-index: 3;
-  left: 20px;
-  top: 30px;
+  left: 15px;
+  top: 25px;
   height: 54px;
   width: 54px;
   background-color: #243040;
@@ -43,9 +43,11 @@ main {
   overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;
-  -webkit-transition: -webkit-transform 0.5s;
-  -moz-transition: -moz-transform 0.5s;
-  transition: transform 0.5s;
+  -webkit-transition: all 750ms ease-in-out;
+  -moz-transition: all 750ms ease-in-out;
+  -ms-transition: all 750ms ease-in-out;
+  -o-transition: all 750ms ease-in-out;
+  transition: all 750ms ease-in-out;
   cursor: pointer;
 
   .cd-nav-icon {
@@ -147,7 +149,7 @@ main {
     height: 100%;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-    padding: 30px 20px 40px;
+    padding: 30px 10px 40px;
     background-color: #1B2025;
     /* Force Hardware Acceleration in WebKit */
     -ms-transform: translateZ(0);
@@ -162,12 +164,6 @@ main {
     -webkit-transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78);
     -moz-transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78);
     transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78);
-
-    h2 {
-      margin:12px 0 20px 70px;
-      color:#EEF2FF;
-      border-bottom:1px solid #555;
-    }
   }
 }
 
@@ -204,6 +200,7 @@ main {
     -ms-transform: rotate(180deg);
     -o-transform: rotate(180deg);
     transform: rotate(180deg);
+    left:51%;
 
     .cd-nav-icon::after,
     .cd-nav-icon::before {
@@ -284,6 +281,78 @@ main {
   font-size: 1.2rem;
 }
 
-@media only screen and (min-width: 1170px) {
+/* Effect 14: border switch */
+nav a {
+	position: relative;
+	display: block;
+	outline: none;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 400;
+	text-shadow: 0 0 1px rgba(255,255,255,0.3);
+	font-size: 1.35em;
+}
 
+nav a:hover,
+nav a:focus {
+	outline: none;
+  color:$color-focus;
+}
+/* Effect 21: borders slight translate */
+.cl-effect-21 a {
+	padding: 10px;
+	color: $color-aluminum;
+	font-weight: 100;
+	text-shadow: none;
+	-webkit-transition: color 0.3s;
+	-moz-transition: color 0.3s;
+	transition: color 0.3s;
+}
+
+// .cl-effect-21 a::before,
+.cl-effect-21 a::after {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background: #fff;
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	-moz-transition: opacity 0.3s, -moz-transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
+	-webkit-transform: translateY(-10px);
+	-moz-transform: translateY(-10px);
+	transform: translateY(-10px);
+}
+
+// .cl-effect-21 a::before {
+// 	top: 0;
+// 	-webkit-transform: translateY(-10px);
+// 	-moz-transform: translateY(-10px);
+// 	transform: translateY(-10px);
+// }
+
+.cl-effect-21 a::after {
+	bottom: 0;
+	-webkit-transform: translateY(10px);
+	-moz-transform: translateY(10px);
+	transform: translateY(10px);
+}
+
+.cl-effect-21 a:hover,
+.cl-effect-21 a:focus {
+	color: #fff;
+}
+
+.cl-effect-21 a:hover::before,
+.cl-effect-21 a:focus::before,
+.cl-effect-21 a:hover::after,
+.cl-effect-21 a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	transform: translateY(0px);
 }

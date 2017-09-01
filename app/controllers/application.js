@@ -1,10 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  isOpen: false,
+  queryParams: ['menuIsOpen'],
+  menuIsOpen: false,
   actions: {
-    toggleNav(){
-      this.toggleProperty('isOpen');
+    toggleNav() {
+      this.toggleProperty('menuIsOpen');
     }
   }
 });
