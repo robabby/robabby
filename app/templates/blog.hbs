@@ -1,9 +1,0 @@
-<h1>Blog</h1>
-
-{{#each model as |item|}}
-	<div>
-		{{#link-to 'post' item.id}}{{item.content}}{{/link-to}}
-	</div>
-{{/each}}
-
-{{outlet}}

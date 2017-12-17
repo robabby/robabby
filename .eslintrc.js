@@ -1,13 +1,19 @@
 module.exports = {
-  root: true,
-  parserOptions: {
-    ecmaVersion: 2017,
-    sourceType: 'module'
+  "env": {
+    "browser": true,
+    "es6": true,
   },
-  extends: 'eslint:recommended',
-  env: {
-    browser: true
+  "plugins": [
+    "react",
+  ],
+  "globals": {
+    "graphql": false,
   },
-  rules: {
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true,
+    },
   }
-};
+}

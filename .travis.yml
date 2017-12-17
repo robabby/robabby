@@ -1,21 +1,15 @@
----
 language: node_js
+
+os:
+  - linux
+  - osx
+
 node_js:
-  - "6"
-
-sudo: false
-
-cache:
-  directories:
-    - $HOME/.npm
-
-before_install:
-  - npm config set spin false
-  - npm install -g phantomjs-prebuilt
-  - phantomjs --version
-
-install:
-  - npm install
+  - "node"
+  - "lts/*"
+  - "7"
+  - "8"
 
 script:
-  - npm test
+  - npm install
+  - npm run lint
