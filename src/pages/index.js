@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
-import Stage from '../components/Stage'
+import HomeStage from '../components/HomeStage'
 import Scene from '../components/Scene'
 import Bio from '../components/Bio'
 import { rhythm } from '../utils/typography'
@@ -16,9 +16,9 @@ class BlogIndex extends React.Component {
     return (
       <div className="ra-page-area">
         <Helmet title={siteTitle} />
-        <Stage>
+        <HomeStage>
           <Scene />
-        </Stage>
+        </HomeStage>
         <Bio />
         <div className="ra-content-area">
           <hr />

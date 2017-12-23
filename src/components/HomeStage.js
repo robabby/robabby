@@ -3,10 +3,10 @@ import { rhythm } from '../utils/typography'
 
 import Scene from './Scene'
 
-import '../assets/scss/components/Stage.scss'
+import '../assets/scss/components/HomeStage.scss'
 
 
-class Stage extends React.Component {
+class HomeStage extends React.Component {
   render() {
     return (
       <section className="ra-stage">
@@ -17,4 +17,4 @@ class Stage extends React.Component {
   }
 }
 
-export default Stage;
+export default HomeStage;
