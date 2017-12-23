@@ -1,7 +1,6 @@
 import Typography from 'typography'
 import GitHub from 'typography-theme-github'
 import Lawton from 'typography-theme-lawton'
-import Parnassus from 'typography-theme-parnassus'
 
 const typography = new Typography(Lawton)
 

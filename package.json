@@ -36,11 +36,9 @@
     "react-trianglify": "^1.2.0",
     "trianglify": "^1.2.0",
     "typeface-merriweather": "0.0.43",
-    "typeface-montserrat": "0.0.43",
+    "typeface-roboto": "0.0.45",
     "typography-theme-github": "^0.15.10",
-    "typography-theme-lawton": "^0.15.10",
-    "typography-theme-parnassus": "^0.15.10",
-    "typography-theme-wordpress-2016": "^0.15.10"
+    "typography-theme-lawton": "^0.15.10"
   },
   "devDependencies": {
     "eslint": "^4.13.1",

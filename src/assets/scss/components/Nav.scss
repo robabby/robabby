@@ -1,0 +1,23 @@
+$baseColor: rgba(58, 124, 164, 1);
+
+.ra-nav {
+  display: flex;
+  flex-direction: row;
+
+  li {
+    list-style: none;
+    margin-bottom: 0;
+    margin-right: 1rem;
+
+    a {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      color:#fff;
+
+      &.active {
+        color:lighten($baseColor, 18%);
+        // text-decoration: underline;
+      }
+    }
+  }
+}
