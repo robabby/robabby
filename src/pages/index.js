@@ -8,7 +8,7 @@ import Scene from '../components/Scene'
 import Bio from '../components/Bio'
 import { rhythm } from '../utils/typography'
 
-class BlogIndex extends React.Component {
+class Index extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const posts = get(this, 'props.data.allMarkdownRemark.edges')
@@ -55,7 +55,7 @@ class BlogIndex extends React.Component {
   }
 }
 
-export default BlogIndex
+export default Index
 
 export const pageQuery = graphql`
   query IndexQuery {
@@ -64,7 +64,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(limit: 2, sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           excerpt

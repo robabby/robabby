@@ -1,6 +1,8 @@
 .ra-header {
   display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   position: absolute;
   width: 100vw;
   padding: 16px 8px;
@@ -10,6 +12,12 @@
   background-image: linear-gradient(45deg, #3f3251 2%, #002025 100%);
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, .1);
   z-index: 1;
+
+  &--isRoot {
+    background-image: none;
+    background-color: rgba(0, 32, 37, .35);
+    border-bottom: 1px solid rgba(63, 50, 82, .75);
+  }
 }
 .ra-header__title {
   color:#fff;

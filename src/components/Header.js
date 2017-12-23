@@ -1,6 +1,8 @@
 import React from 'react';
 import Link from 'gatsby-link'
 import get from 'lodash/get'
+
+import Nav from './Nav'
 import { rhythm, scale } from '../utils/typography'
 
 import '../assets/scss/components/Header.scss'
@@ -15,25 +17,30 @@ class Header extends React.Component  {
   render() {
     return (
       <header className={this.getHeaderClassNames()}>
-        <h3
-          className='ra-header__title'
-          style={{
-            ...scale(.75),
-            marginBottom: 0,
-            marginTop: 0,
-          }}
-        >
-          <Link
+        <div className="ra-header__left">
+          <h3
+            className='ra-header__title'
             style={{
-              boxShadow: 'none',
-              textDecoration: 'none',
-              color: 'inherit',
+              ...scale(.75),
+              marginBottom: 0,
+              marginTop: 0,
             }}
-            to={'/'}
           >
-            Rob Abby
-          </Link>
-        </h3>
+            <Link
+              style={{
+                  boxShadow: 'none',
+                  textDecoration: 'none',
+                  color: 'inherit',
+              }}
+              to={'/'}
+            >
+              Rob Abby
+            </Link>
+          </h3>
+        </div>
+        <div classNam="ra-header__right">
+          <Nav isRoot={get(this, 'props.isRoot')} />
+        </div>
       </header>
     )
   }
