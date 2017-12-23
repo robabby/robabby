@@ -1,20 +1,29 @@
 import React from 'react';
+import get from 'lodash/get'
 import Trianglify from 'react-trianglify'
-import Particles from 'react-particles-js';
+import Particles from 'react-particles-js'
 
 import '../assets/scss/components/Scene.scss'
 
 class Scene extends React.Component {
-  constructor(props, context) {
-    super(props, context);
+  insertTrianglify() {
+    const dimensions = get(this, 'props.dimensions')
+    const { width, height } = dimensions
 
-    this.state = {
-
-    };
+    if (width) {
+      return (
+        <Trianglify
+          output='svg'
+          width={width}
+          height={height}
+          cell_size={80}
+          variance={1}
+          stroke_width={1.5}
+        />
+      )
+    }
   }
   render() {
-    const windowWidth = window.innerWidth; // canvas width
-    const windowHeight = window.innerHeight; // canvas height
 
     return (
       <div className="ra-scene">
@@ -35,17 +44,10 @@ class Scene extends React.Component {
             width: '100%'
           }}
         />
-        <Trianglify
-          output='svg'
-          width={windowWidth}
-          height={windowHeight}
-          cell_size={80}
-          variance={1}
-          stroke_width={1.5}
-        />
+        {this.insertTrianglify()}
       </div>
     )
   }
 }
 
-export default Scene;
+export default Scene

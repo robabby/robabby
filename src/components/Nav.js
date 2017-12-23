@@ -7,11 +7,6 @@ import 'typeface-roboto'
 import '../assets/scss/components/Nav.scss'
 
 class Nav extends React.Component {
-  getActiveLinkStyles() {
-    return {
-      color: '#fff'
-    }
-  }
   render() {
     return (
       <nav className="ra-nav">

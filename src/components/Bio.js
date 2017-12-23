@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-import profilePic from './profile-pic.jpg'
+import profilePic from '../assets/images/profile-pic.jpg'
 import { rhythm } from '../utils/typography'
 
 import '../assets/scss/components/Bio.scss'

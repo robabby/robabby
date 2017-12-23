@@ -3,12 +3,10 @@ import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
-import HomeStage from '../components/HomeStage'
-import Scene from '../components/Scene'
-import Bio from '../components/Bio'
-import { rhythm } from '../utils/typography'
+import BlogStage from '../components/BlogStage'
+import { rhythm, scale } from '../utils/typography'
 
-class Index extends React.Component {
+class Blog extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const posts = get(this, 'props.data.allMarkdownRemark.edges')
@@ -16,21 +14,17 @@ class Index extends React.Component {
     return (
       <div className="ra-page-area">
         <Helmet title={siteTitle} />
-        <HomeStage>
-          <Scene />
-        </HomeStage>
+        <BlogStage />
         <div className="ra-content-area">
-          <Bio />
+          <h2 style={{
+            ...scale(1.1)
+          }}>
+            Blog
+          </h2>
           <hr style={{
             marginTop: rhythm(1.5),
             marginBottom: rhythm(1.5)
           }} />
-          <h2 style={{
-            marginTop: rhythm(1.25),
-            marginBottom: rhythm(1.25)
-          }}>
-            Recent ramblings:
-          </h2>
           {posts.map(({ node }) => {
             const title = get(node, 'frontmatter.title') || node.fields.slug
             return (
@@ -55,16 +49,16 @@ class Index extends React.Component {
   }
 }
 
-export default Index
+export default Blog
 
 export const pageQuery = graphql`
-  query IndexQuery {
+  query blogQuery {
     site {
       siteMetadata {
         title
       }
     }
-    allMarkdownRemark(limit: 3, sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           excerpt

@@ -38,7 +38,7 @@ class Header extends React.Component  {
             </Link>
           </h3>
         </div>
-        <div classNam="ra-header__right">
+        <div className="ra-header__right">
           <Nav isRoot={get(this, 'props.isRoot')} />
         </div>
       </header>
