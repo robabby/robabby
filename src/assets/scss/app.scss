@@ -1,1 +1,14 @@
+@import "reset";
 
+.ra-page-area {
+  position: relative;
+  background-color: #eaf2e3;
+  z-index: 0;
+}
+.ra-content-area {
+  width:960px;
+  margin:0 auto;
+  padding: 2rem 4rem;
+  background-color: #fff;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, .15);
+}
