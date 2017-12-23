@@ -19,9 +19,12 @@ class BlogIndex extends React.Component {
         <HomeStage>
           <Scene />
         </HomeStage>
-        <Bio />
         <div className="ra-content-area">
-          <hr />
+          <Bio />
+          <hr style={{
+            marginTop: rhythm(1.5),
+            marginBottom: rhythm(1.5)
+          }} />
           <h2 style={{
             marginTop: rhythm(1.25),
             marginBottom: rhythm(1.25)

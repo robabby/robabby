@@ -6,9 +6,12 @@
   z-index: 0;
 }
 .ra-content-area {
+  position: relative;
   width:960px;
   margin:0 auto;
   padding: 2rem 4rem;
   background-color: #fff;
-  box-shadow: 0 0 10px 1px rgba(0, 0, 0, .15);
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 -10px 10px 1px rgba(0, 0, 0, .15);
+  transform: translateY(-50px);
 }
