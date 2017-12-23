@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
+import Stage from '../components/Stage'
 import Bio from '../components/Bio'
 import { rhythm } from '../utils/typography'
 
@@ -12,8 +13,9 @@ class BlogIndex extends React.Component {
     const posts = get(this, 'props.data.allMarkdownRemark.edges')
 
     return (
-      <div>
+      <div className="ra-content-area">
         <Helmet title={siteTitle} />
+        <Stage />
         <Bio />
         <hr />
         {posts.map(({ node }) => {
