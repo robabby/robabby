@@ -10,7 +10,9 @@ class About extends React.Component {
     return (
       <div className="ra-page-area">
         <Helmet title={siteTitle} />
-        About Page
+        <div className="ra-content-area">
+          <h1>About Page</h1>
+        </div>
       </div>
     )
   }

@@ -8,7 +8,7 @@ import '../assets/scss/components/Header.scss'
 class Header extends React.Component  {
   render() {
     return (
-      <header style={get(this, 'props.showHeader') ? {} : {display: 'none'}} className="ra-header">
+      <header style={get(this, 'props.showHeader') ? {display: 'none'} : {}} className="ra-header">
         <h3
           className='ra-header__title'
           style={{

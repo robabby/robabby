@@ -22,6 +22,12 @@ class BlogIndex extends React.Component {
         <Bio />
         <div className="ra-content-area">
           <hr />
+          <h2 style={{
+            marginTop: rhythm(1.25),
+            marginBottom: rhythm(1.25)
+          }}>
+            Recent ramblings:
+          </h2>
           {posts.map(({ node }) => {
             const title = get(node, 'frontmatter.title') || node.fields.slug
             return (

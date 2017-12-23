@@ -1,22 +1,29 @@
-.ra-trianglify {
+.ra-scene {
   position: absolute;
   top:0;
   right:0;
   bottom: 0;
   left:0;
+  z-index: 0;
 
-  path {
-    fill: transparent;
-    transform-origin: center;
-    transition: all 150ms ease-in-out;
-    opacity: .0125;
-    transform: scale(1);
+  svg {
+    position: relative;
+    z-index: 1;
 
-    &:hover {
-      fill:rgba(58, 124, 164, .2);
-      opacity: .8;
+    path {
+      fill: transparent;
+      transform-origin: center;
+      transition: all 150ms ease-in-out;
+      opacity: .0125;
+      transform: scale(1);
+
+      &:hover {
+        fill:rgba(58, 124, 164, .2);
+        opacity: .8;
+      }
     }
   }
+
 }
 .ra-particle-container {
   position: absolute;
@@ -24,4 +31,5 @@
   right:0;
   bottom:0;
   left:0;
+  z-index: 0;
 }
