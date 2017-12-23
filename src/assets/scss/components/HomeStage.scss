@@ -1,4 +1,4 @@
-.ra-stage {
+.ra-home-stage {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -18,15 +18,13 @@
     bottom:0;
     left:0;
     background-image: linear-gradient(45deg, #3f3251 2%, #002025 100%);
-    // background-image: url('../../images/calvin-and-hobbes-lets-go-exploring.png');
-    // background-image: url('../../images/el-tracks.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     z-index: -1;
   }
 }
-.ra-stage__title {
+.ra-home-stage__title {
   position: relative;
   color:#fff;
   z-index: 1;

@@ -9,8 +9,8 @@ import '../assets/scss/components/HomeStage.scss'
 class HomeStage extends React.Component {
   render() {
     return (
-      <section className="ra-stage">
-        <h1 className="ra-stage__title">Let's go exploring...</h1>
+      <section className="ra-home-stage">
+        <h1 className="ra-home-stage__title">Let's go exploring...</h1>
         <Scene />
       </section>
     )
