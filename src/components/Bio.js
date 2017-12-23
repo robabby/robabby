@@ -1,8 +1,5 @@
 import React from 'react'
-
-// Import typefaces
-import 'typeface-montserrat'
-import 'typeface-merriweather'
+import Link from 'gatsby-link'
 
 import profilePic from './profile-pic.jpg'
 import { rhythm } from '../utils/typography'
@@ -26,7 +23,7 @@ class Bio extends React.Component {
           I build software for a living. By day I work with an awesome team at <a href="http://savogroup.com/">The Savo Group</a>.
         </p>
         <p>
-          I am also heavily invested in Personal Development, and will gladly talk anyones ear off about life, the Universe, and the nature of existence. If you're intrigued, feel free to read my full Bio on the <b>About Page</b>.
+          I am also heavily invested in Personal Development, and will gladly talk anyones ear off about life, the Universe, and the nature of existence. If you're intrigued, feel free to read my full Bio on the <Link to="/about">About Page</Link>.
         </p>
       </div>
     )
