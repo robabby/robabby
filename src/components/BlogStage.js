@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import { rhythm } from '../utils/typography'
 
 import '../assets/scss/components/BlogStage.scss'

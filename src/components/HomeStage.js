@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import Measure from 'react-measure'
 import { rhythm } from '../utils/typography'
 
@@ -9,14 +9,14 @@ import '../assets/scss/components/HomeStage.scss'
 
 class HomeStage extends React.Component {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
     this.state = {
       dimensions: {
         width: -1,
         height: -1
       }
-    };
+    }
   }
   render() {
     return (
@@ -37,4 +37,4 @@ class HomeStage extends React.Component {
   }
 }
 
-export default HomeStage;
+export default HomeStage

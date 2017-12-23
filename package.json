@@ -8,7 +8,6 @@
   },
   "dependencies": {
     "@dschau/create-gatsby-blog-post": "^1.1.0",
-    "express": "^4.16.2",
     "gatsby": "^1.9.138",
     "gatsby-link": "^1.6.32",
     "gatsby-plugin-catch-links": "^1.0.14",
@@ -29,7 +28,6 @@
     "gatsby-transformer-remark": "^1.7.25",
     "gatsby-transformer-sharp": "^1.6.16",
     "lodash": "^4.17.4",
-    "nodemon": "^1.14.2",
     "react-measure": "^2.0.2",
     "react-particles-js": "^2.1.0",
     "react-responsive-grid": "^0.3.4",
@@ -64,7 +62,6 @@
     "develop": "gatsby develop",
     "build": "gatsby build",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js",
-    "server": "nodemon server.js"
+    "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
   }
 }

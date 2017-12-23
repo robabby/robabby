@@ -1,5 +1,4 @@
-import React from 'react';
-import { rhythm } from '../utils/typography'
+import React from 'react'
 
 import '../assets/scss/components/AboutStage.scss'
 

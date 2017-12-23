@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import get from 'lodash/get'
 import Trianglify from 'react-trianglify'
 import Particles from 'react-particles-js'
@@ -21,6 +21,8 @@ class Scene extends React.Component {
           stroke_width={1.5}
         />
       )
+    } else {
+      return
     }
   }
   render() {
