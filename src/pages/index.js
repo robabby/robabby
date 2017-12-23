@@ -4,6 +4,7 @@ import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
 import Stage from '../components/Stage'
+import Scene from '../components/Scene'
 import Bio from '../components/Bio'
 import { rhythm } from '../utils/typography'
 
@@ -15,7 +16,9 @@ class BlogIndex extends React.Component {
     return (
       <div className="ra-content-area">
         <Helmet title={siteTitle} />
-        <Stage />
+        <Stage>
+          <Scene />
+        </Stage>
         <Bio />
         <hr />
         {posts.map(({ node }) => {

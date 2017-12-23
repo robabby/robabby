@@ -1,0 +1,27 @@
+.ra-trianglify {
+  position: absolute;
+  top:0;
+  right:0;
+  bottom: 0;
+  left:0;
+
+  path {
+    fill: transparent;
+    transform-origin: center;
+    transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+    opacity: .0125;
+    transform: scale(1);
+
+    &:hover {
+      fill:rgba(58, 124, 164, .2);
+      opacity: .8;
+    }
+  }
+}
+.ra-particle-container {
+  position: absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+}
