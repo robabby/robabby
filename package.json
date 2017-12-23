@@ -39,6 +39,7 @@
     "typeface-montserrat": "0.0.43",
     "typography-theme-github": "^0.15.10",
     "typography-theme-lawton": "^0.15.10",
+    "typography-theme-parnassus": "^0.15.10",
     "typography-theme-wordpress-2016": "^0.15.10"
   },
   "devDependencies": {
