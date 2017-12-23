@@ -8,6 +8,8 @@
   height:75vh;
   background-color:rgba(0, 0, 0, .25);
   overflow:hidden;
+  z-index: 0;
+
   &:after {
     content:'';
     position: absolute;
@@ -25,5 +27,7 @@
   }
 }
 .ra-stage__title {
+  position: relative;
   color:#fff;
+  z-index: 1;
 }

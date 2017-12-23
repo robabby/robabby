@@ -1,5 +1,4 @@
 import React from 'react';
-import Anime from 'react-anime';
 import Trianglify from 'react-trianglify'
 import Particles from 'react-particles-js';
 
