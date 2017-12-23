@@ -28,7 +28,7 @@ class Template extends React.Component {
       <Container
         style={this.getContainerStyle(isRoot)}
       >
-        <Header showHeader={isRoot} />
+        <Header isRoot={isRoot} />
         {children()}
       </Container>
     )

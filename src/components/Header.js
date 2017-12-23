@@ -6,9 +6,15 @@ import { rhythm, scale } from '../utils/typography'
 import '../assets/scss/components/Header.scss'
 
 class Header extends React.Component  {
+  getHeaderClassNames() {
+    let classList = ['ra-header']
+    get(this, 'props.isRoot') ? classList.push('ra-header--isRoot') : ''
+
+    return classList.toString().replace(',', ' ')
+  }
   render() {
     return (
-      <header style={get(this, 'props.showHeader') ? {display: 'none'} : {}} className="ra-header">
+      <header className={this.getHeaderClassNames()}>
         <h3
           className='ra-header__title'
           style={{
