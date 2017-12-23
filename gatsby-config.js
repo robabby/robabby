@@ -5,7 +5,7 @@ module.exports = {
     description: 'My website',
     siteUrl: 'https://robabby.com',
   },
-  pathPrefix: '/gatsby-starter-blog',
+  // pathPrefix: '/gatsby-starter-blog',
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
