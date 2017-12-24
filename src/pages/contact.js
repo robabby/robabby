@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
+import ContactStage from '../components/ContactStage'
 import ContactForm from '../components/ContactForm'
 import { rhythm, scale } from '../utils/typography'
 
@@ -22,6 +23,7 @@ class Contact extends React.Component {
     this.setState(nextState)
   }
   handleSubmit() {
+    console.log(get(this, 'refs'));
     if (this.refs.contactForm.isValid()) {
       this.setState({submitted: this.refs.contactForm.getFormData()})
     }
@@ -40,6 +42,7 @@ class Contact extends React.Component {
     return (
       <div className="ra-page-area">
         <Helmet title={siteTitle} />
+        <ContactStage />
         <div className="ra-content-area">
           <h2 style={{
             ...scale(1.1)
@@ -66,6 +69,9 @@ class Contact extends React.Component {
 
           <ContactForm
             ref="contactForm"
+            email={this.state.email}
+            question={this.state.question}
+            company={this.props.company}
           />
 
           <button type="button" className="btn btn-primary btn-block" onClick={this.handleSubmit}>Submit</button>

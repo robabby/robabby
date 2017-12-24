@@ -13,7 +13,7 @@ class AboutStage extends React.Component {
           alt={`Meditating Dude`}
         />
         <div className="ra-about-stage__shadow"></div>
-        {/* <h1 className="ra-about-stage__title">What about me?</h1> */}
+        {/* <h1 className="ra-about-stage__title">What <i>about</i> me?</h1> */}
       </div>
     )
   }
