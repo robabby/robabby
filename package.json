@@ -36,7 +36,8 @@
     "typeface-merriweather": "0.0.43",
     "typeface-roboto": "0.0.45",
     "typography-theme-github": "^0.15.10",
-    "typography-theme-lawton": "^0.15.10"
+    "typography-theme-lawton": "^0.15.10",
+    "webpack-configurator": "^0.3.1"
   },
   "devDependencies": {
     "babel-eslint": "^8.0.3",

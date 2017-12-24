@@ -5,15 +5,18 @@ import get from 'lodash/get'
 import 'typeface-roboto'
 
 import '../assets/scss/components/Nav.scss'
-
+// #6ea8cc
 class Nav extends React.Component {
+
   render() {
+
     return (
       <nav className="ra-nav">
         <li>
           <Link
             to={'/'}
-            activeClassName={get(this, 'props.isRoot') ? 'active' : ''}
+            exact
+            activeClassName={'active'}
           >
             Home
           </Link>

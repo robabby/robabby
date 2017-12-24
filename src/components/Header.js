@@ -15,6 +15,7 @@ class Header extends React.Component  {
     return classList.toString().replace(',', ' ')
   }
   render() {
+
     return (
       <header className={this.getHeaderClassNames()}>
         <div className="ra-header__left">

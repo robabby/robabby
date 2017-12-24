@@ -16,7 +16,6 @@ $baseColor: rgba(58, 124, 164, 1);
 
       &.active {
         color:lighten($baseColor, 18%);
-        // text-decoration: underline;
       }
     }
   }

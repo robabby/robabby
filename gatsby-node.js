@@ -2,6 +2,16 @@ const _ = require('lodash')
 const Promise = require('bluebird')
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
+const webpackConfig = require('webpack-configurator')
+
+exports.modifyWebpackConfig = ({ config, stage }, options) => {
+  if (stage === "build-html") {
+    config.loader("null", {
+      test: /trianglify/,
+      loader: "null-loader",
+    });
+  }
+}
 
 exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators

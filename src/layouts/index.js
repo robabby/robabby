@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container } from 'react-responsive-grid'
+import get from 'lodash/get'
 
 import { rhythm, scale } from '../utils/typography'
 
@@ -15,7 +16,7 @@ class Template extends React.Component {
     }
   }
   render() {
-    const { location, children } = this.props
+    const { location, children } = get(this, 'props')
 
     let rootPath = `/`
     let isRoot = location.pathname === rootPath
@@ -28,7 +29,7 @@ class Template extends React.Component {
       <Container
         style={this.getContainerStyle(isRoot)}
       >
-        <Header isRoot={isRoot} />
+        <Header isRoot={isRoot} path={location.pathname} />
         {children()}
       </Container>
     )
