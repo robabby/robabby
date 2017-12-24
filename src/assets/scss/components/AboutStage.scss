@@ -31,3 +31,63 @@
   color:#fff;
   // z-index: 1;
 }
+.ra-about-stage__meditating-dude {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  filter: drop-shadow(16px 16px 35px rgba(0, 0, 0, .75));
+  animation: MoveUpDown 10s ease-in-out infinite;
+}
+.ra-about-stage__shadow {
+  position: absolute;
+  left: 50%;
+  bottom: 15%;
+  width: 200px;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 1);
+  border-radius: 75px / 10px;
+  transform: translate3d(-50%, 0, 0);
+  filter: blur(10px) drop-shadow(0 0 20px rgba(0, 0, 0, .25)) opacity(.75);
+  animation: SpreadShadow 10s ease-in-out infinite;
+}
+
+@keyframes SpreadShadow {
+  0% {
+    width: 215px;
+    filter: blur(18px) drop-shadow(0 0 20px rgba(0, 0, 0, .20)) opacity(.6);
+  }
+  25% {
+    width: 200px;
+    filter: blur(15px) drop-shadow(0 0 10px rgba(0, 0, 0, .25)) opacity(.75);
+  }
+  50% {
+    width: 230px;
+    filter: blur(20px) drop-shadow(0 0 35px rgba(0, 0, 0, .20)) opacity(.6);
+  }
+  75% {
+    width: 200px;
+    filter: blur(15px) drop-shadow(0 0 10px rgba(0, 0, 0, .25)) opacity(.75);
+  }
+  100% {
+    width: 215px;
+    filter: blur(18px) drop-shadow(0 0 20px rgba(0, 0, 0, .20)) opacity(.6);
+  }
+}
+
+@keyframes MoveUpDown {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  25% {
+    transform: translate3d(-50%, 5%, 0);
+  }
+  50% {
+    transform: translate3d(-50%, -5%, 0);
+  }
+  75% {
+    transform: translate3d(-50%, 8%, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
