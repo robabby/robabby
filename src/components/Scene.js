@@ -10,7 +10,7 @@ class Scene extends React.Component {
     const dimensions = get(this, 'props.dimensions')
     const { width, height } = dimensions
 
-    if (width) {
+    if (width > 0 && height > 0) {
       return (
         <Trianglify
           output='svg'
@@ -21,8 +21,6 @@ class Scene extends React.Component {
           stroke_width={1.5}
         />
       )
-    } else {
-      return
     }
   }
   render() {

@@ -16,9 +16,7 @@ class Index extends React.Component {
     return (
       <div className="ra-page-area">
         <Helmet title={siteTitle} />
-        <HomeStage>
-          <Scene />
-        </HomeStage>
+        <HomeStage />
         <div className="ra-content-area">
           <Bio />
           <hr style={{
