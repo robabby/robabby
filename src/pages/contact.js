@@ -23,9 +23,8 @@ class Contact extends React.Component {
     this.setState(nextState)
   }
   handleSubmit() {
-    console.log(this.contactForm);
     if (this.contactForm.isValid()) {
-      this.setState({submitted: this.refs.contactForm.getFormData()})
+      this.setState({submitted: this.contactForm.getFormData()})
     }
   }
   render() {

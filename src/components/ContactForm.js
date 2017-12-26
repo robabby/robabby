@@ -17,41 +17,41 @@ class ContactForm extends React.Component {
     }
   }
   isValid() {
-    var fields = ['firstName', 'lastName', 'phoneNumber', 'address', 'city', 'state', 'zipCode']
+    let fields = ['firstName', 'lastName', 'phoneNumber', 'address', 'city', 'state', 'zipCode']
     if (get(this, 'props.email')) fields.push('email')
     if (get(this, 'props.question')) fields.push('question')
 
-    var errors = {}
+    let errors = {}
     fields.forEach(function(field) {
-      let value = trim(this.refs[field].getDOMNode().value)
+      let value = trim(this.refs[field].value)
       if (!value) {
         errors[field] = 'This field is required'
       }
     }.bind(this))
     this.setState({errors: errors})
 
-    var isValid = true
-    for (var error in errors) {
+    let isValid = true
+    for (let error in errors) {
       isValid = false
       break
     }
     return isValid
   }
   getFormData() {
-    var data = {
-      firstName: this.refs.firstName.getDOMNode().value,
-      lastName: this.refs.lastName.getDOMNode().value,
-      phoneNumber: this.refs.phoneNumber.getDOMNode().value,
-      address: this.refs.address.getDOMNode().value,
-      city: this.refs.city.getDOMNode().value,
-      state: this.refs.state.getDOMNode().value,
-      zipCode: this.refs.zipCode.getDOMNode().value,
-      currentCustomer: this.refs.currentCustomerYes.getDOMNode().checked
+    let data = {
+      firstName: this.refs.firstName.value,
+      lastName: this.refs.lastName.value,
+      phoneNumber: this.refs.phoneNumber.value,
+      address: this.refs.address.value,
+      city: this.refs.city.value,
+      state: this.refs.state.value,
+      zipCode: this.refs.zipCode.value,
+      currentCustomer: this.refs.currentCustomerYes.checked
     }
     if (this.props.email)
-      data.email = this.refs.email.getDOMNode().value
+      data.email = this.refs.email.value
     if (this.props.question)
-      data.question = this.refs.question.getDOMNode().value
+      data.question = this.refs.question.value
     return data
   }
   renderTextInput(id, label) {
@@ -65,7 +65,7 @@ class ContactForm extends React.Component {
     )
   }
   renderSelect(id, label, values) {
-    var options = values.map(function(value, index) {
+    let options = values.map(function(value, index) {
       return <option key={index} value={value}>{value}</option>
     })
     return this.renderField(id, label,
@@ -118,8 +118,8 @@ ContactForm.defaultProps = {
   question: false
 }
 
-var trim = function() {
-  var TRIM_RE = /^\s+|\s+$/g
+let trim = function() {
+  let TRIM_RE = /^\s+|\s+$/g
   return function trim(string) {
     return string.replace(TRIM_RE, '')
   }
@@ -128,14 +128,14 @@ var trim = function() {
 // Utils
 
 function $c(staticClassName, conditionalClassNames) {
-  var classNames = []
+  let classNames = []
   if (typeof conditionalClassNames == 'undefined') {
     conditionalClassNames = staticClassName
   }
   else {
     classNames.push(staticClassName)
   }
-  for (var className in conditionalClassNames) {
+  for (let className in conditionalClassNames) {
     if (!!conditionalClassNames[className]) {
       classNames.push(className)
     }
