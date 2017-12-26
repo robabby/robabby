@@ -1,5 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import Img from 'gatsby-image'
 import get from 'lodash/get'
 
 import Bio from '../components/Bio'
@@ -13,6 +14,7 @@ class BlogPostTemplate extends React.Component {
     return (
       <div>
         <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
+        <Img sizes={post.frontmatter.image.childImageSharp.sizes} />
         <h1>{post.frontmatter.title}</h1>
         <p
           style={{
@@ -52,6 +54,16 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        image {
+          childImageSharp {
+            resize(width: 1500, height: 1500) {
+              src
+            }
+            sizes(maxWidth: 786) {
+              ...GatsbyImageSharpSizes
+            }
+          }
+        }
       }
     }
   }
