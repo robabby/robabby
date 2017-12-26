@@ -1,0 +1,20 @@
+{
+  "name": "robabby-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "nodemailer": "^4.4.1",
+    "superagent": "^3.8.2"
+  },
+  "scripts": {
+    "server": "nodemon server.js"
+  }
+}
