@@ -6,6 +6,9 @@ import Particles from 'react-particles-js'
 import '../assets/scss/components/Scene.scss'
 
 class Scene extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   insertTrianglify() {
     const dimensions = get(this, 'props.dimensions')
     const { width, height } = dimensions
@@ -13,6 +16,7 @@ class Scene extends React.Component {
     if (width > 0 && height > 0) {
       return (
         <Trianglify
+          ref='trianglify'
           output='svg'
           width={width}
           height={height}
@@ -24,7 +28,7 @@ class Scene extends React.Component {
     }
   }
   render() {
-
+    console.log('Scene:render: ', this.refs);
     return (
       <div className="ra-scene">
         <Particles
@@ -47,6 +51,9 @@ class Scene extends React.Component {
         {this.insertTrianglify()}
       </div>
     )
+  }
+  componentDidMount() {
+    console.log('Scene:componentDidMount: ', this.refs);
   }
 }
 

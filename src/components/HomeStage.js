@@ -19,6 +19,8 @@ class HomeStage extends React.Component {
     }
   }
   render() {
+    console.log('HomeStage:render: ', this.refs);
+
     return (
       <Measure
         bounds
@@ -29,11 +31,17 @@ class HomeStage extends React.Component {
         {({ measureRef }) =>
           <section ref={measureRef} className="ra-home-stage">
             <h1 className="ra-home-stage__title">Let's build something together</h1>
-            <Scene dimensions={this.state.dimensions} />
+            <Scene
+              ref={(el) => {this.Scene = el}}
+              dimensions={this.state.dimensions}
+            />
           </section>
         }
       </Measure>
     )
+  }
+  componentDidMount() {
+    console.log('HomeStage:componentDidMount: ', this.refs);
   }
 }
 

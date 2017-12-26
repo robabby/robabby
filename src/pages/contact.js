@@ -23,8 +23,8 @@ class Contact extends React.Component {
     this.setState(nextState)
   }
   handleSubmit() {
-    console.log(get(this, 'refs'));
-    if (this.refs.contactForm.isValid()) {
+    console.log(this.contactForm);
+    if (this.contactForm.isValid()) {
       this.setState({submitted: this.refs.contactForm.getFormData()})
     }
   }
@@ -68,18 +68,21 @@ class Contact extends React.Component {
           </label>
 
           <ContactForm
-            ref="contactForm"
+            ref={el => this.contactForm = el}
             email={this.state.email}
             question={this.state.question}
             company={this.props.company}
           />
 
-          <button type="button" className="btn btn-primary btn-block" onClick={this.handleSubmit}>Submit</button>
+          <button type="button" className="btn btn-primary btn-block" onClick={this.handleSubmit.bind(this)}>Submit</button>
 
           {submitted}
         </div>
       </div>
     )
+  }
+  componentDidMount() {
+    console.log(this.refs);
   }
 }
 
