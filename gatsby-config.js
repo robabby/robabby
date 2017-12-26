@@ -45,6 +45,15 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        // Setting a color is optional.
+        color: `#DC2430`,
+        // Disable the loading spinner.
+        showSpinner: true,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-typography',
       options: {
         pathToConfigModule: 'src/utils/typography',
