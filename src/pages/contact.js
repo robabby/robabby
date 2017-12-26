@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
+import axios from 'axios'
 
 import ContactStage from '../components/ContactStage'
 import ContactForm from '../components/ContactForm'
@@ -22,14 +23,19 @@ class Contact extends React.Component {
     nextState[field] = e.target.checked
     this.setState(nextState)
   }
-  handleSubmit() {
+  handleSubmit = async (e) => {
     if (this.contactForm.isValid()) {
-      this.setState({submitted: this.contactForm.getFormData()})
+      await this.setState({submitted: this.contactForm.getFormData()})
+      console.log('handleSubmit:this.state.submitted', this.state.submitted)
+
+      axios.post('api/contact', this.state.submitted)
+        .then((result) => {
+          //access the results here....
+          console.log('/result/: ', result);
+        });
     }
   }
   render() {
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-
     let submitted
     if (get(this, 'state.submitted') !== null) {
       submitted = <div className="alert alert-success">
@@ -37,6 +43,8 @@ class Contact extends React.Component {
         <pre><code>{JSON.stringify(this.state.submitted, null, '  ')}</code></pre>
       </div>
     }
+
+    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
 
     return (
       <div className="ra-page-area">

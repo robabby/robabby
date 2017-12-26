@@ -5,6 +5,10 @@ module.exports = {
     description: 'My website',
     siteUrl: 'https://robabby.com',
   },
+  proxy: {
+    prefix: "/api",
+    url: "http://localhost:3000",
+  },
   // pathPrefix: '/gatsby-starter-blog',
   plugins: [
     {
