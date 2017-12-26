@@ -26,12 +26,11 @@ class Contact extends React.Component {
   handleSubmit = async (e) => {
     if (this.contactForm.isValid()) {
       await this.setState({submitted: this.contactForm.getFormData()})
-      console.log('handleSubmit:this.state.submitted', this.state.submitted)
 
       axios.post('api/contact', this.state.submitted)
         .then((result) => {
-          //access the results here....
-          console.log('/result/: ', result);
+          // TODO: Do something after the form is submitted
+          // console.log('/result/: ', result);
         });
     }
   }
@@ -87,9 +86,6 @@ class Contact extends React.Component {
         </div>
       </div>
     )
-  }
-  componentDidMount() {
-    console.log(this.refs);
   }
 }
 

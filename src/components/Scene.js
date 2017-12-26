@@ -28,7 +28,6 @@ class Scene extends React.Component {
     }
   }
   render() {
-    console.log('Scene:render: ', this.refs);
     return (
       <div className="ra-scene">
         <Particles
@@ -51,9 +50,6 @@ class Scene extends React.Component {
         {this.insertTrianglify()}
       </div>
     )
-  }
-  componentDidMount() {
-    console.log('Scene:componentDidMount: ', this.refs);
   }
 }
 

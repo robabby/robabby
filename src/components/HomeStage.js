@@ -19,7 +19,6 @@ class HomeStage extends React.Component {
     }
   }
   render() {
-    console.log('HomeStage:render: ', this.refs);
 
     return (
       <Measure
@@ -39,9 +38,6 @@ class HomeStage extends React.Component {
         }
       </Measure>
     )
-  }
-  componentDidMount() {
-    console.log('HomeStage:componentDidMount: ', this.refs);
   }
 }
 
