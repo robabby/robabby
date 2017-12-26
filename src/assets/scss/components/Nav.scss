@@ -13,6 +13,7 @@ $baseColor: rgba(58, 124, 164, 1);
       font-family: 'Roboto', sans-serif;
       font-weight: 400;
       color:#fff;
+      text-decoration: none;
 
       &.active {
         color:lighten($baseColor, 18%);

@@ -2,8 +2,6 @@ import React from 'react'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 
-import 'typeface-roboto'
-
 import '../assets/scss/components/Nav.scss'
 // #6ea8cc
 class Nav extends React.Component {

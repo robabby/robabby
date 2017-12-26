@@ -22,7 +22,7 @@ class Header extends React.Component  {
           <h3
             className='ra-header__title'
             style={{
-              ...scale(.75),
+              ...scale(.5),
               marginBottom: 0,
               marginTop: 0,
             }}
