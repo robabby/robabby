@@ -33,6 +33,17 @@ class About extends React.Component {
             There is nothing linear about it at all, as I am sure many of you would say of
             yourselves.
           </p>
+          <p>
+            When it comes to Software Development, by day I work with the
+            awesome <a href="https://savogroup.com/blog/what-is-ui-ux-and-why-is-it-important/">UI/UX</a> team
+            at <a href="http://savogroup.com/">The Savo Group</a>.  I also get
+            loads of satisfaction from helping people bring their businesses or
+            ideas to the web.  If you are interested in working with me on your
+            next project, don't hesitate to reach out!
+          </p>
+          <p>
+            I live in Chicago with my beautiful wife, <a href="http://shaynaolufs.com">Shayna</a>.
+          </p>
         </div>
       </div>
     )
