@@ -9,22 +9,30 @@ import '../assets/scss/components/Bio.scss'
 class Bio extends React.Component {
   render() {
     return (
-      <div className="ra-bio">
+      <div
+        style={{
+          marginBottom: rhythm(1.5),
+          marginTop: rhythm(1.5),
+        }}
+        className="ra-bio"
+      >
         <img
           className="ra-bio__avatar"
           src={profilePic}
           alt={`Rob Abby`}
         />
-        <h2 className="ra-bio__title">Who am I?</h2>
-        <p>
-          As you may have gathered by arriving here, my name is Rob and I live in Chicago with my beautiful wife, <a href="http://shaynaolufs.com">Shayna</a>.
-        </p>
-        <p>
-          I build software for a living. By day I work with an awesome team at <a href="http://savogroup.com/">The Savo Group</a>.
-        </p>
-        <p>
-          I am also heavily invested in Personal Development, and will gladly talk anyones ear off about life, the Universe, and the nature of existence. If you're intrigued, feel free to read my full Bio on the <Link to="/about">About Page</Link>.
-        </p>
+        <div className="ra-bio__content">
+          <div>
+            <h2 className="ra-bio__title">Hey there.</h2>
+          </div>
+          <div>
+            <p>
+              My name is <b>Rob Abby</b> and I am passionate about both <b>Software Development</b>
+              and <b>Personal Development</b>. Nothing gives me greater satisfaction
+              than helping people <b>define and achieve their goals and dreams</b>.
+            </p>
+          </div>
+        </div>
       </div>
     )
   }
