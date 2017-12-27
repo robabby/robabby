@@ -1,4 +1,5 @@
 $baseColor: rgba(58, 124, 164, 1);
+$navAvtiveBorderColor: rgba(230, 95, 104, 1);
 
 .ra-nav {
   display: flex;
@@ -10,13 +11,36 @@ $baseColor: rgba(58, 124, 164, 1);
     margin-right: 1rem;
 
     a {
+      display: block;
+      position: relative;
+      padding:.25rem;
       font-family: 'Roboto', sans-serif;
       font-weight: 400;
       color:#fff;
       text-decoration: none;
 
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 10%;
+        left:0;
+        width:0;
+        height:5px;
+        background-color:$navAvtiveBorderColor;
+        transition: all 175ms ease-in-out;
+      }
+      &:hover:after {
+        width:105%;
+      }
+
       &.active {
-        color:lighten($baseColor, 18%);
+        color:lighten($baseColor, 50%);
+        text-shadow: 0px 0px 3px rgba(255, 255, 255, .25), 0px 0px 5px rgba(230, 95, 104, .15);
+
+        &:after {
+          width:105%;
+          background-color:lighten($navAvtiveBorderColor, 10%);
+        }
       }
     }
   }
