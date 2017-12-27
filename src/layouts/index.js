@@ -12,7 +12,7 @@ class Template extends React.Component {
   getContainerStyle(isRoot) {
     return {
       maxWidth: '100vw',
-      paddingTop: isRoot ? 0 : 68
+      paddingTop: isRoot ? 0 : 66
     }
   }
   render() {
