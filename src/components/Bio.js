@@ -29,7 +29,7 @@ class Bio extends React.Component {
             <p>
               My name is <b>Rob Abby</b> and I am passionate about both <b>Software
               Development</b> and <b>Personal Development</b>. Nothing gives me
-              greater satisfaction than helping people <b>define and achieve their
+              greater satisfaction than helping people and organizations <b>define and achieve their
               dreams and goals</b>.
             </p>
           </div>

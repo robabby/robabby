@@ -8,6 +8,8 @@ import Scene from '../components/Scene'
 import Bio from '../components/Bio'
 import { rhythm, scale } from '../utils/typography'
 
+import '../assets/scss/pages/home.scss'
+
 import codeIcon from '../assets/images/feather/code.svg'
 import imageIcon from '../assets/images/feather/image.svg'
 import layoutIcon from '../assets/images/feather/layout.svg'
@@ -29,10 +31,17 @@ class Index extends React.Component {
           }}
         >
           <Bio />
-          <hr style={{
-            marginTop: rhythm(1.5),
-            marginBottom: rhythm(1.5)
-          }} />
+
+          <div className="ra-home__scroll-1">
+            <h3
+              className="scroll-title"
+              style={{
+                ...scale(.8)
+              }}
+            >
+              There's treasure everywhere.
+            </h3>
+          </div>
 
           <div
             className="ra-services"
@@ -48,6 +57,15 @@ class Index extends React.Component {
             >
               How can I help?
             </h3>
+            <p>
+              With an abundance of experience in the world of technology and software
+              development, I can either hold your hand or coach from a distance as
+              we bring your vision into greater fidelity.
+            </p>
+            <hr style={{
+              marginTop: rhythm(1.5),
+              marginBottom: rhythm(1.5)
+            }} />
             <div className="ra-services__list">
               <div className="ra-service">
                 <img

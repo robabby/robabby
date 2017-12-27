@@ -16,7 +16,7 @@ class About extends React.Component {
         <AboutStage />
         <div className="ra-content-area">
           <h2 style={{
-            ...scale(1.1)
+            ...scale(.8)
           }}>
             How am I not myself?
           </h2>
