@@ -11,7 +11,7 @@ import { rhythm, scale } from '../utils/typography'
 import codeIcon from '../assets/images/feather/code.svg'
 import imageIcon from '../assets/images/feather/image.svg'
 import layoutIcon from '../assets/images/feather/layout.svg'
-import activityIcon from '../assets/images/feather/activity.svg'
+import zenCircleIcon from '../assets/images/zen-brush.svg'
 
 class Index extends React.Component {
   render() {
@@ -22,7 +22,12 @@ class Index extends React.Component {
       <div className="ra-page-area">
         <Helmet title={siteTitle} />
         <HomeStage />
-        <div className="ra-content-area">
+        <div
+          className="ra-content-area"
+          style={{
+            transform: 'translateY(-220px)'
+          }}
+        >
           <Bio />
           <hr style={{
             marginTop: rhythm(1.5),
@@ -86,7 +91,7 @@ class Index extends React.Component {
               <div className="ra-service">
                 <img
                   className="ra-service__icon"
-                  src={activityIcon}
+                  src={zenCircleIcon}
                   alt={`Activity`}
                 />
                 <h4 className="ra-service__title">LEAN/Agile</h4>
