@@ -1,0 +1,14 @@
+@import "../_variables";
+
+.ra-services {
+  display: flex;
+  flex-direction: row;
+  height: 80vh;
+  // background-image: linear-gradient(45deg, #252528 2%, #2C283E 100%);
+  background: linear-gradient(to right, #ece9e6, #EEF2F3);
+}
+
+.ra-services__list {
+  position: relative;
+  width:75%;
+}

@@ -1,5 +1,5 @@
 $baseColor: rgba(58, 124, 164, 1);
-$navAvtiveBorderColor: rgba(230, 95, 104, 1);
+$navActiveBorderColor: rgba(230, 95, 104, 1);
 
 .ra-nav {
   display: flex;
@@ -26,7 +26,7 @@ $navAvtiveBorderColor: rgba(230, 95, 104, 1);
         left:0;
         width:0;
         height:5px;
-        background-color:$navAvtiveBorderColor;
+        background-color:$navActiveBorderColor;
         transition: all 175ms ease-in-out;
       }
       &:hover:after {
@@ -39,7 +39,7 @@ $navAvtiveBorderColor: rgba(230, 95, 104, 1);
 
         &:after {
           width:105%;
-          background-color:lighten($navAvtiveBorderColor, 10%);
+          background-color:lighten($navActiveBorderColor, 10%);
         }
       }
     }

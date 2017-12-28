@@ -6,14 +6,10 @@ import Helmet from 'react-helmet'
 import HomeStage from '../components/HomeStage'
 import Scene from '../components/Scene'
 import Bio from '../components/Bio'
+import Services from '../components/Services'
 import { rhythm, scale } from '../utils/typography'
 
 import '../assets/scss/pages/home.scss'
-
-import codeIcon from '../assets/images/feather/code.svg'
-import imageIcon from '../assets/images/feather/image.svg'
-import layoutIcon from '../assets/images/feather/layout.svg'
-import zenCircleIcon from '../assets/images/zen-brush.svg'
 
 class Index extends React.Component {
   render() {
@@ -27,7 +23,8 @@ class Index extends React.Component {
         <div
           className="ra-content-area"
           style={{
-            transform: 'translateY(-220px)'
+            // transform: 'translateY(-220px)',
+            marginTop: -169
           }}
         >
           <Bio />
@@ -42,17 +39,11 @@ class Index extends React.Component {
               There's treasure everywhere.
             </h3>
           </div>
-
-          <div
-            className="ra-services"
-            style={{
-              marginTop: rhythm(1.5),
-              marginBottom: rhythm(1.5)
-            }}
-          >
+          <section className="ra-home__supplement-1">
             <h3
               style={{
-                ...scale(.65)
+                ...scale(.65),
+                marginTop: rhythm(2)
               }}
             >
               How can I help?
@@ -62,66 +53,12 @@ class Index extends React.Component {
               development, I can either hold your hand or coach from a distance as
               we bring your vision into greater fidelity.
             </p>
-            <hr style={{
-              marginTop: rhythm(1.5),
-              marginBottom: rhythm(1.5)
-            }} />
-            <div className="ra-services__list">
-              <div className="ra-service">
-                <img
-                  className="ra-service__icon"
-                  src={layoutIcon}
-                  alt={`Layout`}
-                />
-                <h4 className="ra-service__title">User Experience</h4>
-                <p>
-                  Depending on the scope and complexity of a project, this phase
-                  can cover Sketches,  Wireframes, Prototypes, end-user persona
-                  creation, User Journeys, and User Interviews.
-                </p>
-              </div>
-              <div className="ra-service">
-                <img
-                  className="ra-service__icon"
-                  src={imageIcon}
-                  alt={`Code`}
-                />
-                <h4 className="ra-service__title">Design</h4>
-                <p>
-                  Once we have enough data collected and we have reduced our risk,
-                  it's time to start bringing a greater level of fidelity to our
-                  vision.  This is where we get to see colors and shades bring the
-                  concept to life on a screen.
-                </p>
-              </div>
-              <div className="ra-service">
-                <img
-                  className="ra-service__icon"
-                  src={codeIcon}
-                  alt={`Image`}
-                />
-                <h4 className="ra-service__title">Development</h4>
-                <p>
-                  Here's where the rubber hit's the road.  I take all of the work
-                  we have accomplished thus far and bring it to life on the web.
-                </p>
-              </div>
-              <div className="ra-service">
-                <img
-                  className="ra-service__icon"
-                  src={zenCircleIcon}
-                  alt={`Activity`}
-                />
-                <h4 className="ra-service__title">LEAN/Agile</h4>
-                <p>
-                  To be agile means to adapt quickly and effectively to change.
-                  Customers, requirements, and funding can always change.
-                  Fortunately the way I work will embrace whatever change
-                  is thrown our way.
-                </p>
-              </div>
-            </div>
-          </div>
+            <p>
+              I solve <b>business problems</b> -- occasionally a computer is involved.
+            </p>
+          </section>
+
+          <Services />
 
           <h2 style={{
             marginTop: rhythm(1.25),

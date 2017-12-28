@@ -1,0 +1,41 @@
+import React from 'react'
+
+import '../../assets/scss/components/Services/ServiceItem.scss'
+
+class ServiceItem extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      isActive: false
+    }
+  }
+  render() {
+    return (
+      <div className={this.state.isActive ? "ra-service ra-service--isActive" : "ra-service"}>
+        <img
+          className="ra-service__icon"
+          src={this.props.serviceIcon}
+        />
+        <h4 className="ra-service__title">
+          {this.props.serviceName}
+        </h4>
+        {this.props.children}
+      </div>
+    )
+  }
+  componentDidMount() {
+    if (this.props.activeService === this.props.serviceNumber) {
+      this.setState({ isActive: true })
+    }
+  }
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.activeService === this.props.serviceNumber) {
+      this.setState({ isActive: true })
+    } else {
+      this.setState({ isActive: false })
+    }
+  }
+}
+
+export default ServiceItem

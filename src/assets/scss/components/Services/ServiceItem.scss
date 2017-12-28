@@ -1,0 +1,29 @@
+.ra-service {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .35);
+  filter: opacity(0);
+  transform: translate3d(0, 0, 0);
+  transition: all 350ms ease-in-out;
+}
+.ra-service--isActive {
+  filter: opacity(1);
+  transform: translate3d(0, 0, 1);
+}
+.ra-service__title {
+  font-size: 1.25rem;
+}
+.ra-service__icon {
+  width:48px;
+}
