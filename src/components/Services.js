@@ -45,35 +45,42 @@ class Services extends React.Component {
             activeService={get(this, 'state.activeService')}
             itemNumber={1}
             itemIcon={erlenmeyerFlaskIcon}
-            itemTitle="User Experience"
+            itemTitle="Define the Vision"
             onClick={this.onNavClick}
           />
           <ServiceNavItem
             activeService={get(this, 'state.activeService')}
             itemNumber={2}
             itemIcon={paintbrushIcon}
-            itemTitle="Design"
+            itemTitle="Define the Customer"
             onClick={this.onNavClick}
           />
           <ServiceNavItem
             activeService={get(this, 'state.activeService')}
             itemNumber={3}
             itemIcon={erlenmeyerFlaskIcon}
-            itemTitle="Development"
+            itemTitle="Define the Value Proposition"
             onClick={this.onNavClick}
           />
           <ServiceNavItem
             activeService={get(this, 'state.activeService')}
             itemNumber={4}
             itemIcon={erlenmeyerFlaskIcon}
-            itemTitle="Foo"
+            itemTitle="Problem Validation"
             onClick={this.onNavClick}
           />
           <ServiceNavItem
             activeService={get(this, 'state.activeService')}
             itemNumber={5}
             itemIcon={erlenmeyerFlaskIcon}
-            itemTitle="Bar"
+            itemTitle="Gather Requirements"
+            onClick={this.onNavClick}
+          />
+          <ServiceNavItem
+            activeService={get(this, 'state.activeService')}
+            itemNumber={6}
+            itemIcon={erlenmeyerFlaskIcon}
+            itemTitle="Create a Backlog"
             onClick={this.onNavClick}
           />
         </div>
@@ -121,6 +128,32 @@ class Services extends React.Component {
             activeService={get(this, 'state.activeService')}
             serviceNumber={4}
             serviceName="Agile Process"
+            serviceIcon={zenCircleIcon}
+          >
+            <p>
+              To be agile means to adapt quickly and effectively to change.
+              Customers, requirements, and funding can always change.
+              Fortunately the way I work will embrace whatever change
+              is thrown our way.
+            </p>
+          </ServiceItem>
+          <ServiceItem
+            activeService={get(this, 'state.activeService')}
+            serviceNumber={5}
+            serviceName="Gather Requirements"
+            serviceIcon={zenCircleIcon}
+          >
+            <p>
+              To be agile means to adapt quickly and effectively to change.
+              Customers, requirements, and funding can always change.
+              Fortunately the way I work will embrace whatever change
+              is thrown our way.
+            </p>
+          </ServiceItem>
+          <ServiceItem
+            activeService={get(this, 'state.activeService')}
+            serviceNumber={6}
+            serviceName="Create a Backlog"
             serviceIcon={zenCircleIcon}
           >
             <p>
