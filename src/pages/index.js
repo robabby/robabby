@@ -9,6 +9,9 @@ import Bio from '../components/Bio'
 import Services from '../components/Services'
 import { rhythm, scale } from '../utils/typography'
 
+import asanaPlow from '../assets/images/asana_plow.svg'
+import asanaLotus from '../assets/images/asana_lotus_col.svg'
+
 import '../assets/scss/pages/home.scss'
 
 class Index extends React.Component {
@@ -64,10 +67,21 @@ class Index extends React.Component {
                 marginBottom: rhythm(2)
               }}
             />
+            <div>
+              <img
+                src={asanaPlow}
+              />
+              <p>
+                Through a flexible and adaptable process model, we can curate an approach
+                to your specific needs.
+              </p>
+            </div>
             <p>
-              Through a flexible and adaptable process model, we can curate an approach
-              to your specific need.  And if that approach doesn't work, we'll change it!
+              I strive to achieve process Zen.
             </p>
+            <img
+              src={asanaLotus}
+            />
           </section>
 
           <Services />

@@ -11,8 +11,12 @@ import imageIcon from '../assets/images/feather/image.svg'
 import layoutIcon from '../assets/images/feather/layout.svg'
 import zenCircleIcon from '../assets/images/zen-brush.svg'
 
-import erlenmeyerFlaskIcon from '../assets/images/ionicons/erlenmeyer-flask.svg'
-import paintbrushIcon from '../assets/images/ionicons/paintbrush.svg'
+import flaskIcon from '../assets/images/ionicons/ios-flask.svg'
+import eyeIcon from '../assets/images/ionicons/ios-eye.svg'
+import bodyIcon from '../assets/images/ionicons/ios-body.svg'
+import cachIcon from '../assets/images/ionicons/cash.svg'
+import clipboardIcon from '../assets/images/ionicons/clipboard.svg'
+import filingIcon from '../assets/images/ionicons/filing.svg'
 
 import '../assets/scss/components/Services.scss'
 
@@ -40,46 +44,51 @@ class Services extends React.Component {
           padding: '4rem',
         }}
       >
-        <div className="ra-services__nav">
+        <div
+          className="ra-services__nav"
+          style={{
+            marginRight: '4rem',
+          }}
+        >
           <ServiceNavItem
             activeService={get(this, 'state.activeService')}
             itemNumber={1}
-            itemIcon={erlenmeyerFlaskIcon}
+            itemIcon={eyeIcon}
             itemTitle="Define the Vision"
             onClick={this.onNavClick}
           />
           <ServiceNavItem
             activeService={get(this, 'state.activeService')}
             itemNumber={2}
-            itemIcon={paintbrushIcon}
+            itemIcon={bodyIcon}
             itemTitle="Define the Customer"
             onClick={this.onNavClick}
           />
           <ServiceNavItem
             activeService={get(this, 'state.activeService')}
             itemNumber={3}
-            itemIcon={erlenmeyerFlaskIcon}
+            itemIcon={cachIcon}
             itemTitle="Define the Value Proposition"
             onClick={this.onNavClick}
           />
           <ServiceNavItem
             activeService={get(this, 'state.activeService')}
             itemNumber={4}
-            itemIcon={erlenmeyerFlaskIcon}
+            itemIcon={flaskIcon}
             itemTitle="Problem Validation"
             onClick={this.onNavClick}
           />
           <ServiceNavItem
             activeService={get(this, 'state.activeService')}
             itemNumber={5}
-            itemIcon={erlenmeyerFlaskIcon}
+            itemIcon={clipboardIcon}
             itemTitle="Gather Requirements"
             onClick={this.onNavClick}
           />
           <ServiceNavItem
             activeService={get(this, 'state.activeService')}
             itemNumber={6}
-            itemIcon={erlenmeyerFlaskIcon}
+            itemIcon={filingIcon}
             itemTitle="Create a Backlog"
             onClick={this.onNavClick}
           />
@@ -91,7 +100,7 @@ class Services extends React.Component {
           <ServiceItem
             activeService={get(this, 'state.activeService')}
             serviceNumber={1}
-            serviceName="User Experience"
+            serviceName="Define the Vision"
             serviceIcon={layoutIcon}
           >
             <p>
@@ -103,7 +112,7 @@ class Services extends React.Component {
           <ServiceItem
             activeService={get(this, 'state.activeService')}
             serviceNumber={2}
-            serviceName="Design"
+            serviceName="Define the Customer"
             serviceIcon={imageIcon}
           >
             <p>
@@ -116,7 +125,7 @@ class Services extends React.Component {
           <ServiceItem
             activeService={get(this, 'state.activeService')}
             serviceNumber={3}
-            serviceName="Development"
+            serviceName="Define the Value Proposition"
             serviceIcon={codeIcon}
           >
             <p>
@@ -127,7 +136,7 @@ class Services extends React.Component {
           <ServiceItem
             activeService={get(this, 'state.activeService')}
             serviceNumber={4}
-            serviceName="Agile Process"
+            serviceName="Problem Validation"
             serviceIcon={zenCircleIcon}
           >
             <p>
