@@ -29,7 +29,7 @@ class Index extends React.Component {
         >
           <Bio />
 
-          <div className="ra-home__scroll-1">
+          <section className="ra-home__scroll--treasure">
             <h3
               className="scroll-title"
               style={{
@@ -38,23 +38,35 @@ class Index extends React.Component {
             >
               There's treasure everywhere.
             </h3>
-          </div>
-          <section className="ra-home__supplement-1">
-            <h3
+          </section>
+          <section className="ra-home__supplement">
+            <div
+              className="supplement__top"
               style={{
-                ...scale(.65),
-                marginTop: rhythm(2)
+                paddingTop: rhythm(2)
               }}
             >
-              How can I help?
-            </h3>
+              <h3
+                className="supplement__title"
+                style={{
+                  ...scale(.8)
+                }}
+              >
+                I solve <span>business problems.</span>
+              </h3>
+              <blockquote>
+                <small>occasionally a computer is involved.</small>
+              </blockquote>
+            </div>
+            <hr
+              style={{
+                marginTop: rhythm(1),
+                marginBottom: rhythm(2)
+              }}
+            />
             <p>
-              With an abundance of experience in the world of technology and software
-              development, I can either hold your hand or coach from a distance as
-              we bring your vision into greater fidelity.
-            </p>
-            <p>
-              I solve <b>business problems</b> -- occasionally a computer is involved.
+              Through a flexible and adaptable process model, we can curate an approach
+              to your specific need.  And if that approach doesn't work, we'll change it!
             </p>
           </section>
 

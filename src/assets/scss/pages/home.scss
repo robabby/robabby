@@ -1,6 +1,6 @@
 @import "../_variables";
 
-.ra-home__scroll-1 {
+.ra-home__scroll--treasure {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,4 +48,19 @@
       filter: blur(5px);
     }
   }
+}
+.ra-home__supplement {}
+.supplement__top {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  p {
+    color:lighten(#555, 25%);
+    margin-left: 2rem;
+  }
+}
+.supplement__title span {
+  color:#0072ff;
 }
