@@ -30,24 +30,24 @@ class Scene extends React.Component {
   render() {
     return (
       <div className="ra-scene">
-        <Particles
+        {/* <Particles
           className="ra-particle-container"
           params={{
             particles: {
-              line_linked: {
-                shadow: {
-                  enable: true,
-                  color: "#3CA9D1",
-                  blur: 5
-                }
-              }
+          line_linked: {
+          shadow: {
+          enable: true,
+          color: "#3CA9D1",
+          blur: 5
+          }
+          }
             }
           }}
           style={{
             width: '100%'
           }}
-        />
-        {this.insertTrianglify()}
+        /> */}
+        {/* {this.insertTrianglify()} */}
       </div>
     )
   }
