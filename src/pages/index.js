@@ -26,8 +26,7 @@ class Index extends React.Component {
         <div
           className="ra-content-area"
           style={{
-            // transform: 'translateY(-220px)',
-            marginTop: -169
+            marginTop: -167
           }}
         >
           <Bio />
@@ -42,6 +41,7 @@ class Index extends React.Component {
               There's treasure everywhere.
             </h3>
           </section>
+
           <section className="ra-home__supplement">
             <div
               className="supplement__top"
@@ -49,6 +49,34 @@ class Index extends React.Component {
                 paddingTop: rhythm(2)
               }}
             >
+              <p className="lead-in">
+                I work with everyone from early stage startups, entrepreneurs &amp; independent professionals to large, multi-national corporations - and regardless of size or scale the problems and patterns faced stay relatively the same.
+              </p>
+            </div>
+            <hr
+              style={{
+                marginTop: rhythm(1),
+                marginBottom: rhythm(1)
+              }}
+            />
+            <div>
+              <p>
+                <b>What</b> is best for my business or organization?  <b>Why</b> is this potential solution the best?  <b>How</b> can I turn this idea into a reality, and <b>when</b> will it be completed?
+              </p>
+              <p>
+                Damn near everyone is faced with this simple algorithm countless times over their lives. At any given point in time, there are a number of things jumping up to grab our attention and take it off of the things we want. So how can we make answering these fundamental questions easier, and less intimidating?
+              </p>
+              <p>
+                If our life is a direct reflection of the amount of uncertainty we can handle at any given point in time, how can we start to translate uncertainty into certainty in a simple and effective way.  Thus thoroughly unblocking ourselves and our organizations, getting out of our own way, and gaining true clarity on what we want and how to achieve it.
+              </p>
+            </div>
+            <hr
+              style={{
+                marginTop: rhythm(1),
+                marginBottom: rhythm(1)
+              }}
+            />
+            <div>
               <h3
                 className="supplement__title"
                 style={{
@@ -56,10 +84,9 @@ class Index extends React.Component {
                 }}
               >
                 I solve <span>business problems.</span>
+                <br />
+                Occasionally a computer is involved.
               </h3>
-              <blockquote>
-                <small>occasionally a computer is involved.</small>
-              </blockquote>
             </div>
             <hr
               style={{
@@ -68,20 +95,22 @@ class Index extends React.Component {
               }}
             />
             <div>
-              <img
-                src={asanaPlow}
-              />
               <p>
-                Through a flexible and adaptable process model, we can curate an approach
-                to your specific needs.
+                Fortunately, due to my wealth of experience in both personal development and cutting-edge software development practices, I started to notice patterns of similarity between both worlds.  As I struggled to re-learn my place in the world, I found time and again fundamental similarities between Tony Robbins, Kyle Cease, Kaizen, Lean &amp; Agile.
               </p>
+              <p>
+                Drifting on the surface of these similarities was an inclination to try new things, continually reflect, and apply the learnings from that reflection into a renewed effort to try new things.  All in order to enable us to ship new solutions to those waiting for them in our lives.
+              </p>
+              <p>
+                When we are finished working together, you will have a map that you can use to guide you toward value.  A living breathing artifact that you can print, show off to your friends, and use to go forth and build the future.  When was the last time you were clearly able to articulate the rationale of how your organization creates, delivers and captures value?
+              </p>
+              <p>
+                Let's get started.
+              </p>
+              {/* <p>
+                What most people fail to consider when standing up their new idea, is asking the fundamental question, "does this solve a real problem in world today?"  How can we increase certainty and reduce the risk of our ideas broke in the highly variable world of websites, startups, and application development?
+              </p> */}
             </div>
-            <p>
-              I strive to achieve process Zen.
-            </p>
-            <img
-              src={asanaLotus}
-            />
           </section>
 
           <Services />
