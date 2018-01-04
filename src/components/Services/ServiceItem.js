@@ -13,14 +13,18 @@ class ServiceItem extends React.Component {
   render() {
     return (
       <div className={this.state.isActive ? "ra-service ra-service--isActive" : "ra-service"}>
-        <img
-          className="ra-service__icon"
-          src={this.props.serviceIcon}
-        />
-        <h4 className="ra-service__title">
-          {this.props.serviceName}
-        </h4>
-        {this.props.children}
+        <div className="ra-service__header">
+          <h4 className="ra-service__title">
+            {this.props.serviceName}
+          </h4>
+          <img
+            className="ra-service__icon"
+            src={this.props.serviceIcon}
+          />
+        </div>
+        <div className="ra-service__body">
+          {this.props.children}
+        </div>
       </div>
     )
   }
