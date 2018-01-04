@@ -1,0 +1,27 @@
+.flex {
+  display:flex;
+}
+.row {
+  flex-direction: row;
+}
+.column {
+  flex-direction: column;
+}
+.h-center {
+  justify-content: center;
+}
+.h-space-around {
+  justify-content: space-around;
+}
+.h-space-between {
+  justify-content: space-between;
+}
+.v-center {
+  align-items: center;
+}
+.v-start {
+  align-items: flex-start;
+}
+.v-end {
+  align-items: flex-end;
+}
