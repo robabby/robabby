@@ -14,7 +14,7 @@ import zenCircleIcon from '../assets/images/zen-brush.svg'
 import flaskIcon from '../assets/images/ionicons/ios-flask.svg'
 import eyeIcon from '../assets/images/ionicons/ios-eye.svg'
 import bodyIcon from '../assets/images/ionicons/ios-body.svg'
-import cachIcon from '../assets/images/ionicons/cash.svg'
+import cashIcon from '../assets/images/ionicons/cash.svg'
 import clipboardIcon from '../assets/images/ionicons/clipboard.svg'
 import filingIcon from '../assets/images/ionicons/filing.svg'
 
@@ -54,21 +54,21 @@ class Services extends React.Component {
             activeService={get(this, 'state.activeService')}
             itemNumber={1}
             itemIcon={eyeIcon}
-            itemTitle="Define the Vision"
+            itemTitle="The Vision"
             onClick={this.onNavClick}
           />
           <ServiceNavItem
             activeService={get(this, 'state.activeService')}
             itemNumber={2}
             itemIcon={bodyIcon}
-            itemTitle="Define the Customer"
+            itemTitle="The Customer"
             onClick={this.onNavClick}
           />
           <ServiceNavItem
             activeService={get(this, 'state.activeService')}
             itemNumber={3}
-            itemIcon={cachIcon}
-            itemTitle="Define the Value Proposition"
+            itemIcon={cashIcon}
+            itemTitle="The Value Proposition"
             onClick={this.onNavClick}
           />
           <ServiceNavItem
@@ -100,57 +100,70 @@ class Services extends React.Component {
           <ServiceItem
             activeService={get(this, 'state.activeService')}
             serviceNumber={1}
-            serviceName="Define the Vision"
-            serviceIcon={layoutIcon}
+            serviceName="The Vision"
+            serviceIcon={eyeIcon}
           >
+            <h4>Achieving clarity on pains and opportunities.</h4>
             <p>
-              Depending on the scope and complexity of a project, this phase
-              can cover Sketches,  Wireframes, Prototypes, end-user persona
-              creation, User Journeys, and User Interviews.
+              Let us start with the end in mind. What is our <b>Prime Directive</b> for undertaking an initiative together?  What is our <b>outcome</b>?  What does our <b>Utopia</b> look like? How successful is our initiative?  Who is purchasing it? What kind of impact are we having on the world? How much money is it earning us?
+            </p>
+            <p>
+              In order for any map or plan to be effective, you have to have a good idea of where you want to arrive in the end.  The Project Vision does a great job of defining this end-state for our initiative, and allows us to dig deep into the <b>what's</b> and the <b>why's</b> of the project.
+            </p>
+            <p>
+              If you choose to work with me I will help extract this vision from your head, and the heads of those you collaborate with and get it represented in a sharable, meaningful way.  That way, everyone is in alignment as to where we are going, with minimal ambiguity.
             </p>
           </ServiceItem>
           <ServiceItem
             activeService={get(this, 'state.activeService')}
             serviceNumber={2}
-            serviceName="Define the Customer"
-            serviceIcon={imageIcon}
+            serviceName="The Customer"
+            serviceIcon={bodyIcon}
           >
             <p>
-              Once we have enough data collected and we have reduced our risk,
-              it's time to start bringing a greater level of fidelity to our
-              vision.  This is where we get to see colors and shades bring the
-              concept to life on a screen.
+              Now that we have a clearly defined picture of where we would like to end up via our project vision, now it is time to start to align that vision with the markets and segments that will fuel our growth.  Most people, once they have defined a vision, feel like that's enough to get started and then jump right into building. Heck, some poeple don't even define a vision, they just start building all willy-nilly.
+            </p>
+            <p>
+              Without customers we have no reason, no purpose, no why! Without customers, we have no business.  So how can we systematize our customer definition process and get to the heart of our market quickly and effectively?  Fortunately we have a robust Customer Discovery Process at our disposal to quickly identify our new best friends!
+            </p>
+            <p>
+              Customer Discovery is a constantly evolving process, an as the saying goes, no business plan survives first contact with customers.  Thus we must be patient and diligent as we apply proven methods and techniques to learn who wants to give us money for the things we have.
             </p>
           </ServiceItem>
           <ServiceItem
             activeService={get(this, 'state.activeService')}
             serviceNumber={3}
-            serviceName="Define the Value Proposition"
-            serviceIcon={codeIcon}
+            serviceName="The Value Proposition"
+            serviceIcon={cashIcon}
           >
             <p>
-              Here's where the rubber hit's the road.  I take all of the work
-              we have accomplished thus far and bring it to life on the web.
+              Ok, we have an idea, product or service that we would like to take to market.  We have a vision of the success that we will achieve, and we have a clearly defined customer along with a Customer Discovery process in place in order to learn and grow with our discoveries. Now it is time to start articulating our Value Proposition.
+            </p>
+            <p>
+              How can we understand the patterns of value creation while leveraging the experience and skills of your teams?  How can we save time and effort, while having fun creating something that will guide us to the promised land?  Thankfully there is a wealth of knowledge and resources at our disposal yet again, this time the individuals at Strategyzer are to thank with their wonderful resource, Value Proposition Design.
             </p>
           </ServiceItem>
           <ServiceItem
             activeService={get(this, 'state.activeService')}
             serviceNumber={4}
             serviceName="Problem Validation"
-            serviceIcon={zenCircleIcon}
+            serviceIcon={flaskIcon}
           >
             <p>
-              To be agile means to adapt quickly and effectively to change.
-              Customers, requirements, and funding can always change.
-              Fortunately the way I work will embrace whatever change
-              is thrown our way.
+              Ok, so now it's time to officially challenge all of the ideas we have cultivated up this point and learn if we have a <b>Hero</b> or a <b>Zero</b>.  If you weren't having fun before, then you are bound to during this phase because now we get to roll up our sleeves and get our hands dirty!
+            </p>
+            <p>
+              Here we start from a fundamental premise of asking the question, "How do people currently solve the problems we are looking to address?" Hopefully you enjoy connecting with your potential customers and developing a dialog with them because that foundation will be used to build the rest of your business, startup or initiative.
+            </p>
+            <p>
+              Next we move into discovering what the Customers current workflow is, and gaining an intimate understanding of their current world, as it is.
             </p>
           </ServiceItem>
           <ServiceItem
             activeService={get(this, 'state.activeService')}
             serviceNumber={5}
             serviceName="Gather Requirements"
-            serviceIcon={zenCircleIcon}
+            serviceIcon={clipboardIcon}
           >
             <p>
               To be agile means to adapt quickly and effectively to change.
@@ -163,8 +176,11 @@ class Services extends React.Component {
             activeService={get(this, 'state.activeService')}
             serviceNumber={6}
             serviceName="Create a Backlog"
-            serviceIcon={zenCircleIcon}
+            serviceIcon={filingIcon}
           >
+            <p>
+              From the telescope to the microscope.
+            </p>
             <p>
               To be agile means to adapt quickly and effectively to change.
               Customers, requirements, and funding can always change.

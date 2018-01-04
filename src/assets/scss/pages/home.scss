@@ -10,6 +10,7 @@
   background-color: rgba(0, 0, 0, .25);
   left:-$gutterSize * 2;
   transition: all 250ms ease-in-out;
+  overflow:hidden;
 
   &:after {
     content: '';
@@ -56,11 +57,16 @@
   justify-content: flex-start;
   align-items: center;
 
-  p {
+  .lead-in {
+    font-size:1.2rem;
+    line-height: 1.5;
     color:lighten(#555, 25%);
-    margin-left: 2rem;
   }
 }
-.supplement__title span {
-  color:#0072ff;
+.supplement__title {
+  margin-top:0;
+
+  span {
+    color:#0072ff;
+  }
 }

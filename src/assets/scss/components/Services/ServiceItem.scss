@@ -12,14 +12,21 @@
   padding: 2rem;
   background-color: #fff;
   border-radius: 10px;
+  opacity:0;
   box-shadow: 0 0 20px rgba(0, 0, 0, .35);
-  filter: opacity(0);
   transform: translate3d(0, 0, 0);
   transition: all 350ms ease-in-out;
 }
 .ra-service--isActive {
-  filter: opacity(1);
+  opacity:1;
   transform: translate3d(0, 0, 1);
+}
+.ra-service__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width:100%;
 }
 .ra-service__title {
   font-size: 1.25rem;
