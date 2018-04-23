@@ -12,7 +12,7 @@ class Bio extends React.Component {
       <div
         style={{
           marginBottom: rhythm(1.5),
-          marginTop: rhythm(1.5),
+          marginTop: rhythm(1.5)
         }}
         className="ra-bio"
       >
@@ -27,7 +27,7 @@ class Bio extends React.Component {
           </div>
           <div>
             <p>
-              My name is <b>Rob Abby</b> and I am passionate about both <b>Product Development</b> and <b>Personal Development</b>. Nothing gives me greater satisfaction than building things that nurture growth in myself and the world around me.
+              I'm <b>Rob</b>, and I am passionate about <b>Personal and Product Development</b>.
             </p>
           </div>
         </div>

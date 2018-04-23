@@ -47,7 +47,7 @@ class Scene extends React.Component {
             width: '100%'
           }}
         /> */}
-        {/* {this.insertTrianglify()} */}
+        {this.insertTrianglify()}
       </div>
     )
   }
