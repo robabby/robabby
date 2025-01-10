@@ -2,21 +2,21 @@ export default function Experience() {
   const experiences = [
     {
       title: "Staff Frontend Engineer",
-      company: "TechCorp Inc.",
-      period: "2020 - Present",
-      description: "Lead frontend development for multiple high-impact projects, mentor junior developers, and drive technical decisions."
+      company: "PartySlate",
+      period: "2018 - 2024",
+      description: "In my time at PartySlate we grew from a 12-person early-stage startup to a +50-employee Series-B company while averaging 258.33% revenue growth year-over-year. I shipped *many* features, embraced remote work, established a collaborative Design System, transitioned to Next.js and React Query, and succeeded in building a world class events industry platform."
     },
     {
-      title: "Senior Frontend Developer",
-      company: "WebSolutions Ltd.",
-      period: "2017 - 2020",
-      description: "Developed and maintained large-scale web applications using React and Redux, improving performance and user experience."
+      title: "Senior Product Developer",
+      company: "Savo",
+      period: "2013 - 2018",
+      description: "Worked within Agile and Lean UX methodologies to take projects from discovery to implementation. Collaborated with Visual Design, UX Design & Research, Development, Product, and Delivery Managers to build quality, user centered products."
     },
     {
-      title: "Frontend Developer",
-      company: "DigitalCreations Co.",
-      period: "2014 - 2017",
-      description: "Built responsive websites and implemented interactive features using JavaScript and jQuery."
+      title: "Web Developer",
+      company: "Web2Carz",
+      period: "2011 - 2013",
+      description: "Hired as the first developer and worked directly with the founders to implement a major redesign of the Web2Carz aging site, implement a new editorial segment, and develop an adaptive mobile solution."
     }
   ]
 

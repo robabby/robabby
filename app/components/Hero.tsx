@@ -6,7 +6,7 @@ export default function Hero() {
       <div className="text-center">
         <h1 className="text-8xl font-bold mb-4 animate-fade-in-down">Rob Abby</h1>
         <p className="text-2xl mb-8 animate-fade-in-up">Staff Frontend Engineer</p>
-        <a href="#contact" className="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-100 transition duration-300">Learn More</a>
+        <a href="#about" className="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-100 transition duration-300">Learn More</a>
       </div>
     </section>
   )

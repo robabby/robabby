@@ -1,5 +1,6 @@
 export default function Skills() {
   const skills = [
+    "Coaching", "Training", "Pair Programming", "Living Design Systems", 
     "JavaScript", "TypeScript", "React", "Next.js", "Vue.js", "Node.js",
     "HTML5", "CSS3", "Sass", "Tailwind CSS", "GraphQL", "REST APIs",
     "Webpack", "Jest", "Cypress", "Git", "Agile Methodologies", "CI/CD"
