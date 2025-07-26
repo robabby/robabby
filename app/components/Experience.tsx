@@ -61,7 +61,7 @@ export default function Experience() {
               <a className="text-teal-600 hover:text-emerald-700 mb-2 font-semibold hover:underline transition-colors duration-300" href={exp.companyLink} target="_blank">{exp.company}</a>
               <p className="text-emerald-600 mb-4 font-medium">{exp.period}</p>
               <p className="text-gray-700 mb-4">{exp.description}</p>
-              <ul className="text-gray-700 list-disc list-inside space-y-1">
+              <ul className="text-gray-700 list-disc list-outside ml-5 space-y-2">
                 {exp.highlights.map((highlight, highlightIndex) => (
                   <li key={highlightIndex}>{highlight}</li>
                 ))}
