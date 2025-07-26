@@ -51,15 +51,15 @@ export default function Experience() {
   ]
 
   return (
-    <section id="experience" className="py-20 bg-white">
+    <section id="experience" className="py-20 bg-gradient-to-b from-emerald-50 to-white">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold mb-8 text-center">Experience</h2>
+        <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">Experience</h2>
         <div className="space-y-8">
           {experiences.map((exp, index) => (
-            <div key={index} className="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
-              <h3 className="text-xl font-semibold mb-2">{exp.title}</h3>
-              <a className="text-blue-600 mb-2" href={exp.companyLink} target="_blank">{exp.company}</a>
-              <p className="text-gray-600 mb-4">{exp.period}</p>
+            <div key={index} className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-emerald-100 hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
+              <h3 className="text-2xl font-bold mb-2 text-emerald-800">{exp.title}</h3>
+              <a className="text-teal-600 hover:text-emerald-700 mb-2 font-semibold hover:underline transition-colors duration-300" href={exp.companyLink} target="_blank">{exp.company}</a>
+              <p className="text-emerald-600 mb-4 font-medium">{exp.period}</p>
               <p className="text-gray-700 mb-4">{exp.description}</p>
               <ul className="text-gray-700 list-disc list-inside space-y-1">
                 {exp.highlights.map((highlight, highlightIndex) => (

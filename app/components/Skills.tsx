@@ -13,16 +13,16 @@ export default function Skills() {
   }
 
   return (
-    <section id="skills" className="py-20 bg-gray-100">
+    <section id="skills" className="py-20 bg-gradient-to-b from-white to-emerald-50">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold mb-8 text-center">Skills</h2>
+        <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">Skills</h2>
         <div className="grid md:grid-cols-3 gap-8">
           {Object.entries(skillCategories).map(([category, skills]) => (
-            <div key={category} className="bg-white rounded-lg p-6 shadow-md">
-              <h3 className="text-xl font-semibold mb-4 text-center text-blue-600">{category}</h3>
+            <div key={category} className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-emerald-100 hover:shadow-2xl hover:scale-105 transition-all duration-300">
+              <h3 className="text-xl font-semibold mb-6 text-center text-emerald-700">{category}</h3>
               <div className="flex flex-wrap gap-2">
                 {skills.map((skill, index) => (
-                  <span key={index} className="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm hover:bg-blue-100 transition duration-300">
+                  <span key={index} className="bg-gradient-to-r from-emerald-100 to-teal-100 text-emerald-800 px-4 py-2 rounded-full text-sm hover:from-emerald-200 hover:to-teal-200 hover:shadow-md transform hover:scale-105 transition-all duration-300 font-medium">
                     {skill}
                   </span>
                 ))}
