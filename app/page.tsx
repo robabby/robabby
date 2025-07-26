@@ -8,7 +8,7 @@ import Footer from './components/Footer'
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gray-100 text-gray-900">
+    <main className="min-h-screen bg-gray-100 text-gray-900 pb-10 md:pb-0">
       <Header />
       <Hero />
       <About />
