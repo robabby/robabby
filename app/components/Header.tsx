@@ -8,7 +8,7 @@ export default function Header() {
           <li><Link href="#about" className="text-gray-800 hover:text-blue-600 transition duration-300">About</Link></li>
           <li><Link href="#skills" className="text-gray-800 hover:text-blue-600 transition duration-300">Skills</Link></li>
           <li><Link href="#experience" className="text-gray-800 hover:text-blue-600 transition duration-300">Experience</Link></li>
-          <li><Link href="#contact" className="text-gray-800 hover:text-blue-600 transition duration-300">Contact</Link></li>
+          {/* <li><Link href="#contact" className="text-gray-800 hover:text-blue-600 transition duration-300">Contact</Link></li> */}
         </ul>
       </nav>
     </header>
