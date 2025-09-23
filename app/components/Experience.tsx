@@ -1,6 +1,17 @@
 export default function Experience() {
   const experiences = [
     {
+      title: "IT Manager",
+      company: "VIMSIA",
+      companyLink: "https://www.vimsia.org",
+      period: "2025 - PRESENT",
+      description: "Managing all facets of IT for a private school with a combined headcount of 350 people including faculty and students.",
+      highlights: [
+        "Overseeing all aspects of IT infrastructure, including network management, hardware and software procurement, and system maintenance to ensure optimal performance and security.",
+        "Managing code and changes for small websites, microsites and data repositories using modern frameworks and tools."
+      ]
+    },
+    {
       title: "Staff Frontend Engineer",
       company: "PartySlate",
       companyLink: "https://www.partyslate.com",
