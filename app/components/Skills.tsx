@@ -2,13 +2,19 @@ export default function Skills() {
   const skillCategories = {
     "Languages & Frameworks": [
       "JavaScript", "TypeScript", "React", "Next.js", "Vue.js", "Node.js",
-      "HTML5", "CSS3", "Sass", "Tailwind CSS", "GraphQL", "REST APIs"
+      "HTML5", "CSS3", "Sass", "Tailwind", "GraphQL", "REST APIs", 
+      "React Query", "Apollo Client", "Storybook", "React Testing Library", 
+      "Webpack", "Vite", "ES6+", "Babel", "SWC", "Jest", "Enzyme", "Cypress"
     ],
     "Leadership": [
-      "Coaching", "Training", "Pair Programming", "Agile Methodologies"
+      "Coaching", "Mentorship", "Pair Programming", "Cross-functional Collaboration", 
+      "Agile Methodologies", "Team Building", "User-Centered Design", "Design Thinking",
+      "Knowledge Sharing", "Technical Writing"
     ],
     "Platforms & Tools": [
-      "Living Design Systems", "Webpack", "Jest", "Cypress", "Git", "CI/CD"
+      "AWS (ECR, ECS, S3, CloudWatch, Route 53, etc.)", "Living Design Systems", "Docker", "Figma",
+      "Git & Github", "CI/CD", "VS Code", "Claude Code", "Chrome DevTools", "Postman", "Jira", "Confluence",
+      "Slack", "Zoom"
     ]
   }
 
