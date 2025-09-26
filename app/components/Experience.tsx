@@ -77,7 +77,7 @@ export default function Experience() {
         <Heading size="8">Experience</Heading>
         <Box>
           {experiences.map((exp, index) => (
-            <Container key={index} p="8" my="8" size="3" style={{ background: "var(--gray-a3)", borderRadius: "var(--radius-3)" }}>
+            <Container key={index} p="4" mx="4" my="8" size="3" style={{ background: "var(--gray-a3)", borderRadius: "var(--radius-3)" }}>
               <Heading size="6">{exp.title}</Heading>
               <Flex direction="row" justify="between" my="2">
                 <Text>
