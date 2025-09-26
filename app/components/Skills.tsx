@@ -1,4 +1,4 @@
-import { Badge, Box, Container, Flex, Heading, Text } from "@radix-ui/themes";
+import { Badge, Box, Container, Flex, Heading } from "@radix-ui/themes";
 
 export default function Skills() {
   const skillCategories = {

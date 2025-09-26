@@ -1,21 +1,28 @@
 "use client";
 
-import { Box, Flex, TabNav } from "@radix-ui/themes";
 import { NavigationMenu } from "radix-ui";
 import NextLink from "next/link";
-import { useState } from "react";
 import { usePathname } from "next/navigation";
 import "./NavigationMenu.css";
+import type { LinkProps } from "next/link";
 
-const Link = ({ href, ...props }) => {
-	const pathname = usePathname();
-	const isActive = href === pathname;
+import type { ReactNode } from "react";
 
-	return (
-		<NavigationMenu.Link asChild active={isActive}>
-			<NextLink href={href} className="NavigationMenuLink" {...props} />
-		</NavigationMenu.Link>
-	);
+type CustomLinkProps = LinkProps & {
+  children: ReactNode;
+};
+
+const Link = ({ href, children, ...props }: CustomLinkProps) => {
+  const pathname = usePathname();
+  const isActive = href === pathname;
+
+  return (
+    <NavigationMenu.Link asChild active={isActive}>
+      <NextLink href={href} className="NavigationMenuLink" {...props}>
+        {children}
+      </NextLink>
+    </NavigationMenu.Link>
+  );
 };
 
 export default function Header() {
