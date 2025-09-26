@@ -25,9 +25,9 @@ export default function Skills() {
       <Flex direction="column" justify="center" align="center" py="8">
         <Heading mb="8" size="8">Skills</Heading>
         <Container size="3">
-          <Flex direction={{ xs: "column", md: "row" }} gap="4">
+          <Flex direction="column" gap="4">
             {Object.entries(skillCategories).map(([category, skills]) => (
-              <Box key={category} p="4" width={{ sm: "100%", md: "33.33%"}} style={{ background: "var(--gray-a3)", borderRadius: "var(--radius-3)" }}>
+              <Box key={category} mx="4" p="4" style={{ background: "var(--gray-a3)", borderRadius: "var(--radius-3)" }}>
                 <Heading mb="4" size="5">{category}</Heading>
                 <Flex direction="row" gap="2" wrap="wrap">
                   {skills.map((skill, index) => (
