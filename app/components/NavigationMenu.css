@@ -13,9 +13,10 @@ p {
 .NavigationMenuRoot {
 	position: sticky;
     top: 8px;
+    left: 0;
+    right: 0;
 	display: flex;
 	justify-content: center;
-	width: 100vw;
 	z-index: 1;
 }
 
@@ -61,7 +62,7 @@ p {
 .NavigationMenuLink {
 	display: block;
 	text-decoration: none;
-	font-size: 15px;
+	font-size: 14px;
 	line-height: 1;
 }
 

@@ -1,11 +1,12 @@
 "use client";
 
+import { HomeIcon } from "@radix-ui/react-icons";
 import { NavigationMenu } from "radix-ui";
 import NextLink from "next/link";
 import { usePathname } from "next/navigation";
 import "./NavigationMenu.css";
-import type { LinkProps } from "next/link";
 
+import type { LinkProps } from "next/link";
 import type { ReactNode } from "react";
 
 type CustomLinkProps = LinkProps & {
@@ -38,7 +39,7 @@ export default function Header() {
     return links.map((link) => (
       <NavigationMenu.Item key={link.href} className="NavigationMenuItem">
         <Link href={link.href}>
-          {link.label}
+          {link.label === "Home" ? <HomeIcon /> : link.label}
         </Link>
       </NavigationMenu.Item>
     ));

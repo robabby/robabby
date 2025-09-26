@@ -4,9 +4,8 @@ import { LinkedInLogoIcon, GitHubLogoIcon, EnvelopeClosedIcon } from "@radix-ui/
 export default function Footer() {
   return (
     <Container px="6">
-      <Flex direction="row" justify="between" align="center" my="4">
-        <Text>&copy; {new Date().getFullYear()} Rob Abby. All rights reserved.</Text>
-        <Box>
+      <Flex direction="column" justify="between" align="center" my="4">
+        <Box mb="4">
           <Flex direction="row" align="center" gap="2">
             <Link href="https://linkedin.com/in/robabby" target="_blank" rel="noopener noreferrer">
               <LinkedInLogoIcon />&nbsp;
@@ -22,6 +21,7 @@ export default function Footer() {
             </Link>
           </Flex>
         </Box>
+        <Text>&copy; {new Date().getFullYear()} Rob Abby. All rights reserved.</Text>
       </Flex>
     </Container>
   )

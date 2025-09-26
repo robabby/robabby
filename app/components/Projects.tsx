@@ -27,7 +27,7 @@ export default function Projects() {
       <Flex direction="column" justify="center" align="center" py="8">
         <Heading mb="8" size="8">Projects</Heading>
         {projects.map((proj, index) => (
-          <Container key={index} size="3" mb="8" p="4" style={{ background: "var(--gray-a4)", borderRadius: "var(--radius-3)", boxShadow: "var(--shadow-3)" }}>
+          <Container key={index} size="3" mx="4" mb="8" p="4" style={{ background: "var(--gray-a4)", borderRadius: "var(--radius-3)", boxShadow: "var(--shadow-3)" }}>
             <Heading mb="4" size="4">{proj.title}</Heading>
             <Box mb="4">
               <Text mb="4">{proj.description}</Text>
