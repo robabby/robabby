@@ -1,3 +1,4 @@
+import { Flex } from "@radix-ui/themes";
 import Header from './components/Header'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -8,7 +9,7 @@ import Footer from './components/Footer'
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gray-100 text-gray-900 pb-10 md:pb-0">
+    <Flex direction="column" gap="2">
       <Header />
       <Hero />
       <About />
@@ -16,7 +17,7 @@ export default function Home() {
       <Experience />
       <Projects />
       <Footer />
-    </main>
+		</Flex>
   )
 }
 

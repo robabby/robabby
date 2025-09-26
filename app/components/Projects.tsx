@@ -1,4 +1,6 @@
-export default function Experience() {
+import { Badge, Box, Button, Container, Flex, Heading, Link, Text } from "@radix-ui/themes";
+
+export default function Projects() {
   const projects = [
     {
       title: "ai-chatbot",
@@ -21,50 +23,40 @@ export default function Experience() {
   ]
 
   return (
-    <section id="projects" className="py-20 bg-gradient-to-b from-emerald-50 to-white">
-      <div className="container mx-auto px-6">
-        <h2 
-          className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent"
-        >
-          Projects
-        </h2>
-        <div className="space-y-8">
-          {projects.map((proj, index) => (
-            <div key={index} className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-emerald-100 hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
-              <h3 className="text-2xl font-bold mb-2 text-emerald-800">{proj.title}</h3>
-              <p className="mb-2">
-                <a 
-                  className="text-teal-600 hover:text-emerald-700 mb-2 font-semibold hover:underline transition-colors duration-300" 
-                  href={proj.githubLink} 
-                  target="_blank"
-                >
+    <Box id="projects" py="8" style={{ background: "var(--gray-a2)" }}>
+      <Flex direction="column" justify="center" align="center" py="8">
+        <Heading mb="8" size="8">Projects</Heading>
+        {projects.map((proj, index) => (
+          <Container key={index} size="3" mb="8" p="4" style={{ background: "var(--gray-a4)", borderRadius: "var(--radius-3)", boxShadow: "var(--shadow-3)" }}>
+            <Heading mb="4" size="4">{proj.title}</Heading>
+            <Box mb="4">
+              <Text mb="4">{proj.description}</Text>
+            </Box>
+            <Flex wrap="wrap" gap="2" mb="4">
+              {proj.tech.map((item, index) => (
+                <Badge size="2" key={index}>
+                  {item}
+                </Badge>
+              ))}
+            </Flex>
+            <Box>
+              <Button asChild mb="2" mr="2">
+                <Link href={proj.githubLink} target="_blank">
                   Github Link
-                </a>
-              </p>
+                </Link>
+              </Button>
               {proj.liveLink && (
-                <p className="mb-2">
-                  <a 
-                    className="text-teal-600 hover:text-emerald-700 mb-2 font-semibold hover:underline transition-colors duration-300" 
-                    href={proj.liveLink} 
-                    target="_blank"
-                    >
+                <Button mb="2">
+                  <Link href={proj.liveLink} target="_blank">
                     Demo Link
-                  </a>
-                </p>
+                  </Link>
+                </Button>
               )}
-              <p className="text-gray-700 mb-4">{proj.description}</p>
-              <div className="flex flex-wrap gap-2">
-                {proj.tech.map((item, index) => (
-                  <span key={index} className="bg-gradient-to-r from-emerald-100 to-teal-100 text-emerald-800 px-4 py-2 rounded-full text-sm hover:from-emerald-200 hover:to-teal-200 hover:shadow-md transform hover:scale-105 transition-all duration-300 font-medium">
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+            </Box>
+          </Container>
+        ))}
+      </Flex>
+    </Box>
   )
 }
 

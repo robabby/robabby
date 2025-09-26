@@ -1,15 +1,24 @@
-// import Image from "next/image";
+import { Box, Button, Container, Flex, Heading, Link, Section, Text } from "@radix-ui/themes";
+import { FileIcon } from "@radix-ui/react-icons";
 
 export default function Hero() {
   return (
-    <section className="h-screen flex items-center justify-center bg-gradient-to-br from-emerald-600 via-teal-600 to-cyan-700 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-      <div className="text-center relative z-10">
-        <h1 className="text-5xl md:text-7xl font-bold mb-4 animate-fade-in-down">Robert Abby</h1>
-        <p className="text-2xl mb-12 animate-fade-in-up">Product Engineer</p>
-        <a href="/robert-abby-resume.pdf" className="bg-white/90 backdrop-blur-sm text-emerald-700 px-8 py-4 rounded-full font-semibold hover:bg-white hover:shadow-lg transform hover:scale-105 transition-all duration-300">Resume</a>
-      </div>
-    </section>
+    <Section id="home" style={{ background: "var(--blue-a9)" }}>
+      <Box py="9">
+        <Container py="8" size="3">
+          <Flex direction="column" gap="4" align="center">
+            <Heading mb="4" size="9">Robert Abby</Heading>
+            <Text mb="4" size="7">Product Engineer</Text>
+            <Button asChild size="4">
+              <Link href="/robert-abby-resume.pdf" target="_blank">
+                <FileIcon />
+                <Text>R&eacute;sum&eacute;</Text>
+              </Link>
+            </Button>
+          </Flex>
+        </Container>
+      </Box>
+    </Section>
   )
 }
 

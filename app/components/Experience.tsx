@@ -1,3 +1,5 @@
+import { Box, Container, Flex, Heading, Text } from "@radix-ui/themes";
+
 export default function Experience() {
   const experiences = [
     {
@@ -5,9 +7,9 @@ export default function Experience() {
       company: "VIMSIA",
       companyLink: "https://www.vimsia.org",
       period: "2025 - PRESENT",
-      description: "Managing all facets of IT for a private school with a combined headcount of 350 people including faculty and students.",
+      description: "Managing IT for a private Montessori & International Baccalaureate school with a combined headcount of 350 people including faculty and students.",
       highlights: [
-        "Overseeing all aspects of IT infrastructure, including network management, hardware and software procurement, and system maintenance to ensure optimal performance and security.",
+        "Overseeing all aspects of IT infrastructure, including network management, hardware and software procurement, and system maintenance to ensure optimal performance and security with a network uptime of 98%.",
         "Managing code and changes for small websites, microsites and data repositories using modern frameworks and tools.",
         "Providing technical support and training to faculty and staff, enhancing effective utilization of technology in educational settings and reducing support requests by 20%.",
         "Coordinating with external vendors and service providers to ensure seamless integration and operation of IT services."
@@ -70,26 +72,30 @@ export default function Experience() {
   ]
 
   return (
-    <section id="experience" className="py-20 bg-gradient-to-b from-emerald-50 to-white">
-      <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">Experience</h2>
-        <div className="space-y-8">
+    <Box id="experience" py="8">
+      <Flex direction="column" justify="center" align="center" py="8">
+        <Heading size="8">Experience</Heading>
+        <Box>
           {experiences.map((exp, index) => (
-            <div key={index} className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-emerald-100 hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
-              <h3 className="text-2xl font-bold mb-2 text-emerald-800">{exp.title}</h3>
-              <a className="text-teal-600 hover:text-emerald-700 mb-2 font-semibold hover:underline transition-colors duration-300" href={exp.companyLink} target="_blank">{exp.company}</a>
-              <p className="text-emerald-600 mb-4 font-medium">{exp.period}</p>
-              <p className="text-gray-700 mb-4">{exp.description}</p>
-              <ul className="text-gray-700 list-disc list-outside ml-5 space-y-2">
+            <Container key={index} p="8" my="8" size="3" style={{ background: "var(--gray-a3)", borderRadius: "var(--radius-3)" }}>
+              <Heading size="6">{exp.title}</Heading>
+              <Flex direction="row" justify="between" my="2">
+                <Text>
+                  <a href={exp.companyLink} target="_blank">{exp.company}</a>
+                </Text>
+                <Text>{exp.period}</Text>
+              </Flex>
+              <Text>{exp.description}</Text>
+              <ul>
                 {exp.highlights.map((highlight, highlightIndex) => (
                   <li key={highlightIndex}>{highlight}</li>
                 ))}
-              </ul>
-            </div>
+              </ul> 
+            </Container>
           ))}
-        </div>
-      </div>
-    </section>
+        </Box>
+      </Flex>
+    </Box>
   )
 }
 

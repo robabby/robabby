@@ -1,3 +1,5 @@
+import { Badge, Box, Container, Flex, Heading, Text } from "@radix-ui/themes";
+
 export default function Skills() {
   const skillCategories = {
     "Languages & Frameworks": [
@@ -12,32 +14,34 @@ export default function Skills() {
       "Knowledge Sharing", "Technical Writing"
     ],
     "Platforms & Tools": [
-      "AWS (ECR, ECS, S3, CloudWatch, Route 53, etc.)", "Living Design Systems", "Docker", "Figma",
+      "AWS", "ECR", "ECS", "S3", "CloudWatch", "Route 53", "Living Design Systems", "Docker", "Figma",
       "Git & Github", "CI/CD", "VS Code", "Claude Code", "Chrome DevTools", "Postman", "Jira", "Confluence",
       "Slack", "Zoom"
     ]
   }
 
   return (
-    <section id="skills" className="py-20 bg-gradient-to-b from-white to-emerald-50">
-      <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">Skills</h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          {Object.entries(skillCategories).map(([category, skills]) => (
-            <div key={category} className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-emerald-100 hover:shadow-2xl hover:scale-105 transition-all duration-300">
-              <h3 className="text-xl font-semibold mb-6 text-center text-emerald-700">{category}</h3>
-              <div className="flex flex-wrap gap-2">
-                {skills.map((skill, index) => (
-                  <span key={index} className="bg-gradient-to-r from-emerald-100 to-teal-100 text-emerald-800 px-4 py-2 rounded-full text-sm hover:from-emerald-200 hover:to-teal-200 hover:shadow-md transform hover:scale-105 transition-all duration-300 font-medium">
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+    <Box id="skills" py="8" style={{ background: "var(--gray-a2)" }}>
+      <Flex direction="column" justify="center" align="center" py="8">
+        <Heading mb="8" size="8">Skills</Heading>
+        <Container size="3">
+          <Flex direction={{ xs: "column", md: "row" }} gap="4">
+            {Object.entries(skillCategories).map(([category, skills]) => (
+              <Box key={category} p="4" width={{ sm: "100%", md: "33.33%"}} style={{ background: "var(--gray-a3)", borderRadius: "var(--radius-3)" }}>
+                <Heading mb="4" size="5">{category}</Heading>
+                <Flex direction="row" gap="2" wrap="wrap">
+                  {skills.map((skill, index) => (
+                    <Badge size="3" key={index}>
+                      {skill}
+                    </Badge>
+                  ))}
+                </Flex>
+              </Box>
+            ))}
+          </Flex>
+        </Container>
+      </Flex>
+    </Box>
   )
 }
 
