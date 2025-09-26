@@ -37,7 +37,7 @@ export default function Experience() {
       period: "2018 - 2018",
       description: "project44 (B2B) is the leading Decision Intelligence Platform for supply chains, powered by the world's largest transportation data network.",
       highlights: [
-        "Collaborated within the Product Experience team at project44 (B2B) defining and developing processes and features for project44's new User Interface products, sitting atop existing API based solutions.",
+        "Collaborated within the Product Experience team defining and developing processes and features for new User Interface products, sitting atop existing API based solutions.",
         "Worked heavily with the Here Maps API to build interactive map-based interfaces.",
         "Implementing features into a React/Redux codebase within tight timelines and scope using development best-practices (Jest, Enzyme, ES6, SCSS w/BEM).",
         "Led the creation of a living style guide and UI component library with Ant Design & Rollup.js.",
