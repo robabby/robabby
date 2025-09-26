@@ -5,7 +5,7 @@ import NextLink from "next/link";
 import { usePathname } from "next/navigation";
 import "./NavigationMenu.css";
 
-const Link = ({ href, ...props }) => {
+const Link = ({ href, ...props }: { href: string }) => {
 	const pathname = usePathname();
 	const isActive = href === pathname;
 
