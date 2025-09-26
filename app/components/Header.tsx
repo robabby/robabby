@@ -1,9 +1,7 @@
 "use client";
 
-import { Box, Flex, TabNav } from "@radix-ui/themes";
 import { NavigationMenu } from "radix-ui";
 import NextLink from "next/link";
-import { useState } from "react";
 import { usePathname } from "next/navigation";
 import "./NavigationMenu.css";
 
