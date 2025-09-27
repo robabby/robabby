@@ -11,12 +11,13 @@ p {
 }
 
 .NavigationMenuRoot {
-	position: sticky;
-    top: 8px;
-    left: 0;
-    right: 0;
 	display: flex;
+	position: sticky;
+	top: 8px;
+	left: 0;
+	right: 0;
 	justify-content: center;
+	height: 60px;
 	z-index: 1;
 }
 

@@ -2,10 +2,9 @@ html {
   scroll-behavior: smooth;
 }
 
-.sticky-top {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background-color: var(--color-panel-solid);
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
