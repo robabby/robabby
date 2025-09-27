@@ -24,7 +24,7 @@ export default function Projects() {
 
   return (
     <Box id="projects" py="8" style={{ background: "var(--gray-a2)" }}>
-      <Flex direction="column" justify="center" align="center" py="8">
+      <Flex direction="column" justify="center" align="center">
         <Heading mb="8" size="8">Projects</Heading>
         {projects.map((proj, index) => (
           <Container key={index} size="3" mx="4" mb="8" p="4" style={{ background: "var(--gray-a4)", borderRadius: "var(--radius-3)", boxShadow: "var(--shadow-3)" }}>

@@ -22,7 +22,7 @@ export default function Skills() {
 
   return (
     <Box id="skills" py="8" style={{ background: "var(--gray-a2)" }}>
-      <Flex direction="column" justify="center" align="center" py="8">
+      <Flex direction="column" justify="center" align="center">
         <Heading mb="8" size="8">Skills</Heading>
         <Container size="3">
           <Flex direction="column" gap="4">
