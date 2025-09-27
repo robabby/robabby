@@ -13,6 +13,14 @@ type CustomLinkProps = LinkProps & {
   children: ReactNode;
 };
 
+const LINKS = [
+  { href: "#home", label: "Home" },
+  { href: "#about", label: "About" },
+  { href: "#skills", label: "Skills" },
+  { href: "#experience", label: "Experience" },
+  { href: "#projects", label: "Projects" },
+];
+
 const Link = ({ href, children, ...props }: CustomLinkProps) => {
   const pathname = usePathname();
   const isActive = href === pathname;
@@ -27,23 +35,13 @@ const Link = ({ href, children, ...props }: CustomLinkProps) => {
 };
 
 export default function Header() {
-  const renderTabNavLinks = () => {
-    const links = [
-      { href: "#home", label: "Home" },
-      { href: "#about", label: "About" },
-      { href: "#skills", label: "Skills" },
-      { href: "#experience", label: "Experience" },
-      { href: "#projects", label: "Projects" },
-    ];
-
-    return links.map((link) => (
-      <NavigationMenu.Item key={link.href} className="NavigationMenuItem">
-        <Link href={link.href}>
-          {link.label === "Home" ? <HomeIcon /> : link.label}
-        </Link>
-      </NavigationMenu.Item>
-    ));
-  };
+  const renderTabNavLinks = () => LINKS.map((link) => (
+    <NavigationMenu.Item key={link.href} className="NavigationMenuItem">
+      <Link href={link.href}>
+        {link.label === "Home" ? <HomeIcon /> : link.label}
+      </Link>
+    </NavigationMenu.Item>
+  ));
 
   return (
     <NavigationMenu.Root className="NavigationMenuRoot">

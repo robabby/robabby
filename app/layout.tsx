@@ -8,8 +8,8 @@ import { Theme } from "@radix-ui/themes";
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Rob Abby - Staff Frontend Engineer',
-  description: 'Personal website of Rob Abby, a Staff Frontend Engineer specializing in creating exceptional web experiences.',
+  title: 'Rob Abby - Product Engineer',
+  description: 'Personal website of Rob Abby, a Product Engineer specializing in creating exceptional web experiences.',
 }
 
 export default function RootLayout({
