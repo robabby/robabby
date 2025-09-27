@@ -1,8 +1,10 @@
-import { Badge, Box, Button, Container, Flex, Heading, Link, Text } from "@radix-ui/themes";
+import { Badge, Box, Button, Callout, Container, Flex, Heading, Link, Text } from "@radix-ui/themes";
+import { InfoCircledIcon } from "@radix-ui/react-icons";
 
 const PROJECTS = [
   {
     title: "ai-chatbot",
+    callout: "[09/26/2025] Site loads, but chat responses currently not working.  Debugging...",
     githubLink: "https://github.com/robabby/ai-chatbot",
     liveLink: "https://ai-chatbot-psi-green-88.vercel.app/",
     description: "ChatGPT/Grok clone built with Next.js, TailwindCSS, Grok and OpenAI API. Features include conversation history, user authentication, and a sleek, responsive design.",
@@ -12,6 +14,7 @@ const PROJECTS = [
   },
   {
     title: "tldr-bot",
+    callout: null,
     githubLink: "https://github.com/robabby/tldr-bot",
     liveLink: null,
     description: "A Discord bot written in Python that leverages OpenAI's GPT-5 API to generate sarcastic summaries of recent messages in a channel. Will also generate memes based on message contents.",
@@ -51,6 +54,16 @@ export default function Projects() {
             }}
           >
             <Heading mb="4" size="4">{proj.title}</Heading>
+            {proj.callout && (
+              <Callout.Root mb="4">
+                <Callout.Icon>
+                  <InfoCircledIcon />
+                </Callout.Icon>
+                <Callout.Text>
+                  {proj.callout}
+                </Callout.Text>
+              </Callout.Root>
+            )}
             <Box mb="4">
               <Text mb="4">{proj.description}</Text>
             </Box>
