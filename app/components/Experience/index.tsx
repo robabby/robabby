@@ -75,7 +75,7 @@ export default function Experience() {
 
   return (
     <Box id="experience" py="8">
-      <Flex direction="column" justify="center" align="center" py="8">
+      <Flex direction="column" justify="center" align="center">
         <Heading size="8">Experience</Heading>
         <Box>
           {EXPERIENCE.map(({ 

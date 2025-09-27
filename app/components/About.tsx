@@ -3,7 +3,7 @@ import { Box, Container, Flex, Heading, Text } from "@radix-ui/themes";
 export default function About() {
   return (
     <Box id="about" py="8">
-      <Flex direction="column" justify="center" align="center" py="8">
+      <Flex direction="column" justify="center" align="center">
         <Heading mb="4" size="8">About</Heading>
         <Container p="4" mx="4" my="8" size="3" style={{ background: "var(--gray-a3)", borderRadius: "var(--radius-3)" }}>
           <Text size="4">
