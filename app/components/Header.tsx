@@ -4,7 +4,7 @@ import { HomeIcon } from "@radix-ui/react-icons";
 import { NavigationMenu } from "radix-ui";
 import NextLink from "next/link";
 import { usePathname } from "next/navigation";
-import "./NavigationMenu.css";
+import "./Header.css";
 
 import type { LinkProps } from "next/link";
 import type { ReactNode } from "react";
