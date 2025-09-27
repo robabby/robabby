@@ -1,33 +1,55 @@
 import { Badge, Box, Button, Container, Flex, Heading, Link, Text } from "@radix-ui/themes";
 
+const PROJECTS = [
+  {
+    title: "ai-chatbot",
+    githubLink: "https://github.com/robabby/ai-chatbot",
+    liveLink: "https://ai-chatbot-psi-green-88.vercel.app/",
+    description: "ChatGPT/Grok clone built with Next.js, TailwindCSS, Grok and OpenAI API. Features include conversation history, user authentication, and a sleek, responsive design.",
+    tech: [
+      "Nextjs", "shadcn/ui", "radix-ui", "OpenAI API", "Grok API", "TypeScript", "Vercel Chat SDK"
+    ]
+  },
+  {
+    title: "tldr-bot",
+    githubLink: "https://github.com/robabby/tldr-bot",
+    liveLink: null,
+    description: "A Discord bot written in Python that leverages OpenAI's GPT-5 API to generate sarcastic summaries of recent messages in a channel. Will also generate memes based on message contents.",
+    tech: [
+      "Python", "Discord.py", "OpenAI GPT-5 API"
+    ]
+  }
+]
+
 export default function Projects() {
-  const projects = [
-    {
-      title: "ai-chatbot",
-      githubLink: "https://github.com/robabby/ai-chatbot",
-      liveLink: "https://ai-chatbot-psi-green-88.vercel.app/",
-      description: "ChatGPT/Grok clone built with Next.js, TailwindCSS, Grok and OpenAI API. Features include conversation history, user authentication, and a sleek, responsive design.",
-      tech: [
-        "Nextjs", "shadcn/ui", "radix-ui", "OpenAI API", "Grok API", "TypeScript", "Vercel Chat SDK"
-      ]
-    },
-    {
-      title: "tldr-bot",
-      githubLink: "https://github.com/robabby/tldr-bot",
-      liveLink: null,
-      description: "A Discord bot written in Python that leverages OpenAI's GPT-5 API to generate sarcastic summaries of recent messages in a channel. Will also generate memes based on message contents.",
-      tech: [
-        "Python", "Discord.py", "OpenAI GPT-5 API"
-      ]
-    }
-  ]
 
   return (
-    <Box id="projects" py="8" style={{ background: "var(--gray-a2)" }}>
-      <Flex direction="column" justify="center" align="center">
-        <Heading mb="8" size="8">Projects</Heading>
-        {projects.map((proj, index) => (
-          <Container key={index} size="3" mx="4" mb="8" p="4" style={{ background: "var(--gray-a4)", borderRadius: "var(--radius-3)", boxShadow: "var(--shadow-3)" }}>
+    <Box 
+      id="projects" 
+      py="8" 
+      style={{ background: "var(--gray-a2)" }}
+    >
+      <Flex 
+        align="center"
+        direction="column" 
+        justify="center" 
+      >
+        <Heading mb="8" size="8">
+          Projects
+        </Heading>
+        {PROJECTS.map((proj, index) => (
+          <Container 
+            key={index} 
+            size="3" 
+            mx="4" 
+            mb="8" 
+            p="4" 
+            style={{ 
+              background: "var(--gray-a4)", 
+              borderRadius: "var(--radius-3)", 
+              boxShadow: "var(--shadow-3)" 
+            }}
+          >
             <Heading mb="4" size="4">{proj.title}</Heading>
             <Box mb="4">
               <Text mb="4">{proj.description}</Text>
