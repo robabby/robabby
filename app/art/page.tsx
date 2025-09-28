@@ -1,5 +1,4 @@
 import { Badge, Box, Card, Container, Flex, Heading, Inset, Link } from "@radix-ui/themes";
-import { s } from "motion/react-client";
 import Image from "next/image";
 
 const AI_TOOLS = {
