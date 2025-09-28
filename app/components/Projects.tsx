@@ -10,7 +10,7 @@ const PROJECTS = [
     _target: "_self",
     description: "A smattering of AI-generated art pieces created using various tools including Midjourney, DALL·E 3, and Stable Diffusion. Showcased in a sleek, responsive Next.js application (this site).",
     tech: [
-      "Nextjs", "radix-ui", "Midjourney", "DALL-E", "Invoke UI"
+      "Nextjs", "radix-ui", "Midjourney", "DALL-E", "Flux.1", "Invoke UI"
     ]
   },
   {

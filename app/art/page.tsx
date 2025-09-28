@@ -1,14 +1,87 @@
 import { Badge, Box, Card, Container, Flex, Heading, Inset, Link } from "@radix-ui/themes";
+import { s } from "motion/react-client";
 import Image from "next/image";
 
 const AI_TOOLS = {
   midjourney: "Midjourney",
   dalle: "DALL·E",
-  stableDiffusion: "Stable Diffusion",
+  flux: "Flux.1",
   invokeAI: "Invoke AI"
 }
 
 const IMAGES = [
+  {
+    src: "/art/cosmic-download.png",
+    alt: "AI-generated art piece",
+    title: "Cosmic Download",
+    tool: AI_TOOLS.flux
+  },
+  {
+    src: "/art/cosmic-download 2.png",
+    alt: "AI-generated art piece",
+    title: "Cosmic Download 2",
+    tool: AI_TOOLS.flux
+  },
+  {
+    src: "/art/Attunement.png",
+    alt: "AI-generated art piece",
+    title: "Attunement",
+    tool: AI_TOOLS.flux
+  },
+  {
+    src: "/art/Subtle Energy.png",
+    alt: "AI-generated art piece",
+    title: "Subtle Energy",
+    tool: AI_TOOLS.flux
+  },
+  {
+    src: "/art/Temple of Perception.png",
+    alt: "AI-generated art piece",
+    title: "Temple of Perception",
+    tool: AI_TOOLS.flux
+  },
+  {
+    src: "/art/Lunar Summons.png",
+    alt: "AI-generated art piece",
+    title: "Lunar Summons",
+    tool: AI_TOOLS.flux
+  },
+  {
+    src: "/art/Lunar Summons 2.png",
+    alt: "AI-generated art piece",
+    title: "Lunar Summons 2",
+    tool: AI_TOOLS.flux
+  },
+  {
+    src: "/art/Lunar Summons 3.png",
+    alt: "AI-generated art piece",
+    title: "Lunar Summons 3",
+    tool: AI_TOOLS.flux
+  },
+  {
+    src: "/art/Evening Stroll.png",
+    alt: "AI-generated art piece",
+    title: "Evening Stroll",
+    tool: AI_TOOLS.flux
+  },
+  {
+    src: "/art/Sacral Cave.png",
+    alt: "AI-generated art piece",
+    title: "Sacral Cave",
+    tool: AI_TOOLS.flux
+  },
+  {
+    src: "/art/Sacral Cave 2.png",
+    alt: "AI-generated art piece",
+    title: "Sacral Cave 2",
+    tool: AI_TOOLS.flux
+  },
+  {
+    src: "/art/Sacral Cave 3.png",
+    alt: "AI-generated art piece",
+    title: "Sacral Cave 3",
+    tool: AI_TOOLS.flux
+  },
   {
     src: "/art/bliss83_A_cylindrical_glass_bottle_ornament_inside_a_Japanese_9e610fcb-5bf5-439c-8ea9-06e0ea30e9e5_0.png",
     alt: "AI-generated art piece",
@@ -120,7 +193,9 @@ export default function Home() {
             </Link>
           </Inset>
           <Box>
-            <Heading size="2" my="2">{img.title}</Heading>
+            <Link href={img.src}>
+              <Heading size="2" my="2">{img.title}</Heading>
+            </Link>
           </Box>
           <Badge color={badgeColor}>{img.tool}</Badge>
         </Card>
