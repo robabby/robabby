@@ -1,4 +1,4 @@
-import { Badge, Box, Card, Container, Flex, Heading, Inset, Link, Strong, Text } from "@radix-ui/themes";
+import { Badge, Box, Card, Container, Flex, Heading, Inset, Link } from "@radix-ui/themes";
 import Image from "next/image";
 
 const AI_TOOLS = {
