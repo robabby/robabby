@@ -3,10 +3,22 @@ import { InfoCircledIcon } from "@radix-ui/react-icons";
 
 const PROJECTS = [
   {
+    title: "AI Art Gallery",
+    callout: null,
+    githubLink: "https://github.com/robabby/robabby",
+    liveLink: "/art",
+    _target: "_self",
+    description: "A smattering of AI-generated art pieces created using various tools including Midjourney, DALL·E 3, and Stable Diffusion. Showcased in a sleek, responsive Next.js application (this site).",
+    tech: [
+      "Nextjs", "radix-ui", "Midjourney", "DALL-E", "Invoke UI"
+    ]
+  },
+  {
     title: "ai-chatbot",
     callout: "[09/26/2025] Site loads, but chat responses currently not working.  Debugging...",
     githubLink: "https://github.com/robabby/ai-chatbot",
     liveLink: "https://ai-chatbot-psi-green-88.vercel.app/",
+    _target: "_blank",
     description: "ChatGPT/Grok clone built with Next.js, TailwindCSS, Grok and OpenAI API. Features include conversation history, user authentication, and a sleek, responsive design.",
     tech: [
       "Nextjs", "shadcn/ui", "radix-ui", "OpenAI API", "Grok API", "TypeScript", "Vercel Chat SDK"
@@ -75,14 +87,16 @@ export default function Projects() {
               ))}
             </Flex>
             <Box>
-              <Button asChild mb="2" mr="2">
-                <Link href={proj.githubLink} target="_blank">
-                  Github Link
-                </Link>
-              </Button>
+              {proj.githubLink && (
+                <Button asChild mb="2" mr="2">
+                  <Link href={proj.githubLink} target="_blank">
+                    Github Link
+                  </Link>
+                </Button>
+              )}
               {proj.liveLink && (
                 <Button mb="2">
-                  <Link href={proj.liveLink} target="_blank">
+                  <Link href={proj.liveLink} target={proj._target}>
                     Demo Link
                   </Link>
                 </Button>
