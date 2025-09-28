@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Box } from "@radix-ui/themes";
 import { path } from "./path";
 import "./style.css";
 
