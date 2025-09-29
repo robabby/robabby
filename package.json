@@ -18,7 +18,8 @@
     "next": "15.5.3",
     "radix-ui": "^1.4.3",
     "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react-dom": "^19.1.1",
+    "react-particles": "^2.12.2"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
