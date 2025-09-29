@@ -1,8 +1,6 @@
 "use client";
 
-import { Box } from "@radix-ui/themes";
 import { motion } from "motion/react";
-import { path } from "./path";
 import "./style.css";
 
 export default function MetatronsCube() {
@@ -12,8 +10,6 @@ export default function MetatronsCube() {
       xmlns="http://www.w3.org/2000/svg"
       version="1.0"
       className="MetatronsCube"
-      // width="435"
-      // height="482"
       id="svg2"
       viewBox="0 0 435 482"
     >
