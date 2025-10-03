@@ -42,7 +42,7 @@ const EXPERIENCE = [
       "Implementing features into a React/Redux codebase within tight timelines and scope using development best-practices (Jest, Enzyme, ES6, SCSS w/BEM).",
       "Led the creation of a living style guide and UI component library with Ant Design & Rollup.js.",
       "Built live-code prototypes and deployed them to AWS (S3) for gathering feedback and testing new features.",
-      "Engineered seamless integration of REST API endpoints into React/Redux interfaces over 12-month development cycle, accelerating data retrieval times by 35% and supporting 5+ major feature rollouts using Axios and Postman for real-time validation."
+      "Engineered seamless integration of REST API endpoints into React/Redux interfaces, accelerating data retrieval times by 35% and supporting 5+ major feature rollouts using Axios and Postman for real-time validation."
     ]
   },
   {
