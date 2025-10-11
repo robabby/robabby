@@ -32,12 +32,12 @@ export default function Hero() {
                 </IconButton>
               </Link>
             </Flex>
-            <Button asChild size="4">
+            {/* <Button asChild size="4">
               <Link href="/robert-abby-resume.pdf" target="_blank">
                 <FileIcon />
                 <Text>R&eacute;sum&eacute;</Text>
               </Link>
-            </Button>
+            </Button> */}
           </Flex>
         </Container>
       </Box>
