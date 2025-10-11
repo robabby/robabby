@@ -7,11 +7,10 @@ const EXPERIENCE = [
     company: "VIMSIA",
     companyLink: "https://www.vimsia.org",
     period: "2025 - PRESENT",
-    description: "Managing IT for a private Montessori & International Baccalaureate school with a combined headcount of 350 people including faculty and students.",
+    description: "Leading modernization of internal tech infrastructure and web tools at an international Montessori/IB school.",
     highlights: [
-      "Overseeing all aspects of IT infrastructure, including network management, hardware and software procurement, and system maintenance to ensure optimal performance and security with a network uptime of 98%.",
-      "Managing code and changes for small websites, microsites and data repositories using modern frameworks and tools.",
-      "Providing technical support and training to faculty and staff, enhancing effective utilization of technology in educational settings and reducing support requests by 20%.",
+      "Oversee system performance (98% uptime) and digital transformation initiatives integrating cloud, automation, and web technologies.",
+      "Providing technical support and training to faculty and staﬀ, enhancing eﬀective utilization of technology in educational settings and reducing support requests by 20%.",
       "Coordinating with external vendors and service providers to ensure seamless integration and operation of IT services."
     ]
   },
@@ -20,14 +19,14 @@ const EXPERIENCE = [
     company: "PartySlate",
     companyLink: "https://www.partyslate.com",
     period: "2018 - 2024",
-    description: "PartySlate (B2C) is a photo-rich platform & dual-sided marketplace that connects people planning events with leading vendors and venues.",
+    description: "Supported growth at PartySlate, a dual-sided marketplace platform, from a 12-person early-stage startup to a +50-employee Series-B company while averaging 258.33% revenue growth year-over-year.",
     highlights: [
-      "Supported growth at PartySlate (B2C), a dual-sided marketplace platform, from a 12-person early-stage startup to a +50-employee Series-B company while averaging 258.33% revenue growth year-over-year.",
-      "Spearheaded 10+ large-scale features from requirements phase through agile development and cross-functional definition process, resulting in a 25% increase in user engagement year-over-year.",
+      "Spearheaded 10+ large-scale features used by 200k+ users monthly in a React & NextJS frontend and Ruby on Rails backend from requirements phase through agile development and cross-functional definition process, resulting in a 25% increase in user engagement year-over-year.",
       "Led the rewrite of Find Venues Page, the most impactful page on the website, to provide an interactive Map-view and redesigned search results, leading to  a 150% increase in Venue inquiries.",
       "Mentored fellow engineers via code-reviews, pair programming and lunch-and-learns fostering a positive work environment.",
-      "Optimized code quality across teams by integrating ESLint and Prettier into CI pipelines, reducing code review defects by 40% and ensuring consistent React/GraphQL standards.",
-      "Expanded UI Components library by developing 25+ reusable modules with Ant Design, streamlining cross-team collaboration and reducing feature rollout cycle by 40% over a 12-month period using Rollup.js and Storybook."
+      "Optimized code quality across teams by adopting TypeScript and integrating ESLint and Prettier into CI pipelines, reducing code review defects by 40% and ensuring consistent React/GraphQL standards.",
+      "Expanded UI Components library by developing 25+ reusable modules using TypeScript, React, and Chakra UI with integrated web accessibility testing and visual regression in Storybook, streamlining cross-team collaboration and reducing feature rollout cycle by 40% over a 12-month period.",
+			"Improved site-wide Lighthouse accessibility score from 78 to 95 and performance score to 90+ by implementing lazy loading, code splitting, and WCAG 2.1 AA compliance standards, reducing initial bundle size by 40% and average page load time by 2.3 seconds improving engagement on high-traﬃc marketplace pages."
     ]
   },
   {
@@ -41,8 +40,7 @@ const EXPERIENCE = [
       "Worked heavily with the Here Maps API to build interactive map-based interfaces.",
       "Implementing features into a React/Redux codebase within tight timelines and scope using development best-practices (Jest, Enzyme, ES6, SCSS w/BEM).",
       "Led the creation of a living style guide and UI component library with Ant Design & Rollup.js.",
-      "Built live-code prototypes and deployed them to AWS (S3) for gathering feedback and testing new features.",
-      "Engineered seamless integration of REST API endpoints into React/Redux interfaces, accelerating data retrieval times by 35% and supporting 5+ major feature rollouts using Axios and Postman for real-time validation."
+      "Built live-code prototypes and deployed them to AWS (S3) for gathering feedback and testing new features."
     ]
   },
   {
@@ -53,8 +51,11 @@ const EXPERIENCE = [
     description: "SAVO (B2B) was an industry leader in the sales enablement space, providing SaaS software used by some of the largest companies in the world (Disney, American Express, Google, UPS, etc.). I worked within Agile and Lean UX methodologies taking projects from discovery to implementation.",
     highlights: [
       "Led the spinout of an autonomous UI/UX team that adopted a user-centered process, conducting 50+ User Research sessions, Usability Interviews, and Design Workshops, resulting in a 30% increase in user satisfaction.",
-      "Contributed to the production of a holistic Design Language and Living Design System, resulting in a 20% improvement in developer productivity.",
-      "Established the SAVO Front-End Guild, a bi-weekly meeting for all developers that covered Front-end development basics, best practices, and industry trends."
+			"Architected and implemented UI features that embedded SAVO’s sales content and enablement tools directly within Salesforce, creating a seamless experience for enterprise sales teams and reducing context-switching between platforms.",
+			"Developed UI components and features that integrated SAVO’s sales enablement platform into Salesforce, enabling sales teams to access content, training, and playbooks within their existing CRM workflow, improving adoption rates and user engagement.",
+      "Contributed to the production of a holistic Design Language and Living Design System using Ember.js and Material Design, used within our own products and integrated with Salesforce, resulting in a 20% improvement in developer productivity.",
+      "Established the SAVO Front-End Guild, a bi-weekly meeting for all developers that covered Front-end development basics, best practices, and industry trends.",
+			"Authored design system documentation and contribution guidelines to ensure consistency across multiple product teams."
     ]
   },
   {
