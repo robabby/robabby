@@ -1,8 +1,8 @@
 "use client";
 
-import { Box, Button, Container, Flex, Heading, IconButton, Link, Section, Text } from "@radix-ui/themes";
+import { Box, Container, Flex, Heading, IconButton, Link, Section, Text } from "@radix-ui/themes";
 import { EnvelopeClosedIcon, GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
-import { FileIcon } from "@radix-ui/react-icons";
+// import { FileIcon } from "@radix-ui/react-icons";
 import MetatronsCube from "./MetatronsCube";
 import "./Hero.css";
 
