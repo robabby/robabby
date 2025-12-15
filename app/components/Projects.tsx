@@ -8,7 +8,7 @@ const PROJECTS = [
     githubLink: "https://github.com/robabby/sacred-geometry",
     liveLink: "https://sacred-geometry.vercel.app/",
     _target: "_blank",
-    description: "A site for navigating Platonic Solids, Sacred Geometry concepts, and related mathematical structures.",
+    description: "A site for navigating Platonic Solids, Sacred Geometry concepts, and related mathematical structures. Features in-depth information and search functionality.",
     tech: [
       "Nextjs", "radix-ui", "TypeScript", "MDX", "Jest", "Vitest"
     ]
