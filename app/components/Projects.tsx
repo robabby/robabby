@@ -3,6 +3,17 @@ import { InfoCircledIcon } from "@radix-ui/react-icons";
 
 const PROJECTS = [
   {
+    title: "Sacred Geometry Webapp",
+    callout: null,
+    githubLink: "https://github.com/robabby/sacred-geometry",
+    liveLink: "https://sacred-geometry.vercel.app/",
+    _target: "_blank",
+    description: "A site for navigating Platonic Solids, Sacred Geometry concepts, and related mathematical structures.",
+    tech: [
+      "Nextjs", "radix-ui", "TypeScript", "MDX", "Jest", "Vitest"
+    ]
+  },
+  {
     title: "AI Art Gallery",
     callout: null,
     githubLink: "https://github.com/robabby/robabby",
