@@ -1,11 +1,21 @@
 import "@radix-ui/themes/styles.css";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
-import { Inter } from "next/font/google";
+import { Outfit, Crimson_Pro } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Theme } from "@radix-ui/themes";
 
-const inter = Inter({ subsets: ["latin"] })
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap",
+});
+
+const crimsonPro = Crimson_Pro({
+  subsets: ["latin"],
+  variable: "--font-body",
+  display: "swap",
+});
 
 export const metadata = {
   title: "Rob Abby - Product Engineer",
@@ -19,7 +29,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${outfit.variable} ${crimsonPro.variable}`}>
         <Theme appearance="dark">
           {children}
         </Theme>
