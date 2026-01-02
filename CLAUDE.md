@@ -35,3 +35,13 @@ This is a personal portfolio website for Rob Abby (Staff Frontend Engineer) buil
 - Header and Contact components exist but are currently commented out
 - Uses pnpm as package manager
 - Configured for shadcn/ui with "new-york" style and slate base color
+
+## Project Management
+
+Work items (issues, bugs, features, tasks) are tracked in Linear:
+
+- **Workspace:** Sherpa
+- **Team:** Sherpa
+- **Project:** [robabby.com](https://linear.app/sherpagg/project/robabbycom-7008e82030bb)
+
+When creating issues, always associate them with the `robabby.com` project.
