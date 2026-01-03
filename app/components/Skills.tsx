@@ -1,5 +1,7 @@
 import { Badge, Box, Container, Flex, Heading } from "@radix-ui/themes";
 import GeometricPattern from "./GeometricPattern";
+import AnimatedSection from "./AnimatedSection";
+import StaggeredList from "./StaggeredList";
 
 const SKILLS = {
   "Languages & Frameworks": [
@@ -25,25 +27,27 @@ export default function Skills() {
   return (
     <Box id="skills" py="8" style={{ background: "var(--sg-deep)", position: "relative", overflow: "hidden" }}>
       <GeometricPattern variant="lines" opacity={0.02} />
-      <Flex direction="column" justify="center" align="center" style={{ position: "relative", zIndex: 1 }}>
-        <Heading mb="8" size="8">Skills</Heading>
-        <Container size="3">
-          <Flex direction="column" gap="4">
-            {Object.entries(SKILLS).map(([category, skills]) => (
-              <Box key={category} mx="4" p="4" style={{ background: "var(--gray-a3)", borderRadius: "var(--radius-3)" }}>
-                <Heading mb="4" size="5">{category}</Heading>
-                <Flex direction="row" gap="2" wrap="wrap">
-                  {skills.map((skill, index) => (
-                    <Badge size="3" key={index}>
-                      {skill}
-                    </Badge>
-                  ))}
-                </Flex>
-              </Box>
-            ))}
-          </Flex>
-        </Container>
-      </Flex>
+      <AnimatedSection style={{ position: "relative", zIndex: 1 }}>
+        <Flex direction="column" justify="center" align="center">
+          <Heading mb="8" size="8">Skills</Heading>
+          <Container size="3">
+            <Flex direction="column" gap="4">
+              {Object.entries(SKILLS).map(([category, skills]) => (
+                <Box key={category} mx="4" p="4" style={{ background: "var(--gray-a3)", borderRadius: "var(--radius-3)" }}>
+                  <Heading mb="4" size="5">{category}</Heading>
+                  <StaggeredList style={{ display: "flex", flexDirection: "row", gap: "var(--space-2)", flexWrap: "wrap" }}>
+                    {skills.map((skill, index) => (
+                      <Badge size="3" key={index}>
+                        {skill}
+                      </Badge>
+                    ))}
+                  </StaggeredList>
+                </Box>
+              ))}
+            </Flex>
+          </Container>
+        </Flex>
+      </AnimatedSection>
     </Box>
   )
 }

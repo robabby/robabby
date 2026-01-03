@@ -1,6 +1,7 @@
 import { Box, Flex, Heading } from "@radix-ui/themes";
 import ExperienceItem from "./components/ExperienceItem";
 import GeometricPattern from "../GeometricPattern";
+import AnimatedSection from "../AnimatedSection";
 
 const EXPERIENCE = [
   {
@@ -78,29 +79,31 @@ export default function Experience() {
   return (
     <Box id="experience" py="8" style={{ background: "var(--sg-gradient-section)", position: "relative", overflow: "hidden" }}>
       <GeometricPattern variant="dots" opacity={0.02} />
-      <Flex direction="column" justify="center" align="center" style={{ position: "relative", zIndex: 1 }}>
-        <Heading size="8">Experience</Heading>
-        <Box>
-          {EXPERIENCE.map(({ 
-            title, 
-            company, 
-            companyLink, 
-            period, 
-            description, 
-            highlights
-           }, index) => (
-            <ExperienceItem 
-              title={title}
-              company={company}
-              companyLink={companyLink}
-              period={period}
-              description={description}
-              highlights={highlights}
-              key={index}
-            />
-          ))}
-        </Box>
-      </Flex>
+      <AnimatedSection style={{ position: "relative", zIndex: 1 }}>
+        <Flex direction="column" justify="center" align="center">
+          <Heading size="8">Experience</Heading>
+          <Box>
+            {EXPERIENCE.map(({
+              title,
+              company,
+              companyLink,
+              period,
+              description,
+              highlights
+             }, index) => (
+              <ExperienceItem
+                title={title}
+                company={company}
+                companyLink={companyLink}
+                period={period}
+                description={description}
+                highlights={highlights}
+                key={index}
+              />
+            ))}
+          </Box>
+        </Flex>
+      </AnimatedSection>
     </Box>
   )
 }

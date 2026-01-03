@@ -1,6 +1,7 @@
 import { Badge, Box, Button, Callout, Container, Flex, Heading, Link, Text } from "@radix-ui/themes";
 import { InfoCircledIcon } from "@radix-ui/react-icons";
 import GeometricPattern from "./GeometricPattern";
+import AnimatedSection from "./AnimatedSection";
 
 const PROJECTS = [
   {
@@ -57,12 +58,12 @@ export default function Projects() {
       style={{ background: "var(--sg-deep)", position: "relative", overflow: "hidden" }}
     >
       <GeometricPattern variant="hexagons" opacity={0.02} />
-      <Flex
-        align="center"
-        direction="column"
-        justify="center"
-        style={{ position: "relative", zIndex: 1 }}
-      >
+      <AnimatedSection style={{ position: "relative", zIndex: 1 }}>
+        <Flex
+          align="center"
+          direction="column"
+          justify="center"
+        >
         <Heading mb="8" size="8">
           Projects
         </Heading>
@@ -118,7 +119,8 @@ export default function Projects() {
             </Box>
           </Container>
         ))}
-      </Flex>
+        </Flex>
+      </AnimatedSection>
     </Box>
   )
 }
