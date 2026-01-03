@@ -1,9 +1,11 @@
 import { Box, Container, Flex, Heading, Text } from "@radix-ui/themes";
+import GeometricPattern from "./GeometricPattern";
 
 export default function About() {
   return (
-    <Box id="about" py="8">
-      <Flex direction="column" justify="center" align="center">
+    <Box id="about" py="8" style={{ background: "var(--sg-gradient-section)", position: "relative", overflow: "hidden" }}>
+      <GeometricPattern variant="dots" opacity={0.02} />
+      <Flex direction="column" justify="center" align="center" style={{ position: "relative", zIndex: 1 }}>
         <Heading mb="4" size="8">About</Heading>
         <Container p="4" mx="4" my="8" size="3" style={{ background: "var(--gray-a3)", borderRadius: "var(--radius-3)" }}>
           <Text size="4">

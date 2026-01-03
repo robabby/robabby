@@ -2,7 +2,7 @@
 
 import { Box, Button, Container, Flex, Heading, Text } from "@radix-ui/themes";
 import { RowSpacingIcon, Cross2Icon } from "@radix-ui/react-icons";
-import { Collapsible } from "radix-ui";
+import * as Collapsible from "@radix-ui/react-collapsible";
 import React from "react";
 import "./style.css";
 
@@ -37,7 +37,7 @@ export default function Experience({
         <Heading size="6">{title}</Heading>
         <Flex direction="row" justify="between" my="2">
           <Text>
-            <a href={companyLink} target="_blank">{company}</a>
+            <a href={companyLink} target="_blank" rel="noopener noreferrer">{company}</a>
           </Text>
           <Text>{period}</Text>
         </Flex>

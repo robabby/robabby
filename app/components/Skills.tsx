@@ -1,4 +1,5 @@
 import { Badge, Box, Container, Flex, Heading } from "@radix-ui/themes";
+import GeometricPattern from "./GeometricPattern";
 
 const SKILLS = {
   "Languages & Frameworks": [
@@ -22,8 +23,9 @@ const SKILLS = {
 export default function Skills() {
 
   return (
-    <Box id="skills" py="8" style={{ background: "var(--gray-a2)" }}>
-      <Flex direction="column" justify="center" align="center">
+    <Box id="skills" py="8" style={{ background: "var(--sg-deep)", position: "relative", overflow: "hidden" }}>
+      <GeometricPattern variant="lines" opacity={0.02} />
+      <Flex direction="column" justify="center" align="center" style={{ position: "relative", zIndex: 1 }}>
         <Heading mb="8" size="8">Skills</Heading>
         <Container size="3">
           <Flex direction="column" gap="4">

@@ -1,5 +1,6 @@
 import { Box, Flex, Heading } from "@radix-ui/themes";
 import ExperienceItem from "./components/ExperienceItem";
+import GeometricPattern from "../GeometricPattern";
 
 const EXPERIENCE = [
   {
@@ -75,8 +76,9 @@ const EXPERIENCE = [
 export default function Experience() {
 
   return (
-    <Box id="experience" py="8">
-      <Flex direction="column" justify="center" align="center">
+    <Box id="experience" py="8" style={{ background: "var(--sg-gradient-section)", position: "relative", overflow: "hidden" }}>
+      <GeometricPattern variant="dots" opacity={0.02} />
+      <Flex direction="column" justify="center" align="center" style={{ position: "relative", zIndex: 1 }}>
         <Heading size="8">Experience</Heading>
         <Box>
           {EXPERIENCE.map(({ 
