@@ -45,3 +45,29 @@ Work items (issues, bugs, features, tasks) are tracked in Linear:
 - **Project:** [robabby.com](https://linear.app/sherpagg/project/robabbycom-7008e82030bb)
 
 When creating issues, always associate them with the `robabby.com` project.
+
+**Issue Status:** Linear issues are automatically marked as Done when their branch is merged. Do not manually mark issues as Done.
+
+## Development Workflow
+
+### Feature Implementation
+
+Use the `/feature-dev` skill when implementing features. This provides a structured workflow:
+
+1. **Discovery** - Understand requirements from Linear issues
+2. **Codebase Exploration** - Launch explorer subagents to analyze existing patterns
+3. **Clarifying Questions** - Resolve ambiguities before design
+4. **Architecture Design** - Plan approach with architect subagents
+5. **Implementation** - Build with parallel subagents where possible
+6. **Quality Review** - Launch reviewer subagents for code quality
+7. **Summary** - Document accomplishments
+
+### Subagent Usage
+
+Prefer subagents for parallel, independent work:
+
+- **Exploration**: Launch 2-3 code-explorer agents to analyze different aspects simultaneously
+- **Implementation**: Use general-purpose agents for independent file changes
+- **Review**: Launch multiple code-reviewer agents with different focuses (bugs, DRY, conventions)
+
+This maximizes throughput and reduces context usage in the main conversation.
