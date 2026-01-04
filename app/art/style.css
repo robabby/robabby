@@ -10,6 +10,13 @@
   background: var(--sg-void);
 }
 
+/* Gallery section */
+.gallery-section {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 80px;
+}
+
 /* ==========================================================================
    Masonry Grid
    CSS columns approach for broad browser support
@@ -151,11 +158,26 @@
   justify-content: center;
   gap: 8px;
   flex-wrap: wrap;
-  padding: 16px;
+  padding: 24px 16px;
   position: sticky;
   top: 0;
   z-index: 10;
-  background: linear-gradient(var(--sg-void) 60%, transparent);
+  background: transparent;
+  isolation: isolate;
+}
+
+.filter-bar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    var(--sg-void) 0%,
+    rgba(10, 12, 16, 0.95) 60%,
+    transparent 100%
+  );
+  z-index: -1;
+  pointer-events: none;
 }
 
 .filter-button {
@@ -221,25 +243,39 @@
    ========================================================================== */
 
 .lightbox-overlay {
-  background: rgba(10, 12, 16, 0.95);
-  backdrop-filter: blur(8px);
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 12, 16, 0.97);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
 }
 
 .lightbox-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   max-width: 90vw;
   max-height: 90vh;
+  padding: 20px;
 }
 
 .lightbox-image {
   max-width: 100%;
-  max-height: 80vh;
+  max-height: calc(90vh - 100px);
+  width: auto;
+  height: auto;
   object-fit: contain;
   border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 }
 
 .lightbox-info {
   text-align: center;
-  padding: 16px;
+  padding: 20px 16px 0;
 }
 
 .lightbox-title {
@@ -256,25 +292,28 @@
 }
 
 .lightbox-close {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  background: var(--sg-surface);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  background: rgba(22, 27, 34, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   color: var(--sg-text-primary);
   transition: all 0.2s ease;
+  z-index: 101;
+  backdrop-filter: blur(8px);
 }
 
 .lightbox-close:hover {
-  background: var(--sg-elevated);
+  background: rgba(28, 33, 40, 0.95);
   border-color: var(--sg-secondary);
+  transform: scale(1.05);
 }
 
 /* ==========================================================================
@@ -286,30 +325,32 @@
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
-  background: var(--sg-surface);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(22, 27, 34, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 50%;
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--sg-text-primary);
   transition: all 0.2s ease;
-  z-index: 100;
+  z-index: 101;
+  backdrop-filter: blur(8px);
 }
 
 .lightbox-nav:hover {
-  background: var(--sg-elevated);
+  background: rgba(28, 33, 40, 0.95);
   border-color: var(--sg-secondary);
+  transform: translateY(-50%) scale(1.05);
 }
 
 .lightbox-nav-prev {
-  left: 16px;
+  left: 24px;
 }
 
 .lightbox-nav-next {
-  right: 16px;
+  right: 24px;
 }
 
 /* ==========================================================================

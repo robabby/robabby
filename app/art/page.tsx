@@ -24,7 +24,7 @@ export default function ArtPage() {
       <CosmicBackground />
       <GalleryHero />
 
-      <Container id="gallery" size="4" style={{ position: "relative", zIndex: 1, paddingTop: "40px", paddingBottom: "80px" }}>
+      <section id="gallery" className="gallery-section">
         <FilterBar
           activeFilter={activeFilter}
           counts={counts}
@@ -32,8 +32,10 @@ export default function ArtPage() {
           onFilterChange={setActiveFilter}
         />
 
-        <GalleryGrid images={filteredImages} />
-      </Container>
+        <Container size="4">
+          <GalleryGrid images={filteredImages} />
+        </Container>
+      </section>
     </div>
   );
 }
