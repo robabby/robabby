@@ -15,12 +15,12 @@ This is a personal portfolio website for Rob Abby (Staff Frontend Engineer) buil
 
 ### Tech Stack
 - **Next.js 15** with App Router
-- **React 19** 
+- **React 19**
 - **TypeScript**
-- **Tailwind CSS** for styling
-- **shadcn/ui** components (configured in components.json)
+- **Radix UI Themes** + custom CSS variables for styling
 - **Vercel Analytics** for tracking
-- **Lucide React** for icons
+- **@radix-ui/react-icons** for icons
+- **motion/react** for animations
 
 ### Structure
 - `app/` - Next.js app router pages and layout
@@ -71,3 +71,5 @@ Prefer subagents for parallel, independent work:
 - **Review**: Launch multiple code-reviewer agents with different focuses (bugs, DRY, conventions)
 
 This maximizes throughput and reduces context usage in the main conversation.
+
+**Model Selection:** All subagents should use Claude Opus (`model: "opus"`) for maximum capability and code quality.
