@@ -198,12 +198,16 @@
 }
 
 .gallery-title {
+  font-family: var(--font-mystical), 'Cinzel', Georgia, serif;
   font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 400;
+  letter-spacing: 0.1em;
   background: linear-gradient(135deg, var(--sg-secondary) 0%, #e8d5a3 50%, var(--sg-secondary) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin: 0;
+  text-shadow: 0 0 30px var(--sg-secondary-glow);
 }
 
 .gallery-subtitle {
@@ -239,8 +243,11 @@
 }
 
 .lightbox-title {
+  font-family: var(--font-mystical), 'Cinzel', Georgia, serif;
   color: var(--sg-text-primary);
-  font-size: 1.25rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
   margin: 0;
 }
 
@@ -303,4 +310,121 @@
 
 .lightbox-nav-next {
   right: 16px;
+}
+
+/* ==========================================================================
+   Hero Section
+   Full-viewport entry experience with featured artwork
+   ========================================================================== */
+
+.gallery-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.gallery-hero-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.gallery-hero-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(20px) brightness(0.3);
+  transform: scale(1.1);
+}
+
+.gallery-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(10, 12, 16, 0.4) 30%,
+    rgba(10, 12, 16, 0.8) 70%,
+    var(--sg-void) 100%
+  );
+}
+
+.gallery-hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 24px;
+}
+
+.gallery-hero-title {
+  font-family: var(--font-mystical), 'Cinzel', Georgia, serif;
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  background: linear-gradient(135deg, var(--sg-secondary) 0%, #e8d5a3 50%, var(--sg-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.gallery-hero-subtitle {
+  font-family: var(--font-mystical), 'Cinzel', Georgia, serif;
+  color: var(--sg-text-secondary);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-top: 16px;
+}
+
+.gallery-hero-scroll {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: var(--sg-text-secondary);
+  transition: color 0.3s ease;
+  background: none;
+  border: none;
+  padding: 8px;
+}
+
+.gallery-hero-scroll:hover {
+  color: var(--sg-secondary);
+}
+
+.gallery-hero-scroll-text {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.gallery-hero-scroll-icon {
+  animation: hero-bounce 2s ease-in-out infinite;
+}
+
+@keyframes hero-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery-hero-scroll-icon {
+    animation: none;
+  }
 }

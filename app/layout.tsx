@@ -1,7 +1,7 @@
 import "@radix-ui/themes/styles.css";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
-import { Outfit, Crimson_Pro } from "next/font/google";
+import { Outfit, Crimson_Pro, Cinzel } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Theme } from "@radix-ui/themes";
 
@@ -17,6 +17,12 @@ const crimsonPro = Crimson_Pro({
   display: "swap",
 });
 
+const cinzel = Cinzel({
+  subsets: ["latin"],
+  variable: "--font-mystical",
+  display: "swap",
+});
+
 export const metadata = {
   title: "Rob Abby - Product Engineer",
   description: "Personal website of Rob Abby, a Product Engineer specializing in creating exceptional web experiences.",
@@ -29,7 +35,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${outfit.variable} ${crimsonPro.variable}`}>
+      <body className={`${outfit.variable} ${crimsonPro.variable} ${cinzel.variable}`}>
         <Theme appearance="dark">
           {children}
         </Theme>
