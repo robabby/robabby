@@ -132,3 +132,7 @@ h2 {
   border-color: rgba(74, 158, 255, 0.4);
 }
 
+/* Footer link styles */
+.footer-link:hover {
+  color: var(--sg-primary) !important;
+}
