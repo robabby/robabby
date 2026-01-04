@@ -33,7 +33,7 @@ export default function Skills() {
           <Container size="3">
             <Flex direction="column" gap="4">
               {Object.entries(SKILLS).map(([category, skills]) => (
-                <Box key={category} mx="4" p="4" style={{ background: "var(--gray-a3)", borderRadius: "var(--radius-3)" }}>
+                <Box key={category} mx="4" p="4" className="sg-card">
                   <Heading mb="4" size="5">{category}</Heading>
                   <StaggeredList style={{ display: "flex", flexDirection: "row", gap: "var(--space-2)", flexWrap: "wrap" }}>
                     {skills.map((skill, index) => (

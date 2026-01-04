@@ -33,7 +33,7 @@ export default function Experience({
       open={isOpen}
       onOpenChange={setIsOpen}
     >
-      <Container p="4" mx="4" my="8" size="3" style={{ background: "var(--gray-a3)", borderRadius: "var(--radius-3)" }}>
+      <Container p="4" mx="4" my="8" size="3" className="sg-card">
         <Heading size="6">{title}</Heading>
         <Flex direction="row" justify="between" my="2">
           <Text>
