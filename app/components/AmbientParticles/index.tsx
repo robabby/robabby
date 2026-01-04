@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "motion/react";
-import { useMemo } from "react";
+import { useEffect, useState } from "react";
 import "./style.css";
 
 type Particle = {
@@ -32,17 +32,21 @@ export default function AmbientParticles({
   className = ""
 }: AmbientParticlesProps) {
   const prefersReducedMotion = useReducedMotion();
+  const [particles, setParticles] = useState<Particle[]>([]);
 
-  const particles = useMemo<Particle[]>(() => {
-    return Array.from({ length: count }, (_, i) => ({
-      id: i,
-      x: Math.random() * 100,
-      y: Math.random() * 100,
-      size: minSize + Math.random() * (maxSize - minSize),
-      opacity: minOpacity + Math.random() * (maxOpacity - minOpacity),
-      duration: 10 + Math.random() * 10,
-      delay: Math.random() * 5
-    }));
+  // Generate particles only on client after hydration to avoid mismatch
+  useEffect(() => {
+    setParticles(
+      Array.from({ length: count }, (_, i) => ({
+        id: i,
+        x: Math.random() * 100,
+        y: Math.random() * 100,
+        size: minSize + Math.random() * (maxSize - minSize),
+        opacity: minOpacity + Math.random() * (maxOpacity - minOpacity),
+        duration: 10 + Math.random() * 10,
+        delay: Math.random() * 5
+      }))
+    );
   }, [count, minSize, maxSize, minOpacity, maxOpacity]);
 
   return (
