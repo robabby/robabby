@@ -60,8 +60,6 @@ export default function Footer() {
               </Link>
               <Link
                 href="mailto:robabby23@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer"
                 style={{
                   color: "var(--sg-text-secondary)",
                   transition: "color 0.2s",
