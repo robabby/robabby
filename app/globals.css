@@ -81,3 +81,54 @@ h2 {
   margin-right: auto;
 }
 
+/* Sacred geometry cards */
+.sg-card {
+  background: var(--sg-gradient-card);
+  border: 1px solid rgba(100, 150, 255, 0.1);
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.sg-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(74, 158, 255, 0.05) 0%,
+    transparent 50%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.sg-card:hover {
+  border-color: rgba(100, 150, 255, 0.25);
+  transform: translateY(-2px);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(74, 158, 255, 0.1);
+}
+
+.sg-card:hover::before {
+  opacity: 1;
+}
+
+/* Badge enhancements */
+.sg-badge {
+  background: rgba(74, 158, 255, 0.1);
+  border: 1px solid rgba(74, 158, 255, 0.2);
+  color: var(--sg-text-primary);
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  transition: all 0.2s ease;
+}
+
+.sg-badge:hover {
+  background: rgba(74, 158, 255, 0.2);
+  border-color: rgba(74, 158, 255, 0.4);
+}
+

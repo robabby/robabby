@@ -9,7 +9,7 @@ export default function About() {
       <AnimatedSection style={{ position: "relative", zIndex: 1 }}>
         <Flex direction="column" justify="center" align="center">
           <Heading mb="4" size="8">About</Heading>
-          <Container p="4" mx="4" my="8" size="3" style={{ background: "var(--gray-a3)", borderRadius: "var(--radius-3)" }}>
+          <Container p="4" mx="4" my="8" size="3" className="sg-card">
             <Text size="4">
               I have 15 years of experience building performant, user-centered web applications across B2B and B2C domains
               in agile software development teams. I specialize in React frameworks and excel at translating complex technical

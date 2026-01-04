@@ -68,17 +68,13 @@ export default function Projects() {
           Projects
         </Heading>
         {PROJECTS.map((proj, index) => (
-          <Container 
-            key={index} 
-            size="3" 
-            mx="4" 
-            mb="8" 
-            p="4" 
-            style={{ 
-              background: "var(--gray-a4)", 
-              borderRadius: "var(--radius-3)", 
-              boxShadow: "var(--shadow-3)" 
-            }}
+          <Container
+            key={index}
+            size="3"
+            mx="4"
+            mb="8"
+            p="4"
+            className="sg-card"
           >
             <Heading mb="4" size="4">{proj.title}</Heading>
             {proj.callout && (
