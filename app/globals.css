@@ -492,11 +492,7 @@ h2 {
   }
 
   .skills-hero-statements {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-    margin-top: 1.5rem;
+    display: none;
   }
 
   .skill-statement {
@@ -504,8 +500,8 @@ h2 {
     text-align: center;
     border-left: none;
     padding-left: 0;
-    padding-bottom: 0.75rem;
-    border-bottom: 2px solid var(--sg-secondary);
+    padding-bottom: 0;
+    border-bottom: none;
   }
 
   .skill-statement-emphasis {
@@ -542,18 +538,18 @@ h2 {
     justify-content: center;
   }
 
-  /* Section title alignment for mobile */
+  /* Section title alignment for mobile - left aligned */
   .skills-section .section-title {
-    text-align: center;
+    text-align: left;
   }
 
   .skills-section .section-title::after {
-    margin-left: auto;
+    margin-left: 0;
     margin-right: auto;
   }
 
   .skills-section .section-subtitle {
-    text-align: center;
+    text-align: left;
   }
 }
 
