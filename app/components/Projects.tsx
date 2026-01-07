@@ -16,7 +16,8 @@ const PROJECTS = [
     tech: [
       "Nextjs", "radix-ui", "TypeScript", "MDX", "Jest", "Vitest"
     ],
-    gradientType: "blue"
+    gradientType: "blue",
+    featured: true
   },
   {
     title: "AI Art Gallery",
@@ -82,16 +83,18 @@ export default function Projects() {
             size="3"
             mx="4"
             mb="8"
-            className="sg-card project-card"
+            className={`sg-card project-card ${proj.featured ? 'sg-card--featured' : ''}`}
           >
             <Box className={`project-visual project-visual--${proj.gradientType}`}>
               <Box className="project-visual-pattern" />
+              <Box className="project-visual-content">
+                <Badge size="1" className="sg-badge--featured">
+                  {proj.category}
+                </Badge>
+                <Heading size="6" className="project-visual-title">{proj.title}</Heading>
+              </Box>
             </Box>
             <Box p="4">
-              <Badge size="1" mb="2" className="sg-badge--featured">
-                {proj.category}
-              </Badge>
-              <Heading mb="4" size="4">{proj.title}</Heading>
             {proj.callout && (
               <Callout.Root mb="4">
                 <Callout.Icon>
