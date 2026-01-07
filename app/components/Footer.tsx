@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Link, Text } from "@radix-ui/themes";
+import { Box, Button, Container, Flex, Link, Text } from "@radix-ui/themes";
 import {
   LinkedInLogoIcon,
   GitHubLogoIcon,
@@ -15,18 +15,39 @@ export default function Footer() {
       }}
     >
       <footer>
-        {/* Geometric divider */}
+        {/* Gold geometric divider */}
         <Box
           style={{
             height: "1px",
             background:
-              "linear-gradient(90deg, transparent, var(--sg-primary), transparent)",
-            opacity: 0.3,
+              "linear-gradient(90deg, transparent, var(--sg-secondary), transparent)",
+            opacity: 0.5,
           }}
         />
 
         <Container px="6" py="8">
-          <Flex direction="column" justify="between" align="center" gap="4">
+          <Flex direction="column" justify="between" align="center" gap="6">
+            {/* Availability CTA */}
+            <Box
+              p="4"
+              style={{
+                background: "rgba(201, 169, 98, 0.08)",
+                border: "1px solid rgba(201, 169, 98, 0.2)",
+                borderRadius: "8px",
+                textAlign: "center",
+              }}
+            >
+              <Text size="3" style={{ color: "var(--sg-secondary)" }}>
+                Open to new opportunities
+              </Text>
+              <Box mt="3">
+                <Button size="2" asChild style={{ cursor: "pointer" }}>
+                  <a href="mailto:robabby23@gmail.com">Get in Touch</a>
+                </Button>
+              </Box>
+            </Box>
+
+            {/* Social links */}
             <Flex direction="row" align="center" gap="4">
               <Link
                 href="https://linkedin.com/in/robabby"
@@ -72,9 +93,16 @@ export default function Footer() {
                 </Flex>
               </Link>
             </Flex>
-            <Text size="1" style={{ color: "var(--sg-text-muted)" }}>
-              &copy; {new Date().getFullYear()} Rob Abby. All rights reserved.
-            </Text>
+
+            {/* Branding */}
+            <Flex direction="column" align="center" gap="1">
+              <Text size="1" style={{ color: "var(--sg-text-muted)" }}>
+                Crafted with React, Next.js & Sacred Geometry
+              </Text>
+              <Text size="1" style={{ color: "var(--sg-text-muted)" }}>
+                &copy; {new Date().getFullYear()} Rob Abby
+              </Text>
+            </Flex>
           </Flex>
         </Container>
       </footer>

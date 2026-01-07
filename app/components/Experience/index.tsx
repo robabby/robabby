@@ -8,7 +8,7 @@ const EXPERIENCE = [
     title: "IT Manager",
     company: "VIMSIA",
     companyLink: "https://www.vimsia.org",
-    period: "2025 - PRESENT",
+    period: "2025 - 2025",
     description: "Leading modernization of internal tech infrastructure and web tools at an international Montessori/IB school.",
     highlights: [
       "Oversee system performance (98% uptime) and digital transformation initiatives integrating cloud, automation, and web technologies.",
@@ -81,7 +81,7 @@ export default function Experience() {
       <GeometricPattern variant="dots" opacity={0.02} />
       <AnimatedSection style={{ position: "relative", zIndex: 1 }}>
         <Flex direction="column" justify="center" align="center">
-          <Heading size="8">Experience</Heading>
+          <Heading size="8" className="section-title">Experience</Heading>
           <Box>
             {EXPERIENCE.map(({
               title,

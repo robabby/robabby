@@ -18,11 +18,11 @@ type ExperienceItemType = {
 }
 
 export default function Experience({
-  title, 
-  company, 
-  companyLink, 
-  period, 
-  description, 
+  title,
+  company,
+  companyLink,
+  period,
+  description,
   highlights
 }: ExperienceItemType) {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,11 +35,11 @@ export default function Experience({
     >
       <Container p="4" mx="4" my="8" size="3" className="sg-card">
         <Heading size="6">{title}</Heading>
-        <Flex direction="row" justify="between" my="2">
+        <Flex direction="row" justify="between" my="2" align="center">
           <Text>
-            <a href={companyLink} target="_blank" rel="noopener noreferrer">{company}</a>
+            <a href={companyLink} target="_blank" rel="noopener noreferrer" style={{ color: "var(--sg-primary)" }}>{company}</a>
           </Text>
-          <Text>{period}</Text>
+          <Text className="date-badge">{period}</Text>
         </Flex>
         <Text>{description}</Text>
         <Box mb="4">

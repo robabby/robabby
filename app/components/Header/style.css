@@ -62,6 +62,17 @@ p {
 	color: rgba(255, 255, 255, 1);
 }
 
+/* Active section highlight - gold accent */
+.NavigationMenuLink--active {
+	background: rgba(201, 169, 98, 0.2);
+	color: var(--sg-secondary, #c9a962);
+}
+
+.NavigationMenuLink--active:hover {
+	background: rgba(201, 169, 98, 0.3);
+	color: var(--sg-secondary, #c9a962);
+}
+
 .NavigationMenuTrigger {
 	display: flex;
 	align-items: center;
