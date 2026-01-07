@@ -51,9 +51,9 @@ export default function Hero() {
         <motion.div style={{ y: textY, opacity, position: "relative", zIndex: 1 }}>
           <Container py="8" size="3">
             <Flex direction="column" gap="4" align="center">
-              <Heading mb="2" size="9">Rob Abby</Heading>
-              <Text size="7" style={{ color: "var(--sg-text-primary)" }}>Product Engineer</Text>
-              <Text size="3" mb="4" style={{ color: "var(--sg-secondary)", letterSpacing: "0.1em", fontFamily: "var(--font-display)" }}>
+              <Heading mb="2" size="9" style={{ textShadow: "0 2px 4px rgba(0, 0, 0, 0.3)" }}>Rob Abby</Heading>
+              <Text size="7" style={{ color: "var(--sg-text-primary)", textShadow: "0 1px 3px rgba(0, 0, 0, 0.3)" }}>Product Engineer</Text>
+              <Text size="3" mb="4" style={{ color: "var(--sg-secondary)", letterSpacing: "0.1em", fontFamily: "var(--font-display)", textShadow: "0 1px 2px rgba(0, 0, 0, 0.3)" }}>
                 15+ Years Building Web Experiences
               </Text>
               <Flex direction="row" gap="4" mb="4">
