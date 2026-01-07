@@ -33,19 +33,6 @@ const PROJECTS = [
     gradientType: "gold"
   },
   {
-    title: "ai-chatbot",
-    category: "AI Tool",
-    callout: "[09/26/2025] Site loads, but chat responses currently not working.  Debugging...",
-    githubLink: "https://github.com/robabby/ai-chatbot",
-    liveLink: "https://ai-chatbot-psi-green-88.vercel.app/",
-    _target: "_blank",
-    description: "ChatGPT/Grok clone built with Next.js, TailwindCSS, Grok and OpenAI API. Features include conversation history, user authentication, and a sleek, responsive design.",
-    tech: [
-      "Nextjs", "shadcn/ui", "radix-ui", "OpenAI API", "Grok API", "TypeScript", "Vercel Chat SDK"
-    ],
-    gradientType: "purple"
-  },
-  {
     title: "tldr-bot",
     category: "Bot",
     callout: null,

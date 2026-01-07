@@ -10,7 +10,7 @@ const EXPERIENCE = [
     company: "VIMSIA",
     companyLink: "https://www.vimsia.org",
     period: "2025 - 2025",
-    description: "Leading modernization of internal tech infrastructure and web tools at an international Montessori/IB school.",
+    description: "Contract role during international relocation. Led modernization of internal tech infrastructure and web tools at an international Montessori/IB school.",
     highlights: [
       "Oversee system performance (98% uptime) and digital transformation initiatives integrating cloud, automation, and web technologies.",
       "Providing technical support and training to faculty and staﬀ, enhancing eﬀective utilization of technology in educational settings and reducing support requests by 20%.",
