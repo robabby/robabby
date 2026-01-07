@@ -6,13 +6,21 @@ import { useEffect, useState } from "react";
 import { motion, useReducedMotion } from "motion/react";
 import "./style.css";
 
-const LINKS = [
+type HeaderVariant = "home" | "subpage";
+
+interface HeaderProps {
+  variant?: HeaderVariant;
+}
+
+const HOME_LINKS = [
   { href: "#home", label: "Home", isBrand: true },
   { href: "#about", label: "About" },
   { href: "#skills", label: "Skills" },
   { href: "#experience", label: "Experience" },
   { href: "#projects", label: "Projects" },
 ];
+
+const SUBPAGE_LINKS = [{ href: "/", label: "Home", isBrand: true }];
 
 // Brand mark component with sacred geometry hexagon
 const BrandMark = () => (
@@ -29,12 +37,18 @@ const BrandMark = () => (
   </div>
 );
 
-export default function Header() {
+export default function Header({ variant = "home" }: HeaderProps) {
   const [activeSection, setActiveSection] = useState("home");
   const [isScrolled, setIsScrolled] = useState(false);
   const prefersReducedMotion = useReducedMotion();
 
+  const isSubpage = variant === "subpage";
+  const LINKS = isSubpage ? SUBPAGE_LINKS : HOME_LINKS;
+
   useEffect(() => {
+    // Skip scroll tracking for subpage variant
+    if (isSubpage) return;
+
     const handleScroll = () => {
       // Scroll state for header transformation
       setIsScrolled(window.scrollY > 50);
@@ -59,7 +73,7 @@ export default function Header() {
     handleScroll(); // Set initial state
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [isSubpage]);
 
   // Animation config
   const duration = prefersReducedMotion ? 0 : 0.5;
@@ -75,11 +89,12 @@ export default function Header() {
     >
       <NavigationMenu.Root className="NavigationMenuRoot">
         <NavigationMenu.List
-          className={`NavigationMenuList ${isScrolled ? "NavigationMenuList--scrolled" : ""}`}
+          className={`NavigationMenuList ${isScrolled ? "NavigationMenuList--scrolled" : ""} ${isSubpage ? "NavigationMenuList--subpage" : ""}`}
         >
           {LINKS.map((link, index) => {
-            const sectionId = link.href.replace("#", "");
-            const isActive = activeSection === sectionId;
+            const sectionId = link.href.replace("#", "").replace("/", "home");
+            // On subpage, brand is always active; on home, use scroll-based detection
+            const isActive = isSubpage ? link.isBrand : activeSection === sectionId;
 
             return (
               <NavigationMenu.Item key={link.href} className="NavigationMenuItem">

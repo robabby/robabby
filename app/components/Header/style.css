@@ -88,6 +88,29 @@ header > * {
     0 0 0 1px rgba(100, 150, 255, 0.12);
 }
 
+/* === Subpage Variant === */
+.NavigationMenuRoot:has(.NavigationMenuList--subpage) {
+  justify-content: flex-start;
+  padding-left: 24px;
+}
+
+.NavigationMenuList--subpage {
+  padding: 6px 8px;
+}
+
+.NavigationMenuList--subpage .NavigationMenuLink {
+  padding: 8px 12px;
+}
+
+.NavigationMenuList--subpage .brand-mark {
+  width: 28px;
+  height: 28px;
+}
+
+.NavigationMenuList--subpage .brand-initials {
+  font-size: 12px;
+}
+
 /* === Navigation Item Wrapper === */
 .NavigationMenuItemWrapper {
   position: relative;

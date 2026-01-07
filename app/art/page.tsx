@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import { Container } from "@radix-ui/themes";
+import Header from "@/app/components/Header";
 import { IMAGES, getToolCounts } from "./images";
 import { CosmicBackground } from "./components/CosmicBackground";
 import { FilterBar } from "./components/FilterBar";
@@ -21,6 +22,7 @@ export default function ArtPage() {
 
   return (
     <div className="gallery-page">
+      <Header variant="subpage" />
       <CosmicBackground />
       <GalleryHero />
 
