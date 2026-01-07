@@ -46,8 +46,8 @@ export default function About() {
               {/* Expanded description */}
               <Text size="4" style={{ color: "var(--sg-text-secondary)", lineHeight: 1.8 }}>
                 Specializing in B2B and B2C domains within agile teams. Expert at translating
-                complex technical requirements into scalable UI systems—seeking frontend roles
-                where thoughtful code meets innovation.
+                complex technical requirements into scalable UI systems that drive measurable
+                business outcomes.
               </Text>
             </Box>
           </Flex>
