@@ -1,7 +1,10 @@
-import { Badge, Box, Container, Flex, Heading } from "@radix-ui/themes";
+import { Badge, Box, Container, Flex, Heading, Text } from "@radix-ui/themes";
 import GeometricPattern from "./GeometricPattern";
 import AnimatedSection from "./AnimatedSection";
 import StaggeredList from "./StaggeredList";
+
+// Hero skills displayed as prominent circular badges
+const HERO_SKILLS = ["TypeScript", "React", "Next.js", "Design Systems"];
 
 type SkillCategory = {
   featured: string[];
@@ -37,35 +40,57 @@ const SKILLS: Record<string, SkillCategory> = {
 
 export default function Skills() {
   return (
-    <Box id="skills" py="8" style={{ background: "var(--sg-deep)", position: "relative", overflow: "hidden" }}>
+    <Box id="skills" py="9" style={{ background: "var(--sg-deep)", position: "relative", overflow: "hidden" }}>
       <GeometricPattern variant="lines" opacity={0.02} />
       <AnimatedSection style={{ position: "relative", zIndex: 1 }}>
-        <Flex direction="column" justify="center" align="center">
-          <Heading mb="8" size="8" className="section-title">Skills</Heading>
-          <Container size="3">
-            <Flex direction="column" gap="4">
-              {Object.entries(SKILLS).map(([category, { featured, other }]) => (
-                <Box key={category} mx="4" p="4" className="sg-card">
-                  <Heading mb="4" size="5">{category}</Heading>
-                  <StaggeredList style={{ display: "flex", flexDirection: "row", gap: "var(--space-2)", flexWrap: "wrap" }}>
-                    {/* Featured skills with gold accent */}
-                    {featured.map((skill) => (
-                      <Badge size="3" key={skill} className="sg-badge--featured">
-                        {skill}
-                      </Badge>
-                    ))}
-                    {/* Standard skills */}
-                    {other.map((skill) => (
-                      <Badge size="2" key={skill}>
-                        {skill}
-                      </Badge>
-                    ))}
-                  </StaggeredList>
-                </Box>
-              ))}
-            </Flex>
-          </Container>
-        </Flex>
+        <Container size="4" px="6">
+          {/* Asymmetric grid layout */}
+          <Flex direction={{ initial: "column", md: "row" }} gap="8" align="start">
+            {/* Left column - Section header */}
+            <Box style={{ flex: "0 0 200px" }}>
+              <Text className="section-subtitle" mb="2" style={{ display: "block" }}>
+                Expertise
+              </Text>
+              <Heading size="8" className="section-title" style={{ textAlign: "left" }}>
+                Skills
+              </Heading>
+
+              {/* Hero skill badges - circular prominent display */}
+              <Box className="skill-hero-badges" mt="6">
+                {HERO_SKILLS.map((skill) => (
+                  <Box key={skill} className="skill-hero-badge">
+                    {skill}
+                  </Box>
+                ))}
+              </Box>
+            </Box>
+
+            {/* Right column - Skill categories */}
+            <Box style={{ flex: 1 }}>
+              <Flex direction="column" gap="6">
+                {Object.entries(SKILLS).map(([category, { featured, other }]) => (
+                  <Box key={category} p="5" className="sg-card">
+                    <Heading mb="4" size="4" style={{ color: "var(--sg-secondary)" }}>{category}</Heading>
+                    <StaggeredList style={{ display: "flex", flexDirection: "row", gap: "var(--space-2)", flexWrap: "wrap" }}>
+                      {/* Featured skills with gold accent */}
+                      {featured.map((skill) => (
+                        <Badge size="3" key={skill} className="sg-badge--featured">
+                          {skill}
+                        </Badge>
+                      ))}
+                      {/* Standard skills */}
+                      {other.map((skill) => (
+                        <Badge size="2" key={skill} className="sg-badge">
+                          {skill}
+                        </Badge>
+                      ))}
+                    </StaggeredList>
+                  </Box>
+                ))}
+              </Flex>
+            </Box>
+          </Flex>
+        </Container>
       </AnimatedSection>
     </Box>
   )

@@ -1,3 +1,45 @@
+/* Masonry grid layout */
+.projects-masonry {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+/* Featured project spans full width with gold emphasis */
+.projects-masonry .project-card--featured {
+  grid-column: 1 / -1;
+  border-color: rgba(201, 169, 98, 0.4);
+  box-shadow: 0 0 30px rgba(201, 169, 98, 0.15);
+}
+
+.projects-masonry .project-card--featured:hover {
+  border-color: rgba(201, 169, 98, 0.6);
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.4),
+    0 0 40px rgba(201, 169, 98, 0.2);
+}
+
+/* Gold gradient overlay for featured project visual */
+.project-card--featured .project-visual::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(201, 169, 98, 0.1) 0%,
+    transparent 50%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Mobile: single column */
+@media (max-width: 767px) {
+  .projects-masonry {
+    grid-template-columns: 1fr;
+  }
+}
+
 .project-card {
   overflow: hidden;
   padding: 0 !important;
@@ -5,8 +47,13 @@
 
 .project-visual {
   position: relative;
-  height: 140px;
+  height: 120px;
   overflow: hidden;
+}
+
+/* Featured project has taller visual */
+.project-card--featured .project-visual {
+  height: 160px;
 }
 
 .project-visual--blue {

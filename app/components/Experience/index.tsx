@@ -1,7 +1,8 @@
-import { Box, Flex, Heading } from "@radix-ui/themes";
+import { Box, Container, Flex, Heading, Text } from "@radix-ui/themes";
 import ExperienceItem from "./components/ExperienceItem";
 import GeometricPattern from "../GeometricPattern";
 import AnimatedSection from "../AnimatedSection";
+import "./style.css";
 
 const EXPERIENCE = [
   {
@@ -54,8 +55,8 @@ const EXPERIENCE = [
     description: "SAVO (B2B) was an industry leader in the sales enablement space, providing SaaS software used by some of the largest companies in the world (Disney, American Express, Google, UPS, etc.). I worked within Agile and Lean UX methodologies taking projects from discovery to implementation.",
     highlights: [
       "Led the spinout of an autonomous UI/UX team that adopted a user-centered process, conducting 50+ User Research sessions, Usability Interviews, and Design Workshops, resulting in a 30% increase in user satisfaction.",
-			"Architected and implemented UI features that embedded SAVO’s sales content and enablement tools directly within Salesforce, creating a seamless experience for enterprise sales teams and reducing context-switching between platforms.",
-			"Developed UI components and features that integrated SAVO’s sales enablement platform into Salesforce, enabling sales teams to access content, training, and playbooks within their existing CRM workflow, improving adoption rates and user engagement.",
+			"Architected and implemented UI features that embedded SAVO's sales content and enablement tools directly within Salesforce, creating a seamless experience for enterprise sales teams and reducing context-switching between platforms.",
+			"Developed UI components and features that integrated SAVO's sales enablement platform into Salesforce, enabling sales teams to access content, training, and playbooks within their existing CRM workflow, improving adoption rates and user engagement.",
       "Contributed to the production of a holistic Design Language and Living Design System using Ember.js and Material Design, used within our own products and integrated with Salesforce, resulting in a 20% improvement in developer productivity.",
       "Established the SAVO Front-End Guild, a bi-weekly meeting for all developers that covered Front-end development basics, best practices, and industry trends.",
 			"Authored design system documentation and contribution guidelines to ensure consistency across multiple product teams."
@@ -78,33 +79,43 @@ const EXPERIENCE = [
 export default function Experience() {
 
   return (
-    <Box id="experience" py="8" style={{ background: "var(--sg-gradient-section)", position: "relative", overflow: "hidden" }}>
+    <Box id="experience" py="9" style={{ background: "var(--sg-gradient-section)", position: "relative", overflow: "hidden" }}>
       <GeometricPattern variant="dots" opacity={0.02} />
       <AnimatedSection style={{ position: "relative", zIndex: 1 }}>
-        <Flex direction="column" justify="center" align="center">
-          <Heading size="8" className="section-title">Experience</Heading>
-          <Box>
-            {EXPERIENCE.map(({
-              title,
-              company,
-              companyLink,
-              period,
-              description,
-              highlights,
-              featured
-             }, index) => (
-              <ExperienceItem
-                title={title}
-                company={company}
-                companyLink={companyLink}
-                period={period}
-                description={description}
-                highlights={highlights}
-                featured={featured}
-                key={index}
-              />
-            ))}
-          </Box>
+        <Flex direction="column" align="center">
+          {/* Centered section header */}
+          <Text className="section-subtitle" mb="2">
+            Career
+          </Text>
+          <Heading size="8" mb="8" className="section-title">
+            Experience
+          </Heading>
+
+          {/* Timeline */}
+          <Container size="3" px="4">
+            <Box className="experience-timeline">
+              {EXPERIENCE.map(({
+                title,
+                company,
+                companyLink,
+                period,
+                description,
+                highlights,
+                featured
+               }, index) => (
+                <ExperienceItem
+                  title={title}
+                  company={company}
+                  companyLink={companyLink}
+                  period={period}
+                  description={description}
+                  highlights={highlights}
+                  featured={featured}
+                  key={index}
+                />
+              ))}
+            </Box>
+          </Container>
         </Flex>
       </AnimatedSection>
     </Box>

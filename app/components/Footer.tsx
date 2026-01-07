@@ -12,17 +12,16 @@ export default function Footer() {
       asChild
       style={{
         background: "var(--sg-void)",
-        borderTop: "1px solid rgba(74, 158, 255, 0.1)",
+        borderTop: "1px solid rgba(201, 169, 98, 0.15)",
       }}
     >
       <footer>
         {/* Gold geometric divider */}
         <Box
           style={{
-            height: "1px",
+            height: "2px",
             background:
-              "linear-gradient(90deg, transparent, var(--sg-secondary), transparent)",
-            opacity: 0.5,
+              "linear-gradient(90deg, transparent 0%, var(--sg-gold-deep) 20%, var(--sg-gold) 50%, var(--sg-gold-deep) 80%, transparent 100%)",
           }}
         />
 

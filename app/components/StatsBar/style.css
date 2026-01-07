@@ -1,7 +1,7 @@
 .stats-bar {
-  background: linear-gradient(180deg, var(--sg-surface) 0%, var(--sg-deep) 100%);
-  border-top: 1px solid rgba(74, 158, 255, 0.1);
-  border-bottom: 1px solid rgba(74, 158, 255, 0.1);
+  background: linear-gradient(180deg, var(--sg-surface) 0%, var(--sg-void) 100%);
+  border-top: 1px solid rgba(201, 169, 98, 0.15);
+  border-bottom: 1px solid rgba(201, 169, 98, 0.15);
   position: relative;
 }
 
@@ -11,7 +11,7 @@
   inset: 0;
   background: radial-gradient(
     ellipse at center,
-    rgba(74, 158, 255, 0.05) 0%,
+    rgba(201, 169, 98, 0.03) 0%,
     transparent 70%
   );
   pointer-events: none;
@@ -27,15 +27,28 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 0 1rem;
+  padding: 0 2rem;
   flex: 1;
-  min-width: 120px;
+  min-width: 140px;
+  position: relative;
 }
 
-/* Dividers between stats on desktop */
+/* Gold dividers between stats on desktop */
 @media (min-width: 640px) {
-  .stat-item:not(:last-child) {
-    border-right: 1px solid rgba(74, 158, 255, 0.15);
+  .stat-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 50%;
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      var(--sg-gold) 50%,
+      transparent 100%
+    );
   }
 }
 
@@ -52,8 +65,9 @@
   font-family: var(--font-display);
   color: var(--sg-text-secondary);
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-top: 0.5rem;
+  letter-spacing: 0.1em;
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
 }
 
 /* Mobile: 2x2 grid */
@@ -66,5 +80,9 @@
 
   .stat-item {
     padding: 0;
+  }
+
+  .stat-item::after {
+    display: none;
   }
 }
