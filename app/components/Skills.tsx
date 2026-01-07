@@ -1,17 +1,25 @@
+"use client";
+
 import { Badge, Box, Container, Flex, Heading, Text } from "@radix-ui/themes";
+import { motion } from "motion/react";
 import GeometricPattern from "./GeometricPattern";
 import AnimatedSection from "./AnimatedSection";
 import StaggeredList from "./StaggeredList";
 
-// Hero skills displayed as prominent circular badges
-const HERO_SKILLS = ["TypeScript", "React", "Next.js", "Design Systems"];
+// Core competencies for editorial hero display
+const CORE_COMPETENCIES = [
+  { skill: "TypeScript", emphasis: "Type-Safe" },
+  { skill: "React", emphasis: "Component" },
+  { skill: "Next.js", emphasis: "Full-Stack" },
+  { skill: "Design Systems", emphasis: "Systematic" },
+];
 
 type SkillCategory = {
   featured: string[];
   other: string[];
 };
 
-const SKILLS: Record<string, SkillCategory> = {
+const SKILL_CATEGORIES: Record<string, SkillCategory> = {
   "Languages & Frameworks": {
     featured: ["TypeScript", "React", "Next.js"],
     other: [
@@ -40,14 +48,14 @@ const SKILLS: Record<string, SkillCategory> = {
 
 export default function Skills() {
   return (
-    <Box id="skills" py="9" style={{ background: "var(--sg-deep)", position: "relative", overflow: "hidden" }}>
+    <Box id="skills" py="9" className="skills-section">
       <GeometricPattern variant="lines" opacity={0.02} />
       <AnimatedSection style={{ position: "relative", zIndex: 1 }}>
         <Container size="4" px="6">
           {/* Asymmetric grid layout */}
           <Flex direction={{ initial: "column", md: "row" }} gap="8" align="start">
-            {/* Left column - Section header */}
-            <Box style={{ flex: "0 0 200px" }}>
+            {/* Left column - Section header + Hero statements */}
+            <Box className="skills-left-column">
               <Text className="section-subtitle" mb="2" style={{ display: "block" }}>
                 Expertise
               </Text>
@@ -55,44 +63,57 @@ export default function Skills() {
                 Skills
               </Heading>
 
-              {/* Hero skill badges - circular prominent display */}
-              <Box className="skill-hero-badges" mt="6">
-                {HERO_SKILLS.map((skill) => (
-                  <Box key={skill} className="skill-hero-badge">
-                    {skill}
-                  </Box>
+              {/* Editorial Hero Statements */}
+              <Box className="skills-hero-statements">
+                {CORE_COMPETENCIES.map((item, index) => (
+                  <motion.div
+                    key={item.skill}
+                    className="skill-statement"
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.1, duration: 0.5, ease: "easeOut" }}
+                    viewport={{ once: true, amount: 0.3 }}
+                  >
+                    <span className="skill-statement-emphasis">{item.emphasis}</span>
+                    <span className="skill-statement-skill">{item.skill}</span>
+                  </motion.div>
                 ))}
               </Box>
             </Box>
 
-            {/* Right column - Skill categories */}
-            <Box style={{ flex: 1 }}>
-              <Flex direction="column" gap="6">
-                {Object.entries(SKILLS).map(([category, { featured, other }]) => (
-                  <Box key={category} p="5" className="sg-card">
-                    <Heading mb="4" size="4" style={{ color: "var(--sg-secondary)" }}>{category}</Heading>
-                    <StaggeredList style={{ display: "flex", flexDirection: "row", gap: "var(--space-2)", flexWrap: "wrap" }}>
-                      {/* Featured skills with gold accent */}
+            {/* Right column - Category cards with equal weight */}
+            <Box className="skills-categories">
+              <StaggeredList style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+                {Object.entries(SKILL_CATEGORIES).map(([category, { featured, other }]) => (
+                  <Box key={category} className="sg-card skill-category-card">
+                    {/* Category header */}
+                    <h3 className="skill-category-title">{category}</h3>
+
+                    {/* Featured skills as pull quotes */}
+                    <Box className="skill-featured-container">
                       {featured.map((skill) => (
-                        <Badge size="3" key={skill} className="sg-badge--featured">
+                        <Text key={skill} className="skill-pull-quote">
                           {skill}
-                        </Badge>
+                        </Text>
                       ))}
-                      {/* Standard skills */}
+                    </Box>
+
+                    {/* Supporting skills */}
+                    <Flex wrap="wrap" gap="2" className="skill-supporting-container">
                       {other.map((skill) => (
-                        <Badge size="2" key={skill} className="sg-badge">
+                        <Badge key={skill} size="2" className="sg-badge">
                           {skill}
                         </Badge>
                       ))}
-                    </StaggeredList>
+                    </Flex>
                   </Box>
                 ))}
-              </Flex>
+              </StaggeredList>
             </Box>
           </Flex>
         </Container>
       </AnimatedSection>
     </Box>
-  )
+  );
 }
 
