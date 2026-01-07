@@ -64,77 +64,83 @@ export default function Projects() {
   return (
     <Box
       id="projects"
-      py="8"
+      py="9"
       style={{ background: "var(--sg-deep)", position: "relative", overflow: "hidden" }}
     >
       <GeometricPattern variant="hexagons" opacity={0.02} />
       <AnimatedSection style={{ position: "relative", zIndex: 1 }}>
-        <Flex
-          align="center"
-          direction="column"
-          justify="center"
-        >
-        <Heading mb="8" size="8" className="section-title">
-          Projects
-        </Heading>
-        {PROJECTS.map((proj, index) => (
-          <Container
-            key={index}
-            size="3"
-            mx="4"
-            mb="8"
-            className={`sg-card project-card ${proj.featured ? 'sg-card--featured' : ''}`}
-          >
-            <Box className={`project-visual project-visual--${proj.gradientType}`}>
-              <Box className="project-visual-pattern" />
-              <Box className="project-visual-content">
-                <Badge size="1" className="sg-badge--featured">
-                  {proj.category}
-                </Badge>
-                <Heading size="6" className="project-visual-title">{proj.title}</Heading>
-              </Box>
+        <Container size="4" px="6">
+          {/* Asymmetric grid layout */}
+          <Flex direction={{ initial: "column", md: "row" }} gap="8" align="start">
+            {/* Left column - Section header */}
+            <Box style={{ flex: "0 0 200px" }}>
+              <Text className="section-subtitle" mb="2" style={{ display: "block" }}>
+                Work
+              </Text>
+              <Heading size="8" className="section-title" style={{ textAlign: "left" }}>
+                Projects
+              </Heading>
             </Box>
-            <Box p="4">
-            {proj.callout && (
-              <Callout.Root mb="4">
-                <Callout.Icon>
-                  <InfoCircledIcon />
-                </Callout.Icon>
-                <Callout.Text>
-                  {proj.callout}
-                </Callout.Text>
-              </Callout.Root>
-            )}
-            <Box mb="4">
-              <Text mb="4">{proj.description}</Text>
-            </Box>
-            <Flex wrap="wrap" gap="2" mb="4">
-              {proj.tech.map((item, index) => (
-                <Badge size="2" key={index}>
-                  {item}
-                </Badge>
+
+            {/* Right column - Masonry grid */}
+            <Box style={{ flex: 1 }} className="projects-masonry">
+              {PROJECTS.map((proj, index) => (
+                <Box
+                  key={index}
+                  className={`sg-card project-card ${proj.featured ? 'project-card--featured' : ''}`}
+                >
+                  <Box className={`project-visual project-visual--${proj.gradientType}`}>
+                    <Box className="project-visual-pattern" />
+                    <Box className="project-visual-content">
+                      <Badge size="1" className="sg-badge--featured">
+                        {proj.category}
+                      </Badge>
+                      <Heading size="5" className="project-visual-title">{proj.title}</Heading>
+                    </Box>
+                  </Box>
+                  <Box p="4">
+                    {proj.callout && (
+                      <Callout.Root mb="3" size="1">
+                        <Callout.Icon>
+                          <InfoCircledIcon />
+                        </Callout.Icon>
+                        <Callout.Text>
+                          {proj.callout}
+                        </Callout.Text>
+                      </Callout.Root>
+                    )}
+                    <Text size="2" style={{ color: "var(--sg-text-secondary)", display: "block" }} mb="3">
+                      {proj.description}
+                    </Text>
+                    <Flex wrap="wrap" gap="1" mb="4">
+                      {proj.tech.map((item, techIndex) => (
+                        <Badge size="1" key={techIndex} className="sg-badge">
+                          {item}
+                        </Badge>
+                      ))}
+                    </Flex>
+                    <Flex gap="2">
+                      {proj.githubLink && (
+                        <Button size="1" variant="outline" asChild>
+                          <Link href={proj.githubLink} target="_blank">
+                            GitHub
+                          </Link>
+                        </Button>
+                      )}
+                      {proj.liveLink && (
+                        <Button size="1" asChild>
+                          <Link href={proj.liveLink} target={proj._target}>
+                            Demo
+                          </Link>
+                        </Button>
+                      )}
+                    </Flex>
+                  </Box>
+                </Box>
               ))}
-            </Flex>
-              <Box>
-                {proj.githubLink && (
-                  <Button asChild mb="2" mr="2">
-                    <Link href={proj.githubLink} target="_blank">
-                      Github Link
-                    </Link>
-                  </Button>
-                )}
-                {proj.liveLink && (
-                  <Button mb="2">
-                    <Link href={proj.liveLink} target={proj._target}>
-                      Demo Link
-                    </Link>
-                  </Button>
-                )}
-              </Box>
             </Box>
-          </Container>
-        ))}
-        </Flex>
+          </Flex>
+        </Container>
       </AnimatedSection>
     </Box>
   )

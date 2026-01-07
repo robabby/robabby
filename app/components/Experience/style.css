@@ -1,0 +1,85 @@
+/* Experience Timeline Styles */
+
+.experience-timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+/* Vertical gold line */
+.experience-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    var(--sg-gold) 10%,
+    var(--sg-gold) 90%,
+    transparent 100%
+  );
+}
+
+/* Timeline dot at each item */
+.experience-timeline .sg-card {
+  position: relative;
+}
+
+.experience-timeline .sg-card::before {
+  content: '';
+  position: absolute;
+  left: -2.5rem;
+  top: 2rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--sg-void);
+  border: 2px solid var(--sg-gold);
+  z-index: 2;
+}
+
+/* Featured item has larger, filled dot */
+.experience-timeline .sg-card--featured::before {
+  width: 16px;
+  height: 16px;
+  left: calc(-2.5rem - 2px);
+  background: var(--sg-gold);
+  box-shadow: 0 0 12px var(--sg-gold-glow);
+}
+
+/* Connecting line from dot to card */
+.experience-timeline .sg-card::after {
+  content: '';
+  position: absolute;
+  left: -1.5rem;
+  top: calc(2rem + 5px);
+  width: 1.5rem;
+  height: 1px;
+  background: rgba(201, 169, 98, 0.3);
+}
+
+/* Mobile: simpler timeline */
+@media (max-width: 767px) {
+  .experience-timeline {
+    padding-left: 1.5rem;
+  }
+
+  .experience-timeline .sg-card::before {
+    left: -1.85rem;
+    width: 10px;
+    height: 10px;
+  }
+
+  .experience-timeline .sg-card--featured::before {
+    width: 12px;
+    height: 12px;
+    left: calc(-1.85rem - 1px);
+  }
+
+  .experience-timeline .sg-card::after {
+    left: -1rem;
+    width: 1rem;
+  }
+}

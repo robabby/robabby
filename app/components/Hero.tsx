@@ -1,7 +1,7 @@
 "use client";
 
-import { Box, Button, Container, Flex, Heading, IconButton, Link, Section, Text } from "@radix-ui/themes";
-import { DownloadIcon, EnvelopeClosedIcon, GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
+import { Box, Button, Container, Flex, Section, Text } from "@radix-ui/themes";
+import { DownloadIcon } from "@radix-ui/react-icons";
 import { motion, useScroll, useTransform, useReducedMotion } from "motion/react";
 import { useRef } from "react";
 import Image from "next/image";
@@ -24,7 +24,7 @@ export default function Hero() {
     [0, prefersReducedMotion ? 0 : 150]
   );
 
-  const textY = useTransform(
+  const contentY = useTransform(
     scrollYProgress,
     [0, 1],
     [0, prefersReducedMotion ? 0 : 50]
@@ -40,69 +40,98 @@ export default function Hero() {
     <Section
       ref={sectionRef}
       id="home"
-      style={{ background: "var(--blue-a9)", position: "relative", overflow: "hidden" }}
+      className="hero-section"
     >
-      <Box py="9" style={{ position: "relative" }}>
-        <AmbientParticles />
+      <AmbientParticles />
 
-        <motion.div style={{ y: cubeY, opacity }} className="hero-cube-container">
-          <MetatronsCube />
-        </motion.div>
+      {/* Metatron's Cube - positioned behind portrait */}
+      <motion.div style={{ y: cubeY, opacity }} className="hero-cube-container">
+        <MetatronsCube />
+      </motion.div>
 
-        <motion.div style={{ y: textY, opacity, position: "relative", zIndex: 1 }}>
-          <Container py="8" size="3">
-            <Flex direction="column" gap="4" align="center">
-              <motion.div
-                className="hero-portrait"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.3, duration: 0.6, ease: "easeOut" }}
-              >
+      {/* Diagonal gold accent line */}
+      <div className="hero-diagonal-accent" aria-hidden="true" />
+
+      <motion.div style={{ y: contentY, opacity }} className="hero-content-wrapper">
+        <Container size="4" className="hero-container">
+          <div className="hero-grid">
+            {/* Portrait Column */}
+            <motion.div
+              className="hero-portrait-column"
+              initial={{ opacity: 0, scale: 0.8, x: -30 }}
+              animate={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
+            >
+              <div className="hero-portrait-wrapper">
                 <Image
                   src="/profile.jpeg"
                   alt="Rob Abby - Staff Frontend Engineer"
-                  width={150}
-                  height={150}
+                  width={300}
+                  height={300}
                   priority
                   className="hero-portrait-image"
                 />
+              </div>
+            </motion.div>
+
+            {/* Content Column */}
+            <div className="hero-content-column">
+              {/* Stacked Name */}
+              <motion.div
+                className="hero-name-wrapper"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 0.6, ease: "easeOut" }}
+              >
+                <h1 className="display-dramatic hero-name">
+                  <span className="hero-name-line">Rob</span>
+                  <span className="hero-name-line">Abby</span>
+                </h1>
               </motion.div>
-              <Heading mb="2" size="9" style={{ textShadow: "0 2px 4px rgba(0, 0, 0, 0.3)" }}>Rob Abby</Heading>
-              <Text size="7" style={{ color: "var(--sg-text-primary)", textShadow: "0 1px 3px rgba(0, 0, 0, 0.3)" }}>Staff Frontend Engineer</Text>
-              <Text size="3" mb="4" style={{ color: "var(--sg-secondary)", letterSpacing: "0.1em", fontFamily: "var(--font-display)", textShadow: "0 1px 2px rgba(0, 0, 0, 0.3)" }}>
-                15+ Years Building Web Experiences
-              </Text>
-              <Flex direction="row" gap="4" mb="4">
-                <Link href="https://www.linkedin.com/in/robabby/" target="_blank">
-                  <IconButton size="4" variant="ghost" style={{ cursor: "pointer" }}>
-                    <LinkedInLogoIcon width="24" height="24" />
-                  </IconButton>
-                </Link>
-                <Link href="https://github.com/robabby" target="_blank">
-                  <IconButton size="4" variant="ghost" style={{ cursor: "pointer" }}>
-                    <GitHubLogoIcon width="24" height="24" />
-                  </IconButton>
-                </Link>
-                <Link href="mailto:robabby23@gmail.com">
-                  <IconButton size="4" variant="ghost" style={{ cursor: "pointer" }}>
-                    <EnvelopeClosedIcon width="24" height="24" />
-                  </IconButton>
-                </Link>
-              </Flex>
-              <Flex direction="row" gap="3">
-                <Button size="3" asChild style={{ cursor: "pointer" }}>
-                  <a href="#experience">View Experience</a>
-                </Button>
-                <Button size="3" variant="outline" asChild className="resume-button">
-                  <a href="/robert-abby-resume.pdf" download>
-                    <DownloadIcon /> Resume
-                  </a>
-                </Button>
-              </Flex>
-            </Flex>
-          </Container>
-        </motion.div>
-      </Box>
+
+              {/* Title */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.7, duration: 0.5, ease: "easeOut" }}
+              >
+                <Text size="6" className="hero-title">
+                  Staff Frontend Engineer
+                </Text>
+              </motion.div>
+
+              {/* Tagline */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.9, duration: 0.5, ease: "easeOut" }}
+              >
+                <Text className="subtitle-refined hero-tagline">
+                  15+ Years Building Web Experiences
+                </Text>
+              </motion.div>
+
+              {/* CTA Buttons */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.1, duration: 0.5, ease: "easeOut" }}
+              >
+                <Flex direction="row" gap="3" className="hero-cta">
+                  <Button size="3" asChild style={{ cursor: "pointer" }}>
+                    <a href="#experience">View Experience</a>
+                  </Button>
+                  <Button size="3" variant="outline" asChild className="resume-button">
+                    <a href="/robert-abby-resume.pdf" download>
+                      <DownloadIcon /> Resume
+                    </a>
+                  </Button>
+                </Flex>
+              </motion.div>
+            </div>
+          </div>
+        </Container>
+      </motion.div>
     </Section>
   );
 }

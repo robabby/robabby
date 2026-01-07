@@ -1,34 +1,111 @@
-.Canvas,
-.Wrapper {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
+/* Hero Section - Refined Luxury */
+.hero-section {
+  background: var(--blue-a9);
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
-/* Hero cube container */
+/* Metatron's Cube - positioned behind portrait on desktop */
 .hero-cube-container {
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 0;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+/* Diagonal gold accent line */
+.hero-diagonal-accent {
+  position: absolute;
+  width: 200%;
+  height: 1px;
+  background: linear-gradient(90deg, var(--sg-secondary), transparent);
+  transform: rotate(-12deg);
+  top: 70%;
+  left: -30%;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+/* Content wrapper */
+.hero-content-wrapper {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 6rem 0;
+}
+
+/* Grid container */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* Portrait Column */
+.hero-portrait-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-portrait-wrapper {
   position: relative;
 }
 
-/* Portrait in content flow */
-.hero-portrait {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1rem;
+.hero-portrait-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 4px solid var(--sg-secondary);
+  box-shadow:
+    0 0 60px rgba(212, 184, 114, 0.4),
+    0 0 120px rgba(74, 158, 255, 0.2),
+    0 20px 60px rgba(0, 0, 0, 0.5);
+  object-fit: cover;
 }
 
-.hero-portrait-image {
-  border-radius: 50%;
-  border: 3px solid var(--sg-secondary);
-  box-shadow:
-    0 0 40px rgba(212, 184, 114, 0.3),
-    0 0 80px rgba(74, 158, 255, 0.2);
-  object-fit: cover;
+/* Content Column */
+.hero-content-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Stacked Name */
+.hero-name {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.hero-name-line {
+  display: block;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Title */
+.hero-title {
+  color: var(--sg-text-primary);
+  font-family: var(--font-display);
+  font-weight: 400;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Tagline */
+.hero-tagline {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* CTA Buttons */
+.hero-cta {
+  margin-top: 1rem;
 }
 
 /* Resume button styling */
@@ -40,15 +117,99 @@
 }
 
 .resume-button:hover {
-  background: rgba(212, 184, 114, 0.1) !important;
+  background: rgba(212, 184, 114, 0.15) !important;
   border-color: var(--sg-secondary) !important;
-  box-shadow: 0 0 20px rgba(212, 184, 114, 0.2);
+  box-shadow: 0 0 25px rgba(212, 184, 114, 0.25);
 }
 
-/* Mobile responsiveness */
-@media (max-width: 768px) {
+/* ===========================================
+   RESPONSIVE STYLES
+   =========================================== */
+
+/* Tablet landscape */
+@media (max-width: 1024px) {
+  .hero-grid {
+    gap: 3rem;
+  }
+
   .hero-portrait-image {
-    width: 120px !important;
-    height: 120px !important;
+    width: 260px;
+    height: 260px;
+  }
+
+  .hero-cube-container {
+    left: 5%;
+    opacity: 0.1;
+  }
+}
+
+/* Tablet portrait and below - stacked layout */
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: auto;
+  }
+
+  .hero-content-wrapper {
+    padding: 4rem 0;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+  }
+
+  /* Portrait on top for mobile */
+  .hero-portrait-column {
+    order: -1;
+  }
+
+  .hero-portrait-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .hero-content-column {
+    align-items: center;
+  }
+
+  .hero-name {
+    align-items: center;
+  }
+
+  .hero-cta {
+    justify-content: center;
+  }
+
+  .hero-cube-container {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.08;
+  }
+
+  .hero-diagonal-accent {
+    display: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .hero-content-wrapper {
+    padding: 3rem 0;
+  }
+
+  .hero-portrait-image {
+    width: 160px;
+    height: 160px;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-cta > * {
+    width: 100%;
+    justify-content: center;
   }
 }

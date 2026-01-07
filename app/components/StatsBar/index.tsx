@@ -54,7 +54,7 @@ function AnimatedNumber({ value, suffix }: { value: number; suffix: string }) {
   }, [isInView, value, prefersReducedMotion]);
 
   return (
-    <span ref={ref} className="stat-number">
+    <span ref={ref} className="stat-number metric-impact">
       {displayValue}{suffix}
     </span>
   );
