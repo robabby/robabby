@@ -81,7 +81,7 @@ export default function Experience() {
       <GeometricPattern variant="dots" opacity={0.02} />
       <AnimatedSection style={{ position: "relative", zIndex: 1 }}>
         <Flex direction="column" justify="center" align="center">
-          <Heading size="8">Experience</Heading>
+          <Heading size="8" className="section-title">Experience</Heading>
           <Box>
             {EXPERIENCE.map(({
               title,
@@ -98,6 +98,7 @@ export default function Experience() {
                 period={period}
                 description={description}
                 highlights={highlights}
+                isCurrent={index === 0}
                 key={index}
               />
             ))}

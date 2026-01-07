@@ -1,6 +1,13 @@
-import { Box, Container, Flex, Heading, Text } from "@radix-ui/themes";
+import { Badge, Box, Container, Flex, Heading, Text } from "@radix-ui/themes";
 import GeometricPattern from "./GeometricPattern";
 import AnimatedSection from "./AnimatedSection";
+
+const KEY_STRENGTHS = [
+  "React Frameworks",
+  "Design Systems",
+  "Component Architecture",
+  "Cross-functional Leadership"
+];
 
 export default function About() {
   return (
@@ -8,14 +15,27 @@ export default function About() {
       <GeometricPattern variant="dots" opacity={0.02} />
       <AnimatedSection style={{ position: "relative", zIndex: 1 }}>
         <Flex direction="column" justify="center" align="center">
-          <Heading mb="4" size="8">About</Heading>
-          <Container p="4" mx="4" my="8" size="3" className="sg-card">
+          <Heading mb="4" size="8" className="section-title">About</Heading>
+          <Container p="6" mx="4" my="8" size="3" className="sg-card">
+            {/* Lead statement with gold accent */}
+            <Text size="5" weight="medium" mb="4" style={{ color: "var(--sg-secondary)", display: "block" }}>
+              15 years crafting performant, user-centered web applications.
+            </Text>
+
+            {/* Key competency badges */}
+            <Flex gap="2" wrap="wrap" mb="4">
+              {KEY_STRENGTHS.map((strength) => (
+                <Badge key={strength} size="2" className="sg-badge--featured">
+                  {strength}
+                </Badge>
+              ))}
+            </Flex>
+
+            {/* Expanded description */}
             <Text size="4">
-              I have 15 years of experience building performant, user-centered web applications across B2B and B2C domains
-              in agile software development teams. I specialize in React frameworks and excel at translating complex technical
-              requirements into scalable UI systems. I bring deep experience with design systems, component architecture,
-              refactoring and cross-functional collaboration—and I&apos;m seeking frontend software engineering roles where thoughtful
-              code meets innovation.
+              Specializing in B2B and B2C domains within agile teams. Expert at translating
+              complex technical requirements into scalable UI systems—seeking frontend roles
+              where thoughtful code meets innovation.
             </Text>
           </Container>
         </Flex>

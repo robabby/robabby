@@ -6,6 +6,7 @@ import AnimatedSection from "./AnimatedSection";
 const PROJECTS = [
   {
     title: "Sacred Geometry Webapp",
+    category: "Web App",
     callout: null,
     githubLink: "https://github.com/robabby/sacred-geometry",
     liveLink: "https://sacred-geometry.vercel.app/",
@@ -17,6 +18,7 @@ const PROJECTS = [
   },
   {
     title: "AI Art Gallery",
+    category: "Gallery",
     callout: null,
     githubLink: "https://github.com/robabby/robabby",
     liveLink: "/art",
@@ -28,6 +30,7 @@ const PROJECTS = [
   },
   {
     title: "ai-chatbot",
+    category: "AI Tool",
     callout: "[09/26/2025] Site loads, but chat responses currently not working.  Debugging...",
     githubLink: "https://github.com/robabby/ai-chatbot",
     liveLink: "https://ai-chatbot-psi-green-88.vercel.app/",
@@ -39,6 +42,7 @@ const PROJECTS = [
   },
   {
     title: "tldr-bot",
+    category: "Bot",
     callout: null,
     githubLink: "https://github.com/robabby/tldr-bot",
     liveLink: null,
@@ -64,7 +68,7 @@ export default function Projects() {
           direction="column"
           justify="center"
         >
-        <Heading mb="8" size="8">
+        <Heading mb="8" size="8" className="section-title">
           Projects
         </Heading>
         {PROJECTS.map((proj, index) => (
@@ -76,6 +80,9 @@ export default function Projects() {
             p="4"
             className="sg-card"
           >
+            <Badge size="1" mb="2" className="sg-badge--featured">
+              {proj.category}
+            </Badge>
             <Heading mb="4" size="4">{proj.title}</Heading>
             {proj.callout && (
               <Callout.Root mb="4">

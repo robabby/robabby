@@ -11,6 +11,12 @@ body {
 :root {
   --font-display: 'Outfit', sans-serif;
   --font-body: 'Crimson Pro', serif;
+  --font-mystical: 'Cinzel', serif;
+
+  /* Line heights */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.6;
+  --line-height-relaxed: 1.75;
 
   /* Sacred geometry palette */
   --sg-void: #0a0c10;
@@ -37,6 +43,7 @@ body {
 
 body {
   font-family: var(--font-body);
+  line-height: var(--line-height-relaxed);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -60,25 +67,36 @@ h2 {
   opacity: 0.7;
 }
 
-/* Section titles - larger, more dramatic */
+/* Section titles - using Cinzel for mystical elegance */
 .section-title {
-  font-family: var(--font-display);
-  font-weight: 300;
-  font-size: 3rem;
-  letter-spacing: -0.02em;
+  font-family: var(--font-mystical);
+  font-weight: 400;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  letter-spacing: 0.05em;
+  color: var(--sg-text-primary);
   position: relative;
 }
 
-/* Geometric accent line under section titles */
+/* Gold accent line under section titles */
 .section-title::after {
   content: '';
   display: block;
   width: 60px;
   height: 2px;
-  background: linear-gradient(90deg, var(--sg-primary), transparent);
+  background: linear-gradient(90deg, var(--sg-secondary), transparent);
   margin-top: 1rem;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* Category/subtitle headings */
+.section-subtitle {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 0.875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sg-secondary);
 }
 
 /* Sacred geometry cards */
@@ -131,6 +149,43 @@ h2 {
 .sg-badge:hover {
   background: rgba(74, 158, 255, 0.2);
   border-color: rgba(74, 158, 255, 0.4);
+}
+
+/* Featured badge - gold accent for highlighted skills */
+.sg-badge--featured {
+  background: rgba(201, 169, 98, 0.12);
+  border: 1px solid rgba(201, 169, 98, 0.25);
+  color: var(--sg-secondary);
+  font-weight: 600;
+}
+
+.sg-badge--featured:hover {
+  background: rgba(201, 169, 98, 0.2);
+  border-color: rgba(201, 169, 98, 0.4);
+}
+
+/* Date badge - for experience timeline */
+.date-badge {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sg-secondary);
+  border-left: 2px solid var(--sg-secondary);
+  padding-left: 0.5rem;
+}
+
+/* Current role card highlight */
+.sg-card--current {
+  border-color: rgba(201, 169, 98, 0.3);
+  box-shadow: 0 0 20px rgba(201, 169, 98, 0.1);
+}
+
+.sg-card--current:hover {
+  border-color: rgba(201, 169, 98, 0.5);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 0 30px rgba(201, 169, 98, 0.15);
 }
 
 /* Footer link styles */

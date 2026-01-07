@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Button, Container, Flex, Heading, Text } from "@radix-ui/themes";
+import { Badge, Box, Button, Container, Flex, Heading, Text } from "@radix-ui/themes";
 import { RowSpacingIcon, Cross2Icon } from "@radix-ui/react-icons";
 import * as Collapsible from "@radix-ui/react-collapsible";
 import React from "react";
@@ -15,15 +15,17 @@ type ExperienceItemType = {
   period: string;
   description: string;
   highlights: string[];
+  isCurrent?: boolean;
 }
 
 export default function Experience({
-  title, 
-  company, 
-  companyLink, 
-  period, 
-  description, 
-  highlights
+  title,
+  company,
+  companyLink,
+  period,
+  description,
+  highlights,
+  isCurrent = false
 }: ExperienceItemType) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -33,13 +35,25 @@ export default function Experience({
       open={isOpen}
       onOpenChange={setIsOpen}
     >
-      <Container p="4" mx="4" my="8" size="3" className="sg-card">
+      <Container p="4" mx="4" my="8" size="3" className={`sg-card ${isCurrent ? 'sg-card--current' : ''}`}>
+        {isCurrent && (
+          <Badge
+            size="1"
+            mb="2"
+            style={{
+              background: "var(--sg-secondary)",
+              color: "var(--sg-void)"
+            }}
+          >
+            Current Role
+          </Badge>
+        )}
         <Heading size="6">{title}</Heading>
-        <Flex direction="row" justify="between" my="2">
+        <Flex direction="row" justify="between" my="2" align="center">
           <Text>
-            <a href={companyLink} target="_blank" rel="noopener noreferrer">{company}</a>
+            <a href={companyLink} target="_blank" rel="noopener noreferrer" style={{ color: "var(--sg-primary)" }}>{company}</a>
           </Text>
-          <Text>{period}</Text>
+          <Text className="date-badge">{period}</Text>
         </Flex>
         <Text>{description}</Text>
         <Box mb="4">
