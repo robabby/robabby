@@ -8,7 +8,7 @@ const EXPERIENCE = [
     title: "IT Manager",
     company: "VIMSIA",
     companyLink: "https://www.vimsia.org",
-    period: "2025 - PRESENT",
+    period: "2025 - 2025",
     description: "Leading modernization of internal tech infrastructure and web tools at an international Montessori/IB school.",
     highlights: [
       "Oversee system performance (98% uptime) and digital transformation initiatives integrating cloud, automation, and web technologies.",
@@ -98,7 +98,6 @@ export default function Experience() {
                 period={period}
                 description={description}
                 highlights={highlights}
-                isCurrent={index === 0}
                 key={index}
               />
             ))}

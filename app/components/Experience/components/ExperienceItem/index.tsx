@@ -1,6 +1,6 @@
 "use client";
 
-import { Badge, Box, Button, Container, Flex, Heading, Text } from "@radix-ui/themes";
+import { Box, Button, Container, Flex, Heading, Text } from "@radix-ui/themes";
 import { RowSpacingIcon, Cross2Icon } from "@radix-ui/react-icons";
 import * as Collapsible from "@radix-ui/react-collapsible";
 import React from "react";
@@ -15,7 +15,6 @@ type ExperienceItemType = {
   period: string;
   description: string;
   highlights: string[];
-  isCurrent?: boolean;
 }
 
 export default function Experience({
@@ -24,8 +23,7 @@ export default function Experience({
   companyLink,
   period,
   description,
-  highlights,
-  isCurrent = false
+  highlights
 }: ExperienceItemType) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -35,19 +33,7 @@ export default function Experience({
       open={isOpen}
       onOpenChange={setIsOpen}
     >
-      <Container p="4" mx="4" my="8" size="3" className={`sg-card ${isCurrent ? 'sg-card--current' : ''}`}>
-        {isCurrent && (
-          <Badge
-            size="1"
-            mb="2"
-            style={{
-              background: "var(--sg-secondary)",
-              color: "var(--sg-void)"
-            }}
-          >
-            Current Role
-          </Badge>
-        )}
+      <Container p="4" mx="4" my="8" size="3" className="sg-card">
         <Heading size="6">{title}</Heading>
         <Flex direction="row" justify="between" my="2" align="center">
           <Text>
