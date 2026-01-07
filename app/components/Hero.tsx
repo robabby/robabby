@@ -1,9 +1,10 @@
 "use client";
 
 import { Box, Button, Container, Flex, Heading, IconButton, Link, Section, Text } from "@radix-ui/themes";
-import { EnvelopeClosedIcon, GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
+import { DownloadIcon, EnvelopeClosedIcon, GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import { motion, useScroll, useTransform, useReducedMotion } from "motion/react";
 import { useRef } from "react";
+import Image from "next/image";
 import MetatronsCube from "./MetatronsCube";
 import AmbientParticles from "./AmbientParticles";
 import "./Hero.css";
@@ -44,15 +45,30 @@ export default function Hero() {
       <Box py="9" style={{ position: "relative" }}>
         <AmbientParticles />
 
-        <motion.div style={{ y: cubeY, opacity }}>
+        <motion.div style={{ y: cubeY, opacity }} className="hero-cube-container">
           <MetatronsCube />
         </motion.div>
 
         <motion.div style={{ y: textY, opacity, position: "relative", zIndex: 1 }}>
           <Container py="8" size="3">
             <Flex direction="column" gap="4" align="center">
+              <motion.div
+                className="hero-portrait"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.3, duration: 0.6, ease: "easeOut" }}
+              >
+                <Image
+                  src="/profile.jpeg"
+                  alt="Rob Abby - Staff Frontend Engineer"
+                  width={150}
+                  height={150}
+                  priority
+                  className="hero-portrait-image"
+                />
+              </motion.div>
               <Heading mb="2" size="9" style={{ textShadow: "0 2px 4px rgba(0, 0, 0, 0.3)" }}>Rob Abby</Heading>
-              <Text size="7" style={{ color: "var(--sg-text-primary)", textShadow: "0 1px 3px rgba(0, 0, 0, 0.3)" }}>Product Engineer</Text>
+              <Text size="7" style={{ color: "var(--sg-text-primary)", textShadow: "0 1px 3px rgba(0, 0, 0, 0.3)" }}>Staff Frontend Engineer</Text>
               <Text size="3" mb="4" style={{ color: "var(--sg-secondary)", letterSpacing: "0.1em", fontFamily: "var(--font-display)", textShadow: "0 1px 2px rgba(0, 0, 0, 0.3)" }}>
                 15+ Years Building Web Experiences
               </Text>
@@ -73,9 +89,16 @@ export default function Hero() {
                   </IconButton>
                 </Link>
               </Flex>
-              <Button size="3" asChild style={{ cursor: "pointer" }}>
-                <a href="#experience">View Experience</a>
-              </Button>
+              <Flex direction="row" gap="3">
+                <Button size="3" asChild style={{ cursor: "pointer" }}>
+                  <a href="#experience">View Experience</a>
+                </Button>
+                <Button size="3" variant="outline" asChild className="resume-button">
+                  <a href="/robert-abby-resume.pdf" download>
+                    <DownloadIcon /> Resume
+                  </a>
+                </Button>
+              </Flex>
             </Flex>
           </Container>
         </motion.div>

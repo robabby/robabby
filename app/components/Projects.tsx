@@ -2,6 +2,7 @@ import { Badge, Box, Button, Callout, Container, Flex, Heading, Link, Text } fro
 import { InfoCircledIcon } from "@radix-ui/react-icons";
 import GeometricPattern from "./GeometricPattern";
 import AnimatedSection from "./AnimatedSection";
+import "./Projects.css";
 
 const PROJECTS = [
   {
@@ -14,7 +15,8 @@ const PROJECTS = [
     description: "A site for navigating Platonic Solids, Sacred Geometry concepts, and related mathematical structures. Features in-depth information and search functionality.",
     tech: [
       "Nextjs", "radix-ui", "TypeScript", "MDX", "Jest", "Vitest"
-    ]
+    ],
+    gradientType: "blue"
   },
   {
     title: "AI Art Gallery",
@@ -26,7 +28,8 @@ const PROJECTS = [
     description: "A smattering of AI-generated art pieces created using various tools including Midjourney, DALL·E 3, and Stable Diffusion. Showcased in a sleek, responsive Next.js application (this site).",
     tech: [
       "Nextjs", "radix-ui", "Midjourney", "DALL-E", "Flux.1", "Invoke UI"
-    ]
+    ],
+    gradientType: "gold"
   },
   {
     title: "ai-chatbot",
@@ -38,7 +41,8 @@ const PROJECTS = [
     description: "ChatGPT/Grok clone built with Next.js, TailwindCSS, Grok and OpenAI API. Features include conversation history, user authentication, and a sleek, responsive design.",
     tech: [
       "Nextjs", "shadcn/ui", "radix-ui", "OpenAI API", "Grok API", "TypeScript", "Vercel Chat SDK"
-    ]
+    ],
+    gradientType: "purple"
   },
   {
     title: "tldr-bot",
@@ -49,7 +53,8 @@ const PROJECTS = [
     description: "A Discord bot written in Python that leverages OpenAI's GPT-5 API to generate sarcastic summaries of recent messages in a channel. Will also generate memes based on message contents.",
     tech: [
       "Python", "Discord.py", "OpenAI GPT-5 API"
-    ]
+    ],
+    gradientType: "green"
   }
 ]
 
@@ -77,13 +82,16 @@ export default function Projects() {
             size="3"
             mx="4"
             mb="8"
-            p="4"
-            className="sg-card"
+            className="sg-card project-card"
           >
-            <Badge size="1" mb="2" className="sg-badge--featured">
-              {proj.category}
-            </Badge>
-            <Heading mb="4" size="4">{proj.title}</Heading>
+            <Box className={`project-visual project-visual--${proj.gradientType}`}>
+              <Box className="project-visual-pattern" />
+            </Box>
+            <Box p="4">
+              <Badge size="1" mb="2" className="sg-badge--featured">
+                {proj.category}
+              </Badge>
+              <Heading mb="4" size="4">{proj.title}</Heading>
             {proj.callout && (
               <Callout.Root mb="4">
                 <Callout.Icon>
@@ -104,21 +112,22 @@ export default function Projects() {
                 </Badge>
               ))}
             </Flex>
-            <Box>
-              {proj.githubLink && (
-                <Button asChild mb="2" mr="2">
-                  <Link href={proj.githubLink} target="_blank">
-                    Github Link
-                  </Link>
-                </Button>
-              )}
-              {proj.liveLink && (
-                <Button mb="2">
-                  <Link href={proj.liveLink} target={proj._target}>
-                    Demo Link
-                  </Link>
-                </Button>
-              )}
+              <Box>
+                {proj.githubLink && (
+                  <Button asChild mb="2" mr="2">
+                    <Link href={proj.githubLink} target="_blank">
+                      Github Link
+                    </Link>
+                  </Button>
+                )}
+                {proj.liveLink && (
+                  <Button mb="2">
+                    <Link href={proj.liveLink} target={proj._target}>
+                      Demo Link
+                    </Link>
+                  </Button>
+                )}
+              </Box>
             </Box>
           </Container>
         ))}

@@ -124,11 +124,12 @@ h2 {
 }
 
 .sg-card:hover {
-  border-color: rgba(100, 150, 255, 0.25);
-  transform: translateY(-2px);
+  border-color: rgba(100, 150, 255, 0.35);
+  transform: translateY(-4px) scale(1.005);
   box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.3),
-    0 0 0 1px rgba(74, 158, 255, 0.1);
+    0 12px 40px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(74, 158, 255, 0.15),
+    0 0 60px rgba(74, 158, 255, 0.08);
 }
 
 .sg-card:hover::before {
@@ -186,6 +187,27 @@ h2 {
   box-shadow:
     0 8px 32px rgba(0, 0, 0, 0.3),
     0 0 30px rgba(201, 169, 98, 0.15);
+}
+
+/* Featured role card highlight */
+.sg-card--featured {
+  border-color: rgba(201, 169, 98, 0.3);
+  border-left: 3px solid var(--sg-secondary);
+  box-shadow: 0 0 25px rgba(201, 169, 98, 0.12);
+}
+
+.sg-card--featured:hover {
+  border-color: rgba(201, 169, 98, 0.5);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 0 35px rgba(201, 169, 98, 0.18);
+}
+
+/* Metric highlight for numbers in text */
+.metric-highlight {
+  color: var(--sg-secondary);
+  font-weight: 600;
+  font-family: var(--font-display);
 }
 
 /* Footer link styles */

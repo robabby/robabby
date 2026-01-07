@@ -24,8 +24,8 @@ const cinzel = Cinzel({
 });
 
 export const metadata = {
-  title: "Rob Abby - Product Engineer",
-  description: "Personal website of Rob Abby, a Product Engineer specializing in creating exceptional web experiences.",
+  title: "Rob Abby - Staff Frontend Engineer",
+  description: "Staff Frontend Engineer with 15+ years building exceptional web experiences for startups and enterprises. Expert in React, TypeScript, and design systems.",
 }
 
 export default function RootLayout({
