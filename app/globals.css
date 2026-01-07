@@ -27,8 +27,8 @@ body {
   /* Accent colors - ethereal blues and golds */
   --sg-primary: #4a9eff;
   --sg-primary-glow: rgba(74, 158, 255, 0.4);
-  --sg-secondary: #c9a962;
-  --sg-secondary-glow: rgba(201, 169, 98, 0.3);
+  --sg-secondary: #d4b872;
+  --sg-secondary-glow: rgba(212, 184, 114, 0.3);
 
   /* Text */
   --sg-text-primary: rgba(255, 255, 255, 0.92);

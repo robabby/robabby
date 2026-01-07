@@ -53,7 +53,7 @@ export default function Hero() {
             <Flex direction="column" gap="4" align="center">
               <Heading mb="2" size="9">Rob Abby</Heading>
               <Text size="7" style={{ color: "var(--sg-text-primary)" }}>Product Engineer</Text>
-              <Text size="3" mb="4" style={{ color: "var(--sg-secondary)", letterSpacing: "0.1em", fontFamily: "var(--font-display)" }}>
+              <Text size="3" mb="4" style={{ color: "var(--sg-secondary)", letterSpacing: "0.1em", fontFamily: "var(--font-display)", textShadow: "0 1px 2px rgba(0, 0, 0, 0.3)" }}>
                 15+ Years Building Web Experiences
               </Text>
               <Flex direction="row" gap="4" mb="4">
