@@ -34,7 +34,7 @@ export default function AnimatedSection({
       }}
       viewport={{
         once: true,
-        amount: 0.2
+        amount: 0.1
       }}
     >
       {children}
