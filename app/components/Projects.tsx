@@ -71,9 +71,9 @@ export default function Projects() {
       <AnimatedSection style={{ position: "relative", zIndex: 1 }}>
         <Container size="4" px="6">
           {/* Asymmetric grid layout */}
-          <Flex direction={{ initial: "column", md: "row" }} gap="8" align="start">
+          <Flex direction={{ initial: "column", md: "row" }} gap={{ initial: "4", md: "8" }} align="start">
             {/* Left column - Section header */}
-            <Box style={{ flex: "0 0 200px" }}>
+            <Box className="section-header-column">
               <Text className="section-subtitle" mb="2" style={{ display: "block" }}>
                 Work
               </Text>

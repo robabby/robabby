@@ -113,6 +113,17 @@ h2 {
   color: var(--sg-secondary);
 }
 
+/* Section header column - fixed width on desktop, auto on mobile */
+.section-header-column {
+  flex: 0 0 auto;
+}
+
+@media (min-width: 768px) {
+  .section-header-column {
+    flex: 0 0 200px;
+  }
+}
+
 /* Sacred geometry cards */
 .sg-card {
   background: var(--sg-gradient-card);
