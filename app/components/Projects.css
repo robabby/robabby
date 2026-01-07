@@ -53,13 +53,57 @@
     radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
     radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.02) 2px, transparent 2px);
   background-size: 40px 40px, 60px 60px, 80px 80px;
+  z-index: 1;
 }
 
-/* Hover effect */
-.project-card:hover .project-visual {
-  background-position: 100% 100%;
+/* Bottom gradient scrim for text readability */
+.project-visual::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80%;
+  background: linear-gradient(
+    to top,
+    rgba(10, 12, 16, 0.85) 0%,
+    rgba(10, 12, 16, 0.6) 40%,
+    rgba(10, 12, 16, 0.2) 70%,
+    transparent 100%
+  );
+  z-index: 1;
+  pointer-events: none;
 }
 
+/* Header content container - positions badge and title at bottom */
+.project-visual-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 2;
+}
+
+/* Title styling for readability */
+.project-visual-title {
+  color: var(--sg-text-primary);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Badge positioning adjustment within header */
+.project-visual-content .sg-badge--featured {
+  align-self: flex-start;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+
+/* Hover effect - subtle highlight overlay */
 .project-card:hover .project-visual::after {
   content: '';
   position: absolute;
@@ -69,4 +113,5 @@
     rgba(255, 255, 255, 0.02) 0%,
     transparent 100%
   );
+  pointer-events: none;
 }
