@@ -15,6 +15,7 @@ type ExperienceItemType = {
   period: string;
   description: string;
   highlights: string[];
+  featured?: boolean;
 }
 
 export default function Experience({
@@ -23,9 +24,10 @@ export default function Experience({
   companyLink,
   period,
   description,
-  highlights
+  highlights,
+  featured = false
 }: ExperienceItemType) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(featured);
 
   return (
     <Collapsible.Root
@@ -33,7 +35,7 @@ export default function Experience({
       open={isOpen}
       onOpenChange={setIsOpen}
     >
-      <Container p="4" mx="4" my="8" size="3" className="sg-card">
+      <Container p="4" mx="4" my="8" size="3" className={`sg-card ${featured ? 'sg-card--featured' : ''}`}>
         <Heading size="6">{title}</Heading>
         <Flex direction="row" justify="between" my="2" align="center">
           <Text>

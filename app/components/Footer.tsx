@@ -3,6 +3,7 @@ import {
   LinkedInLogoIcon,
   GitHubLogoIcon,
   EnvelopeClosedIcon,
+  FileTextIcon,
 } from "@radix-ui/react-icons";
 
 export default function Footer() {
@@ -29,22 +30,40 @@ export default function Footer() {
           <Flex direction="column" justify="between" align="center" gap="6">
             {/* Availability CTA */}
             <Box
-              p="4"
+              p="6"
               style={{
-                background: "rgba(201, 169, 98, 0.08)",
-                border: "1px solid rgba(201, 169, 98, 0.2)",
-                borderRadius: "8px",
+                background: "rgba(201, 169, 98, 0.12)",
+                border: "2px solid rgba(201, 169, 98, 0.4)",
+                borderRadius: "12px",
                 textAlign: "center",
+                boxShadow: "0 0 40px rgba(201, 169, 98, 0.15)",
               }}
             >
-              <Text size="3" style={{ color: "var(--sg-secondary)" }}>
-                Open to new opportunities
+              <Flex align="center" justify="center" gap="2" mb="2">
+                <Box
+                  style={{
+                    width: 8,
+                    height: 8,
+                    borderRadius: "50%",
+                    background: "#22c55e",
+                    boxShadow: "0 0 8px #22c55e",
+                  }}
+                />
+                <Text size="2" style={{ color: "var(--sg-text-secondary)" }}>
+                  Available for opportunities
+                </Text>
+              </Flex>
+              <Text
+                size="5"
+                weight="bold"
+                style={{ color: "var(--sg-secondary)", display: "block" }}
+                mb="3"
+              >
+                Let&apos;s Build Something Great
               </Text>
-              <Box mt="3">
-                <Button size="2" asChild style={{ cursor: "pointer" }}>
-                  <a href="mailto:robabby23@gmail.com">Get in Touch</a>
-                </Button>
-              </Box>
+              <Button size="3" asChild style={{ cursor: "pointer" }}>
+                <a href="mailto:robabby23@gmail.com">Get in Touch</a>
+              </Button>
             </Box>
 
             {/* Social links */}
@@ -90,6 +109,20 @@ export default function Footer() {
                 <Flex align="center" gap="1">
                   <EnvelopeClosedIcon />
                   <Text size="2">Email</Text>
+                </Flex>
+              </Link>
+              <Link
+                href="/robert-abby-resume.pdf"
+                download
+                style={{
+                  color: "var(--sg-text-secondary)",
+                  transition: "color 0.2s",
+                }}
+                className="footer-link"
+              >
+                <Flex align="center" gap="1">
+                  <FileTextIcon />
+                  <Text size="2">Resume</Text>
                 </Flex>
               </Link>
             </Flex>

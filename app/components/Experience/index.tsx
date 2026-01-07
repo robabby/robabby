@@ -22,6 +22,7 @@ const EXPERIENCE = [
     companyLink: "https://www.partyslate.com",
     period: "2018 - 2024",
     description: "Supported growth at PartySlate, a dual-sided marketplace platform, from a 12-person early-stage startup to a +50-employee Series-B company while averaging 258.33% revenue growth year-over-year.",
+    featured: true,
     highlights: [
       "Spearheaded 10+ large-scale features used by 200k+ users monthly in a React & NextJS frontend and Ruby on Rails backend from requirements phase through agile development and cross-functional definition process, resulting in a 25% increase in user engagement year-over-year.",
       "Led the rewrite of Find Venues Page, the most impactful page on the website, to provide an interactive Map-view and redesigned search results, leading to  a 150% increase in Venue inquiries.",
@@ -89,7 +90,8 @@ export default function Experience() {
               companyLink,
               period,
               description,
-              highlights
+              highlights,
+              featured
              }, index) => (
               <ExperienceItem
                 title={title}
@@ -98,6 +100,7 @@ export default function Experience() {
                 period={period}
                 description={description}
                 highlights={highlights}
+                featured={featured}
                 key={index}
               />
             ))}
