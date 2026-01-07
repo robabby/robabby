@@ -323,10 +323,10 @@ h2 {
   animation: shimmer 3s ease-in-out infinite;
 }
 
-/* Skill hero badge - circular featured skill display */
+/* Skill hero badge - circular featured skill display with fluid sizing */
 .skill-hero-badge {
-  width: 80px;
-  height: 80px;
+  width: clamp(60px, 18vw, 80px);
+  height: clamp(60px, 18vw, 80px);
   border-radius: 50%;
   border: 2px solid var(--sg-secondary);
   background: rgba(201, 169, 98, 0.08);
@@ -334,7 +334,7 @@ h2 {
   align-items: center;
   justify-content: center;
   font-family: var(--font-display);
-  font-size: 0.7rem;
+  font-size: clamp(0.55rem, 1.5vw, 0.7rem);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.02em;
@@ -351,11 +351,11 @@ h2 {
   border-color: var(--sg-gold-bright);
 }
 
-/* Skill hero badges container - 2x2 grid on mobile */
+/* Skill hero badges container - fluid 2x2 grid */
 .skill-hero-badges {
   display: grid;
-  grid-template-columns: repeat(2, 80px);
-  gap: 0.75rem;
+  grid-template-columns: repeat(2, minmax(60px, 80px));
+  gap: clamp(0.5rem, 2vw, 0.75rem);
   justify-content: start;
 }
 
@@ -363,11 +363,5 @@ h2 {
   .skill-hero-badges {
     justify-content: center;
     margin-top: 1.5rem;
-  }
-
-  .skill-hero-badge {
-    width: 70px;
-    height: 70px;
-    font-size: 0.6rem;
   }
 }
