@@ -20,6 +20,18 @@ const PROJECTS = [
     featured: true
   },
   {
+    title: "Claude Skills",
+    category: "Tool",
+    callout: null,
+    githubLink: "https://github.com/robabby/claude-skills",
+    liveLink: null,
+    _target: "_blank",
+    description: "A cross-session memory system for Claude Code that uses Obsidian as persistent storage. Includes 6 skills for memory management: hydrate, remember, recall, reflect, glean, and pickup.",
+    tech: ["Claude Code", "Obsidian", "MCP", "TypeScript"],
+    gradientType: "purple",
+    featured: false
+  },
+  {
     title: "AI Art Gallery",
     category: "Gallery",
     callout: null,
