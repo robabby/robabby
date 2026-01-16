@@ -50,6 +50,26 @@ When creating issues, always associate them with the `robabby.com` project.
 
 ## Development Workflow
 
+### Git Workflow (Required)
+
+**Never commit directly to `main`.** All changes must go through a pull request.
+
+1. **Start with a Linear ticket** - Every change needs a corresponding Linear issue in the `robabby.com` project
+2. **Use the ticket's branch** - Linear auto-generates branch names (e.g., `sg-238-add-claude-skills-to-projects-section`). Always use this branch.
+3. **Create the branch if needed**:
+   ```bash
+   git checkout -b <linear-branch-name>
+   ```
+4. **Make commits on the feature branch** - Use conventional commit format: `type(scope): description`
+5. **Push and create a PR**:
+   ```bash
+   git push -u origin <branch-name>
+   gh pr create --title "..." --body "..."
+   ```
+6. **Merge via PR** - Linear automatically marks issues as Done when their branch is merged
+
+If asked to make changes without a Linear ticket, ask the user to create one first or offer to create one via the Linear MCP tools.
+
 ### Feature Implementation
 
 Use the `/feature-dev` skill when implementing features. This provides a structured workflow:
