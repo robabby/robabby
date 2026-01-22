@@ -6,11 +6,11 @@ import "./Projects.css";
 
 const PROJECTS = [
   {
-    title: "Sacred Geometry Webapp",
+    title: "WavePoint",
     category: "Web App",
     callout: null,
-    githubLink: "https://github.com/robabby/sacred-geometry",
-    liveLink: "https://sacred-geometry.vercel.app/",
+    githubLink: "https://github.com/robabby/wavepoint",
+    liveLink: "https://wavepoint.space/",
     _target: "_blank",
     description: "A site for navigating Platonic Solids, Sacred Geometry concepts, and related mathematical structures. Features in-depth information and search functionality.",
     tech: [
