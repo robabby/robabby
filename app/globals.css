@@ -283,6 +283,59 @@ h2 {
   color: var(--color-text);
 }
 
+/* ===========================================
+   ABOUT SECTION
+   =========================================== */
+
+/* About lead - editorial pull-quote style */
+.about-lead {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+}
+
+/* Narrative body paragraphs */
+.about-narrative {
+  color: var(--color-text-2);
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.about-narrative + .about-narrative {
+  margin-top: 1rem;
+}
+
+/* Principles container */
+.about-principles {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border-subtle);
+  margin-top: 0.5rem;
+}
+
+/* Individual principle - editorial accent style */
+.about-principle {
+  padding-left: 1rem;
+  border-left: 2px solid var(--color-primary);
+}
+
+.about-principle-title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--color-text);
+  margin-bottom: 0.25rem;
+}
+
+.about-principle-description {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--color-text-2);
+  line-height: 1.6;
+}
 
 /* ===========================================
    SKILLS SECTION - EDITORIAL STYLE
