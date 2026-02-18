@@ -1,0 +1,79 @@
+/* Case study teaser card layout */
+.case-study-card {
+  padding: 1.5rem;
+}
+
+/* Title styling - display font */
+.case-study-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--color-text);
+  line-height: 1.3;
+}
+
+/* Metrics row - horizontal flex with top border */
+.case-study-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+/* Individual metric block */
+.case-study-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+/* Metric value - large number in primary color (body font for clean numerals) */
+.case-study-metric-value {
+  font-family: var(--font-body);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.2;
+}
+
+/* Metric label - small uppercase muted text */
+.case-study-metric-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-2);
+  line-height: 1.4;
+}
+
+/* Read case study link */
+.case-study-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: gap 0.2s ease;
+}
+
+.case-study-link:hover {
+  gap: 0.75rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .case-study-card {
+    padding: 1.25rem;
+  }
+
+  .case-study-metrics {
+    gap: 1.25rem;
+  }
+
+  .case-study-metric-value {
+    font-size: 1.25rem;
+  }
+}

@@ -65,17 +65,28 @@ Each phase is independently plannable. After completing a phase, update the "Pha
 ---
 
 ### Phase 3: Case Studies
-**Status:** `pending`
-**Goal:** Add 1-2 detailed case studies that prove staff-level work with visuals, architecture decisions, and measurable outcomes.
+**Status:** `completed`
+**Branch:** `phase3-case-studies`
+**Goal:** Add 2 detailed case studies that prove staff-level work with code-generated diagrams, architecture decisions, and measurable outcomes.
 
 **Scope:**
-- PartySlate Venue Page rewrite (primary candidate: 150% inquiry increase, map-view, search redesign)
-- Potentially: Design system / component library work at PartySlate or Savo
-- Format: problem statement, approach, architecture, screenshots/mockups, results
-- May require a new route (`/case-studies/[slug]`) or in-page expandable sections
-- Source screenshots and visual assets
+- PartySlate Venue Page rewrite (150% inquiry increase, map-view, search redesign, Lighthouse 78→95)
+- Savo Design System Leadership (UX team spinout, 50+ research sessions, living design system)
+- Format: problem → approach → architecture → results with inline SVG diagrams
+- Standalone pages at `/case-studies/[slug]` with SSG + metadata
+- Homepage teaser section between Experience and Projects
+- 4 SVG diagram components (server-rendered, CSS variable themed)
 
-**Learnings:** _(updated after completion)_
+**Learnings:**
+- Two case studies cover both pillars of staff-level work: technical depth (PartySlate) and organizational influence (Savo).
+- Code-generated SVG diagrams avoid the need for product screenshots (none available). Using CSS variables makes them theme-consistent.
+- Content in TypeScript data files (not MDX) — consistent with Phase 1 decision to remove MDX. The `data.ts` + `getCaseStudyBySlug()` pattern mirrors `app/art/images.ts`.
+- Copy was drafted collaboratively (presented for review before implementation), matching the Phase 2 workflow.
+- Detail pages use single-column editorial layout (720px max-width) for focused reading, unlike the asymmetric grid used on the homepage.
+- Homepage teaser uses the asymmetric grid pattern (section-header-column left, content right) consistent with About/Skills/Projects.
+- Diagrams are server components with `viewBox` for responsive scaling, `role="img"` + `aria-label` for accessibility.
+- DiagramRenderer component maps string IDs to diagram components with figcaption support.
+- 11 new files, 3 modified files. Clean build with both slugs in static params.
 
 ---
 
