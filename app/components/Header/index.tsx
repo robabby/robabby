@@ -22,7 +22,7 @@ const HOME_LINKS = [
 
 const SUBPAGE_LINKS = [{ href: "/", label: "Home", isBrand: true }];
 
-// Brand mark component with sacred geometry hexagon
+// Brand mark component
 const BrandMark = () => (
   <div className="brand-mark">
     <svg className="brand-geometry" viewBox="0 0 40 40" aria-hidden="true">

@@ -1,13 +1,12 @@
 /* ==========================================================================
    Gallery Page Styles
-   Extends the sacred geometry design system for the art gallery
    ========================================================================== */
 
 /* Gallery page container */
 .gallery-page {
   min-height: 100vh;
   position: relative;
-  background: var(--sg-void);
+  background: var(--color-bg);
 }
 
 /* Gallery section */
@@ -49,7 +48,6 @@
 
 /* ==========================================================================
    Gallery Card
-   Extends .sg-card concept with gallery-specific enhancements
    ========================================================================== */
 
 .gallery-card {
@@ -58,16 +56,16 @@
   border-radius: 12px;
   overflow: hidden;
   position: relative;
-  background: var(--sg-gradient-card);
-  border: 1px solid rgba(100, 150, 255, 0.1);
+  background: var(--gradient-card);
+  border: 1px solid rgba(59, 130, 246, 0.1);
   transition: all 0.3s ease;
 }
 
 .gallery-card:hover {
-  border-color: var(--sg-secondary);
+  border-color: var(--color-secondary);
   transform: translateY(-4px);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4),
-              0 0 20px var(--sg-secondary-glow);
+              0 0 20px var(--color-secondary-glow);
 }
 
 .gallery-card-image {
@@ -94,13 +92,13 @@
 }
 
 .gallery-card-title {
-  color: var(--sg-text-primary);
+  color: var(--color-text);
   font-weight: 500;
   margin: 0;
 }
 
 .gallery-card-tool {
-  color: var(--sg-secondary);
+  color: var(--color-secondary);
   font-size: 0.85rem;
 }
 
@@ -120,9 +118,9 @@
 .cosmic-gradient {
   position: absolute;
   inset: -50%;
-  background: radial-gradient(ellipse at 30% 20%, var(--sg-primary-glow) 0%, transparent 50%),
-              radial-gradient(ellipse at 70% 80%, var(--sg-secondary-glow) 0%, transparent 50%),
-              var(--sg-void);
+  background: radial-gradient(ellipse at 30% 20%, var(--color-primary-glow) 0%, transparent 50%),
+              radial-gradient(ellipse at 70% 80%, var(--color-secondary-glow) 0%, transparent 50%),
+              var(--color-bg);
   animation: cosmic-drift 20s ease-in-out infinite alternate;
 }
 
@@ -172,8 +170,8 @@
   inset: 0;
   background: linear-gradient(
     180deg,
-    var(--sg-void) 0%,
-    rgba(10, 12, 16, 0.95) 60%,
+    var(--color-bg) 0%,
+    rgba(10, 10, 15, 0.95) 60%,
     transparent 100%
   );
   z-index: -1;
@@ -184,21 +182,21 @@
   padding: 8px 16px;
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  background: var(--sg-surface);
-  color: var(--sg-text-secondary);
+  background: var(--color-surface);
+  color: var(--color-text-2);
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .filter-button:hover {
-  border-color: var(--sg-secondary);
-  color: var(--sg-text-primary);
+  border-color: var(--color-primary);
+  color: var(--color-text);
 }
 
 .filter-button.active {
-  background: var(--sg-secondary);
-  color: var(--sg-void);
-  border-color: var(--sg-secondary);
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
 }
 
 .filter-count {
@@ -220,20 +218,19 @@
 }
 
 .gallery-title {
-  font-family: var(--font-mystical), 'Cinzel', Georgia, serif;
+  font-family: var(--font-display), 'Syne', sans-serif;
   font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 400;
   letter-spacing: 0.1em;
-  background: linear-gradient(135deg, var(--sg-secondary) 0%, #e8d5a3 50%, var(--sg-secondary) 100%);
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-primary) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin: 0;
-  text-shadow: 0 0 30px var(--sg-secondary-glow);
 }
 
 .gallery-subtitle {
-  color: var(--sg-text-secondary);
+  color: var(--color-text-2);
   margin-top: 8px;
 }
 
@@ -245,7 +242,7 @@
 .lightbox-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(10, 12, 16, 0.97);
+  background: rgba(10, 10, 15, 0.97);
   backdrop-filter: blur(12px);
   display: flex;
   align-items: center;
@@ -279,8 +276,8 @@
 }
 
 .lightbox-title {
-  font-family: var(--font-mystical), 'Cinzel', Georgia, serif;
-  color: var(--sg-text-primary);
+  font-family: var(--font-display), 'Syne', sans-serif;
+  color: var(--color-text);
   font-size: 1.5rem;
   font-weight: 400;
   letter-spacing: 0.05em;
@@ -288,7 +285,7 @@
 }
 
 .lightbox-tool {
-  color: var(--sg-secondary);
+  color: var(--color-secondary);
 }
 
 .lightbox-close {
@@ -304,7 +301,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: var(--sg-text-primary);
+  color: var(--color-text);
   transition: all 0.2s ease;
   z-index: 101;
   backdrop-filter: blur(8px);
@@ -312,7 +309,7 @@
 
 .lightbox-close:hover {
   background: rgba(28, 33, 40, 0.95);
-  border-color: var(--sg-secondary);
+  border-color: var(--color-primary);
   transform: scale(1.05);
 }
 
@@ -333,7 +330,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--sg-text-primary);
+  color: var(--color-text);
   transition: all 0.2s ease;
   z-index: 101;
   backdrop-filter: blur(8px);
@@ -341,7 +338,7 @@
 
 .lightbox-nav:hover {
   background: rgba(28, 33, 40, 0.95);
-  border-color: var(--sg-secondary);
+  border-color: var(--color-primary);
   transform: translateY(-50%) scale(1.05);
 }
 
@@ -389,9 +386,9 @@
   background: linear-gradient(
     180deg,
     transparent 0%,
-    rgba(10, 12, 16, 0.4) 30%,
-    rgba(10, 12, 16, 0.8) 70%,
-    var(--sg-void) 100%
+    rgba(10, 10, 15, 0.4) 30%,
+    rgba(10, 10, 15, 0.8) 70%,
+    var(--color-bg) 100%
   );
 }
 
@@ -403,11 +400,11 @@
 }
 
 .gallery-hero-title {
-  font-family: var(--font-mystical), 'Cinzel', Georgia, serif;
+  font-family: var(--font-display), 'Syne', sans-serif;
   font-size: clamp(2.5rem, 8vw, 5rem);
   font-weight: 400;
   letter-spacing: 0.15em;
-  background: linear-gradient(135deg, var(--sg-secondary) 0%, #e8d5a3 50%, var(--sg-secondary) 100%);
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-primary) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -416,8 +413,8 @@
 }
 
 .gallery-hero-subtitle {
-  font-family: var(--font-mystical), 'Cinzel', Georgia, serif;
-  color: var(--sg-text-secondary);
+  font-family: var(--font-display), 'Syne', sans-serif;
+  color: var(--color-text-2);
   font-size: clamp(1rem, 2vw, 1.25rem);
   letter-spacing: 0.3em;
   text-transform: uppercase;
@@ -434,7 +431,7 @@
   align-items: center;
   gap: 8px;
   cursor: pointer;
-  color: var(--sg-text-secondary);
+  color: var(--color-text-2);
   transition: color 0.3s ease;
   background: none;
   border: none;
@@ -442,7 +439,7 @@
 }
 
 .gallery-hero-scroll:hover {
-  color: var(--sg-secondary);
+  color: var(--color-primary);
 }
 
 .gallery-hero-scroll-text {

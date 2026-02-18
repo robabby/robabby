@@ -35,9 +35,9 @@ export default function ExperienceItem({
       open={isOpen}
       onOpenChange={setIsOpen}
     >
-      <Box p="5" mb="6" className={`sg-card ${featured ? 'sg-card--featured' : ''}`}>
+      <Box p="5" mb="6" className={`card ${featured ? 'card--featured' : ''}`}>
         <Flex direction="row" justify="between" align="start" mb="2" gap="4">
-          <Heading size="5" style={{ color: featured ? "var(--sg-secondary)" : "var(--sg-text-primary)" }}>
+          <Heading size="5" style={{ color: featured ? "var(--color-primary)" : "var(--color-text)" }}>
             {title}
           </Heading>
           <Text className="date-badge" style={{ whiteSpace: "nowrap" }}>{period}</Text>
@@ -47,12 +47,12 @@ export default function ExperienceItem({
             href={companyLink}
             target="_blank"
             rel="noopener noreferrer"
-            style={{ color: "var(--sg-primary)", textDecoration: "none" }}
+            style={{ color: "var(--color-primary)", textDecoration: "none" }}
           >
             {company}
           </a>
         </Text>
-        <Text size="3" style={{ color: "var(--sg-text-secondary)", display: "block" }} mb="3">
+        <Text size="3" style={{ color: "var(--color-text-2)", display: "block" }} mb="3">
           {description}
         </Text>
         <Box>
@@ -71,7 +71,7 @@ export default function ExperienceItem({
                     position: "relative",
                     paddingLeft: "1rem",
                     marginBottom: "0.5rem",
-                    color: "var(--sg-text-secondary)",
+                    color: "var(--color-text-2)",
                     fontSize: "0.9rem",
                     lineHeight: 1.6
                   }}
@@ -84,7 +84,7 @@ export default function ExperienceItem({
                       width: "4px",
                       height: "4px",
                       borderRadius: "50%",
-                      background: "var(--sg-gold)",
+                      background: "var(--color-primary)",
                       display: "block"
                     }}
                   />
@@ -100,7 +100,7 @@ export default function ExperienceItem({
               variant="ghost"
               size="1"
               style={{
-                color: "var(--sg-secondary)",
+                color: "var(--color-primary)",
                 cursor: "pointer"
               }}
             >

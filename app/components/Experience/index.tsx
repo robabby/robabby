@@ -1,6 +1,5 @@
 import { Box, Container, Flex, Heading, Text } from "@radix-ui/themes";
 import ExperienceItem from "./components/ExperienceItem";
-import GeometricPattern from "../GeometricPattern";
 import AnimatedSection from "../AnimatedSection";
 import "./style.css";
 
@@ -79,8 +78,7 @@ const EXPERIENCE = [
 export default function Experience() {
 
   return (
-    <Box id="experience" py="9" style={{ background: "var(--sg-gradient-section)", position: "relative", overflow: "hidden" }}>
-      <GeometricPattern variant="dots" opacity={0.02} />
+    <Box id="experience" py="9" style={{ background: "var(--gradient-section)", position: "relative", overflow: "hidden" }}>
       <AnimatedSection style={{ position: "relative", zIndex: 1 }}>
         <Flex direction="column" align="center">
           {/* Centered section header */}

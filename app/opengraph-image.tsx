@@ -22,35 +22,9 @@ export default async function Image() {
           justifyContent: "center",
           backgroundColor: "#0a0a0f",
           backgroundImage:
-            "radial-gradient(circle at 25% 25%, rgba(212, 175, 55, 0.1) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(59, 130, 246, 0.1) 0%, transparent 50%)",
+            "radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.1) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(96, 165, 250, 0.08) 0%, transparent 50%)",
         }}
       >
-        {/* Sacred geometry accent */}
-        <div
-          style={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            width: "500px",
-            height: "500px",
-            border: "1px solid rgba(212, 175, 55, 0.1)",
-            borderRadius: "50%",
-          }}
-        />
-        <div
-          style={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%) rotate(60deg)",
-            width: "400px",
-            height: "400px",
-            border: "1px solid rgba(212, 175, 55, 0.08)",
-            borderRadius: "50%",
-          }}
-        />
-
         {/* Content */}
         <div
           style={{
@@ -80,7 +54,7 @@ export default async function Image() {
             style={{
               fontSize: 32,
               fontWeight: 400,
-              color: "#d4af37",
+              color: "#3b82f6",
               marginBottom: 24,
             }}
           >
@@ -133,7 +107,7 @@ export default async function Image() {
             left: 0,
             right: 0,
             height: 4,
-            background: "linear-gradient(90deg, transparent, #d4af37, transparent)",
+            background: "linear-gradient(90deg, transparent, #3b82f6, transparent)",
           }}
         />
       </div>

@@ -1,7 +1,7 @@
 .stats-bar {
-  background: linear-gradient(180deg, var(--sg-surface) 0%, var(--sg-void) 100%);
-  border-top: 1px solid rgba(201, 169, 98, 0.15);
-  border-bottom: 1px solid rgba(201, 169, 98, 0.15);
+  background: linear-gradient(180deg, var(--color-surface) 0%, var(--color-bg) 100%);
+  border-top: 1px solid rgba(59, 130, 246, 0.15);
+  border-bottom: 1px solid rgba(59, 130, 246, 0.15);
   position: relative;
 }
 
@@ -11,7 +11,7 @@
   inset: 0;
   background: radial-gradient(
     ellipse at center,
-    rgba(201, 169, 98, 0.03) 0%,
+    rgba(59, 130, 246, 0.03) 0%,
     transparent 70%
   );
   pointer-events: none;
@@ -33,7 +33,7 @@
   position: relative;
 }
 
-/* Gold dividers between stats on desktop */
+/* Dividers between stats on desktop */
 @media (min-width: 640px) {
   .stat-item:not(:last-child)::after {
     content: '';
@@ -46,7 +46,7 @@
     background: linear-gradient(
       180deg,
       transparent 0%,
-      var(--sg-gold) 50%,
+      var(--color-primary) 50%,
       transparent 100%
     );
   }
@@ -56,14 +56,14 @@
   font-family: var(--font-display);
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 700;
-  color: var(--sg-secondary);
+  color: var(--color-primary);
   line-height: 1.1;
   letter-spacing: -0.02em;
 }
 
 .stat-label {
   font-family: var(--font-display);
-  color: var(--sg-text-secondary);
+  color: var(--color-text-2);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-top: 0.75rem;

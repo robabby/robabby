@@ -11,31 +11,22 @@ export default function Footer() {
     <Box
       asChild
       style={{
-        background: "var(--sg-void)",
-        borderTop: "1px solid rgba(201, 169, 98, 0.15)",
+        background: "var(--color-bg)",
+        borderTop: "1px solid var(--color-border)",
       }}
     >
       <footer>
-        {/* Gold geometric divider */}
-        <Box
-          style={{
-            height: "2px",
-            background:
-              "linear-gradient(90deg, transparent 0%, var(--sg-gold-deep) 20%, var(--sg-gold) 50%, var(--sg-gold-deep) 80%, transparent 100%)",
-          }}
-        />
-
         <Container px="6" py="8">
           <Flex direction="column" justify="between" align="center" gap="6">
             {/* Availability CTA */}
             <Box
               p="6"
               style={{
-                background: "rgba(201, 169, 98, 0.12)",
-                border: "2px solid rgba(201, 169, 98, 0.4)",
+                background: "rgba(59, 130, 246, 0.08)",
+                border: "2px solid rgba(59, 130, 246, 0.25)",
                 borderRadius: "12px",
                 textAlign: "center",
-                boxShadow: "0 0 40px rgba(201, 169, 98, 0.15)",
+                boxShadow: "0 0 40px rgba(59, 130, 246, 0.1)",
               }}
             >
               <Flex align="center" justify="center" gap="2" mb="2">
@@ -48,14 +39,14 @@ export default function Footer() {
                     boxShadow: "0 0 8px #22c55e",
                   }}
                 />
-                <Text size="2" style={{ color: "var(--sg-text-secondary)" }}>
+                <Text size="2" style={{ color: "var(--color-text-2)" }}>
                   Available for opportunities
                 </Text>
               </Flex>
               <Text
                 size="5"
                 weight="bold"
-                style={{ color: "var(--sg-secondary)", display: "block" }}
+                style={{ color: "var(--color-primary)", display: "block" }}
                 mb="3"
               >
                 Let&apos;s Build Something Great
@@ -72,7 +63,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
-                  color: "var(--sg-text-secondary)",
+                  color: "var(--color-text-2)",
                   transition: "color 0.2s",
                 }}
                 className="footer-link"
@@ -87,7 +78,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
-                  color: "var(--sg-text-secondary)",
+                  color: "var(--color-text-2)",
                   transition: "color 0.2s",
                 }}
                 className="footer-link"
@@ -100,7 +91,7 @@ export default function Footer() {
               <Link
                 href="mailto:robabby23@gmail.com"
                 style={{
-                  color: "var(--sg-text-secondary)",
+                  color: "var(--color-text-2)",
                   transition: "color 0.2s",
                 }}
                 className="footer-link"
@@ -114,7 +105,7 @@ export default function Footer() {
                 href="/robert-abby-resume.pdf"
                 download
                 style={{
-                  color: "var(--sg-text-secondary)",
+                  color: "var(--color-text-2)",
                   transition: "color 0.2s",
                 }}
                 className="footer-link"
@@ -128,10 +119,10 @@ export default function Footer() {
 
             {/* Branding */}
             <Flex direction="column" align="center" gap="1">
-              <Text size="1" style={{ color: "var(--sg-text-muted)" }}>
-                Crafted with React, Next.js & Sacred Geometry
+              <Text size="1" style={{ color: "var(--color-text-muted)" }}>
+                Crafted with React & Next.js
               </Text>
-              <Text size="1" style={{ color: "var(--sg-text-muted)" }}>
+              <Text size="1" style={{ color: "var(--color-text-muted)" }}>
                 &copy; {new Date().getFullYear()} Rob Abby
               </Text>
             </Flex>

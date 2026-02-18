@@ -2,7 +2,6 @@
 
 import { Badge, Box, Container, Flex, Heading, Text } from "@radix-ui/themes";
 import { motion } from "motion/react";
-import GeometricPattern from "./GeometricPattern";
 import AnimatedSection from "./AnimatedSection";
 import StaggeredList from "./StaggeredList";
 
@@ -49,7 +48,6 @@ const SKILL_CATEGORIES: Record<string, SkillCategory> = {
 export default function Skills() {
   return (
     <Box id="skills" py="9" className="skills-section">
-      <GeometricPattern variant="lines" opacity={0.02} />
       <AnimatedSection style={{ position: "relative", zIndex: 1 }}>
         <Container size="4" px="6">
           {/* Asymmetric grid layout */}
@@ -85,7 +83,7 @@ export default function Skills() {
             <Box className="skills-categories">
               <StaggeredList style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
                 {Object.entries(SKILL_CATEGORIES).map(([category, { featured, other }]) => (
-                  <Box key={category} className="sg-card skill-category-card">
+                  <Box key={category} className="card skill-category-card">
                     {/* Category header */}
                     <h3 className="skill-category-title">{category}</h3>
 
@@ -101,7 +99,7 @@ export default function Skills() {
                     {/* Supporting skills */}
                     <Flex wrap="wrap" gap="2" className="skill-supporting-container">
                       {other.map((skill) => (
-                        <Badge key={skill} size="2" className="sg-badge">
+                        <Badge key={skill} size="2" className="badge">
                           {skill}
                         </Badge>
                       ))}

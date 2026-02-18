@@ -1,6 +1,5 @@
 import { Badge, Box, Button, Callout, Container, Flex, Heading, Link, Text } from "@radix-ui/themes";
 import { InfoCircledIcon } from "@radix-ui/react-icons";
-import GeometricPattern from "./GeometricPattern";
 import AnimatedSection from "./AnimatedSection";
 import "./Projects.css";
 
@@ -64,9 +63,8 @@ export default function Projects() {
     <Box
       id="projects"
       py="9"
-      style={{ background: "var(--sg-deep)", position: "relative", overflow: "hidden" }}
+      style={{ background: "var(--color-surface)", position: "relative", overflow: "hidden" }}
     >
-      <GeometricPattern variant="hexagons" opacity={0.02} />
       <AnimatedSection style={{ position: "relative", zIndex: 1 }}>
         <Container size="4" px="6">
           {/* Asymmetric grid layout */}
@@ -86,12 +84,12 @@ export default function Projects() {
               {PROJECTS.map((proj, index) => (
                 <Box
                   key={index}
-                  className={`sg-card project-card ${proj.featured ? 'project-card--featured' : ''}`}
+                  className={`card project-card ${proj.featured ? 'project-card--featured' : ''}`}
                 >
                   <Box className={`project-visual project-visual--${proj.gradientType}`}>
                     <Box className="project-visual-pattern" />
                     <Box className="project-visual-content">
-                      <Badge size="1" className="sg-badge--featured">
+                      <Badge size="1" className="badge--featured">
                         {proj.category}
                       </Badge>
                       <Heading size="5" className="project-visual-title">{proj.title}</Heading>
@@ -108,12 +106,12 @@ export default function Projects() {
                         </Callout.Text>
                       </Callout.Root>
                     )}
-                    <Text size="2" style={{ color: "var(--sg-text-secondary)", display: "block" }} mb="3">
+                    <Text size="2" style={{ color: "var(--color-text-2)", display: "block" }} mb="3">
                       {proj.description}
                     </Text>
                     <Flex wrap="wrap" gap="1" mb="4">
                       {proj.tech.map((item, techIndex) => (
-                        <Badge size="1" key={techIndex} className="sg-badge">
+                        <Badge size="1" key={techIndex} className="badge">
                           {item}
                         </Badge>
                       ))}
