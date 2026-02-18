@@ -16,9 +16,9 @@ Each phase is independently plannable. After completing a phase, update the "Pha
 
 ---
 
-### Phase 1: Theme & Typography (Current)
-**Status:** `planning`
-**Branch:** TBD (needs Linear ticket)
+### Phase 1: Theme & Typography
+**Status:** `completed`
+**Branch:** `phase1-theme-typography`
 **Goal:** Replace the Sacred Geometry identity with a design system that communicates "senior engineer" — precise, confident, technically sophisticated.
 
 **Scope:**
@@ -32,7 +32,14 @@ Each phase is independently plannable. After completing a phase, update the "Pha
 
 **Does NOT include:** Content changes, layout restructuring, new sections. Those come in later phases. This phase is purely visual identity.
 
-**Learnings:** _(updated after completion)_
+**Learnings:**
+- Fonts: Syne (display) + Instrument Sans (body) replaced Cinzel/Outfit/Crimson Pro. Two fonts is sufficient.
+- Colors: Blue (#3b82f6) primary + Warm Stone (#a8a29e) secondary on near-black (#0a0a0f). All text passes WCAG AA.
+- Token rename from `--sg-*` to semantic `--color-*`/`--gradient-*`/`--transition-*` touched 16+ files. CSS class rename `.sg-card`→`.card` and `.sg-badge`→`.badge` was equally pervasive.
+- Deleted 5 decorative components (MetatronsCube, AmbientParticles, GeometricPattern, ScrollProgress, SectionDivider) removing ~620 lines.
+- Removed unused dependencies: @radix-ui/colors, react-particles, gray-matter, next-mdx-remote, reading-time.
+- Pre-existing issue: `pnpm lint` (`next lint`) fails with "Invalid project directory" — not related to Phase 1 changes.
+- Design system documented at `docs/ux/design-system.md`.
 
 ---
 
