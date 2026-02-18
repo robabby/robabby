@@ -7,7 +7,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `pnpm dev` - Start development server with Turbopack (runs on http://localhost:3000)
 - `pnpm build` - Build the production application
 - `pnpm start` - Start production server
-- `pnpm lint` - Run ESLint for code quality checks
+- `pnpm lint` - Run ESLint directly (Next.js 16 removed `next lint`)
 
 ## Project Architecture
 

@@ -38,7 +38,7 @@ Each phase is independently plannable. After completing a phase, update the "Pha
 - Token rename from `--sg-*` to semantic `--color-*`/`--gradient-*`/`--transition-*` touched 16+ files. CSS class rename `.sg-card`→`.card` and `.sg-badge`→`.badge` was equally pervasive.
 - Deleted 5 decorative components (MetatronsCube, AmbientParticles, GeometricPattern, ScrollProgress, SectionDivider) removing ~620 lines.
 - Removed unused dependencies: @radix-ui/colors, react-particles, gray-matter, next-mdx-remote, reading-time.
-- Pre-existing issue: `pnpm lint` (`next lint`) fails with "Invalid project directory" — not related to Phase 1 changes.
+- Pre-existing issue: `pnpm lint` (`next lint`) failed with "Invalid project directory" — resolved in Phase 2 (see below).
 - Design system documented at `docs/ux/design-system.md`.
 
 ---
@@ -60,6 +60,7 @@ Each phase is independently plannable. After completing a phase, update the "Pha
 - Engineering principles replaced KEY_STRENGTHS badges — communicate *how Rob thinks* rather than *what Rob knows*, avoiding duplication with the Skills section.
 - ~45 lines of CSS added using existing design tokens. No new dependencies, no layout restructuring. Component stays as server component.
 - Copy was drafted collaboratively (presented for review before code), approved on first pass with no iteration needed.
+- Fixed pre-existing lint breakage: `next lint` was removed in Next.js 16. Migrated to `eslint .` via official codemod, upgraded `eslint-config-next` from 15.1.4 to 16.1.6, removed unused `@eslint/eslintrc`. Fixed 4 pre-existing lint errors (unused import, missing deps, setState-in-effect).
 
 ---
 
