@@ -1,5 +1,4 @@
 import { Badge, Box, Container, Flex, Heading, Text } from "@radix-ui/themes";
-import GeometricPattern from "./GeometricPattern";
 import AnimatedSection from "./AnimatedSection";
 
 const KEY_STRENGTHS = [
@@ -11,8 +10,7 @@ const KEY_STRENGTHS = [
 
 export default function About() {
   return (
-    <Box id="about" py="9" style={{ background: "var(--sg-gradient-section)", position: "relative", overflow: "hidden" }}>
-      <GeometricPattern variant="dots" opacity={0.02} />
+    <Box id="about" py="9" style={{ background: "var(--gradient-section)", position: "relative", overflow: "hidden" }}>
       <AnimatedSection style={{ position: "relative", zIndex: 1 }}>
         <Container size="4" px="6">
           {/* Asymmetric grid layout */}
@@ -37,14 +35,14 @@ export default function About() {
               {/* Key competency badges */}
               <Flex gap="2" wrap="wrap" mb="6">
                 {KEY_STRENGTHS.map((strength) => (
-                  <Badge key={strength} size="2" className="sg-badge--featured">
+                  <Badge key={strength} size="2" className="badge--featured">
                     {strength}
                   </Badge>
                 ))}
               </Flex>
 
               {/* Expanded description */}
-              <Text size="4" style={{ color: "var(--sg-text-secondary)", lineHeight: 1.8 }}>
+              <Text size="4" style={{ color: "var(--color-text-2)", lineHeight: 1.8 }}>
                 Specializing in B2B and B2C domains within agile teams. Expert at translating
                 complex technical requirements into scalable UI systems that drive measurable
                 business outcomes.

@@ -5,28 +5,28 @@
   gap: 1.5rem;
 }
 
-/* Featured project spans full width with gold emphasis */
+/* Featured project spans full width with primary emphasis */
 .projects-masonry .project-card--featured {
   grid-column: 1 / -1;
-  border-color: rgba(201, 169, 98, 0.4);
-  box-shadow: 0 0 30px rgba(201, 169, 98, 0.15);
+  border-color: rgba(59, 130, 246, 0.4);
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.15);
 }
 
 .projects-masonry .project-card--featured:hover {
-  border-color: rgba(201, 169, 98, 0.6);
+  border-color: rgba(59, 130, 246, 0.6);
   box-shadow:
     0 12px 40px rgba(0, 0, 0, 0.4),
-    0 0 40px rgba(201, 169, 98, 0.2);
+    0 0 40px rgba(59, 130, 246, 0.2);
 }
 
-/* Gold gradient overlay for featured project visual */
+/* Primary gradient overlay for featured project visual */
 .project-card--featured .project-visual::after {
   content: '';
   position: absolute;
   inset: 0;
   background: linear-gradient(
     135deg,
-    rgba(201, 169, 98, 0.1) 0%,
+    rgba(59, 130, 246, 0.1) 0%,
     transparent 50%
   );
   pointer-events: none;
@@ -59,8 +59,8 @@
 .project-visual--blue {
   background: linear-gradient(
     135deg,
-    rgba(74, 158, 255, 0.15) 0%,
-    rgba(74, 158, 255, 0.05) 50%,
+    rgba(59, 130, 246, 0.15) 0%,
+    rgba(59, 130, 246, 0.05) 50%,
     rgba(30, 64, 120, 0.2) 100%
   );
 }
@@ -137,14 +137,14 @@
 
 /* Title styling for readability */
 .project-visual-title {
-  color: var(--sg-text-primary);
+  color: var(--color-text);
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
   margin: 0;
   line-height: 1.2;
 }
 
 /* Badge positioning adjustment within header */
-.project-visual-content .sg-badge--featured {
+.project-visual-content .badge--featured {
   align-self: flex-start;
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
