@@ -44,7 +44,8 @@ Each phase is independently plannable. After completing a phase, update the "Pha
 ---
 
 ### Phase 2: About Section & Narrative
-**Status:** `pending`
+**Status:** `completed`
+**Branch:** `phase2-about-narrative`
 **Goal:** Rewrite the About section into a compelling engineering narrative that communicates staff-level philosophy, not just a LinkedIn summary.
 
 **Scope:**
@@ -52,7 +53,13 @@ Each phase is independently plannable. After completing a phase, update the "Pha
 - Consider restructuring the layout to give About more visual weight
 - Revisit key strength badges — make them more meaningful or replace with a different format
 
-**Learnings:** _(updated after completion)_
+**Learnings:**
+- Replaced generic lead statement ("15 years crafting...") and 4 badge chips with 3-block content architecture: editorial lead (Syne pull-quote), 3-paragraph narrative, and 3 engineering principles with left-border accent.
+- Lead statement answers "what kind of engineer" not "how long" — avoids duplicating Hero tagline and StatsBar metrics.
+- Narrative paragraphs thread the career arc (Web2Carz → Savo → project44 → PartySlate) around a staff-level theme: building the systems and teams beneath the feature.
+- Engineering principles replaced KEY_STRENGTHS badges — communicate *how Rob thinks* rather than *what Rob knows*, avoiding duplication with the Skills section.
+- ~45 lines of CSS added using existing design tokens. No new dependencies, no layout restructuring. Component stays as server component.
+- Copy was drafted collaboratively (presented for review before code), approved on first pass with no iteration needed.
 
 ---
 
@@ -134,7 +141,7 @@ These are not templates — they represent the *confidence level* and *precision
 ## Notes for Future Sessions
 
 - This document is the source of truth for the redesign
-- Each phase gets its own Linear ticket and feature branch
+- Each phase gets its own feature branch
 - After completing a phase, update its Status, add Learnings, and note any scope changes that affect downstream phases
 - The site runs on `pnpm dev` at localhost:3000
 - All work follows the git workflow in CLAUDE.md (feature branch -> PR -> merge)
