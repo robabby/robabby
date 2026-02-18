@@ -19,18 +19,13 @@ const STATS: Stat[] = [
 ];
 
 function AnimatedNumber({ value, suffix }: { value: number; suffix: string }) {
-  const [displayValue, setDisplayValue] = useState(0);
+  const prefersReducedMotion = useReducedMotion();
+  const [displayValue, setDisplayValue] = useState(prefersReducedMotion ? value : 0);
   const ref = useRef<HTMLSpanElement>(null);
   const isInView = useInView(ref, { once: true });
-  const prefersReducedMotion = useReducedMotion();
 
   useEffect(() => {
-    if (!isInView) return;
-
-    if (prefersReducedMotion) {
-      setDisplayValue(value);
-      return;
-    }
+    if (!isInView || prefersReducedMotion) return;
 
     const duration = 1500;
     const startTime = Date.now();

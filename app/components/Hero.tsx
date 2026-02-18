@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Button, Container, Flex, Section, Text } from "@radix-ui/themes";
+import { Button, Container, Flex, Section, Text } from "@radix-ui/themes";
 import { DownloadIcon } from "@radix-ui/react-icons";
 import { motion, useScroll, useTransform, useReducedMotion } from "motion/react";
 import { useRef } from "react";

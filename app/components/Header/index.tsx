@@ -73,7 +73,7 @@ export default function Header({ variant = "home" }: HeaderProps) {
     handleScroll(); // Set initial state
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [isSubpage]);
+  }, [isSubpage, LINKS]);
 
   // Animation config
   const duration = prefersReducedMotion ? 0 : 0.5;
