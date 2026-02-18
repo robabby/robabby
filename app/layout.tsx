@@ -1,25 +1,19 @@
 import "@radix-ui/themes/styles.css";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
-import { Outfit, Crimson_Pro, Cinzel } from "next/font/google";
+import { Syne, Instrument_Sans } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Theme } from "@radix-ui/themes";
 
-const outfit = Outfit({
+const syne = Syne({
   subsets: ["latin"],
   variable: "--font-display",
   display: "swap",
 });
 
-const crimsonPro = Crimson_Pro({
+const instrumentSans = Instrument_Sans({
   subsets: ["latin"],
   variable: "--font-body",
-  display: "swap",
-});
-
-const cinzel = Cinzel({
-  subsets: ["latin"],
-  variable: "--font-mystical",
   display: "swap",
 });
 
@@ -49,7 +43,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${outfit.variable} ${crimsonPro.variable} ${cinzel.variable}`}>
+      <body className={`${syne.variable} ${instrumentSans.variable}`}>
         <Theme appearance="dark">
           {children}
         </Theme>
