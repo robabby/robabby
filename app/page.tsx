@@ -5,6 +5,7 @@ import StatsBar from "./components/StatsBar";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
+import CaseStudies from "./components/CaseStudies";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
 
@@ -17,6 +18,7 @@ export default function Home() {
       <About />
       <Skills />
       <Experience />
+      <CaseStudies />
       <Projects />
       <Footer />
     </Box>
