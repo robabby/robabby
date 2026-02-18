@@ -1,35 +1,11 @@
-/* Hero Section - Refined Luxury */
+/* Hero Section */
 .hero-section {
-  background: var(--blue-a9);
+  background: var(--color-bg);
   position: relative;
   overflow: hidden;
   min-height: 100vh;
   display: flex;
   align-items: center;
-}
-
-/* Metatron's Cube - positioned behind portrait on desktop */
-.hero-cube-container {
-  position: absolute;
-  left: 10%;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 0;
-  opacity: 0.15;
-  pointer-events: none;
-}
-
-/* Diagonal gold accent line */
-.hero-diagonal-accent {
-  position: absolute;
-  width: 200%;
-  height: 1px;
-  background: linear-gradient(90deg, var(--sg-secondary), transparent);
-  transform: rotate(-12deg);
-  top: 70%;
-  left: -30%;
-  opacity: 0.2;
-  pointer-events: none;
 }
 
 /* Content wrapper */
@@ -63,10 +39,9 @@
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  border: 4px solid var(--sg-secondary);
+  border: 2px solid var(--color-border);
   box-shadow:
-    0 0 60px rgba(212, 184, 114, 0.4),
-    0 0 120px rgba(74, 158, 255, 0.2),
+    0 0 40px rgba(59, 130, 246, 0.15),
     0 20px 60px rgba(0, 0, 0, 0.5);
   object-fit: cover;
 }
@@ -92,7 +67,7 @@
 
 /* Title */
 .hero-title {
-  color: var(--sg-text-primary);
+  color: var(--color-text);
   font-family: var(--font-display);
   font-weight: 400;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
@@ -111,15 +86,15 @@
 /* Resume button styling */
 .resume-button {
   cursor: pointer;
-  border-color: var(--sg-secondary) !important;
-  color: var(--sg-secondary) !important;
+  border-color: var(--color-secondary) !important;
+  color: var(--color-secondary) !important;
   transition: all 0.2s ease;
 }
 
 .resume-button:hover {
-  background: rgba(212, 184, 114, 0.15) !important;
-  border-color: var(--sg-secondary) !important;
-  box-shadow: 0 0 25px rgba(212, 184, 114, 0.25);
+  background: rgba(59, 130, 246, 0.15) !important;
+  border-color: var(--color-primary) !important;
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.25);
 }
 
 /* ===========================================
@@ -135,11 +110,6 @@
   .hero-portrait-image {
     width: 260px;
     height: 260px;
-  }
-
-  .hero-cube-container {
-    left: 5%;
-    opacity: 0.1;
   }
 }
 
@@ -179,16 +149,6 @@
 
   .hero-cta {
     justify-content: center;
-  }
-
-  .hero-cube-container {
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0.08;
-  }
-
-  .hero-diagonal-accent {
-    display: none;
   }
 }
 

@@ -5,8 +5,6 @@ import { DownloadIcon } from "@radix-ui/react-icons";
 import { motion, useScroll, useTransform, useReducedMotion } from "motion/react";
 import { useRef } from "react";
 import Image from "next/image";
-import MetatronsCube from "./MetatronsCube";
-import AmbientParticles from "./AmbientParticles";
 import "./Hero.css";
 
 export default function Hero() {
@@ -17,12 +15,6 @@ export default function Hero() {
     target: sectionRef,
     offset: ["start start", "end start"]
   });
-
-  const cubeY = useTransform(
-    scrollYProgress,
-    [0, 1],
-    [0, prefersReducedMotion ? 0 : 150]
-  );
 
   const contentY = useTransform(
     scrollYProgress,
@@ -42,16 +34,6 @@ export default function Hero() {
       id="home"
       className="hero-section"
     >
-      <AmbientParticles />
-
-      {/* Metatron's Cube - positioned behind portrait */}
-      <motion.div style={{ y: cubeY, opacity }} className="hero-cube-container">
-        <MetatronsCube />
-      </motion.div>
-
-      {/* Diagonal gold accent line */}
-      <div className="hero-diagonal-accent" aria-hidden="true" />
-
       <motion.div style={{ y: contentY, opacity }} className="hero-content-wrapper">
         <Container size="4" className="hero-container">
           <div className="hero-grid">
