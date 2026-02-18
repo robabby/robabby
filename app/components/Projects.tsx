@@ -6,14 +6,14 @@ import "./Projects.css";
 const PROJECTS = [
   {
     title: "WavePoint",
-    category: "Web App",
+    category: "Platform",
     callout: null,
-    githubLink: "https://github.com/robabby/wavepoint",
+    githubLink: null,
     liveLink: "https://wavepoint.space/",
     _target: "_blank",
-    description: "A site for navigating Platonic Solids, Sacred Geometry concepts, and related mathematical structures. Features in-depth information and search functionality.",
+    description: "A cross-platform product shipping a Next.js web app and 6 native Apple apps from a single monorepo. Shared TypeScript content packages, a Swift astronomy engine for real-time calculations, Supabase auth, and Stripe payments \u2014 all coordinated across web, iOS, iPadOS, and macOS.",
     tech: [
-      "Nextjs", "radix-ui", "TypeScript", "MDX", "Jest", "Vitest"
+      "Next.js", "React", "TypeScript", "Supabase", "Stripe", "Swift", "SwiftUI"
     ],
     gradientType: "blue",
     featured: true
