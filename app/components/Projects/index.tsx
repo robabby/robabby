@@ -1,9 +1,31 @@
 import { Badge, Box, Button, Callout, Container, Flex, Heading, Link, Text } from "@radix-ui/themes";
 import { InfoCircledIcon } from "@radix-ui/react-icons";
-import AnimatedSection from "./AnimatedSection";
-import "./Projects.css";
+import AnimatedSection from "../AnimatedSection";
+import WavePointArchitecture from "./diagrams/WavePointArchitecture";
+import ClaudeSkillsPipeline from "./diagrams/ClaudeSkillsPipeline";
+import "./style.css";
 
-const PROJECTS = [
+const DIAGRAMS: Record<string, React.ComponentType> = {
+  "wavepoint-architecture": WavePointArchitecture,
+  "claude-skills-pipeline": ClaudeSkillsPipeline,
+};
+
+type Project = {
+  title: string;
+  category: string;
+  callout: string | null;
+  githubLink: string | null;
+  liveLink: string | null;
+  liveLinkLabel?: string;
+  _target?: string;
+  description: string;
+  tech: string[];
+  gradientType: string;
+  featured?: boolean;
+  diagramId?: string;
+};
+
+const PROJECTS: Project[] = [
   {
     title: "WavePoint",
     category: "Platform",
@@ -11,35 +33,37 @@ const PROJECTS = [
     githubLink: null,
     liveLink: "https://wavepoint.space/",
     _target: "_blank",
-    description: "A cross-platform product shipping a Next.js web app and 6 native Apple apps from a single monorepo. Shared TypeScript content packages, a Swift astronomy engine for real-time calculations, Supabase auth, and Stripe payments \u2014 all coordinated across web, iOS, iPadOS, and macOS.",
+    description: "A cross-platform product shipping a Next.js web app and 6 native Apple apps from a single monorepo. Shared TypeScript content packages bridge web and native, a Swift astronomy engine powers real-time celestial calculations, and Supabase auth, Stripe payments, and Brevo CRM are coordinated across all platforms.",
     tech: [
-      "Next.js", "React", "TypeScript", "Supabase", "Stripe", "Swift", "SwiftUI"
+      "Next.js", "React", "TypeScript", "Supabase", "Stripe", "Brevo", "Swift", "SwiftUI"
     ],
     gradientType: "blue",
-    featured: true
+    featured: true,
+    diagramId: "wavepoint-architecture"
   },
   {
     title: "Claude Skills",
-    category: "Tool",
+    category: "Developer Tool",
     callout: null,
     githubLink: "https://github.com/robabby/claude-skills",
     liveLink: null,
     _target: "_blank",
-    description: "A cross-session memory system for Claude Code that uses Obsidian as persistent storage. Includes 6 skills for memory management: hydrate, remember, recall, reflect, glean, and pickup.",
+    description: "A cross-session memory and workflow system for Claude Code built on the MCP protocol. Six composable skills \u2014 hydrate, remember, recall, reflect, glean, and pickup \u2014 manage persistent state across conversations using Obsidian as the storage layer.",
     tech: ["Claude Code", "Obsidian", "MCP", "TypeScript"],
     gradientType: "purple",
-    featured: false
+    diagramId: "claude-skills-pipeline"
   },
   {
-    title: "AI Art Gallery",
-    category: "Gallery",
+    title: "robabby.com",
+    category: "Portfolio",
     callout: null,
     githubLink: "https://github.com/robabby/robabby",
     liveLink: "/art",
+    liveLinkLabel: "Art Gallery",
     _target: "_self",
-    description: "A smattering of AI-generated art pieces created using various tools including Midjourney, DALL·E 3, and Stable Diffusion. Showcased in a sleek, responsive Next.js application (this site).",
+    description: "A Next.js 15 + React 19 portfolio featuring code-generated SVG architecture diagrams, WCAG AA compliance, static generation with dynamic routes, motion/react animations with reduced-motion support, and an integrated AI art gallery with lightbox navigation.",
     tech: [
-      "Nextjs", "radix-ui", "Midjourney", "DALL-E", "Flux.1", "Invoke UI"
+      "Next.js", "React 19", "TypeScript", "Radix UI", "motion/react", "Vercel"
     ],
     gradientType: "gold"
   },
@@ -49,13 +73,13 @@ const PROJECTS = [
     callout: null,
     githubLink: "https://github.com/robabby/tldr-bot",
     liveLink: null,
-    description: "A Discord bot written in Python that leverages OpenAI's GPT-5 API to generate sarcastic summaries of recent messages in a channel. Will also generate memes based on message contents.",
+    description: "An early exploration of AI-powered developer tools \u2014 a Discord bot that uses OpenAI\u2019s API to generate sarcastic summaries of channel history and auto-generate memes from message context.",
     tech: [
       "Python", "Discord.py", "OpenAI GPT-5 API"
     ],
     gradientType: "green"
   }
-]
+];
 
 export default function Projects() {
 
@@ -72,7 +96,7 @@ export default function Projects() {
             {/* Left column - Section header */}
             <Box className="section-header-column">
               <Text className="section-subtitle" mb="2" style={{ display: "block" }}>
-                Work
+                Builds
               </Text>
               <Heading size="8" className="section-title" style={{ textAlign: "left" }}>
                 Projects
@@ -86,16 +110,30 @@ export default function Projects() {
                   key={index}
                   className={`card project-card ${proj.featured ? 'project-card--featured' : ''}`}
                 >
-                  <Box className={`project-visual project-visual--${proj.gradientType}`}>
-                    <Box className="project-visual-pattern" />
-                    <Box className="project-visual-content">
-                      <Badge size="1" className="badge--featured">
-                        {proj.category}
-                      </Badge>
-                      <Heading size="5" className="project-visual-title">{proj.title}</Heading>
-                    </Box>
+                  <Box className={`project-visual ${proj.diagramId ? 'project-visual--diagram' : `project-visual--${proj.gradientType}`}`}>
+                    {proj.diagramId && DIAGRAMS[proj.diagramId] ? (
+                      (() => {
+                        const DiagramComponent = DIAGRAMS[proj.diagramId!];
+                        return <DiagramComponent />;
+                      })()
+                    ) : (
+                      <Box className="project-visual-content">
+                        <Badge size="1" className="badge--featured">
+                          {proj.category}
+                        </Badge>
+                        <Heading size="5" className="project-visual-title">{proj.title}</Heading>
+                      </Box>
+                    )}
                   </Box>
                   <Box p="4">
+                    {proj.diagramId && (
+                      <Flex gap="2" align="center" mb="3">
+                        <Badge size="1" className="badge--featured">
+                          {proj.category}
+                        </Badge>
+                        <Heading size="4" style={{ color: "var(--color-text)" }}>{proj.title}</Heading>
+                      </Flex>
+                    )}
                     {proj.callout && (
                       <Callout.Root mb="3" size="1">
                         <Callout.Icon>
@@ -127,7 +165,7 @@ export default function Projects() {
                       {proj.liveLink && (
                         <Button size="1" asChild>
                           <Link href={proj.liveLink} target={proj._target}>
-                            Demo
+                            {proj.liveLinkLabel || "Demo"}
                           </Link>
                         </Button>
                       )}
@@ -142,4 +180,3 @@ export default function Projects() {
     </Box>
   )
 }
-
