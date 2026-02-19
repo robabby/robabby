@@ -91,16 +91,26 @@ Each phase is independently plannable. After completing a phase, update the "Pha
 ---
 
 ### Phase 4: Projects Section Overhaul
-**Status:** `pending`
-**Goal:** Replace hobby-level projects with evidence of staff-level engineering or reframe existing projects to highlight engineering depth.
+**Status:** `completed`
+**Branch:** `phase4-projects-overhaul`
+**Goal:** Elevate the Projects section from hobby-level cards with gradient placeholders to engineering-focused showcases with SVG diagrams and sharper descriptions.
 
 **Scope:**
-- Evaluate which current projects to keep, reframe, or remove
-- Add project screenshots/demos instead of gradient placeholder cards
-- Consider adding: design system work, architectural decision records, OSS contributions
-- Show the actual work — live embeds, video clips, or annotated screenshots
+- Rewrote all 4 project descriptions to emphasize engineering depth
+- Replaced AI Art Gallery card with robabby.com portfolio card (Art Gallery accessible via /art link)
+- Changed section subtitle from "Work" to "Builds"
+- Created 2 SVG architecture diagrams replacing gradient placeholders for top projects
+- Restructured Projects from flat files to directory format (matching Experience/ pattern)
+- Cleaned up CSS: removed unused gradient/pattern styles, increased visual heights
 
-**Learnings:** _(updated after completion)_
+**Learnings:**
+- Restructured `Projects.tsx` + `Projects.css` into `Projects/index.tsx` + `Projects/style.css` with `diagrams/` subdirectory, matching the `Experience/` directory pattern.
+- SVG diagrams for WavePoint (layered monorepo architecture) and Claude Skills (MCP pipeline flow) replace generic gradient headers, consistent with case study diagram approach from Phase 3.
+- Diagram rendering uses a `DIAGRAMS` lookup map keyed by `diagramId` field on the project type, keeping the conditional logic clean.
+- Cards with diagrams move the category badge + title below the visual into the card body; gradient-only cards keep the overlay title approach.
+- Removed 4 gradient classes (blue, purple, gold pattern, green pattern) and dot-pattern styles; kept only gold and green gradients for robabby.com and tldr-bot.
+- Copy was drafted collaboratively (presented for review before code), matching the Phase 2/3 workflow. WavePoint updated to include Brevo CRM integration.
+- 2 new SVG diagram files, 2 moved files, 1 modified plan file. Clean build and lint.
 
 ---
 
