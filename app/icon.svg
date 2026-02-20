@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="40%" stop-color="#0a0a0f"/>
+      <stop offset="100%" stop-color="#0a0a0f"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+
+  <!-- R: stem + bowl (white) -->
+  <path d="M13 50 V13 H26 Q34 13 34 21 Q34 29 26 29 H13"
+        fill="none" stroke="#f5f5f4" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- R: leg (white, connects to A at baseline) -->
+  <line x1="24" y1="29" x2="33" y2="50" stroke="#f5f5f4" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- A: left + right strokes (blue) -->
+  <path d="M33 50 L44 13 L53 50"
+        fill="none" stroke="#3b82f6" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- A: crossbar (blue) -->
+  <line x1="37" y1="35" x2="50" y2="35" stroke="#3b82f6" stroke-width="4.5" stroke-linecap="round"/>
+</svg>
