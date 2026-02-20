@@ -14,7 +14,7 @@ const DIAGRAM_CAPTIONS: Record<string, string> = {
   "venue-page-architecture":
     "Component architecture: SearchFilters, MapView, ResultsList, and GraphQL data layer",
   "metrics-before-after":
-    "Before and after: key performance and accessibility metrics",
+    "Key performance and accessibility improvements",
   "team-structure":
     "Organizational evolution from siloed teams to a hub-and-spoke UX practice",
   "design-system-layers":
