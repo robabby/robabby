@@ -8,7 +8,7 @@ const EXPERIENCE = [
     title: "Founder & Principal Engineer",
     company: "WavePoint",
     companyLink: "https://wavepoint.space",
-    period: "2025 — Present",
+    period: "2026 — Present",
     featured: true,
     description: "Solo technical founder of WavePoint, an intelligence-native astrology platform shipping a Next.js web app and 6 native Apple apps from a single monorepo. Built a purpose-designed AI-augmented development workflow that enables one engineer to operate at team-scale scope while maintaining Staff-level architectural standards.",
     highlights: [
