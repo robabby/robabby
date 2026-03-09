@@ -52,6 +52,19 @@ const PROJECTS: Project[] = [
     gradientType: "gold"
   },
   {
+    title: "Space-Viz",
+    category: "Utility",
+    callout: null,
+    githubLink: "https://github.com/robabby/space-viz",
+    liveLink: null,
+    _target: "_blank",
+    description: "A disk space visualization tool with interactive D3 sunburst and treemap charts. Scans directories recursively with block-level accuracy, supports drill-down navigation, and handles macOS APFS firmlinks and hidden files.",
+    tech: [
+      "Next.js 16", "React 19", "TypeScript", "D3.js", "Recharts", "Tailwind CSS"
+    ],
+    gradientType: "blue"
+  },
+  {
     title: "tldr-bot",
     category: "Bot",
     callout: null,
