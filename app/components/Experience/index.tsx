@@ -5,6 +5,21 @@ import "./style.css";
 
 const EXPERIENCE = [
   {
+    title: "Founder & Principal Engineer",
+    company: "WavePoint",
+    companyLink: "https://wavepoint.space",
+    period: "2025 — Present",
+    featured: true,
+    description: "Solo technical founder of WavePoint, an intelligence-native astrology platform shipping a Next.js web app and 6 native Apple apps from a single monorepo. Built a purpose-designed AI-augmented development workflow that enables one engineer to operate at team-scale scope while maintaining Staff-level architectural standards.",
+    highlights: [
+      "Shipped 450+ commits across a full-stack monorepo in 9 weeks — Next.js 16 web app, 6 native Apple apps (Swift/SwiftUI), 82 API routes, 37 computation modules, and 111 primitives as a solo engineer.",
+      "Designed and implemented a 44-rule AI governance system with auto-loading enforcement, worktree isolation, and a structured initiative workflow that ensures architectural consistency across all AI-generated contributions.",
+      "Built a purpose-built MCP server with 12 composed tools following a Stripe-inspired 5-level abstraction ladder, replacing ad-hoc AI tooling with a principled interface design.",
+      "Created a cross-platform 'Modern Mystic' design system spanning web (Radix UI, Tailwind) and native (SwiftUI) with shared TypeScript content packages bridging both surfaces.",
+      "Integrated Stripe payments, Supabase auth, and Brevo CRM across all platforms with a unified architecture — handling the full product surface from infrastructure through user-facing UI."
+    ]
+  },
+  {
     title: "IT Manager",
     company: "VIMSIA",
     companyLink: "https://www.vimsia.org",
@@ -22,7 +37,7 @@ const EXPERIENCE = [
     companyLink: "https://www.partyslate.com",
     period: "2018 - 2024",
     description: "Supported growth at PartySlate, a dual-sided marketplace platform, from a 12-person early-stage startup to a +50-employee Series-B company while averaging 258.33% revenue growth year-over-year.",
-    featured: true,
+    featured: false,
     highlights: [
       "Spearheaded 10+ large-scale features used by 200k+ users monthly in a React & NextJS frontend and Ruby on Rails backend from requirements phase through agile development and cross-functional definition process, resulting in a 25% increase in user engagement year-over-year.",
       "Led the rewrite of Find Venues Page, the most impactful page on the website, to provide an interactive Map-view and redesigned search results, leading to  a 150% increase in Venue inquiries.",

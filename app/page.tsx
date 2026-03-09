@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import StatsBar from "./components/StatsBar";
 import About from "./components/About";
+import FeaturedWork from "./components/FeaturedWork";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 import CaseStudies from "./components/CaseStudies";
@@ -16,6 +17,7 @@ export default function Home() {
       <Hero />
       <StatsBar />
       <About />
+      <FeaturedWork />
       <Skills />
       <Experience />
       <CaseStudies />
