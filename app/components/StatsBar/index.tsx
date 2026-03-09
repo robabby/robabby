@@ -12,10 +12,10 @@ interface Stat {
 }
 
 const STATS: Stat[] = [
-  { value: 258, suffix: "%", label: "YoY Revenue Growth" },
-  { value: 150, suffix: "%", label: "Venue Inquiry Increase" },
-  { value: 40, suffix: "%", label: "Faster Feature Delivery" },
-  { value: 95, suffix: "", label: "Lighthouse Score" },
+  { value: 450, suffix: "+", label: "Commits in 9 Weeks" },
+  { value: 6, suffix: "", label: "Native Apple Apps" },
+  { value: 111, suffix: "", label: "Computation Primitives" },
+  { value: 44, suffix: "", label: "Agentic Governance Rules" },
 ];
 
 function AnimatedNumber({ value, suffix }: { value: number; suffix: string }) {

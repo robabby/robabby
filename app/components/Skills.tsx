@@ -36,11 +36,11 @@ const SKILL_CATEGORIES: Record<string, SkillCategory> = {
     ]
   },
   "Platforms & Tools": {
-    featured: ["AWS", "Docker", "Living Design Systems"],
+    featured: ["AWS", "Docker", "Living Design Systems", "AI-Augmented Development"],
     other: [
       "ECR", "ECS", "S3", "CloudWatch", "Route 53", "Figma", "Git & Github",
       "CI/CD", "VS Code", "Claude Code", "Chrome DevTools", "Postman",
-      "Jira", "Confluence", "Slack", "Zoom"
+      "Jira", "Confluence", "Slack", "Zoom", "MCP / Agentic Workflows", "Swift / SwiftUI"
     ]
   }
 };

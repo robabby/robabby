@@ -1,12 +1,10 @@
 import { Badge, Box, Button, Callout, Container, Flex, Heading, Link, Text } from "@radix-ui/themes";
 import { InfoCircledIcon } from "@radix-ui/react-icons";
 import AnimatedSection from "../AnimatedSection";
-import WavePointArchitecture from "./diagrams/WavePointArchitecture";
 import ClaudeSkillsPipeline from "./diagrams/ClaudeSkillsPipeline";
 import "./style.css";
 
 const DIAGRAMS: Record<string, React.ComponentType> = {
-  "wavepoint-architecture": WavePointArchitecture,
   "claude-skills-pipeline": ClaudeSkillsPipeline,
 };
 
@@ -27,21 +25,6 @@ type Project = {
 
 const PROJECTS: Project[] = [
   {
-    title: "WavePoint",
-    category: "Platform",
-    callout: null,
-    githubLink: null,
-    liveLink: "https://wavepoint.space/",
-    _target: "_blank",
-    description: "A cross-platform product shipping a Next.js web app and 6 native Apple apps from a single monorepo. Shared TypeScript content packages bridge web and native, a Swift astronomy engine powers real-time celestial calculations, and Supabase auth, Stripe payments, and Brevo CRM are coordinated across all platforms.",
-    tech: [
-      "Next.js", "React", "TypeScript", "Supabase", "Stripe", "Brevo", "Swift", "SwiftUI"
-    ],
-    gradientType: "blue",
-    featured: true,
-    diagramId: "wavepoint-architecture"
-  },
-  {
     title: "Claude Skills",
     category: "Developer Tool",
     callout: null,
@@ -51,6 +34,7 @@ const PROJECTS: Project[] = [
     description: "A cross-session memory and workflow system for Claude Code built on the MCP protocol. Six composable skills \u2014 hydrate, remember, recall, reflect, glean, and pickup \u2014 manage persistent state across conversations using Obsidian as the storage layer.",
     tech: ["Claude Code", "Obsidian", "MCP", "TypeScript"],
     gradientType: "purple",
+    featured: true,
     diagramId: "claude-skills-pipeline"
   },
   {
