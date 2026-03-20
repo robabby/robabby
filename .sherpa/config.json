@@ -1,0 +1,7 @@
+{
+  "$schema": "https://sherpa.solar/schema.json",
+  "admin": {
+    "projectName": "Rob Abby",
+    "projectDescription": "Personal site"
+  }
+}
