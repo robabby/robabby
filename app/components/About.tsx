@@ -37,7 +37,7 @@ export default function About() {
             <Box style={{ flex: 1 }}>
               {/* Editorial lead statement */}
               <Text className="about-lead" mb="6" style={{ display: "block" }}>
-                After 13 years building frontend infrastructure at scale, I spent a year building my own — founding Sherpa, shipping WavePoint, and creating the developer tooling that ties them together. The result: a practice that ships complex software with the velocity of a team and the architectural rigor of a staff engineer.
+                The same instinct that led me to build design systems and component libraries now drives me to build the infrastructure behind agentic engineering — governance, workflow tooling, and the systems that make AI-assisted development reliable at scale.
               </Text>
 
               {/* Narrative paragraphs */}
