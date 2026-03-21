@@ -18,11 +18,11 @@ const instrumentSans = Instrument_Sans({
 });
 
 export const metadata = {
-  title: "Rob Abby - Staff Frontend Engineer",
-  description: "Staff Frontend Engineer with 15+ years building exceptional web experiences for startups and enterprises. Expert in React, TypeScript, and design systems.",
+  title: "Rob Abby - Staff Engineer & Agentic Engineering Practitioner",
+  description: "Staff Engineer & Agentic Engineering Practitioner with 15+ years building exceptional web experiences for startups and enterprises. Expert in React, TypeScript, and design systems.",
   metadataBase: new URL("https://robabby.com"),
   openGraph: {
-    title: "Rob Abby - Staff Frontend Engineer",
+    title: "Rob Abby - Staff Engineer & Agentic Engineering Practitioner",
     description: "15+ years building exceptional web experiences. Expert in React, TypeScript, and design systems. Available for opportunities.",
     url: "https://robabby.com",
     siteName: "Rob Abby",
@@ -31,7 +31,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rob Abby - Staff Frontend Engineer",
+    title: "Rob Abby - Staff Engineer & Agentic Engineering Practitioner",
     description: "15+ years building exceptional web experiences. Expert in React, TypeScript, and design systems.",
   },
 }

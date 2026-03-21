@@ -47,7 +47,7 @@ export default function Hero() {
               <div className="hero-portrait-wrapper">
                 <Image
                   src="/profile.jpeg"
-                  alt="Rob Abby - Staff Engineer & AI-Augmented Builder"
+                  alt="Rob Abby - Staff Engineer & Agentic Engineering Practitioner"
                   width={300}
                   height={300}
                   priority
@@ -78,7 +78,7 @@ export default function Hero() {
                 transition={{ delay: 0.7, duration: 0.5, ease: "easeOut" }}
               >
                 <Text size="6" className="hero-title">
-                  Staff Engineer &amp; AI-Augmented Builder
+                  Staff Engineer &amp; Agentic Engineering Practitioner
                 </Text>
               </motion.div>
 
@@ -89,7 +89,7 @@ export default function Hero() {
                 transition={{ delay: 0.9, duration: 0.5, ease: "easeOut" }}
               >
                 <Text className="subtitle-refined hero-tagline">
-                  From Design Systems to Intelligence-Native Products
+                  From Design Systems to Agentic Engineering
                 </Text>
               </motion.div>
 

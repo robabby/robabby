@@ -39,7 +39,8 @@ const SKILL_CATEGORIES: Record<string, SkillCategory> = {
     featured: ["AWS", "Docker", "Living Design Systems", "AI-Augmented Development"],
     other: [
       "ECR", "ECS", "S3", "CloudWatch", "Route 53", "Figma", "Git & Github",
-      "CI/CD", "VS Code", "Claude Code", "Chrome DevTools", "Postman",
+      "CI/CD", "VS Code", "Claude Code", "OpenClaw", "Codex", "Gemini",
+      "Cursor", "GitHub Copilot", "Chrome DevTools", "Postman",
       "Jira", "Confluence", "Slack", "Zoom", "MCP / Agentic Workflows", "Swift / SwiftUI"
     ]
   }

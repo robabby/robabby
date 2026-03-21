@@ -10,9 +10,9 @@ const EXPERIENCE = [
     companyLink: "https://wavepoint.space",
     period: "2026 — Present",
     featured: true,
-    description: "Solo technical founder of WavePoint, an intelligence-native astrology platform shipping a Next.js web app and 6 native Apple apps from a single monorepo. Built a purpose-designed AI-augmented development workflow that enables one engineer to operate at team-scale scope while maintaining Staff-level architectural standards.",
+    description: "Solo technical founder of WavePoint, an intelligence-native astrology platform shipping a Next.js web app and native Apple apps from a single monorepo. Built a purpose-designed AI-augmented development workflow that enables one engineer to operate at team-scale scope while maintaining Staff-level architectural standards.",
     highlights: [
-      "Shipped 450+ commits across a full-stack monorepo in 9 weeks — Next.js 16 web app, 6 native Apple apps (Swift/SwiftUI), 82 API routes, 37 computation modules, and 111 primitives as a solo engineer.",
+      "Shipped 450+ commits across a full-stack monorepo in 9 weeks — Next.js 16 web app, native Apple apps (Swift/SwiftUI), 82 API routes, 37 computation modules, and 111 primitives as a solo engineer.",
       "Designed and implemented a 44-rule AI governance system with auto-loading enforcement, worktree isolation, and a structured initiative workflow that ensures architectural consistency across all AI-generated contributions.",
       "Built a purpose-built MCP server with 12 composed tools following a Stripe-inspired 5-level abstraction ladder, replacing ad-hoc AI tooling with a principled interface design.",
       "Created a cross-platform 'Modern Mystic' design system spanning web (Radix UI, Tailwind) and native (SwiftUI) with shared TypeScript content packages bridging both surfaces.",
