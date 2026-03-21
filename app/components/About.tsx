@@ -3,16 +3,16 @@ import AnimatedSection from "./AnimatedSection";
 
 const ENGINEERING_PRINCIPLES = [
   {
-    title: "Systems that absorb complexity",
-    description: "Build the abstraction layer that makes the next 100 features — and the next 100 AI-generated contributions — safe to ship.",
+    title: "Build the tooling layer",
+    description: "Sherpa Studio exists because reliable AI development requires more than a capable model — it requires workforce management, skill orchestration, and convention enforcement at the infrastructure level.",
   },
   {
-    title: "AI as infrastructure, not shortcut",
-    description: "Governance rules, review gates, and structured workflows. The value is in the system around the model, not the model alone.",
+    title: "AI as a governed system, not a shortcut",
+    description: "Review gates, structured workflows, and clear boundaries. The value compounds when you treat AI as infrastructure you architect, not magic you invoke.",
   },
   {
-    title: "Ship the whole product",
-    description: "Architecture, APIs, native apps, payments, deployment. Staff-level thinking means owning the full surface, not just one layer.",
+    title: "Own the full surface",
+    description: "Consulting practice, product, native apps, APIs, tooling, deployment. Founding means shipping end-to-end — every layer, every decision.",
   },
 ];
 
@@ -37,7 +37,7 @@ export default function About() {
             <Box style={{ flex: 1 }}>
               {/* Editorial lead statement */}
               <Text className="about-lead" mb="6" style={{ display: "block" }}>
-                I build products at the intersection of systems engineering and AI-augmented development — shipping complex, cross-platform software as a solo technical founder at a pace that used to require a team.
+                As the founder and principal engineer behind Sherpa and WavePoint, I&#39;ve built across consulting, product, and developer tooling — turning 13 years of frontend infrastructure expertise into a practice that ships complex software with the velocity of a team and the architectural rigor of a staff engineer.
               </Text>
 
               {/* Narrative paragraphs */}
@@ -46,7 +46,7 @@ export default function About() {
               </Text>
 
               <Text className="about-narrative" mb="6" style={{ display: "block" }}>
-                Now I&#39;m applying that infrastructure instinct to a new kind of engineering. With WavePoint, I&#39;m building a full product — Next.js web app, 6 native Apple apps, shared TypeScript packages, a Swift astronomy engine — solo, shipping 450+ commits in 9 weeks. The multiplier is a purpose-built AI development workflow: governance rules, worktree isolation, a custom MCP server, and a 5-level abstraction ladder that lets me operate at the scope of a small team while maintaining the architectural standards of a Staff engineer.
+                Now I&#39;m applying that infrastructure instinct to a new kind of engineering. I founded Sherpa, an AI consulting practice grounded in honesty and craftsmanship, then built WavePoint — a full astrology and spirituality platform spanning a Next.js web app, native Apple apps, shared TypeScript packages, and a Swift astronomy engine — shipping 472+ PRs in 11 weeks as both a product and a proof-of-concept for agentic engineering at scale. To make that possible, I built Sherpa Studio, an Agentic Engineering workflow suite handling workforce management, skill orchestration, and convention enforcement. The throughline: I didn&#39;t just use AI tools, I built the infrastructure that makes AI-assisted development reliable.
               </Text>
 
               {/* Engineering principles */}
