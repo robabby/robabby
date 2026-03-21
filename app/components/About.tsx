@@ -37,7 +37,7 @@ export default function About() {
             <Box style={{ flex: 1 }}>
               {/* Editorial lead statement */}
               <Text className="about-lead" mb="6" style={{ display: "block" }}>
-                As the founder and principal engineer behind Sherpa and WavePoint, I&#39;ve built across consulting, product, and developer tooling — turning 13 years of frontend infrastructure expertise into a practice that ships complex software with the velocity of a team and the architectural rigor of a staff engineer.
+                After 13 years building frontend infrastructure at scale, I spent a year building my own — founding Sherpa, shipping WavePoint, and creating the developer tooling that ties them together. The result: a practice that ships complex software with the velocity of a team and the architectural rigor of a staff engineer.
               </Text>
 
               {/* Narrative paragraphs */}
@@ -46,7 +46,7 @@ export default function About() {
               </Text>
 
               <Text className="about-narrative" mb="6" style={{ display: "block" }}>
-                Now I&#39;m applying that infrastructure instinct to a new kind of engineering. I founded Sherpa, an AI consulting practice grounded in honesty and craftsmanship, then built WavePoint — a full astrology and spirituality platform spanning a Next.js web app, native Apple apps, shared TypeScript packages, and a Swift astronomy engine — shipping 472+ PRs in 11 weeks as both a product and a proof-of-concept for agentic engineering at scale. To make that possible, I built Sherpa Studio, an Agentic Engineering workflow suite handling workforce management, skill orchestration, and convention enforcement. The throughline: I didn&#39;t just use AI tools, I built the infrastructure that makes AI-assisted development reliable.
+                Now I&#39;m applying that infrastructure instinct to a new kind of engineering. I founded Sherpa, an AI consulting practice grounded in honesty and craftsmanship, then built WavePoint — a full astrology and spirituality platform spanning a Next.js web app, native Apple apps, shared TypeScript packages, and a Swift astronomy engine — shipping 472+ PRs in 11 weeks as both a product and a proof-of-concept for agentic engineering at scale. To make that possible, I built Sherpa Studio, an Agentic Engineering workflow suite handling workforce management, skill orchestration, and convention enforcement. The throughline: I didn&#39;t just use AI tools, I built the infrastructure that makes AI-assisted development reliable. I&#39;ve built the solo version — now I&#39;m looking for a team where that velocity and system-design thinking compounds at real scale.
               </Text>
 
               {/* Engineering principles */}
