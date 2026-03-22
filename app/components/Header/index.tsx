@@ -15,7 +15,7 @@ interface HeaderProps {
 const HOME_LINKS = [
   { href: "#home", label: "Home", isBrand: true },
   { href: "#about", label: "About" },
-
+  { href: "#featured-work", label: "Featured" },
   { href: "#skills", label: "Skills" },
   { href: "#experience", label: "Experience" },
   { href: "#case-studies", label: "Case Studies" },
