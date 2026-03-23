@@ -12,7 +12,7 @@ interface Stat {
 }
 
 const STATS: Stat[] = [
-  { value: 450, suffix: "+", label: "Commits in 9 Weeks" },
+  { value: 472, suffix: "+", label: "PRs in 11 Weeks" },
   { value: 6, suffix: "", label: "Native Apple Apps" },
   { value: 111, suffix: "", label: "Computation Primitives" },
   { value: 44, suffix: "", label: "Agentic Governance Rules" },
