@@ -54,7 +54,7 @@ export default function FeaturedWork() {
 
             <Box style={{ flex: 1 }}>
               <Text className="about-lead" mb="4" style={{ display: "block" }}>
-                A cross-platform astrology product built solo with AI agents — 450+ commits in 9 weeks across a web app and 6 native Apple apps.
+                A cross-platform astrology product built solo with AI agents — 472+ PRs in 11 weeks across a web app and 6 native Apple apps.
               </Text>
               <Button size="2" variant="outline" asChild>
                 <a href="https://wavepoint.space" target="_blank" rel="noopener noreferrer">
