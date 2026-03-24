@@ -5,30 +5,45 @@ import "./style.css";
 
 const EXPERIENCE = [
   {
-    title: "Founder & Principal Engineer",
+    title: "Principal Engineer",
+    company: "Sherpa Consulting",
+    companyLink: "https://sherpa.solar",
+    period: "2024 — Present",
+    featured: true,
+    description: "Built an AI consulting practice and Sherpa Studio — an agentic engineering workflow suite — to develop and demonstrate the infrastructure that makes Human+AI collaborative development reliable.",
+    highlights: [
+      "Designed and implemented Sherpa Studio — an AI-native development operations platform featuring a real-time dashboard with SSE event streaming, MCP server, multi-backend task dispatch pipeline (9 agent backends), and a knowledge engine with BM25 full-text search across all project artifacts.",
+      "Architected a behavioral governance system encoding agent role definitions, initiative lifecycle conventions, and quality gates — enabling reliable, auditable AI-agent collaboration.",
+      "Built a multi-agent production environment: an always-on VPS-based agent handling overnight research, code review, and content generation cycles; and an interactive Claude Code session for rapid development — both operating against the same codebase with isolated responsibilities and a shared dispatch queue.",
+      "Established a Human+AI engineering methodology — worktree isolation, structured review gates, judge/worker/planner role separation, and provenance tracking.",
+      "Deployed full production infrastructure on Hetzner VPS: Docker containerization, Tailscale networking, CI/CD via GitHub, and Vercel preview deployments — with agent memory across Telegram, CLI, and dispatch channels."
+    ]
+  },
+  {
+    title: "Independent Engineer",
     company: "WavePoint",
     companyLink: "https://wavepoint.space",
     period: "2026 — Present",
     featured: true,
-    description: "Solo technical founder of WavePoint, an intelligence-native astrology platform shipping a Next.js web app and native Apple apps from a single monorepo. Built a purpose-designed AI-augmented development workflow that enables one engineer to operate at team-scale scope while maintaining Staff-level architectural standards.",
+    description: "Built an intelligence-native astrology platform shipping a Next.js web app and native Apple apps from a single monorepo — serving as both a product and a proof-of-concept for the agentic engineering methodology developed through Sherpa Studio.",
     highlights: [
-      "Shipped 472+ PRs across a full-stack monorepo in 11 weeks — Next.js 16 web app, native Apple apps (Swift/SwiftUI), 82 API routes, 37 computation modules, and 111 primitives as a solo engineer.",
-      "Designed and implemented a 44-rule AI governance system with auto-loading enforcement, worktree isolation, and a structured initiative workflow that ensures architectural consistency across all AI-generated contributions.",
+      "Shipped 472+ PRs across a full-stack monorepo in 11 weeks — Next.js 16 web app, native Apple apps (Swift/SwiftUI), 82 API routes, 37 computation modules, and 111 primitives.",
+      "Designed and implemented a 44-rule AI governance system with auto-loading enforcement, worktree isolation, and a structured initiative workflow that ensures architectural consistency across all AI-generated contributions — the seed which became Sherpa Studio.",
       "Built a purpose-built MCP server with 12 composed tools following a Stripe-inspired 5-level abstraction ladder, replacing ad-hoc AI tooling with a principled interface design.",
       "Created a cross-platform 'Modern Mystic' design system spanning web (Radix UI, Tailwind) and native (SwiftUI) with shared TypeScript content packages bridging both surfaces.",
       "Integrated Stripe payments, Supabase auth, and Brevo CRM across all platforms with a unified architecture — handling the full product surface from infrastructure through user-facing UI."
     ]
   },
   {
-    title: "IT Manager",
+    title: "IT Manager & Technology Strategist",
     company: "VIMSIA",
     companyLink: "https://www.vimsia.org",
     period: "2025 - 2025",
-    description: "Contract role during international relocation. Led modernization of internal tech infrastructure and web tools at an international Montessori/IB school.",
+    description: "Managed IT infrastructure at an international Montessori/IB school while exploring the convergence of AI and education.",
     highlights: [
-      "Oversee system performance (98% uptime) and digital transformation initiatives integrating cloud, automation, and web technologies.",
-      "Providing technical support and training to faculty and staﬀ, enhancing eﬀective utilization of technology in educational settings and reducing support requests by 20%.",
-      "Coordinating with external vendors and service providers to ensure seamless integration and operation of IT services."
+      "Managed IT infrastructure, network operations, and system maintenance across a K-12 educational institution, maintaining 98% network uptime.",
+      "Explored the intersection of AI and education, engaging with administration on strategies for technology integration in educational settings.",
+      "Provided technical support and training to faculty and staff, reducing support requests by 20%."
     ]
   },
   {

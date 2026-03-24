@@ -12,7 +12,7 @@ const ENGINEERING_PRINCIPLES = [
   },
   {
     title: "Own the full surface",
-    description: "Consulting practice, product, native apps, APIs, tooling, deployment. Founding means shipping end-to-end — every layer, every decision.",
+    description: "Consulting practice, product, native apps, APIs, tooling, deployment. Building means shipping end-to-end — every layer, every decision.",
   },
 ];
 
@@ -46,7 +46,7 @@ export default function About() {
               </Text>
 
               <Text className="about-narrative" mb="6" style={{ display: "block" }}>
-                Now I&#39;m applying that infrastructure instinct to a new kind of engineering. I founded Sherpa, an AI consulting practice grounded in honesty and craftsmanship, then built WavePoint — a full astrology and spirituality platform spanning a Next.js web app, native Apple apps, shared TypeScript packages, and a Swift astronomy engine — shipping 472+ PRs in 11 weeks as both a product and a proof-of-concept for agentic engineering at scale. To make that possible, I built Sherpa Studio, an Agentic Engineering workflow suite handling workforce management, skill orchestration, and convention enforcement. The throughline: I didn&#39;t just use AI tools, I built the infrastructure that makes AI-assisted development reliable. I&#39;ve built the solo version — now I&#39;m looking for a team where that velocity and system-design thinking compounds at real scale.
+                Now I&#39;m applying that infrastructure instinct to a new kind of engineering. I built Sherpa, an AI consulting practice grounded in honesty and craftsmanship, then built WavePoint — a full astrology and spirituality platform spanning a Next.js web app, native Apple apps, shared TypeScript packages, and a Swift astronomy engine — shipping 472+ PRs in 11 weeks as both a product and a proof-of-concept for agentic engineering. To make that possible, I built Sherpa Studio, an Agentic Engineering workflow suite handling workforce management, skill orchestration, and convention enforcement. The throughline: I didn&#39;t just use AI tools, I built the infrastructure that makes AI-assisted development reliable. Now I&#39;m looking for the right team to bring that to.
               </Text>
 
               {/* Engineering principles */}
