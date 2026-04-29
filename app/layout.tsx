@@ -1,14 +1,15 @@
 import "@radix-ui/themes/styles.css";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
-import { Syne, Instrument_Sans } from "next/font/google";
+import { Fraunces, Instrument_Sans } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Theme } from "@radix-ui/themes";
+import ThemeProvider from "./components/ThemeProvider";
 
-const syne = Syne({
+const fraunces = Fraunces({
   subsets: ["latin"],
   variable: "--font-display",
   display: "swap",
+  axes: ["opsz"],
 });
 
 const instrumentSans = Instrument_Sans({
@@ -18,12 +19,14 @@ const instrumentSans = Instrument_Sans({
 });
 
 export const metadata = {
-  title: "Rob Abby - Staff Engineer & Agentic Engineering Practitioner",
-  description: "Staff Engineer & Agentic Engineering Practitioner with 15+ years building exceptional web experiences for startups and enterprises. Expert in React, TypeScript, and design systems.",
+  title: "Rob Abby — Staff Engineer & IT Manager",
+  description:
+    "Senior technologist with 15 years across software engineering and IT operations. Bellingham, WA.",
   metadataBase: new URL("https://robabby.com"),
   openGraph: {
-    title: "Rob Abby - Staff Engineer & Agentic Engineering Practitioner",
-    description: "15+ years building exceptional web experiences. Expert in React, TypeScript, and design systems. Available for opportunities.",
+    title: "Rob Abby — Staff Engineer & IT Manager",
+    description:
+      "15 years across software engineering and IT operations. Bellingham, WA.",
     url: "https://robabby.com",
     siteName: "Rob Abby",
     locale: "en_US",
@@ -31,26 +34,29 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rob Abby - Staff Engineer & Agentic Engineering Practitioner",
-    description: "15+ years building exceptional web experiences. Expert in React, TypeScript, and design systems.",
+    title: "Rob Abby — Staff Engineer & IT Manager",
+    description:
+      "15 years across software engineering and IT operations. Bellingham, WA.",
   },
-}
+};
+
+const themeScript = `(function(){try{var s=localStorage.getItem('theme');var d=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=s||d;}catch(e){document.documentElement.dataset.theme='dark';}})();`;
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`${syne.variable} ${instrumentSans.variable}`}>
-        <Theme appearance="dark">
-          {children}
-        </Theme>
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
+      <body className={`${fraunces.variable} ${instrumentSans.variable}`}>
+        <ThemeProvider>{children}</ThemeProvider>
         <Analytics />
         <SpeedInsights />
       </body>
     </html>
-  )
+  );
 }
-
