@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 
-export const alt = "Rob Abby — Staff Engineer & IT Manager";
+export const alt = "Rob Abby — Senior Frontend Product Engineer";
 export const size = {
   width: 1200,
   height: 630,
@@ -61,7 +61,7 @@ export default async function Image() {
             marginBottom: 16,
           }}
         >
-          Staff Engineer & IT Manager
+          Senior Frontend Product Engineer
         </div>
         <div
           style={{
@@ -71,7 +71,7 @@ export default async function Image() {
             textAlign: "center",
           }}
         >
-          15 years across software engineering and IT operations.
+          15 years shipping consumer and B2B products in React and TypeScript.
         </div>
       </div>
     ),
