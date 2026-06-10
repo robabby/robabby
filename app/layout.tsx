@@ -19,14 +19,14 @@ const instrumentSans = Instrument_Sans({
 });
 
 export const metadata = {
-  title: "Rob Abby — Staff Engineer & IT Manager",
+  title: "Rob Abby — Senior Frontend Product Engineer",
   description:
-    "Senior technologist with 15 years across software engineering and IT operations. Bellingham, WA.",
+    "Senior Frontend Product Engineer with 15 years shipping consumer and B2B products in React and TypeScript. Bellingham, WA.",
   metadataBase: new URL("https://robabby.com"),
   openGraph: {
-    title: "Rob Abby — Staff Engineer & IT Manager",
+    title: "Rob Abby — Senior Frontend Product Engineer",
     description:
-      "15 years across software engineering and IT operations. Bellingham, WA.",
+      "15 years shipping consumer and B2B products in React and TypeScript. Bellingham, WA.",
     url: "https://robabby.com",
     siteName: "Rob Abby",
     locale: "en_US",
@@ -34,9 +34,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rob Abby — Staff Engineer & IT Manager",
+    title: "Rob Abby — Senior Frontend Product Engineer",
     description:
-      "15 years across software engineering and IT operations. Bellingham, WA.",
+      "15 years shipping consumer and B2B products in React and TypeScript. Bellingham, WA.",
   },
 };
 

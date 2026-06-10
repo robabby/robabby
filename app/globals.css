@@ -172,6 +172,93 @@ body {
   color: var(--ink-faint);
 }
 
+.work {
+  max-width: 540px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 4.5rem;
+  text-align: center;
+}
+
+.work .eyebrow {
+  margin-bottom: 0.75rem;
+}
+
+.work .rule {
+  margin-bottom: 2.75rem;
+}
+
+.work-sub {
+  font-family: var(--font-body), sans-serif;
+  font-size: 0.9375rem;
+  color: var(--ink-muted);
+  margin: 0 0 1.75rem;
+}
+
+.work-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 2.75rem;
+}
+
+.work-item {
+  margin: 0;
+}
+
+.work-name {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 0 0 0.625rem;
+}
+
+.work-description {
+  font-family: var(--font-body), sans-serif;
+  font-size: 0.9375rem;
+  color: var(--ink-muted);
+  line-height: 1.55;
+  max-width: 28rem;
+  margin: 0 auto 0.75rem;
+}
+
+.work-stack {
+  font-family: var(--font-body), sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: var(--ink-faint);
+  margin: 0 0 0.875rem;
+}
+
+.work-links {
+  font-family: var(--font-body), sans-serif;
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+.work-links a {
+  color: var(--ink-muted);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 1px;
+  transition: color 200ms ease, border-color 200ms ease;
+}
+
+.work-links a:hover,
+.work-links a:focus-visible {
+  color: var(--ink);
+  border-bottom-color: var(--ink);
+  outline: none;
+}
+
+.footer {
+  padding: 0 1.5rem 2.5rem;
+  text-align: center;
+}
+
 .copyright {
   font-family: var(--font-body), sans-serif;
   font-size: 0.6875rem;
