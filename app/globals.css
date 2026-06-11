@@ -295,6 +295,34 @@ body {
   margin: 0;
 }
 
+.colophon {
+  font-family: var(--font-body), sans-serif;
+  font-size: 0.6875rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin: 0.625rem 0 0;
+}
+
+.colophon a {
+  color: var(--ink-muted);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 1px;
+  transition: color 200ms ease, border-color 200ms ease;
+}
+
+.colophon a:hover,
+.colophon a:focus-visible {
+  color: var(--ink);
+  border-bottom-color: var(--ink);
+}
+
+.colophon a:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
 .theme-toggle {
   position: fixed;
   top: 1.25rem;
@@ -361,6 +389,8 @@ body {
   body,
   .cta,
   .links a,
+  .work-links a,
+  .colophon a,
   .theme-toggle {
     transition: none;
   }

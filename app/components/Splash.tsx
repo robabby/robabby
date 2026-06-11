@@ -217,6 +217,16 @@ export default function Splash() {
         </motion.section>
         <footer className="footer">
           <p className="copyright">© {YEAR} Rob Abby</p>
+          <p className="colophon">
+            Designed &amp; built with Next.js ·{" "}
+            <a
+              href="https://github.com/robabby/robabby"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View source
+            </a>
+          </p>
         </footer>
       </main>
     </>
