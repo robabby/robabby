@@ -44,6 +44,44 @@ const PROJECTS = [
   },
 ];
 
+const EXPERIENCE = [
+  {
+    company: "VIMSIA",
+    role: "Technology Strategist & IT Manager",
+    dates: "Mar 2025 – Nov 2025",
+    summary:
+      "Led technology strategy and AI integration for a PK-12 school; reduced support requests 20% through training and systems improvements.",
+  },
+  {
+    company: "PartySlate",
+    role: "Staff Engineer",
+    dates: "Dec 2018 – Feb 2024",
+    summary:
+      "Senior-most frontend engineer through growth from a 12-person startup to a 50+ employee Series-B company. Led the rewrite of Find Venues — the platform's highest-traffic page — driving a 150% increase in venue inquiries, and built the 25-module component library that cut feature rollout cycles 40% across teams.",
+  },
+  {
+    company: "project44",
+    role: "Senior UX Engineer",
+    dates: "Jun 2018 – Dec 2018",
+    summary:
+      "Built map-based logistics interfaces in a React/Redux codebase; established a living style guide and UI component library.",
+  },
+  {
+    company: "SAVO",
+    role: "Senior UI/UX & Product Developer",
+    dates: "Apr 2013 – Jun 2018",
+    summary:
+      "Led the spinout of an autonomous UI/UX team and a living design system informed by 50+ user research sessions; founded the org-wide Front-End Guild.",
+  },
+  {
+    company: "Web2Carz",
+    role: "Web Developer",
+    dates: "Nov 2011 – Mar 2013",
+    summary:
+      "Built consumer-facing galleries, forms, and a standalone mobile web app; introduced git and a formal deployment process.",
+  },
+];
+
 export default function Splash() {
   const reduceMotion = useReducedMotion();
   const fade = reduceMotion
@@ -59,6 +97,13 @@ export default function Splash() {
         initial: { opacity: 0, y: 8 },
         animate: { opacity: 1, y: 0 },
         transition: { duration: 0.6, ease: EASE, delay: 0.2 },
+      };
+  const fadeExp = reduceMotion
+    ? {}
+    : {
+        initial: { opacity: 0, y: 8 },
+        animate: { opacity: 1, y: 0 },
+        transition: { duration: 0.6, ease: EASE, delay: 0.35 },
       };
 
   return (
@@ -109,9 +154,9 @@ export default function Splash() {
           aria-labelledby="work-heading"
           {...fadeWork}
         >
-          <p className="eyebrow" id="work-heading">
+          <h2 className="eyebrow" id="work-heading">
             Current Work
-          </p>
+          </h2>
           <p className="work-sub">
             Independent Software Engineer · Rob Abby LLC · Nov 2025 – Present
           </p>
@@ -119,7 +164,7 @@ export default function Splash() {
           <ul className="work-list">
             {PROJECTS.map((project) => (
               <li className="work-item" key={project.name}>
-                <h2 className="work-name">{project.name}</h2>
+                <h3 className="work-name">{project.name}</h3>
                 <p className="work-description">{project.description}</p>
                 <p className="work-stack">{project.stack}</p>
                 <p className="work-links">
@@ -136,6 +181,27 @@ export default function Splash() {
                     </span>
                   ))}
                 </p>
+              </li>
+            ))}
+          </ul>
+        </motion.section>
+        <motion.section
+          className="work"
+          aria-labelledby="experience-heading"
+          {...fadeExp}
+        >
+          <h2 className="eyebrow" id="experience-heading">
+            Experience
+          </h2>
+          <hr className="rule" aria-hidden />
+          <ul className="work-list">
+            {EXPERIENCE.map((job) => (
+              <li className="work-item" key={job.company}>
+                <h3 className="work-name">{job.company}</h3>
+                <p className="exp-meta">
+                  {job.role} · {job.dates}
+                </p>
+                <p className="work-description">{job.summary}</p>
               </li>
             ))}
           </ul>

@@ -232,6 +232,14 @@ body {
   margin: 0 0 0.875rem;
 }
 
+.exp-meta {
+  font-family: var(--font-body), sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: var(--ink-faint);
+  margin: 0 0 0.625rem;
+}
+
 .work-links {
   font-family: var(--font-body), sans-serif;
   font-size: 0.8125rem;
