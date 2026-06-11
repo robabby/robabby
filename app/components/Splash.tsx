@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion, useReducedMotion } from "motion/react";
 import ThemeToggle from "./ThemeToggle";
 
@@ -112,6 +113,14 @@ export default function Splash() {
       <main>
         <section className="splash">
           <motion.article className="card" {...fade}>
+            <Image
+              className="portrait"
+              src="/profile.jpeg"
+              alt=""
+              width={88}
+              height={88}
+              priority
+            />
             <p className="eyebrow">Bellingham, WA</p>
             <h1 className="name">Rob Abby</h1>
             <hr className="rule" aria-hidden />
