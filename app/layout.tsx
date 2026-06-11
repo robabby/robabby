@@ -1,5 +1,6 @@
 import "@radix-ui/themes/styles.css";
 import "./globals.css";
+import type { Viewport } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { Fraunces, Instrument_Sans } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -40,6 +41,30 @@ export const metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#faf7f2" },
+    { media: "(prefers-color-scheme: dark)", color: "#14110d" },
+  ],
+  colorScheme: "light dark",
+};
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Rob Abby",
+  jobTitle: "Senior Frontend Product Engineer",
+  url: "https://robabby.com",
+  image: "https://robabby.com/profile.jpeg",
+  email: "mailto:robabby23@gmail.com",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Bellingham",
+    addressRegion: "WA",
+  },
+  sameAs: ["https://linkedin.com/in/robabby", "https://github.com/robabby"],
+};
+
 const themeScript = `(function(){try{var s=localStorage.getItem('theme');var d=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=s||d;}catch(e){document.documentElement.dataset.theme='dark';}})();`;
 
 export default function RootLayout({
@@ -53,6 +78,10 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body className={`${fraunces.variable} ${instrumentSans.variable}`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
         <ThemeProvider>{children}</ThemeProvider>
         <Analytics />
         <SpeedInsights />

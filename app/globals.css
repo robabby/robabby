@@ -17,6 +17,7 @@ body {
   --ink-muted: #5a5a5a;
   --ink-faint: #8a8a8a;
   --rule: #d4ccc0;
+  color-scheme: light;
 }
 
 [data-theme="dark"] {
@@ -25,6 +26,7 @@ body {
   --ink-muted: #a39c91;
   --ink-faint: #6b665d;
   --rule: #2a261f;
+  color-scheme: dark;
 }
 
 html {
