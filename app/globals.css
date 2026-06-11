@@ -92,6 +92,7 @@ body {
   line-height: 1;
   color: var(--ink);
   margin: 0 0 1.5rem;
+  text-wrap: balance;
 }
 
 .rule {
@@ -120,6 +121,7 @@ body {
   max-width: 28rem;
   margin: 0 auto 2.75rem;
   line-height: 1.55;
+  text-wrap: balance;
 }
 
 .cta {
@@ -175,7 +177,12 @@ body {
 .links a:focus-visible {
   color: var(--ink);
   border-bottom-color: var(--ink);
-  outline: none;
+}
+
+.links a:focus-visible,
+.work-links a:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
 }
 
 .links span {
@@ -232,6 +239,7 @@ body {
   line-height: 1.55;
   max-width: 28rem;
   margin: 0 auto 0.75rem;
+  text-wrap: pretty;
 }
 
 .work-stack {
@@ -269,7 +277,6 @@ body {
 .work-links a:focus-visible {
   color: var(--ink);
   border-bottom-color: var(--ink);
-  outline: none;
 }
 
 .footer {
@@ -308,7 +315,11 @@ body {
 .theme-toggle:focus-visible {
   color: var(--ink);
   border-color: var(--ink);
-  outline: none;
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
 }
 
 @media (max-width: 480px) {
