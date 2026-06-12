@@ -17,6 +17,7 @@ body {
   --ink-muted: #5a5a5a;
   --ink-faint: #8a8a8a;
   --rule: #d4ccc0;
+  color-scheme: light;
 }
 
 [data-theme="dark"] {
@@ -25,6 +26,7 @@ body {
   --ink-muted: #a39c91;
   --ink-faint: #6b665d;
   --rule: #2a261f;
+  color-scheme: dark;
 }
 
 html {
@@ -63,6 +65,16 @@ body {
   text-align: center;
 }
 
+.portrait {
+  display: block;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--rule);
+  margin: 0 auto 1.5rem;
+}
+
 .eyebrow {
   font-family: var(--font-body), sans-serif;
   font-size: 0.6875rem;
@@ -82,6 +94,7 @@ body {
   line-height: 1;
   color: var(--ink);
   margin: 0 0 1.5rem;
+  text-wrap: balance;
 }
 
 .rule {
@@ -108,8 +121,17 @@ body {
   font-weight: 400;
   color: var(--ink-muted);
   max-width: 28rem;
-  margin: 0 auto 2.75rem;
+  margin: 0 auto 1rem;
   line-height: 1.55;
+  text-wrap: balance;
+}
+
+.proof {
+  font-family: var(--font-body), sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: var(--ink-faint);
+  margin: 0 0 2.75rem;
 }
 
 .cta {
@@ -165,7 +187,12 @@ body {
 .links a:focus-visible {
   color: var(--ink);
   border-bottom-color: var(--ink);
-  outline: none;
+}
+
+.links a:focus-visible,
+.work-links a:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
 }
 
 .links span {
@@ -222,6 +249,7 @@ body {
   line-height: 1.55;
   max-width: 28rem;
   margin: 0 auto 0.75rem;
+  text-wrap: pretty;
 }
 
 .work-stack {
@@ -230,6 +258,14 @@ body {
   letter-spacing: 0.06em;
   color: var(--ink-faint);
   margin: 0 0 0.875rem;
+}
+
+.exp-meta {
+  font-family: var(--font-body), sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: var(--ink-faint);
+  margin: 0 0 0.625rem;
 }
 
 .work-links {
@@ -251,7 +287,6 @@ body {
 .work-links a:focus-visible {
   color: var(--ink);
   border-bottom-color: var(--ink);
-  outline: none;
 }
 
 .footer {
@@ -266,6 +301,34 @@ body {
   text-transform: uppercase;
   color: var(--ink-faint);
   margin: 0;
+}
+
+.colophon {
+  font-family: var(--font-body), sans-serif;
+  font-size: 0.6875rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin: 0.625rem 0 0;
+}
+
+.colophon a {
+  color: var(--ink-muted);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 1px;
+  transition: color 200ms ease, border-color 200ms ease;
+}
+
+.colophon a:hover,
+.colophon a:focus-visible {
+  color: var(--ink);
+  border-bottom-color: var(--ink);
+}
+
+.colophon a:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
 }
 
 .theme-toggle {
@@ -290,7 +353,11 @@ body {
 .theme-toggle:focus-visible {
   color: var(--ink);
   border-color: var(--ink);
-  outline: none;
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
 }
 
 @media (max-width: 480px) {
@@ -298,11 +365,17 @@ body {
     padding: 1.5rem 1.25rem;
   }
 
+  .portrait {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 1.25rem;
+  }
+
   .eyebrow {
     margin-bottom: 1.75rem;
   }
 
-  .tagline {
+  .proof {
     margin-bottom: 2.25rem;
   }
 
@@ -324,6 +397,8 @@ body {
   body,
   .cta,
   .links a,
+  .work-links a,
+  .colophon a,
   .theme-toggle {
     transition: none;
   }
