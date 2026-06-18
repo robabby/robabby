@@ -12,19 +12,12 @@ const PROJECTS = [
   {
     name: "WavePoint",
     description:
-      "Solo-built product live in production: a Next.js 16 web app with subscriptions, plus six native Apple apps sharing a Swift astronomy engine — a 750+ commit monorepo.",
-    stack: "Next.js 16 · TypeScript · Supabase · Stripe · SwiftUI",
+      "Solo-built and live in production: a Next.js 16 web app that computes astrology live from astronomical positions — birth charts, astrocartography, and transits calculated at request time, not served as static content. A shared TypeScript layer of pure, Zod-validated primitives powers the web app, a REST API, and an MCP server — a 915-commit monorepo.",
+    stack: "Next.js 16 · TypeScript · Supabase · Stripe · MCP",
     links: [
       { label: "Live site", href: "https://wavepoint.space" },
       { label: "GitHub", href: "https://github.com/robabby/wavepoint" },
     ],
-  },
-  {
-    name: "Sherpa",
-    description:
-      "Collaboration framework for agentic workflows that governs its own development — agent definitions, a skills engine, and a dispatch pipeline that live in your codebase.",
-    stack: "Claude Code · Agentic workflows · TypeScript",
-    links: [{ label: "Live site", href: "https://sherpa.solar" }],
   },
   {
     name: "claude-skills",
