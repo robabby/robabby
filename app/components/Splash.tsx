@@ -12,7 +12,7 @@ const PROJECTS = [
   {
     name: "WavePoint",
     description:
-      "Solo-built and live in production: a Next.js 16 web app that computes astrology live from astronomical positions — birth charts, astrocartography, and transits calculated at request time, not served as static content. A shared TypeScript layer of pure, Zod-validated primitives powers the web app, a REST API, and an MCP server — a 915-commit monorepo.",
+      "Solo-built and live in production: a Next.js 16 web app that computes astrology live from astronomical positions — birth charts, astrocartography, and transits calculated at request time, not served as static content. A shared TypeScript layer of Zod-validated primitives powers the web app, a REST API, and an MCP server.",
     stack: "Next.js 16 · TypeScript · Supabase · Stripe · MCP",
     links: [
       { label: "Live site", href: "https://wavepoint.space" },
