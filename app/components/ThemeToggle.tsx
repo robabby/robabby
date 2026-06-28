@@ -2,12 +2,15 @@
 
 import { SunIcon, MoonIcon } from "@radix-ui/react-icons";
 import { setThemeMode, useThemeMode } from "./useThemeMode";
+import { track, ANALYTICS_EVENTS } from "../lib/analytics";
 
 export default function ThemeToggle() {
   const theme = useThemeMode();
 
   const toggle = () => {
-    setThemeMode(theme === "dark" ? "light" : "dark");
+    const next = theme === "dark" ? "light" : "dark";
+    setThemeMode(next);
+    track(ANALYTICS_EVENTS.THEME_CHANGED, { theme: next });
   };
 
   return (

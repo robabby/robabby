@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion, useReducedMotion } from "motion/react";
 import ThemeToggle from "./ThemeToggle";
 
@@ -219,7 +220,8 @@ export default function Splash() {
               rel="noopener noreferrer"
             >
               View source
-            </a>
+            </a>{" "}
+            · <Link href="/privacy">Privacy</Link>
           </p>
         </footer>
       </main>
