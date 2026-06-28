@@ -1,9 +1,10 @@
 import "@radix-ui/themes/styles.css";
 import "./globals.css";
-import type { Viewport } from "next";
+import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { Fraunces, Instrument_Sans } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import ThemeProvider from "./components/ThemeProvider";
 
 const fraunces = Fraunces({
@@ -19,7 +20,7 @@ const instrumentSans = Instrument_Sans({
   display: "swap",
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Rob Abby — Senior Frontend Product Engineer",
   description:
     "Senior Frontend Product Engineer with 15 years shipping consumer and B2B products in React and TypeScript. Bellingham, WA.",
@@ -85,6 +86,9 @@ export default function RootLayout({
         <ThemeProvider>{children}</ThemeProvider>
         <Analytics />
         <SpeedInsights />
+        {process.env.NEXT_PUBLIC_GA_ID && (
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
+        )}
       </body>
     </html>
   );
