@@ -38,21 +38,33 @@ This is a personal portfolio website for Rob Abby (Staff Frontend Engineer) buil
 
 ## Development Workflow
 
+### Project Tracking (Linear)
+
+Linear is our product and project management system — it houses every work item and defines our branching strategy. Work for this site lives in the **robabby.com project** in Linear workspace `sherpagg`, **team Sherpa (key `SG`)** — there is no separate "robabby" team; robabby.com is a *project* under Sherpa, so its issues are numbered `SG-###` (same scheme as the WavePoint project).
+
+Accessed via the `plugin:linear:linear` MCP server (load tools through ToolSearch). Read + create/update issues, comments, labels, status updates, and docs via the `save_*` tools.
+
+- **Start every change from a Linear issue.** If the work isn't tracked yet, create the issue in the robabby.com project first.
+- **No archive/delete tool.** Close an issue out by setting its `state` to `Canceled`; real archive/delete is a UI-only bulk action (canceled/completed issues auto-archive on the team's schedule).
+- **Listing every project issue at once can overflow the tool token limit.** Filter `list_issues` by `state`/`updatedAt`, or read the saved tool-result file.
+
 ### Git Workflow (Required)
 
-**Never commit directly to `main`.** All changes must go through a pull request.
+**Never commit directly to `main`.** Every change is tracked by a Linear issue and lands through a pull request.
 
-1. **Create a feature branch** with a descriptive name (e.g., `phase2-about-narrative`):
+1. **Pick or create the Linear issue** in the robabby.com project for the work.
+2. **Create the branch from that issue** using the name Linear generates (Linear → "Copy git branch name", e.g. `sg-123-add-blog-with-mdx-support`), cut from an up-to-date `main`:
    ```bash
-   git checkout -b <branch-name>
+   git checkout main && git pull
+   git checkout -b <linear-branch-name>
    ```
-2. **Make commits on the feature branch** - Use conventional commit format: `type(scope): description`
-3. **Push and create a PR**:
+3. **Commit on the branch** using conventional commit format: `type(scope): description`. Reference the issue (`SG-###`) in a commit or the PR so Linear links the work automatically.
+4. **Push and open a PR** back to `main`:
    ```bash
-   git push -u origin <branch-name>
+   git push -u origin <linear-branch-name>
    gh pr create --title "..." --body "..."
    ```
-4. **Merge via PR**
+5. **Merge via PR.** Merging advances the linked Linear issue to its Done state.
 
 ### Feature Implementation
 
