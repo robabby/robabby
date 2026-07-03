@@ -1,11 +1,9 @@
-import "@radix-ui/themes/styles.css";
 import "./globals.css";
 import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { Fraunces, Instrument_Sans } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import ThemeProvider from "./components/ThemeProvider";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -66,7 +64,7 @@ const personJsonLd = {
   sameAs: ["https://linkedin.com/in/robabby", "https://github.com/robabby"],
 };
 
-const themeScript = `(function(){try{var s=localStorage.getItem('theme');var d=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=s||d;}catch(e){document.documentElement.dataset.theme='dark';}})();`;
+const themeScript = `(function(){var e=document.documentElement;e.dataset.js="";try{var s=localStorage.getItem('theme');var d=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';e.dataset.theme=s||d;}catch(err){e.dataset.theme='dark';}})();`;
 
 export default function RootLayout({
   children,
@@ -83,7 +81,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
         />
-        <ThemeProvider>{children}</ThemeProvider>
+        {children}
         <Analytics />
         <SpeedInsights />
         {process.env.NEXT_PUBLIC_GA_ID && (

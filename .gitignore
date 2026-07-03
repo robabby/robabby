@@ -27,6 +27,9 @@
 # worktrees
 .worktrees/
 
+# screenshot harness output (scripts/screenshots.mjs)
+/screenshots/
+
 # debug
 npm-debug.log*
 yarn-debug.log*
