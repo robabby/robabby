@@ -8,6 +8,14 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // Per-application source attribution: print robabby.com/via/<slug> on a
+      // resume or outreach message and GA4 records the landing as /?src=<slug>
+      // (page_location keeps the query), so each application is measurable.
+      {
+        source: "/via/:slug",
+        destination: "/?src=:slug",
+        permanent: false,
+      },
       {
         source: "/wavepoint",
         destination: "https://wavepoint.space",
