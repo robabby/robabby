@@ -1,13 +1,8 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useReducedMotion } from "motion/react";
 import ThemeToggle from "./ThemeToggle";
 
 const YEAR = new Date().getFullYear();
-
-const EASE = [0.22, 1, 0.36, 1] as const;
 
 const PROJECTS = [
   {
@@ -58,35 +53,12 @@ const EXPERIENCE = [
 ];
 
 export default function Splash() {
-  const reduceMotion = useReducedMotion();
-  const fade = reduceMotion
-    ? {}
-    : {
-        initial: { opacity: 0, y: 8 },
-        animate: { opacity: 1, y: 0 },
-        transition: { duration: 0.6, ease: EASE },
-      };
-  const fadeWork = reduceMotion
-    ? {}
-    : {
-        initial: { opacity: 0, y: 8 },
-        animate: { opacity: 1, y: 0 },
-        transition: { duration: 0.6, ease: EASE, delay: 0.2 },
-      };
-  const fadeExp = reduceMotion
-    ? {}
-    : {
-        initial: { opacity: 0, y: 8 },
-        animate: { opacity: 1, y: 0 },
-        transition: { duration: 0.6, ease: EASE, delay: 0.35 },
-      };
-
   return (
     <>
       <ThemeToggle />
       <main>
         <section className="splash">
-          <motion.article className="card" {...fade}>
+          <article className="card lift-in">
             <Image
               className="portrait"
               src="/profile.jpeg"
@@ -131,12 +103,11 @@ export default function Splash() {
                 GitHub
               </a>
             </nav>
-          </motion.article>
+          </article>
         </section>
-        <motion.section
-          className="work"
+        <section
+          className="work fade-in fade-in-d2"
           aria-labelledby="work-heading"
-          {...fadeWork}
         >
           <h2 className="eyebrow" id="work-heading">
             Current Work
@@ -169,11 +140,10 @@ export default function Splash() {
               </li>
             ))}
           </ul>
-        </motion.section>
-        <motion.section
-          className="work"
+        </section>
+        <section
+          className="work fade-in fade-in-d3"
           aria-labelledby="experience-heading"
-          {...fadeExp}
         >
           <h2 className="eyebrow" id="experience-heading">
             Experience
@@ -190,7 +160,7 @@ export default function Splash() {
               </li>
             ))}
           </ul>
-        </motion.section>
+        </section>
         <footer className="footer">
           <p className="copyright">© {YEAR} Rob Abby</p>
           <p className="colophon">
