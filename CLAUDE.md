@@ -8,6 +8,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `pnpm build` - Build the production application
 - `pnpm start` - Start production server
 - `pnpm lint` - Run ESLint directly (Next.js 16 removed `next lint`)
+- `pnpm shots [base-url]` - Playwright screenshot harness: light/dark × desktop/mobile plus no-JS and reduced-motion renders into `screenshots/` (gitignored)
 
 ## Project Architecture
 
@@ -17,15 +18,15 @@ This is the personal site of Rob Abby (Senior Frontend Product Engineer) — a d
 - **Next.js 16** with App Router
 - **React 19**
 - **TypeScript**
-- **Radix UI Themes** + custom CSS variables (`app/globals.css`) for styling
+- **Custom CSS** with CSS variables (`app/globals.css`) — no UI framework
 - **Fraunces** (display) + **Instrument Sans** (body) via `next/font`
-- **motion/react** for entrance animations (respects reduced motion)
+- **CSS keyframe entrance animations**, gated on a `data-js` flag set by the inline head script — no-JS visitors get the fully visible static page, reduced motion is respected, and the hero animates transform-only so LCP isn't delayed
 - **Vercel Analytics + Speed Insights** and **GA4** (`@next/third-parties`, gated on `NEXT_PUBLIC_GA_ID`)
 
 ### Structure
 - `app/page.tsx` - Renders `<Splash />`, the entire homepage
 - `app/components/Splash.tsx` - All homepage content: hero card, Current Work (WavePoint), Experience summaries, footer. Copy lives in the `PROJECTS` and `EXPERIENCE` constants
-- `app/components/ThemeProvider.tsx` / `ThemeToggle.tsx` / `useThemeMode.ts` - light/dark theming (localStorage + `prefers-color-scheme`)
+- `app/components/ThemeToggle.tsx` / `useThemeMode.ts` - light/dark theming (localStorage + `prefers-color-scheme`, applied via `data-theme` on `<html>`)
 - `app/layout.tsx` - Root layout: fonts, metadata/OG, Person JSON-LD, analytics
 - `app/privacy/page.tsx`, `app/robots.ts`, `app/sitemap.ts`, `app/opengraph-image.tsx`
 - `public/resume.pdf` - Served by the "View Résumé" CTA — keep in sync with the current resume
