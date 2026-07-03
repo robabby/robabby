@@ -31,7 +31,15 @@ This is the personal site of Rob Abby (Senior Frontend Product Engineer) — a d
 - `public/resume.pdf` - Served by the "View Résumé" CTA — keep in sync with the current resume
 
 ### Content Rules
-- Site copy must stay consistent with the resume and LinkedIn (see Linear project for the positioning source of truth). Notable: "React and TypeScript since 2018" (never "15 years of React"), WavePoint is the only showcased project, and no links to private repos.
+- Site copy must stay consistent with the resume and LinkedIn (`../career/docs/positioning.md` is the positioning source of truth). Notable: "React and TypeScript since 2018" (never "15 years of React"), WavePoint is the only showcased project, and no links to private repos.
+
+### Career Hub (private)
+
+Career positioning, approved copy blocks, application tracking, and job-search context live in the **private** repo at `../career` (github.com/robabby/career) — never in this public repo.
+
+- Before editing site copy (`app/components/Splash.tsx`, `app/layout.tsx` metadata/OG, `README.md`, `public/resume.pdf`), consult `../career/docs/positioning.md` — site copy must match it.
+- Application logs, target-company notes, comp data, interview prep: `../career` only.
+- Career-focused Claude sessions run from `../career`, not this repo.
 
 ## Development Workflow
 
