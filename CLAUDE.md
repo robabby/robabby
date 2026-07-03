@@ -11,30 +11,27 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Architecture
 
-This is a personal portfolio website for Rob Abby (Staff Frontend Engineer) built with Next.js 15 using the app router structure.
+This is the personal site of Rob Abby (Senior Frontend Product Engineer) — a deliberately minimal single-page splash built with Next.js 16 (App Router).
 
 ### Tech Stack
-- **Next.js 15** with App Router
+- **Next.js 16** with App Router
 - **React 19**
 - **TypeScript**
-- **Radix UI Themes** + custom CSS variables for styling
-- **Vercel Analytics** for tracking
-- **@radix-ui/react-icons** for icons
-- **motion/react** for animations
+- **Radix UI Themes** + custom CSS variables (`app/globals.css`) for styling
+- **Fraunces** (display) + **Instrument Sans** (body) via `next/font`
+- **motion/react** for entrance animations (respects reduced motion)
+- **Vercel Analytics + Speed Insights** and **GA4** (`@next/third-parties`, gated on `NEXT_PUBLIC_GA_ID`)
 
 ### Structure
-- `app/` - Next.js app router pages and layout
-  - `page.tsx` - Main homepage combining all portfolio sections
-  - `layout.tsx` - Root layout with Inter font and Analytics
-  - `components/` - Page-specific components (Hero, About, Skills, Experience, Footer)
-- `lib/utils.ts` - Utility functions (likely for shadcn/ui)
-- `components.json` - shadcn/ui configuration with path aliases
+- `app/page.tsx` - Renders `<Splash />`, the entire homepage
+- `app/components/Splash.tsx` - All homepage content: hero card, Current Work (WavePoint), Experience summaries, footer. Copy lives in the `PROJECTS` and `EXPERIENCE` constants
+- `app/components/ThemeProvider.tsx` / `ThemeToggle.tsx` / `useThemeMode.ts` - light/dark theming (localStorage + `prefers-color-scheme`)
+- `app/layout.tsx` - Root layout: fonts, metadata/OG, Person JSON-LD, analytics
+- `app/privacy/page.tsx`, `app/robots.ts`, `app/sitemap.ts`, `app/opengraph-image.tsx`
+- `public/resume.pdf` - Served by the "View Résumé" CTA — keep in sync with the current resume
 
-### Key Features
-- Portfolio sections: Hero, About, Skills, Experience
-- Header and Contact components exist but are currently commented out
-- Uses pnpm as package manager
-- Configured for shadcn/ui with "new-york" style and slate base color
+### Content Rules
+- Site copy must stay consistent with the resume and LinkedIn (see Linear project for the positioning source of truth). Notable: "React and TypeScript since 2018" (never "15 years of React"), WavePoint is the only showcased project, and no links to private repos.
 
 ## Development Workflow
 

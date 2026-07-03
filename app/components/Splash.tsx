@@ -13,29 +13,9 @@ const PROJECTS = [
   {
     name: "WavePoint",
     description:
-      "Solo-built and live in production: a Next.js 16 web app that computes astrology live from astronomical positions — birth charts, astrocartography, and transits calculated at request time, not served as static content. A shared TypeScript layer of Zod-validated primitives powers the web app, a REST API, and an MCP server.",
-    stack: "Next.js 16 · TypeScript · Supabase · Stripe · MCP",
-    links: [
-      { label: "Live site", href: "https://wavepoint.space" },
-      { label: "GitHub", href: "https://github.com/robabby/wavepoint" },
-    ],
-  },
-  {
-    name: "claude-skills",
-    description:
-      "Open-source cross-session memory system for Claude Code, built on Obsidian. Eight skills for persistent context, recall, and session handoff.",
-    stack: "Claude Code · MCP · Obsidian · Markdown/YAML",
-    links: [{ label: "GitHub", href: "https://github.com/robabby/claude-skills" }],
-  },
-  {
-    name: "ai-ready-vault",
-    description:
-      "Documentation site for AI-ready Obsidian vaults with downloadable starter templates.",
-    stack: "Next.js App Router · React Server Components · TypeScript · MDX · Vercel",
-    links: [
-      { label: "Live site", href: "https://ai-ready-vault.vercel.app" },
-      { label: "GitHub", href: "https://github.com/robabby/ai-ready-vault" },
-    ],
+      "Solo-built and live in production: an astrology platform computing birth charts, astrocartography, and transits from live astronomical positions. A 58-module TypeScript computation engine covered by 1,300+ unit tests, behind a Next.js 16 App Router app with partial prerendering, roughly a thousand programmatically generated pages, Supabase auth, and Stripe subscriptions.",
+    stack: "Next.js 16 · React 19 · TypeScript · Supabase · Stripe",
+    links: [{ label: "Live site", href: "https://wavepoint.space" }],
   },
 ];
 
@@ -120,8 +100,8 @@ export default function Splash() {
             <hr className="rule" aria-hidden />
             <p className="role">Senior Frontend Product Engineer</p>
             <p className="tagline">
-              15 years shipping consumer and B2B products in React and
-              TypeScript.
+              15 years shipping consumer and B2B web products — React and
+              TypeScript since 2018.
             </p>
             <p className="proof">Previously: PartySlate · project44 · SAVO</p>
             <a
@@ -162,7 +142,8 @@ export default function Splash() {
             Current Work
           </h2>
           <p className="work-sub">
-            Independent Software Engineer · Rob Abby LLC · Nov 2025 – Present
+            Senior Frontend Engineer (Independent) · Rob Abby LLC · Nov 2025 –
+            Present
           </p>
           <hr className="rule" aria-hidden />
           <ul className="work-list">

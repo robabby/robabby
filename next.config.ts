@@ -1,6 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // A stray lockfile in ~/Workbench makes Turbopack infer the parent dir as
+  // the workspace root and load its postcss config; pin the root here.
+  turbopack: {
+    root: __dirname,
+  },
   async redirects() {
     return [
       {

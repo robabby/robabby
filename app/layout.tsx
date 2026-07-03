@@ -23,12 +23,12 @@ const instrumentSans = Instrument_Sans({
 export const metadata: Metadata = {
   title: "Rob Abby — Senior Frontend Product Engineer",
   description:
-    "Senior Frontend Product Engineer with 15 years shipping consumer and B2B products in React and TypeScript. Bellingham, WA.",
+    "Senior Frontend Product Engineer with 15 years shipping consumer and B2B web products — React and TypeScript since 2018. Bellingham, WA.",
   metadataBase: new URL("https://robabby.com"),
   openGraph: {
     title: "Rob Abby — Senior Frontend Product Engineer",
     description:
-      "15 years shipping consumer and B2B products in React and TypeScript. Bellingham, WA.",
+      "15 years shipping consumer and B2B web products — React and TypeScript since 2018. Bellingham, WA.",
     url: "https://robabby.com",
     siteName: "Rob Abby",
     locale: "en_US",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Rob Abby — Senior Frontend Product Engineer",
     description:
-      "15 years shipping consumer and B2B products in React and TypeScript. Bellingham, WA.",
+      "15 years shipping consumer and B2B web products — React and TypeScript since 2018. Bellingham, WA.",
   },
 };
 
