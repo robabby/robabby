@@ -23,6 +23,9 @@ export const metadata: Metadata = {
   description:
     "Senior Frontend Product Engineer with 15 years shipping consumer and B2B web products — React and TypeScript since 2018. Bellingham, WA.",
   metadataBase: new URL("https://robabby.com"),
+  alternates: {
+    canonical: "https://robabby.com",
+  },
   openGraph: {
     title: "Rob Abby — Senior Frontend Product Engineer",
     description:
@@ -61,7 +64,23 @@ const personJsonLd = {
     addressLocality: "Bellingham",
     addressRegion: "WA",
   },
-  sameAs: ["https://linkedin.com/in/robabby", "https://github.com/robabby"],
+  sameAs: [
+    "https://linkedin.com/in/robabby",
+    "https://github.com/robabby",
+    "https://wavepoint.space",
+  ],
+  worksFor: {
+    "@type": "Organization",
+    name: "Rob Abby LLC",
+  },
+  knowsAbout: [
+    "React",
+    "TypeScript",
+    "Next.js",
+    "Design systems",
+    "Web performance",
+    "AI-assisted development",
+  ],
 };
 
 const themeScript = `(function(){var e=document.documentElement;e.dataset.js="";try{var s=localStorage.getItem('theme');var d=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';e.dataset.theme=s||d;}catch(err){e.dataset.theme='dark';}})();`;
