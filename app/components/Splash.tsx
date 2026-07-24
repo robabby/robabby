@@ -8,7 +8,7 @@ const PROJECTS = [
   {
     name: "WavePoint",
     description:
-      "Solo-built and live in production: an astrology platform computing birth charts, astrocartography, and transits from live astronomical positions. A 58-module TypeScript computation engine covered by 1,300+ unit tests, behind a Next.js 16 App Router app with partial prerendering, roughly a thousand programmatically generated pages, Supabase auth, and Stripe subscriptions.",
+      "Solo-built and live in production: an astrology platform computing birth charts, astrocartography, and transits from live astronomical positions. A pure-function TypeScript computation engine on real ephemeris math, behind a Next.js 16 App Router app with partial prerendering, roughly a thousand programmatically generated pages, Supabase auth, and Stripe subscriptions — 2,300+ unit tests and CI on every change, 700+ PRs merged solo.",
     stack: "Next.js 16 · React 19 · TypeScript · Supabase · Stripe",
     links: [{ label: "Live site", href: "https://wavepoint.space" }],
   },
@@ -113,7 +113,7 @@ export default function Splash() {
             Current Work
           </h2>
           <p className="work-sub">
-            Senior Frontend Engineer (Independent) · Rob Abby LLC · Nov 2025 –
+            Founder &amp; Senior Frontend Engineer · WavePoint · Nov 2025 –
             Present
           </p>
           <hr className="rule" aria-hidden />

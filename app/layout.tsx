@@ -71,7 +71,8 @@ const personJsonLd = {
   ],
   worksFor: {
     "@type": "Organization",
-    name: "Rob Abby LLC",
+    name: "WavePoint",
+    url: "https://wavepoint.space",
   },
   knowsAbout: [
     "React",
