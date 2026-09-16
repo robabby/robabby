@@ -1,22 +1,30 @@
 # Rob Abby
 
-Senior Frontend Product Engineer — 15 years shipping consumer and B2B web products; React and TypeScript since 2018.
+I’m the founder and operator of [WavePoint](https://wavepoint.space/), a personal astrology business. I lead its product, design, engineering, and day-to-day operation.
 
-Currently building [WavePoint](https://wavepoint.space) under Rob Abby LLC: a production astrology platform that computes birth charts, astrocartography, and transits from live astronomical positions — a 58-module TypeScript computation engine with 1,300+ unit tests, behind a Next.js 16 App Router app (Supabase, Stripe). Solo, shipped daily with agentic workflows (Claude Code, MCP): 600+ PRs merged through a Linear-tracked, CI-gated process.
+I also work with small business owners on select projects: clearer websites, useful software, and practical ways to use AI. Based in Bellingham, Washington; working locally and remotely.
 
-Previously: Staff Engineer at PartySlate (12-person startup through Series B), project44, SAVO.
+Building WavePoint has shaped how I work with AI, from questions and prototypes through development, release, and ongoing improvement. Read the [WavePoint case study](https://www.robabby.com/work/wavepoint) or [explore ways to work together](https://www.robabby.com/work-with-me).
 
-**[robabby.com](https://robabby.com)** · [LinkedIn](https://linkedin.com/in/robabby) · [robabby23@gmail.com](mailto:robabby23@gmail.com)
+Previously building web products at PartySlate, project44, and SAVO.
+
+[Discuss a project](mailto:robabby23@gmail.com) · [Website](https://www.robabby.com/) · [LinkedIn](https://linkedin.com/in/robabby)
 
 ---
 
 ## About this repo
 
-The source of [robabby.com](https://robabby.com) — Next.js 16 (App Router), React 19, TypeScript, and [motion](https://motion.dev), deployed on Vercel.
+The source of [robabby.com](https://www.robabby.com/): Next.js App Router, React, TypeScript, and custom CSS, deployed on Vercel. The core pages are Home, Work with me, and the WavePoint case study, with a separate privacy page.
 
-```bash
-pnpm install
-pnpm dev     # http://localhost:3000
-pnpm build
+```sh
+pnpm install --frozen-lockfile
+pnpm dev
 pnpm lint
+pnpm build
+pnpm start
+pnpm shots http://localhost:3000
 ```
+
+`pnpm shots` checks the public pages, navigation, metadata, themes, and no-JavaScript rendering, and writes browser screenshots to the ignored `screenshots/` directory. Run it against a local production build before release.
+
+See [the design system](docs/ux/design-system.md) for the visual conventions and [CLAUDE.md](CLAUDE.md) for repository workflows. Images in `public/images/wavepoint/` show WavePoint’s public example chart and a published Moon Calendar sample; they contain no private chart data.
