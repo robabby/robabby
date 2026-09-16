@@ -15,11 +15,12 @@ export default function ThemeToggle() {
 
   return (
     <button
-      className="theme-toggle"
+      className="theme"
       type="button"
       aria-label={
         theme === "dark" ? "Switch to light theme" : "Switch to dark theme"
       }
+      aria-pressed={theme === "dark"}
       onClick={toggle}
     >
       {theme === "dark" ? <SunIcon /> : <MoonIcon />}

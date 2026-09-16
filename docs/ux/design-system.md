@@ -1,62 +1,44 @@
-# Design System — robabby.com
+# Design system — robabby.com
+
+The site uses the editorial direction approved on 2026-09-16: warm ivory, forest green, restrained typography, and space around useful content. Shared CSS lives in `app/globals.css`; fonts are configured in `app/layout.tsx`.
 
 ## Typography
 
-| Token | Font | Usage |
-|-------|------|-------|
-| `--font-display` | Syne | Headings, hero name, section titles, brand mark, nav items |
-| `--font-body` | Instrument Sans | Body text, UI elements, badges, labels, descriptions |
+| Token | Font | Use |
+|---|---|---|
+| `--font-display` | Fraunces, regular, optical sizing | Personal name, page headings, section headings |
+| `--font-body` | Instrument Sans, regular and medium | Navigation, paragraphs, labels, buttons |
 
-**Weights:**
-- Display: 400 (section titles), 600 (headings), 700 (hero name)
-- Body: 400 (text), 500 (labels, badges), 600 (emphasis)
+Keep display headings restrained. Sentence case and first-person language are intentional parts of the personal brand. Body copy uses comfortable line lengths and a 1.6–1.8 line height. Small uppercase labels supply hierarchy without replacing descriptive headings.
 
-## Color Palette
+## Color
 
-### Backgrounds
-| Token | Value | Usage |
-|-------|-------|-------|
-| `--color-bg` | `#0a0a0f` | Page background, deepest layer |
-| `--color-surface` | `#141418` | Card backgrounds, section alternation |
-| `--color-elevated` | `#1e1e24` | Elevated cards, hover states |
+| Token | Light | Dark | Use |
+|---|---|---|---|
+| `--paper` | `#f5f3eb` | `#111d17` | Page background |
+| `--ink` | `#20372c` | `#f0f1e6` | Main text |
+| `--body` | `#4f5b51` | `#b4c1b6` | Supporting text |
+| `--line` | `#cdd1c4` | `#384b3e` | Dividers |
+| `--accent` | `#294c38` | `#ccdebb` | Main action |
+| `--pale` | `#e5e9dd` | `#2b4033` | Product figures and process context |
+| `--contact` | `#203b2d` | `#294534` | Contact section |
 
-### Accent Colors
-| Token | Value | Usage |
-|-------|-------|-------|
-| `--color-primary` | `#3b82f6` | Primary actions, links, active states, timeline |
-| `--color-primary-glow` | `rgba(59, 130, 246, 0.4)` | Glow effects, focus rings |
-| `--color-secondary` | `#a8a29e` | Secondary text, subtle labels, warm balance |
-| `--color-accent` | `#60a5fa` | Hover highlights, gradient endpoints |
-| `--color-accent-glow` | `rgba(96, 165, 250, 0.3)` | Subtle glow effects |
+Themes use `data-theme` on the document. The saved preference takes precedence over the system preference. Without JavaScript, CSS follows the system preference and hides the inactive theme button.
 
-### Borders
-| Token | Value | Usage |
-|-------|-------|-------|
-| `--color-border` | `#1e1e24` | Card borders, dividers |
-| `--color-border-subtle` | `rgba(59, 130, 246, 0.1)` | Faint card borders, section edges |
+## Structure
 
-### Text
-| Token | Value | Contrast on bg | Contrast on surface | Usage |
-|-------|-------|----------------|---------------------|-------|
-| `--color-text` | `#f5f5f4` | 18.1:1 | 16.8:1 | Primary content, headings |
-| `--color-text-2` | `#a8a29e` | 7.8:1 | 7.3:1 | Secondary descriptions, labels |
-| `--color-text-muted` | `#847d77` | 4.9:1 | 4.5:1 | Tertiary info, timestamps |
+- Home uses the descriptor “Product, design & engineering” in the header and “Rob Abby” as the sole personal-name heading. Do not duplicate it with a homepage logo.
+- Inner pages link home with Rob’s name. Shared navigation points to the WavePoint case study, Work with me, and the homepage About section.
+- The maximum content width is 1160px. Layouts become a single column on phones; navigation remains visible without a JavaScript menu.
+- WavePoint imagery uses real public product views. Keep the example-chart label visible; never substitute private customer or chart data.
+- Explain the development process through a numbered sequence and a compact project-context summary. Avoid decorative dashboards or a grid of vendor logos.
+- The primary action is “Discuss a project,” leading to the contact section or email. Keep the contact address visible and selectable.
+- The historical resume remains accessible at its existing URL, with noindex and no promotional CTA in the new site.
 
-### Status
-| Token | Value | Usage |
-|-------|-------|-------|
-| `--color-success` | `#22c55e` | Availability indicator |
+## Accessibility and performance
 
-## Accessibility
+Use semantic links and buttons, one h1 per page, clear section headings, a working skip link, visible keyboard focus, and informative image alternatives. Native details elements handle the small FAQ. All substantive content is server-rendered and remains available without JavaScript.
 
-- All text meets WCAG AA (4.5:1 body, 3:1 large text)
-- All interactive elements have visible focus states using `--color-primary`
-- Animations respect `prefers-reduced-motion`
-- Semantic HTML throughout
+Use `next/image` with dimensions and responsive sizes. Preload only the hero portrait; other images load lazily. Use `next/font` for the two existing font families. Keep motion minimal and respect reduced-motion preferences. Avoid horizontal overflow at narrow widths and at enlarged text sizes.
 
-## Design Principles
-
-1. **Precision over decoration.** No ornament for its own sake.
-2. **Show, don't tell.** The site itself demonstrates frontend craft.
-3. **Accessibility is non-negotiable.** WCAG AA minimum everywhere.
-4. **Performance is a feature.** Fast loads, no layout shift.
+Page-specific metadata is defined in `app/lib/site.ts`. The canonical origin is `https://www.robabby.com`. Person and WavePoint are separate structured-data entities connected by the founder relationship; do not represent the business URL as another identity of the person.

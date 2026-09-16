@@ -12,33 +12,36 @@ This file provides the canonical guidance for coding agents working in this repo
 
 ## Project Architecture
 
-This is the personal site of Rob Abby (Senior Frontend Product Engineer) — a deliberately minimal single-page splash built with Next.js 16 (App Router).
+This is Rob Abby's personal site: founder and operator of WavePoint, with select independent client projects. The approved direction is a three-page editorial site built with Next.js App Router.
 
-### Tech Stack
-- **Next.js 16** with App Router
-- **React 19**
-- **TypeScript**
-- **Custom CSS** with CSS variables (`app/globals.css`) — no UI framework
-- **Fraunces** (display) + **Instrument Sans** (body) via `next/font`
-- **CSS keyframe entrance animations**, gated on a `data-js` flag set by the inline head script — no-JS visitors get the fully visible static page, reduced motion is respected, and the hero animates transform-only so LCP isn't delayed
-- **Vercel Analytics + Speed Insights** and **GA4** (`@next/third-parties`, gated on `NEXT_PUBLIC_GA_ID`)
+### Tech stack
+
+- Next.js 16, React 19, TypeScript, and custom CSS (`app/globals.css`).
+- Fraunces display type and Instrument Sans body type through `next/font`.
+- Server-rendered page content; the theme toggle is a small client component with a saved/system preference. The site remains usable without JavaScript.
+- Vercel Analytics and Speed Insights; GA4 is gated on `NEXT_PUBLIC_GA_ID`.
 
 ### Structure
-- `app/page.tsx` - Renders `<Splash />`, the entire homepage
-- `app/components/Splash.tsx` - All homepage content: hero card, Current Work (WavePoint), Experience summaries, footer. Copy lives in the `PROJECTS` and `EXPERIENCE` constants
-- `app/components/ThemeToggle.tsx` / `useThemeMode.ts` - light/dark theming (localStorage + `prefers-color-scheme`, applied via `data-theme` on `<html>`)
-- `app/layout.tsx` - Root layout: fonts, metadata/OG, Person JSON-LD, analytics
-- `app/privacy/page.tsx`, `app/robots.ts`, `app/sitemap.ts`, `app/opengraph-image.tsx`
-- `public/resume.pdf` - Served by the "View Résumé" CTA — keep in sync with the current resume
+
+- `app/page.tsx` — personal introduction, WavePoint, service summary, background, and contact.
+- `app/work-with-me/page.tsx` — services, approach, FAQ, and contact.
+- `app/work/wavepoint/page.tsx` — product case study and AI-native development process.
+- `app/components/` — shared header, footer, contact, theme control, and JSON-LD rendering.
+- `app/lib/site.ts` — page metadata, canonical origin, and Person/Organization identities.
+- `app/lib/share-image.tsx` and route `opengraph-image.tsx` files — matching share cards.
+- `app/privacy/page.tsx`, `app/robots.ts`, `app/sitemap.ts` — privacy and search infrastructure.
+- `public/images/wavepoint/` — public example-chart screenshot and published calendar sample.
+- `public/resume.pdf` — historical direct URL retained without a CTA; served with noindex. A resume refresh is not a dependency of site work.
+- `docs/ux/design-system.md` — current visual conventions.
 
 ### Content Rules
-- Site copy must stay consistent with the resume and LinkedIn (`../career/docs/positioning.md` is the positioning source of truth). Notable: "React and TypeScript since 2018" (never "15 years of React"), WavePoint is the only showcased project, and no links to private repos.
+- Use the current approved copy in `../career/docs/copy-blocks.md` and facts in `../career/docs/positioning.md`. Historical resume/LinkedIn wording is not authority over the approved 2026-09-16 direction. WavePoint remains the only showcased product. No private-repository links, unsupported outcomes, or stale numeric claims.
 
 ### Career Hub (private)
 
-Career positioning, approved copy blocks, application tracking, and job-search context live in the **private** repo at `../career` (github.com/robabby/career) — never in this public repo.
+Professional positioning, approved copy blocks, and private career history live in the **private** repo at `../career` (github.com/robabby/career) — never in this public repo.
 
-- Before editing site copy (`app/components/Splash.tsx`, `app/layout.tsx` metadata/OG, `README.md`, `public/resume.pdf`), consult `../career/docs/positioning.md` — site copy must match it.
+- Before editing site copy (`app/**/page.tsx`, metadata/OG, `README.md`, or any resume revision), consult `../career/docs/positioning.md` — site copy must match it.
 - Application logs, target-company notes, comp data, interview prep: `../career` only.
 - Career-focused agent sessions run from `../career`, not this repo.
 
