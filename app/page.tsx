@@ -4,6 +4,7 @@ import SiteHeader from "@/app/components/SiteHeader";
 import Contact from "@/app/components/Contact";
 import { pageMetadata, PAGE_INFO, SITE_URL } from "@/app/lib/site";
 import JsonLd from "@/app/components/JsonLd";
+import ExperienceLogos from "@/app/components/ExperienceLogos";
 
 export const metadata = pageMetadata("home");
 
@@ -80,11 +81,7 @@ export default function Home() {
             <br />
             web products at
           </p>{" "}
-          <ul>
-            <li>PartySlate</li>
-            <li>project44</li>
-            <li>SAVO</li>
-          </ul>{" "}
+          <ExperienceLogos />{" "}
         </div>{" "}
         <section
           className="wrap section business"

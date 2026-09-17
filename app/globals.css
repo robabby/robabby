@@ -245,9 +245,11 @@ h1 {
   margin: 0;
 }
 .experience-strip li {
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: -0.02em;
+  flex: none;
+}
+.experience-strip svg {
+  display: block;
+  height: auto;
 }
 .section {
   padding: 100px 0;
@@ -613,11 +615,17 @@ footer a {
     font-size: 10px;
   }
   .experience-strip ul {
-    gap: 28px;
+    gap: 20px;
     flex-wrap: wrap;
   }
-  .experience-strip li {
-    font-size: 17px;
+  .experience-logo-partyslate {
+    width: 130px;
+  }
+  .experience-logo-project44 {
+    width: 90px;
+  }
+  .experience-logo-savo {
+    width: 68px;
   }
   .section {
     padding: 55px 0;
@@ -752,10 +760,16 @@ footer a {
     left: 20px;
   }
   .experience-strip ul {
-    gap: 22px;
+    gap: 16px;
   }
-  .experience-strip li {
-    font-size: 15px;
+  .experience-logo-partyslate {
+    width: 112px;
+  }
+  .experience-logo-project44 {
+    width: 76px;
+  }
+  .experience-logo-savo {
+    width: 58px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
