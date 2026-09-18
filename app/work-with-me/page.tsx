@@ -16,18 +16,18 @@ export default function WorkWithMe() {
           <div>
             <p className="eyebrow">Work with me</p>
             <h1 id="services-title">
-              Clear websites.
+              Web design,
               <br />
-              Useful software.
+              software &amp; AI.
             </h1>
             <p className="sub-lead">
-              Design and development for small businesses, with one person
-              involved from the first conversation through the finished work.
+              Bring me an idea, a website you’ve outgrown, or a problem you
+              haven’t quite figured out yet. We can work through it together.
             </p>
             <p className="sub-intro">
-              I’m based in Bellingham, Washington, and work with clients locally
-              and remotely. Bring an existing website, a product idea, or a
-              process that needs a better way forward.
+              I design and build websites and software for small businesses,
+              and help owners put AI to use in their work. I’m based in
+              Bellingham, Washington, and work locally and remotely.
             </p>
             <div className="hero-actions">
               <a className="button" href="#contact">
@@ -53,9 +53,9 @@ export default function WorkWithMe() {
               <p className="eyebrow">From my own business</p>
               <h2>WavePoint.</h2>
               <p>
-                I’m its founder and operator. Building WavePoint has shaped how
-                I combine product design, engineering, and AI-assisted
-                development with the work of running a business.
+                WavePoint is the business I founded and run. It’s where I put
+                this way of working into practice, from the first idea to the
+                details of running the product.
               </p>
               <Link className="text-link" href="/work/wavepoint">
                 Explore the work <span aria-hidden="true">→</span>
@@ -104,9 +104,10 @@ export default function WorkWithMe() {
             </div>
             <div>
               <p className="body-copy">
-                Some problems need more than a website. We can shape and build a
-                tool for a specific task, starting with how people work and what
-                they need to accomplish.
+                If you’re working around the limits of a spreadsheet or an
+                awkward piece of software, let’s look at how the process
+                works. I can help you improve the interface or build a tool
+                around what you need.
               </p>
               <ul className="deliverables">
                 <li>A prototype to test an idea before a larger build</li>
@@ -129,10 +130,10 @@ export default function WorkWithMe() {
             </div>
             <div>
               <p className="body-copy">
-                Building WavePoint has given me hands-on experience using AI
-                across product planning, design, and development. We can apply
-                that experience to a specific task in your business and test a
-                workflow you can understand and use.
+                I use AI throughout my work on WavePoint. If you’re wondering
+                where it could help your business, we can start with a task
+                you already do, try an approach together, and check whether it
+                helps.
               </p>
               <ul className="deliverables">
                 <li>Choose tools and models around the task</li>
@@ -157,9 +158,9 @@ export default function WorkWithMe() {
           <div>
             <p className="eyebrow">Working together</p>
             <h2 id="approach-title">
-              A clear path
+              How we’ll
               <br />
-              from idea to use.
+              work together.
             </h2>
           </div>
           <ol className="approach-list">
@@ -167,8 +168,9 @@ export default function WorkWithMe() {
               <div>
                 <h3>Understand the problem.</h3>
                 <p>
-                  Start with the people using the product, what they need, and
-                  where the current experience falls short.
+                  I’ll ask about your business, the people using the product,
+                  and what’s getting in their way. We’ll work out what needs
+                  to change.
                 </p>
               </div>
             </li>
@@ -176,8 +178,9 @@ export default function WorkWithMe() {
               <div>
                 <h3>Make it tangible.</h3>
                 <p>
-                  Use a working prototype to make decisions about the interface
-                  and behavior together.
+                  I’ll make a prototype we can look at and try together.
+                  Seeing the idea in action gives us something concrete to
+                  discuss and improve.
                 </p>
               </div>
             </li>
@@ -185,8 +188,9 @@ export default function WorkWithMe() {
               <div>
                 <h3>Build, check, and hand over.</h3>
                 <p>
-                  Agree on the scope, complete the work, and leave you with a
-                  clear understanding of what was built and how to use it.
+                  Once we agree on what to build, I’ll do the hands-on work
+                  and check how it behaves. We’ll go through the finished
+                  result together so you know how to use it.
                 </p>
               </div>
             </li>

@@ -1,7 +1,7 @@
 type Props = { intro?: string; eyebrow?: string };
 
 export default function Contact({
-  intro = "Tell me about your business, what’s getting in the way, and what you’d like to make better.",
+  intro = "Send me a link and a few sentences about what you’d like to make or improve. We can start there.",
   eyebrow = "Have a project in mind?",
 }: Props) {
   return (
@@ -13,9 +13,9 @@ export default function Contact({
       <div>
         <p className="eyebrow">{eyebrow}</p>
         <h2 id="contact-title">
-          Tell me what needs
+          Tell me what
           <br />
-          to work better.
+          you have in mind.
         </h2>
       </div>
       <div>

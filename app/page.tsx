@@ -36,8 +36,9 @@ export default function Home() {
               , a personal astrology business.
             </p>{" "}
             <p className="hero-lead">
-              I also work with small business owners on select projects: clearer
-              websites, useful software, and practical ways to use AI.
+              I also take on select projects with small business owners. I
+              design and build websites and software, and help people use AI
+              in their work.
             </p>{" "}
             <div className="hero-actions">
               {" "}
@@ -158,15 +159,15 @@ export default function Home() {
               for your business.
             </h2>{" "}
             <p className="body-copy">
-              Bring a problem you want to solve. We’ll agree on a clear result,
-              then I’ll work with you to build it and get it into use.
+              Have something you want to make or improve? We can work through
+              it together. I’ll help you figure out what’s needed, then design
+              and build it with you.
             </p>{" "}
             <Link className="text-link" href="/work-with-me">
               Explore ways to work together <span aria-hidden="true">→</span>
             </Link>{" "}
             <p className="scope-note">
-              Focused projects, with product guidance, hands-on delivery, and a
-              clear handoff.
+              You’ll work directly with me throughout the project.
             </p>{" "}
           </div>{" "}
           <div className="offers">
@@ -176,8 +177,8 @@ export default function Home() {
               <p className="eyebrow">Websites</p>{" "}
               <h3>Help customers take the next step.</h3>{" "}
               <p>
-                Make your offer clearer, improve the experience, and make it
-                easier to get in touch.
+                Help people understand your business, find what they need, and
+                get in touch.
               </p>{" "}
             </article>{" "}
             <article className="offer">
@@ -194,8 +195,8 @@ export default function Home() {
               <p className="eyebrow">Practical AI</p>{" "}
               <h3>Put AI to work on a real task.</h3>{" "}
               <p>
-                Find a useful application, try it together, and learn how to
-                keep using it.
+                We can explore where AI could help your business and try it on
+                work you already do.
               </p>{" "}
             </article>{" "}
           </div>{" "}
@@ -216,15 +217,13 @@ export default function Home() {
             </h2>{" "}
           </div>{" "}
           <p className="body-copy">
-            My background spans product design and web engineering at
-            PartySlate, project44, and SAVO. Today I apply that experience to my
-            own business and select client projects.
+            Before WavePoint, I worked on web products at PartySlate,
+            project44, and SAVO. Design and engineering have both shaped how I
+            work. I care about the whole experience, including the details
+            people rely on every day.
           </p>{" "}
         </section>{" "}
-        <Contact
-          intro="A few sentences about your business and what you’d like to improve is a good place to start."
-          eyebrow="Have something in mind?"
-        />{" "}
+        <Contact eyebrow="Have something in mind?" />{" "}
       </main>
     </>
   );
