@@ -21,10 +21,10 @@ export default function WavePoint() {
             <h1 id="case-title">WavePoint.</h1>{" "}
             <p className="sub-lead">Personal astrology, on screen and paper.</p>{" "}
             <p className="sub-intro">
-              I founded WavePoint and lead its product, design, engineering, and
-              day-to-day operation. Building it has also shaped how I work with
-              AI: from the first questions and prototypes through development,
-              release, and ongoing improvement.
+              I’m the founder and operator of WavePoint. I’m responsible for
+              the product, design, engineering, and day-to-day operation.
+              Building it has taught me a great deal about working with AI and
+              about bringing an idea into the world.
             </p>{" "}
             <div className="hero-actions">
               {" "}
@@ -86,9 +86,9 @@ export default function WavePoint() {
                 another way to explore astrology through the site.
               </p>{" "}
               <p className="body-copy">
-                It’s a useful design principle: give someone a clear place to
-                start, a result they can understand, and something they can
-                keep.
+                I want someone to be able to try WavePoint and take something
+                away from that first visit. They can make a chart, explore it,
+                and keep a copy without signing up.
               </p>{" "}
             </div>{" "}
           </section>{" "}
@@ -110,9 +110,10 @@ export default function WavePoint() {
                 Published sample pages let people see what they’re buying.
               </p>{" "}
               <p className="body-copy">
-                Designing for paper means working with a fixed amount of space.
-                The hierarchy, type, and amount of information have to make
-                sense on the page, just as they do on a small screen.
+                Working on paper brings a different set of design questions.
+                The page has a fixed size, so I have to think carefully about
+                what belongs, what’s readable, and where someone’s eye goes
+                first.
               </p>{" "}
             </div>{" "}
             <figure>
@@ -134,8 +135,7 @@ export default function WavePoint() {
             {" "}
             <h3 id="app-note-title">An app is taking shape.</h3>{" "}
             <p>
-              An iPhone and iPad app is in development, extending the product
-              into another everyday setting.
+              I’m also developing an iPhone and iPad app.
             </p>{" "}
           </aside>{" "}
           <section
@@ -148,7 +148,7 @@ export default function WavePoint() {
               {" "}
               <div>
                 {" "}
-                <p className="eyebrow">From idea to experience</p>{" "}
+                <p className="eyebrow">What I’ve learned building WavePoint</p>{" "}
                 <h2 id="process-title">
                   How I build
                   <br /> with AI.
@@ -157,14 +157,12 @@ export default function WavePoint() {
               <div>
                 {" "}
                 <p className="case-lead">
-                  WavePoint is where I’ve developed an AI-native product
-                  development process.
+                  Building WavePoint has changed how I work.
                 </p>{" "}
                 <p className="body-copy">
-                  AI is part of the work throughout: researching a question,
-                  exploring designs, writing code, and reviewing changes. I
-                  guide the direction and stay responsible for the decisions and
-                  the finished experience.
+                  I use AI to research questions, explore designs, build
+                  prototypes, write code, and review the result. I make the
+                  decisions and stay responsible for the finished work.
                 </p>{" "}
               </div>{" "}
             </div>{" "}
@@ -184,13 +182,10 @@ export default function WavePoint() {
                 </div>{" "}
                 <div>
                   <p>
-                    Start with the person using the product and what they need
-                    to accomplish. Work through assumptions and tradeoffs, then
-                    agree on what a useful result would look like.
-                  </p>
-                  <p className="method-artifact">
-                    <span>Made concrete</span>A working brief and the questions
-                    still to resolve.
+                    I start with questions. Who is this for? What are they
+                    trying to do? I use the conversation to challenge
+                    assumptions and understand what would make the experience
+                    better.
                   </p>
                 </div>{" "}
               </li>{" "}
@@ -204,13 +199,10 @@ export default function WavePoint() {
                 </div>{" "}
                 <div>
                   <p>
-                    Use wireframes to explore structure and clickable prototypes
-                    to try the behavior. Review real words, navigation, and
-                    different screen sizes while changes are still easy to make.
-                  </p>
-                  <p className="method-artifact">
-                    <span>Made concrete</span>Something to see and try before
-                    committing to the build.
+                    I use wireframes and clickable prototypes to see how an
+                    idea holds up. Trying the words, navigation, and behavior
+                    together often reveals things a written description
+                    misses.
                   </p>
                 </div>{" "}
               </li>{" "}
@@ -224,14 +216,9 @@ export default function WavePoint() {
                 </div>{" "}
                 <div>
                   <p>
-                    The chosen direction becomes a focused piece of work in
-                    Linear, where I track scope, decisions, and criteria for
-                    completion. The accepted design gives implementation and
-                    review a shared reference.
-                  </p>
-                  <p className="method-artifact">
-                    <span>Made concrete</span>An agreed design, a clear scope,
-                    and a way to judge completion.
+                    Once the direction is settled, I record what I’m building
+                    and how I’ll know it’s done. I use Linear to keep track of
+                    the work, decisions, and questions still to resolve.
                   </p>
                 </div>{" "}
               </li>{" "}
@@ -245,14 +232,9 @@ export default function WavePoint() {
                 </div>{" "}
                 <div>
                   <p>
-                    Use AI to help implement, investigate problems, and
-                    challenge an approach. Keep changes small enough to inspect,
-                    with code review and tests matched to the behavior being
-                    changed.
-                  </p>
-                  <p className="method-artifact">
-                    <span>Made concrete</span>Reviewable changes, with checks
-                    that matter to the work.
+                    I work with AI to write code, investigate problems, and
+                    question an approach. I review the changes and use tests
+                    to check the behavior that matters.
                   </p>
                 </div>{" "}
               </li>{" "}
@@ -266,13 +248,10 @@ export default function WavePoint() {
                 </div>{" "}
                 <div>
                   <p>
-                    Try the actual journey, including relevant screen sizes,
-                    keyboard use, and error states. After release, verify what’s
-                    live and carry what I learn into the next improvement.
-                  </p>
-                  <p className="method-artifact">
-                    <span>Made concrete</span>A working experience and a record
-                    of what still needs attention.
+                    I try the experience itself: different screens, keyboard
+                    navigation, and what happens when something goes wrong. I
+                    check the live result after release and keep track of what
+                    needs attention.
                   </p>
                 </div>{" "}
               </li>{" "}
@@ -288,17 +267,18 @@ export default function WavePoint() {
               {" "}
               <p className="eyebrow">Working across models</p>{" "}
               <h2 id="context-title">
-                Keep the context
-                <br /> with the project.
+                The work continues
+                <br />
+                across tools.
               </h2>{" "}
               <p className="body-copy">
-                I work across AI models from different labs. The brief,
-                decisions, design references, and working conventions live with
-                the project, so each new session has a clear starting point.
+                I work with AI models from different labs. I keep the brief,
+                designs, decisions, and working conventions with the project
+                so I can continue across tools and sessions.
               </p>{" "}
               <p className="body-copy">
-                That lets me bring in different perspectives and change tools as
-                the work calls for it. I still review the result and decide what
+                That gives me a way to compare perspectives and choose tools
+                for the work at hand. I review what comes back and decide what
                 belongs in the product.
               </p>{" "}
             </div>{" "}
@@ -334,7 +314,7 @@ export default function WavePoint() {
                   </dd>
                 </div>{" "}
               </dl>{" "}
-              <p>The project provides continuity as the tools evolve.</p>{" "}
+              <p>The tools change. The project keeps its history.</p>{" "}
             </div>{" "}
           </section>{" "}
           <section className="case-transfer" aria-labelledby="transfer-title">
@@ -350,16 +330,16 @@ export default function WavePoint() {
             <div>
               {" "}
               <p className="body-copy">
-                Running WavePoint keeps design connected to the practical work
-                of a business: explaining the product, making purchase paths
-                clear, handling personal information thoughtfully, and
-                maintaining the work after release.
+                Running WavePoint means thinking about more than the
+                interface. I also have to explain the product, help people buy
+                it, take care with their information, and maintain it after
+                release.
               </p>{" "}
               <p className="body-copy">
-                For your project, we can make decisions around something you can
-                see and try, keep track of what we’ve agreed, and check how the
-                result works in use. You work directly with the person shaping
-                and building it.
+                That’s the perspective I bring to client work. We’ll work
+                through the decisions together, with prototypes we can try and
+                a shared understanding of what we’re building. I’ll be the
+                person doing the hands-on work.
               </p>{" "}
               <Link className="text-link" href="/work-with-me">
                 Ways we can work together <span aria-hidden="true">→</span>

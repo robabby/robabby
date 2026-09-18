@@ -247,6 +247,18 @@ h1 {
 .experience-strip li {
   flex: none;
 }
+.experience-strip a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 6px 0;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.experience-strip a:hover {
+  color: var(--ink);
+  border-bottom-color: currentColor;
+}
 .experience-strip svg {
   display: block;
   height: auto;
@@ -1334,20 +1346,6 @@ footer a {
   margin: 0;
   max-width: 550px;
 }
-.method-steps .method-artifact {
-  font-size: 12px;
-  line-height: 1.75;
-  margin: 14px 0 0;
-  color: var(--ink);
-}
-.method-artifact span {
-  display: block;
-  font-size: 9px;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--body);
-  margin-bottom: 2px;
-}
 .case-context {
   background: var(--pale);
   padding: 46px 48px;
@@ -1498,9 +1496,6 @@ footer a {
   }
   .method-steps p {
     font-size: 15px;
-  }
-  .method-steps .method-artifact {
-    margin-top: 13px;
   }
   .case-context {
     grid-template-columns: 1fr;

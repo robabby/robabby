@@ -13,3 +13,13 @@ Sources retrieved on 2026-09-17:
 - **SAVO:** the monochrome wordmark in the footer of SAVO's [Sales Content Pro sell sheet](https://images.template.net/wp-content/uploads/2016/03/16064334/Sales-Content-Pro-Sell-Sheet-PDF-Free-Download.pdf), page 1. Extract the four original vector paths with Poppler and tighten the viewBox around the wordmark, excluding the adjacent slogan. Replace white with `currentColor`. The mark was cross-checked against SAVO's [2017 company press release](https://www.prnewswire.co.uk/news-releases/miller-heiman-selects-savo-group-for-sales-enablement-technology-663654613.html).
 
 These logos identify Rob's previous employers. They remain the respective owners' trademarks. SAVO's old domain now hosts an unrelated business and is not a source for this artwork.
+
+## Link destinations
+
+Approved on 2026-09-18:
+
+- PartySlate links to its [company homepage](https://www.partyslate.com/).
+- project44 links to its [company homepage](https://www.project44.com/).
+- SAVO links to [Seismic’s acquisition announcement, published on 2018-05-08](https://www.prnewswire.com/news-releases/seismic-acquires-savo-group-to-extend-sales-enablement-market-leadership-300644094.html). This is Seismic’s release on PR Newswire; the former announcement URL on seismic.com returns a 404. A generic Seismic homepage would not explain the earlier SAVO employment.
+
+Each link opens in a new tab, has an accessible destination label and a 44px minimum target height, and inherits the site’s visible keyboard focus. The SVG is decorative inside its named link. Hovering underlines the link area without changing the wordmark’s proportions.
