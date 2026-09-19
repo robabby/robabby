@@ -216,12 +216,26 @@ export default function Home() {
               Hands-on engineering.
             </h2>{" "}
           </div>{" "}
-          <p className="body-copy">
-            Before WavePoint, I worked on web products at PartySlate,
-            project44, and SAVO. Design and engineering have both shaped how I
-            work. I care about the whole experience, including the details
-            people rely on every day.
-          </p>{" "}
+          <div className="about-detail">
+            <p className="body-copy">
+              Before WavePoint, I worked on web products at PartySlate,
+              project44, and SAVO. Design and engineering have both shaped how I
+              work. I care about the whole experience, including the details
+              people rely on every day.
+            </p>
+            <aside className="case-callout" aria-labelledby="savo-callout-title">
+              <h3 id="savo-callout-title">
+                Building a UI/UX practice at SAVO.
+              </h3>
+              <p>
+                How I helped build the team, the shared UI system, and a closer
+                connection to the people using our software.
+              </p>
+              <Link className="text-link" href="/work/savo">
+                Read the SAVO case study <span aria-hidden="true">→</span>
+              </Link>
+            </aside>
+          </div>{" "}
         </section>{" "}
         <Contact eyebrow="Have something in mind?" />{" "}
       </main>

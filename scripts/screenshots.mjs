@@ -170,6 +170,9 @@ try {
           fullPage: true,
         });
         await page.screenshot({ path: `${out}${routeName}-${name}-fold.png` });
+        if (path === "/") {
+          await page.locator("#about").screenshot({ path: `${out}about-${name}.png` });
+        }
       }
       if (routeName !== "privacy") {
         assert.equal(
@@ -221,6 +224,10 @@ try {
     await page.evaluate(() => document.activeElement.className),
     "skip",
   );
+  assert.ok(await page.locator(".skip").evaluate((el) => {
+    const bounds = el.getBoundingClientRect();
+    return bounds.top >= 0 && bounds.bottom <= innerHeight;
+  }), "Keyboard focus reveals the skip link");
   await page.keyboard.press("Enter");
   assert.equal(
     await page.evaluate(() => document.activeElement.id),
@@ -234,6 +241,9 @@ try {
     .getByRole("link", { name: "Work with me" })
     .click();
   await page.waitForURL(`${base}/work-with-me`);
+  await page.waitForLoadState("networkidle");
+  assert.ok(await page.locator(".skip").evaluate((el) => el.getBoundingClientRect().bottom < 0),
+    "Pointer navigation keeps the skip link offscreen");
   assert.equal(await page.locator("html").getAttribute("data-theme"), "dark");
   await page.reload();
   assert.equal(await page.locator("html").getAttribute("data-theme"), "dark");
@@ -257,6 +267,21 @@ try {
     person["@id"],
   );
 
+  await page.getByRole("complementary", { name: "Building a UI/UX practice at SAVO." })
+    .getByRole("link", { name: "Read the SAVO case study" }).click();
+  await page.waitForURL(`${base}/work/savo`);
+  await page.waitForLoadState("networkidle");
+  assert.ok(await page.locator(".skip").evaluate((el) => el.getBoundingClientRect().bottom < 0),
+    "The callout navigates without revealing the skip link");
+  await page.keyboard.press("Tab");
+  await page.keyboard.press("Shift+Tab");
+  assert.equal(await page.evaluate(() => document.activeElement.className), "skip");
+  assert.ok(await page.locator(".skip").evaluate((el) => el.getBoundingClientRect().top >= 0),
+    "Keyboard navigation still reveals the skip link after a route change");
+  await page.keyboard.press("Enter");
+  assert.equal(await page.evaluate(() => document.activeElement.id), "main-content");
+  await page.getByRole("link", { name: "Rob Abby", exact: true }).click();
+  await page.waitForURL(`${base}/`);
   await page.getByRole("link", { name: "SAVO — read the case study", exact: true }).click();
   await page.waitForURL(`${base}/work/savo`);
   await page.getByRole("navigation", { name: "In this case study" })
@@ -339,6 +364,8 @@ try {
     results,
     navigation: "pass",
     caseStudyLinksAndClaims: "pass",
+    aboutCaseStudyCallout: "pass",
+    skipLinkPointerAndKeyboard: "pass",
     keyboard: "pass",
     themePersistence: "pass",
     schema: "pass",
