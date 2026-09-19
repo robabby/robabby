@@ -12,6 +12,7 @@ const routes = [
   { path: "/", name: "home" },
   { path: "/work-with-me", name: "services" },
   { path: "/work/wavepoint", name: "wavepoint" },
+  { path: "/work/savo", name: "savo" },
   { path: "/privacy", name: "privacy" },
 ];
 const variants = [
@@ -202,7 +203,7 @@ try {
     }
     assert.deepEqual(errors, [], `${name}: browser errors`);
     await context.close();
-    console.log(`✓ ${name}: four pages`);
+    console.log(`✓ ${name}: ${routes.length} pages`);
   }
 
   const context = await browser.newContext({ colorScheme: "light" });
@@ -256,6 +257,43 @@ try {
     person["@id"],
   );
 
+  await page.getByRole("link", { name: "SAVO — read the case study", exact: true }).click();
+  await page.waitForURL(`${base}/work/savo`);
+  await page.getByRole("navigation", { name: "In this case study" })
+    .getByRole("link", { name: "The shared UI system", exact: true }).click();
+  await page.waitForURL(`${base}/work/savo#shared-ui`);
+  assert.ok(await page.locator("#shared-ui-title").isVisible());
+  assert.ok(await page.locator("#shared-ui-title").evaluate((el) => {
+    const bounds = el.getBoundingClientRect();
+    return bounds.top >= 0 && bounds.bottom <= innerHeight;
+  }));
+  const expectedProfiles = [
+    "brittanymikottis", "johnnarofsky", "tom-green-b6198a4", "allisonpaul",
+    "zachary-debelak-39b7541", "doug-marquis", "vbrianhauk",
+  ].map((slug) => `https://www.linkedin.com/in/${slug}/`).sort();
+  const profiles = await page.locator('article a[href^="https://www.linkedin.com/in/"]')
+    .evaluateAll((links) => links.map((link) => link.href).sort());
+  assert.deepEqual(profiles, expectedProfiles);
+  const article = await page.locator("article").innerText();
+  assert.ok(article.includes("The redesign shipped to customers and was well received."));
+  assert.ok(article.includes("The team never delivered that work to customers; company priorities changed."));
+  assert.doesNotMatch(article, /private review|draft 02|Downloads\/Portfolio|iHeartMEDIA/i);
+  const caseSchema = await page.locator('script[type="application/ld+json"]')
+    .evaluateAll((items) => items.map((el) => JSON.parse(el.textContent))
+      .find((value) => value["@type"] === "WebPage"));
+  assert.equal(caseSchema.url, `${canonicalOrigin}/work/savo`);
+  assert.equal(caseSchema.mainEntity.author["@id"], person["@id"]);
+  assert.equal(caseSchema.mainEntity.about.name, "SAVO");
+  const figure = await context.request.get(`${base}/images/savo/styleguide-buttons.png`);
+  assert.equal(figure.status(), 200);
+  assert.match(figure.headers()["content-type"], /^image\/png/);
+  await page.getByRole("navigation", { name: "Related work" })
+    .getByRole("link", { name: "Explore WavePoint" }).click();
+  await page.waitForURL(`${base}/work/wavepoint`);
+  await page.getByRole("navigation", { name: "Related work" })
+    .getByRole("link", { name: "Building a UI/UX practice at SAVO" }).click();
+  await page.waitForURL(`${base}/work/savo`);
+
   const sitemap = await context.request.get(`${base}/sitemap.xml`);
   assert.equal(sitemap.status(), 200);
   const xml = await sitemap.text();
@@ -300,6 +338,7 @@ try {
   const report = {
     results,
     navigation: "pass",
+    caseStudyLinksAndClaims: "pass",
     keyboard: "pass",
     themePersistence: "pass",
     schema: "pass",

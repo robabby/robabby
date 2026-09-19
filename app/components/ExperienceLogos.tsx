@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 // Original company artwork; sources and extraction notes: docs/ux/company-logos.md.
 export default function ExperienceLogos() {
   return (
@@ -45,12 +47,10 @@ export default function ExperienceLogos() {
         </a>
       </li>
       <li>
-        <a
-          href="https://www.prnewswire.com/news-releases/seismic-acquires-savo-group-to-extend-sales-enablement-market-leadership-300644094.html"
-          aria-label="SAVO — Seismic’s 2018 acquisition announcement on PR Newswire (opens in a new tab)"
-          title="SAVO — Seismic’s 2018 acquisition announcement on PR Newswire"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          href="/work/savo"
+          aria-label="SAVO — read the case study"
+          title="SAVO — read the case study"
         >
           <svg
             className="experience-logo-savo"
@@ -66,7 +66,7 @@ export default function ExperienceLogos() {
             <path d="M 77.367188 588.171875 C 80.414062 588.171875 81.566406 585.46875 81.566406 582.785156 C 81.566406 579.972656 80.414062 577.269531 77.367188 577.269531 C 74.308594 577.269531 73.167969 579.972656 73.167969 582.785156 C 73.167969 585.46875 74.308594 588.171875 77.367188 588.171875 M 77.367188 574.296875 C 82.125 574.296875 84.960938 578.011719 84.960938 582.785156 C 84.960938 587.425781 82.125 591.140625 77.367188 591.140625 C 72.601562 591.140625 69.765625 587.425781 69.765625 582.785156 C 69.765625 578.011719 72.601562 574.296875 77.367188 574.296875 " />
             <path d="M 51.046875 582.140625 L 52.234375 578.640625 L 52.28125 578.640625 L 53.070312 581.042969 C 51.714844 581.632812 51.050781 582.140625 51.046875 582.140625 M 62.726562 579.273438 C 59.96875 579.273438 57.734375 579.621094 55.96875 580.070312 L 54.03125 574.679688 L 50.546875 574.679688 L 44.679688 590.757812 L 48.125 590.757812 L 48.929688 588.382812 C 49.683594 586.960938 51.152344 585.148438 53.953125 583.699219 L 56.285156 590.757812 L 59.8125 590.757812 L 56.84375 582.507812 C 57.191406 582.398438 57.550781 582.292969 57.925781 582.195312 C 67.890625 579.558594 78.089844 584.117188 78.089844 584.117188 L 79.050781 584.039062 C 79.050781 584.039062 72.476562 579.273438 62.726562 579.273438 " />
           </svg>
-        </a>
+        </Link>
       </li>
     </ul>
   );

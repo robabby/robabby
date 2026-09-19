@@ -12,7 +12,7 @@ This file provides the canonical guidance for coding agents working in this repo
 
 ## Project Architecture
 
-This is Rob Abby's personal site: founder and operator of WavePoint, with select independent client projects. The approved direction is a three-page editorial site built with Next.js App Router.
+This is Rob Abby's personal site: founder and operator of WavePoint, with select independent client projects. The approved direction is an editorial site built with Next.js App Router, with current business and historical work case studies.
 
 ### Tech stack
 
@@ -26,6 +26,7 @@ This is Rob Abby's personal site: founder and operator of WavePoint, with select
 - `app/page.tsx` — personal introduction, WavePoint, service summary, background, and contact.
 - `app/work-with-me/page.tsx` — services, approach, FAQ, and contact.
 - `app/work/wavepoint/page.tsx` — product case study and AI-native development process.
+- `app/work/savo/page.tsx` — historical UI/UX, shared UI system, and team-building case study.
 - `app/components/` — shared header, footer, contact, theme control, and JSON-LD rendering.
 - `app/lib/site.ts` — page metadata, canonical origin, and Person/Organization identities.
 - `app/lib/share-image.tsx` and route `opengraph-image.tsx` files — matching share cards.
@@ -35,7 +36,7 @@ This is Rob Abby's personal site: founder and operator of WavePoint, with select
 - `docs/ux/design-system.md` — current visual conventions.
 
 ### Content Rules
-- Use the current approved copy in `../career/docs/copy-blocks.md` and facts in `../career/docs/positioning.md`. Historical resume/LinkedIn wording is not authority over the approved 2026-09-16 direction. WavePoint remains the only showcased product. No private-repository links, unsupported outcomes, or stale numeric claims.
+- Use the current approved copy in `../career/docs/copy-blocks.md` and facts in `../career/docs/positioning.md`. Historical resume/LinkedIn wording is not authority over the approved direction. WavePoint remains the featured current business; SAVO supplies historical work evidence. No private-repository links, unsupported outcomes, or stale numeric claims.
 
 ### Career Hub (private)
 

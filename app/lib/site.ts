@@ -20,6 +20,12 @@ export const PAGE_INFO = {
     description:
       "How Rob Abby builds and operates WavePoint, bringing product design, prototypes, and AI-native development together across web, print, and an app in development.",
   },
+  savo: {
+    path: "/work/savo",
+    title: "SAVO UI/UX and Design System Case Study | Rob Abby",
+    description:
+      "How Rob Abby helped establish SAVO’s UI/UX team, redesigned its Asset Page with Brittany Mikottis, and built a shared Ember.js UI system.",
+  },
   privacy: {
     path: "/privacy",
     title: "Privacy | Rob Abby",

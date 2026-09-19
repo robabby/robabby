@@ -3,6 +3,7 @@ import Link from "next/link";
 import SiteHeader from "@/app/components/SiteHeader";
 import Contact from "@/app/components/Contact";
 import { pageMetadata } from "@/app/lib/site";
+import workStyles from "../case-study.module.css";
 
 export const metadata = pageMetadata("wavepoint");
 
@@ -346,6 +347,12 @@ export default function WavePoint() {
               </Link>{" "}
             </div>{" "}
           </section>{" "}
+          <nav className={workStyles.related} aria-label="Related work">
+            <p className="eyebrow">More work</p>
+            <Link href="/work/savo">
+              Building a UI/UX practice at SAVO <span aria-hidden="true">→</span>
+            </Link>
+          </nav>
         </div>{" "}
         <Contact />{" "}
       </main>
