@@ -20,6 +20,6 @@ Approved on 2026-09-18:
 
 - PartySlate links to its [company homepage](https://www.partyslate.com/).
 - project44 links to its [company homepage](https://www.project44.com/).
-- SAVO links to [Seismic’s acquisition announcement, published on 2018-05-08](https://www.prnewswire.com/news-releases/seismic-acquires-savo-group-to-extend-sales-enablement-market-leadership-300644094.html). This is Seismic’s release on PR Newswire; the former announcement URL on seismic.com returns a 404. A generic Seismic homepage would not explain the earlier SAVO employment.
+- SAVO links to Rob’s [SAVO case study](/work/savo), approved for publication on 2026-09-18. This replaces the earlier acquisition-announcement destination and lets visitors explore his work at the company.
 
-Each link opens in a new tab, has an accessible destination label and a 44px minimum target height, and inherits the site’s visible keyboard focus. The SVG is decorative inside its named link. Hovering underlines the link area without changing the wordmark’s proportions.
+The company homepage links open in a new tab; the SAVO case study opens in the same tab. Each link has an accessible destination label and a 44px minimum target height, and inherits the site’s visible keyboard focus. The SVG is decorative inside its named link. Hovering underlines the link area without changing the wordmark’s proportions.
