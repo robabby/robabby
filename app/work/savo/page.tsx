@@ -162,7 +162,7 @@ export default function Savo() {
           </article>
           <nav className={styles.related} aria-label="Related work">
             <p className="eyebrow">My business</p>
-            <Link href="/work/wavepoint">Explore WavePoint <span aria-hidden="true">→</span></Link>
+            <Link href="/#wavepoint">Explore WavePoint <span aria-hidden="true">→</span></Link>
           </nav>
         </div>
         <Contact />

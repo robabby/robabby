@@ -4,7 +4,7 @@ I’m the founder and operator of [WavePoint](https://wavepoint.space/), a perso
 
 I also work with small business owners on select projects: clearer websites, useful software, and practical ways to use AI. Based in Bellingham, Washington; working locally and remotely.
 
-Building WavePoint has shaped how I work with AI, from questions and prototypes through development, release, and ongoing improvement. Read the [WavePoint case study](https://www.robabby.com/work/wavepoint) or [explore ways to work together](https://www.robabby.com/work-with-me).
+Building WavePoint has shaped how I work with AI, from questions and prototypes through development, release, and ongoing improvement. [Visit WavePoint](https://wavepoint.space/) or [explore ways to work together](https://www.robabby.com/work-with-me).
 
 Previously building web products at PartySlate, project44, and SAVO.
 
@@ -14,7 +14,7 @@ Previously building web products at PartySlate, project44, and SAVO.
 
 ## About this repo
 
-The source of [robabby.com](https://www.robabby.com/): Next.js App Router, React, TypeScript, and custom CSS, deployed on Vercel. The core pages are Home, Work with me, and the WavePoint case study, with a separate privacy page.
+The source of [robabby.com](https://www.robabby.com/): Next.js App Router, React, TypeScript, and custom CSS, deployed on Vercel. The core pages are Home, Work with me, and the SAVO case study, with a separate privacy page. WavePoint has a brief introduction on the homepage and a link to its website.
 
 ```sh
 pnpm install --frozen-lockfile

@@ -14,12 +14,6 @@ export const PAGE_INFO = {
     description:
       "Website design, custom software, and practical AI help for small businesses. Work directly with Rob Abby in Bellingham or remotely.",
   },
-  wavepoint: {
-    path: "/work/wavepoint",
-    title: "WavePoint: AI-Native Product Development | Rob Abby",
-    description:
-      "How Rob Abby builds and operates WavePoint, bringing product design, prototypes, and AI-native development together across web, print, and an app in development.",
-  },
   savo: {
     path: "/work/savo",
     title: "SAVO UI/UX and Design System Case Study | Rob Abby",

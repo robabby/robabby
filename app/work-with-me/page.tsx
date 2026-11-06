@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import SiteHeader from "@/app/components/SiteHeader";
 import Contact from "@/app/components/Contact";
 import { pageMetadata } from "@/app/lib/site";
@@ -57,9 +56,9 @@ export default function WorkWithMe() {
                 this way of working into practice, from the first idea to the
                 details of running the product.
               </p>
-              <Link className="text-link" href="/work/wavepoint">
-                Explore the work <span aria-hidden="true">→</span>
-              </Link>
+              <a className="text-link" href="https://wavepoint.space/">
+                Visit WavePoint <span aria-hidden="true">↗</span>
+              </a>
             </figcaption>
           </figure>
         </section>{" "}
@@ -145,12 +144,6 @@ export default function WorkWithMe() {
                   together
                 </li>
               </ul>
-              <Link
-                className="text-link service-process-link"
-                href="/work/wavepoint#process"
-              >
-                See how I build with AI <span aria-hidden="true">→</span>
-              </Link>
             </div>
           </article>
         </section>{" "}

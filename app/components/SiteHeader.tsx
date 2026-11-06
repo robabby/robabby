@@ -1,7 +1,7 @@
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 
-type Props = { home?: boolean; active?: "services" | "wavepoint" };
+type Props = { home?: boolean; active?: "services" };
 
 export default function SiteHeader({ home = false, active }: Props) {
   return (
@@ -19,10 +19,7 @@ export default function SiteHeader({ home = false, active }: Props) {
         )}
         <div className="header-right">
           <nav className="nav" aria-label="Main navigation">
-            <Link
-              href="/work/wavepoint"
-              aria-current={active === "wavepoint" ? "page" : undefined}
-            >
+            <Link href="/#wavepoint">
               WavePoint
             </Link>
             <Link

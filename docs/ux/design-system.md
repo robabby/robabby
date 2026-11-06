@@ -28,10 +28,9 @@ Themes use `data-theme` on the document. The saved preference takes precedence o
 ## Structure
 
 - Home uses the descriptor “Product, design & engineering” in the header and “Rob Abby” as the sole personal-name heading. Do not duplicate it with a homepage logo.
-- Inner pages link home with Rob’s name. Shared navigation points to the WavePoint case study, Work with me, and the homepage About section.
+- Inner pages link home with Rob’s name. Shared navigation points to the homepage WavePoint section, Work with me, and the homepage About section.
 - The maximum content width is 1160px. Layouts become a single column on phones; navigation remains visible without a JavaScript menu.
 - WavePoint imagery uses real public product views. Keep the example-chart label visible; never substitute private customer or chart data.
-- Explain the development process through a numbered sequence and a compact project-context summary. Avoid decorative dashboards or a grid of vendor logos.
 - The primary action is “Discuss a project,” leading to the contact section or email. Keep the contact address visible and selectable.
 - The historical resume remains accessible at its existing URL, with noindex and no promotional CTA in the new site.
 

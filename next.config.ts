@@ -25,6 +25,11 @@ const nextConfig: NextConfig = {
         permanent: false,
       },
       {
+        source: "/work/wavepoint",
+        destination: "/#wavepoint",
+        permanent: true,
+      },
+      {
         source: "/wavepoint",
         destination: "https://wavepoint.space",
         permanent: false,

@@ -12,7 +12,7 @@ This file provides the canonical guidance for coding agents working in this repo
 
 ## Project Architecture
 
-This is Rob Abby's personal site: founder and operator of WavePoint, with select independent client projects. The approved direction is an editorial site built with Next.js App Router, with current business and historical work case studies.
+This is Rob Abby's personal site: founder and operator of WavePoint, with select independent client projects. The approved direction is an editorial site built with Next.js App Router, with a brief business introduction and a historical SAVO case study.
 
 ### Tech stack
 
@@ -25,7 +25,7 @@ This is Rob Abby's personal site: founder and operator of WavePoint, with select
 
 - `app/page.tsx` — personal introduction, WavePoint, service summary, background, and contact.
 - `app/work-with-me/page.tsx` — services, approach, FAQ, and contact.
-- `app/work/wavepoint/page.tsx` — product case study and AI-native development process.
+- WavePoint is introduced on the homepage with a link to its website; `/work/wavepoint` redirects to `/#wavepoint`.
 - `app/work/savo/page.tsx` — historical UI/UX, shared UI system, and team-building case study.
 - `app/components/` — shared header, footer, contact, theme control, and JSON-LD rendering.
 - `app/lib/site.ts` — page metadata, canonical origin, and Person/Organization identities.

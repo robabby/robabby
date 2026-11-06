@@ -107,9 +107,9 @@ export default function Home() {
               I look after the product, design, engineering, and day-to-day
               operation.
             </p>{" "}
-            <Link className="text-link" href="/work/wavepoint">
-              Read the WavePoint case study <span aria-hidden="true">→</span>
-            </Link>{" "}
+            <a className="text-link" href="https://wavepoint.space/">
+              Visit WavePoint <span aria-hidden="true">↗</span>
+            </a>{" "}
           </div>{" "}
           <figure className="product-figure">
             {" "}

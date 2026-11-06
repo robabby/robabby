@@ -11,7 +11,6 @@ const canonicalOrigin = "https://www.robabby.com";
 const routes = [
   { path: "/", name: "home" },
   { path: "/work-with-me", name: "services" },
-  { path: "/work/wavepoint", name: "wavepoint" },
   { path: "/work/savo", name: "savo" },
   { path: "/privacy", name: "privacy" },
 ];
@@ -103,6 +102,7 @@ try {
       await page.evaluate(() => document.fonts.ready);
       assert.equal(await page.locator("h1").count(), 1);
       assert.equal(await page.locator("main").count(), 1);
+      assert.equal(await page.locator('a[href^="/work/wavepoint"]').count(), 0);
       assert.ok(await page.locator("h1").isVisible());
       assert.ok((await page.locator("main").innerText()).length > 300);
       assert.equal(
@@ -247,9 +247,12 @@ try {
   assert.equal(await page.locator("html").getAttribute("data-theme"), "dark");
   await page.reload();
   assert.equal(await page.locator("html").getAttribute("data-theme"), "dark");
-  await page.getByRole("link", { name: "See how I build with AI" }).click();
-  await page.waitForURL(`${base}/work/wavepoint#process`);
-  assert.ok(await page.locator("#process-title").isVisible());
+  await page.getByRole("navigation", { name: "Main navigation" })
+    .getByRole("link", { name: "WavePoint", exact: true }).click();
+  await page.waitForURL(`${base}/#wavepoint`);
+  assert.ok(await page.locator("#wavepoint-title").isVisible());
+  assert.equal(await page.getByRole("link", { name: "Visit WavePoint" }).getAttribute("href"),
+    "https://wavepoint.space/");
   await page.getByRole("link", { name: "About", exact: true }).click();
   await page.waitForURL(`${base}/#about`);
   assert.ok(await page.locator("#about-title").isVisible());
@@ -314,14 +317,13 @@ try {
   assert.match(figure.headers()["content-type"], /^image\/png/);
   await page.getByRole("navigation", { name: "Related work" })
     .getByRole("link", { name: "Explore WavePoint" }).click();
-  await page.waitForURL(`${base}/work/wavepoint`);
-  await page.getByRole("navigation", { name: "Related work" })
-    .getByRole("link", { name: "Building a UI/UX practice at SAVO" }).click();
-  await page.waitForURL(`${base}/work/savo`);
+  await page.waitForURL(`${base}/#wavepoint`);
+  assert.ok(await page.locator("#wavepoint-title").isVisible());
 
   const sitemap = await context.request.get(`${base}/sitemap.xml`);
   assert.equal(sitemap.status(), 200);
   const xml = await sitemap.text();
+  assert.ok(!xml.includes("/work/wavepoint"));
   for (const { path } of routes)
     assert.ok(xml.includes(`<loc>${canonicalOrigin}${path}</loc>`));
   assert.ok(!xml.includes("<lastmod>"));
@@ -337,6 +339,13 @@ try {
     new URL(redirect.headers().location).href,
     "https://wavepoint.space/",
   );
+  const retiredCaseStudy = await context.request.get(`${base}/work/wavepoint`, {
+    maxRedirects: 0,
+  });
+  assert.equal(retiredCaseStudy.status(), 308);
+  assert.equal(new URL(retiredCaseStudy.headers().location, base).href, `${base}/#wavepoint`);
+  const retiredShareCard = await context.request.get(`${base}/work/wavepoint/opengraph-image`);
+  assert.equal(retiredShareCard.status(), 404);
   const resume = await context.request.get(`${base}/resume.pdf`);
   assert.equal(resume.status(), 200);
   assert.equal(resume.headers()["x-robots-tag"], "noindex");
