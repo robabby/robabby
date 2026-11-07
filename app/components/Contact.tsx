@@ -1,8 +1,10 @@
-type Props = { intro?: string; eyebrow?: string };
+import { ArrowRightIcon } from "@radix-ui/react-icons";
+
+type Props = { intro?: string; wavepointLink?: boolean };
 
 export default function Contact({
   intro = "Send me a link and a few sentences about what you’d like to make or improve. We can start there.",
-  eyebrow = "Have a project in mind?",
+  wavepointLink = false,
 }: Props) {
   return (
     <section
@@ -10,25 +12,15 @@ export default function Contact({
       id="contact"
       aria-labelledby="contact-title"
     >
-      <div>
-        <p className="eyebrow">{eyebrow}</p>
-        <h2 id="contact-title">
-          Tell me what
-          <br />
-          you have in mind.
-        </h2>
-      </div>
+      <h2 id="contact-title">Let’s talk.</h2>
       <div>
         <p>{intro}</p>
-        <a className="button" href="mailto:robabby23@gmail.com">
-          Discuss a project{" "}
-          <span className="arrow" aria-hidden="true">
-            ↗
-          </span>
+        <a className="text-link email" href="mailto:robabby23@gmail.com">
+          robabby23@gmail.com <ArrowRightIcon className="arrow" aria-hidden="true" />
         </a>
-        <a className="email" href="mailto:robabby23@gmail.com">
-          robabby23@gmail.com
-        </a>
+        {wavepointLink && (
+          <p className="contact-product">Interested in WavePoint? <a href="https://wavepoint.space/">Visit WavePoint.</a></p>
+        )}
       </div>
     </section>
   );

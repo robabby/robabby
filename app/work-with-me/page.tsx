@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ArrowRightIcon, ArrowDownIcon } from "@radix-ui/react-icons";
 import SiteHeader from "@/app/components/SiteHeader";
 import Contact from "@/app/components/Contact";
 import { pageMetadata } from "@/app/lib/site";
@@ -8,16 +9,15 @@ export const metadata = pageMetadata("services");
 export default function WorkWithMe() {
   return (
     <>
-      <SiteHeader active="services" />
+      <SiteHeader />
 
       <main id="main-content" tabIndex={-1}>
         <section className="wrap sub-hero" aria-labelledby="services-title">
           <div>
-            <p className="eyebrow">Work with me</p>
             <h1 id="services-title">
               Web design,
               <br />
-              software &amp; AI.
+              software and AI.
             </h1>
             <p className="sub-lead">
               Bring me an idea, a website you’ve outgrown, or a problem you
@@ -31,25 +31,22 @@ export default function WorkWithMe() {
             <div className="hero-actions">
               <a className="button" href="#contact">
                 Discuss a project{" "}
-                <span className="arrow" aria-hidden="true">
-                  ↗
-                </span>
+                <ArrowRightIcon className="arrow" aria-hidden="true" />
               </a>
               <a className="text-link" href="#services">
-                Ways I can help <span aria-hidden="true">↓</span>
+                Ways I can help <ArrowDownIcon aria-hidden="true" />
               </a>
             </div>
           </div>
           <figure className="proof-card">
             <Image
-              src="/images/wavepoint/wavepoint-web.png"
-              width={1280}
-              height={820}
-              alt="WavePoint’s birth-chart introduction and example chart"
-              sizes="(max-width: 760px) calc(100vw - 80px), 620px"
+              src="/images/wavepoint/homepage-2026-11.png"
+              width={1440}
+              height={1000}
+              alt="WavePoint’s current website homepage, with a Day chart and Moment example"
+              sizes="(max-width: 720px) calc(100vw - 68px), 520px"
             />
             <figcaption>
-              <p className="eyebrow">From my own business</p>
               <h2>WavePoint.</h2>
               <p>
                 WavePoint is the business I founded and run. It’s where I put
@@ -57,11 +54,11 @@ export default function WorkWithMe() {
                 details of running the product.
               </p>
               <a className="text-link" href="https://wavepoint.space/">
-                Visit WavePoint <span aria-hidden="true">↗</span>
+                Visit WavePoint <ArrowRightIcon className="arrow" aria-hidden="true" />
               </a>
             </figcaption>
           </figure>
-        </section>{" "}
+        </section>
         <section
           className="wrap service-list"
           id="services"
@@ -69,12 +66,12 @@ export default function WorkWithMe() {
         >
           <article className="service-row">
             <div>
-              <p className="eyebrow">Website design &amp; development</p>
               <h2>
                 Make the next
                 <br />
                 step obvious.
               </h2>
+              <p className="section-context">Website design and development</p>
             </div>
             <div>
               <p className="body-copy">
@@ -94,12 +91,12 @@ export default function WorkWithMe() {
           </article>
           <article className="service-row">
             <div>
-              <p className="eyebrow">Software &amp; product interfaces</p>
               <h2>
                 Give a difficult
                 <br />
                 process a better tool.
               </h2>
+              <p className="section-context">Software and product interfaces</p>
             </div>
             <div>
               <p className="body-copy">
@@ -120,12 +117,12 @@ export default function WorkWithMe() {
           </article>
           <article className="service-row">
             <div>
-              <p className="eyebrow">Practical AI</p>
               <h2>
                 Start with a task
                 <br />
                 that matters.
               </h2>
+              <p className="section-context">Practical AI</p>
             </div>
             <div>
               <p className="body-copy">
@@ -146,10 +143,9 @@ export default function WorkWithMe() {
               </ul>
             </div>
           </article>
-        </section>{" "}
+        </section>
         <section className="wrap approach" aria-labelledby="approach-title">
           <div>
-            <p className="eyebrow">Working together</p>
             <h2 id="approach-title">
               How we’ll
               <br />
@@ -188,10 +184,9 @@ export default function WorkWithMe() {
               </div>
             </li>
           </ol>
-        </section>{" "}
+        </section>
         <section className="wrap questions" aria-labelledby="questions-title">
           <div>
-            <p className="eyebrow">A few practical questions</p>
             <h2 id="questions-title">Before we begin.</h2>
           </div>
           <div>

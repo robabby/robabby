@@ -12,37 +12,42 @@ This file provides the canonical guidance for coding agents working in this repo
 
 ## Project Architecture
 
-This is Rob Abby's personal site: founder and operator of WavePoint, with select independent client projects. The approved direction is an editorial site built with Next.js App Router, with a brief business introduction and a historical SAVO case study.
+This is Rob Abby's personal site for a mixed audience, bringing together his product, design, engineering, and collaborative experience. WavePoint is the featured current business, with historical work shown through SAVO. The accepted visual direction is Ink + Ultramarine: an editorial layout built with Next.js App Router.
 
 ### Tech stack
 
 - Next.js 16, React 19, TypeScript, and custom CSS (`app/globals.css`).
-- Fraunces display type and Instrument Sans body type through `next/font`.
-- Server-rendered page content; the theme toggle is a small client component with a saved/system preference. The site remains usable without JavaScript.
+- Newsreader display type, including italic, and Instrument Sans body type through `next/font`.
+- Server-rendered page content; small client components handle the saved/system theme preference and manual WavePoint gallery. The site remains usable without JavaScript.
 - Vercel Analytics and Speed Insights; GA4 is gated on `NEXT_PUBLIC_GA_ID`.
 
 ### Structure
 
-- `app/page.tsx` — personal introduction, WavePoint, service summary, background, and contact.
+- `app/page.tsx` — personal introduction, previous-employer logos, selected WavePoint and SAVO work, approach, and contact.
 - `app/work-with-me/page.tsx` — services, approach, FAQ, and contact.
 - WavePoint is introduced on the homepage with a link to its website; `/work/wavepoint` redirects to `/#wavepoint`.
 - `app/work/savo/page.tsx` — historical UI/UX, shared UI system, and team-building case study.
-- `app/components/` — shared header, footer, contact, theme control, and JSON-LD rendering.
+- `app/components/` — shared header, footer, contact, theme control, original employer logos, manual product gallery, and JSON-LD rendering.
+- `app/work/case-study.module.css` — SAVO article layout, contents navigation, and image framing.
 - `app/lib/site.ts` — page metadata, canonical origin, and Person/Organization identities.
 - `app/lib/share-image.tsx` and route `opengraph-image.tsx` files — matching share cards.
 - `app/privacy/page.tsx`, `app/robots.ts`, `app/sitemap.ts` — privacy and search infrastructure.
-- `public/images/wavepoint/` — public example-chart screenshot and published calendar sample.
+- `public/images/wavepoint/` — current website and iPhone development captures; its `README.md` records provenance and distinguishes active images from retained historical assets.
 - `public/resume.pdf` — historical direct URL retained without a CTA; served with noindex. A resume refresh is not a dependency of site work.
 - `docs/ux/design-system.md` — current visual conventions.
 
 ### Content Rules
-- Use the current approved copy in `../career/docs/copy-blocks.md` and facts in `../career/docs/positioning.md`. Historical resume/LinkedIn wording is not authority over the approved direction. WavePoint remains the featured current business; SAVO supplies historical work evidence. No private-repository links, unsupported outcomes, or stale numeric claims.
+
+- Consult `../career/docs/positioning.md` for facts and `../career/docs/copy-blocks.md` for previously approved copy. Their September 2026 website direction predates Rob's November 6 decisions for this site; do not use it to restore the older visual system, founder-only framing, navigation, or removed WavePoint case study.
+- The November 6 working direction presents Rob to people considering roles, projects, or a conversation. The accepted homepage hero is “Product thinking. A feel for people. Hands on the work.” The final line is italic and blue. The rest of the revised homepage copy remains a working draft. Local implementation is authorized; this does not establish final copy or publication approval.
+- Preserve the substantive services, SAVO, and privacy copy during theme work. WavePoint remains the featured current business; SAVO supplies historical work evidence. Historical resume/LinkedIn wording is not authority over the current direction. No private-repository links, unsupported outcomes, or stale numeric claims.
+- WavePoint's app status is TestFlight. Its gallery screenshots show a development preview with fictional sample content, not proof that those exact screens are distributed in TestFlight. Preserve that distinction in captions and image descriptions.
 
 ### Career Hub (private)
 
 Professional positioning, approved copy blocks, and private career history live in the **private** repo at `../career` (github.com/robabby/career) — never in this public repo.
 
-- Before editing site copy (`app/**/page.tsx`, metadata/OG, `README.md`, or any resume revision), consult `../career/docs/positioning.md` — site copy must match it.
+- Before editing site copy (`app/**/page.tsx`, metadata/OG, `README.md`, or any resume revision), consult `../career/docs/positioning.md` and apply the dated content precedence above. Keep private career material out of this public repository.
 - Application logs, target-company notes, comp data, interview prep: `../career` only.
 - Career-focused agent sessions run from `../career`, not this repo.
 

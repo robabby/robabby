@@ -14,7 +14,9 @@ Previously building web products at PartySlate, project44, and SAVO.
 
 ## About this repo
 
-The source of [robabby.com](https://www.robabby.com/): Next.js App Router, React, TypeScript, and custom CSS, deployed on Vercel. The core pages are Home, Work with me, and the SAVO case study, with a separate privacy page. WavePoint has a brief introduction on the homepage and a link to its website.
+The source of [robabby.com](https://www.robabby.com/): Next.js App Router, React, TypeScript, and custom CSS, deployed on Vercel. The core pages are Home, Work with me, and the SAVO case study, with a separate privacy page. The homepage features WavePoint through a manual website/iPhone gallery and a link to its website.
+
+The Ink + Ultramarine theme uses Newsreader and Instrument Sans in light and dark appearances. Page content is server-rendered; small client components handle theme choice and gallery controls. Content remains usable without JavaScript.
 
 ```sh
 pnpm install --frozen-lockfile
@@ -25,6 +27,6 @@ pnpm start
 pnpm shots http://localhost:3000
 ```
 
-`pnpm shots` checks the public pages, navigation, metadata, themes, and no-JavaScript rendering, and writes browser screenshots to the ignored `screenshots/` directory. Run it against a local production build before release.
+`pnpm shots` checks public pages, navigation, metadata, themes, gallery interaction, no-JavaScript rendering, and reduced motion. It writes browser screenshots and a verification report to the ignored `screenshots/` directory. Run it against a local production build before release.
 
-See [the design system](docs/ux/design-system.md) for the visual conventions and [CLAUDE.md](CLAUDE.md) for repository workflows. Images in `public/images/wavepoint/` show WavePoint’s public example chart and a published Moon Calendar sample; they contain no private chart data.
+See [the design system](docs/ux/design-system.md) for visual conventions and [CLAUDE.md](CLAUDE.md) for repository workflows. Active images in `public/images/wavepoint/` show WavePoint’s November 2026 website and iPhone development previews with fictional sample content. The app is in TestFlight; these captures do not establish which screens are distributed there. See the [image provenance notes](public/images/wavepoint/README.md) for capture details and retained historical assets. Original employer wordmarks and their sources are documented in [the logo notes](docs/ux/company-logos.md).

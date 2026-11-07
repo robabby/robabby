@@ -23,7 +23,8 @@ export default function ThemeToggle() {
       aria-pressed={theme === "dark"}
       onClick={toggle}
     >
-      {theme === "dark" ? <SunIcon /> : <MoonIcon />}
+      {theme === "dark" ? <SunIcon aria-hidden="true" /> : <MoonIcon aria-hidden="true" />}
+      <span>{theme === "dark" ? "Light" : "Dark"}</span>
     </button>
   );
 }

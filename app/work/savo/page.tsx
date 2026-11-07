@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ArrowRightIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 import SiteHeader from "@/app/components/SiteHeader";
 import Contact from "@/app/components/Contact";
@@ -52,7 +53,7 @@ const sections = [
   {
     id: "research-and-process",
     title: "Bringing research into the process",
-    label: "Research & process",
+    label: "Research and process",
     content: (<>
       <p>Access to the SAVO User Alliance Group eventually gave us a pool of administrators and end users for interviews and testing. <a href="https://www.linkedin.com/in/tom-green-b6198a4/">Tom Green</a> was our user researcher, and <a href="https://www.linkedin.com/in/allisonpaul/">Allison Paul</a> later managed outreach, scheduling, and session facilitation. We worked together to define research goals.</p>
       <p>Getting candid feedback took relationship-building, too. We worked to create the trust and space for one-to-one conversations with the people using the software.</p>
@@ -113,7 +114,6 @@ export default function Savo() {
           <article aria-labelledby="savo-title">
             <header className={styles.hero}>
               <div>
-                <p className="eyebrow">Selected work · SAVO</p>
                 <h1 id="savo-title">Building a UI/UX practice at SAVO.</h1>
                 <p className={styles.lead}>SAVO is where my career truly started. I joined as a self-taught frontend developer and went on to help shape how we designed, built, and learned from the people using our software.</p>
                 <p className={styles.intro}>I led the initiative to form our UI/UX team, hired visual designer <a href="https://www.linkedin.com/in/brittanymikottis/">Brittany Mikottis</a>, and worked alongside her on design and implementation. I also built the shared Ember.js component system and style guide used across several parts of the product.</p>
@@ -127,12 +127,11 @@ export default function Savo() {
             </header>
             <div className={styles.layout}>
               <nav className={styles.contents} aria-label="In this case study">
-                <p className="eyebrow">In this story</p>
+                <p>In this story</p>
                 <ol role="list">
-                  {sections.map((section, i) => (
+                  {sections.map((section) => (
                     <li key={section.id}>
                       <a href={`#${section.id}`}>
-                        <span className={styles.number} aria-hidden="true">{String(i + 1).padStart(2, "0")}</span>
                         <span>{section.label}</span>
                       </a>
                     </li>
@@ -140,9 +139,8 @@ export default function Savo() {
                 </ol>
               </nav>
               <div className={styles.story}>
-                {sections.map((section, i) => (
+                {sections.map((section) => (
                   <section className={styles.section} id={section.id} key={section.id} aria-labelledby={`${section.id}-title`}>
-                    <span className={styles.sectionIndex} aria-hidden="true">{String(i + 1).padStart(2, "0")}</span>
                     <h2 id={`${section.id}-title`}>{section.title}</h2>
                     {section.content}
                     {section.id === "shared-ui" && (
@@ -161,8 +159,8 @@ export default function Savo() {
             </div>
           </article>
           <nav className={styles.related} aria-label="Related work">
-            <p className="eyebrow">My business</p>
-            <Link href="/#wavepoint">Explore WavePoint <span aria-hidden="true">→</span></Link>
+            <p>My business</p>
+            <Link href="/#wavepoint">Explore WavePoint <ArrowRightIcon aria-hidden="true" /></Link>
           </nav>
         </div>
         <Contact />

@@ -1,3 +1,4 @@
+import { ArrowLeftIcon } from "@radix-ui/react-icons";
 import SiteHeader from "../components/SiteHeader";
 import { pageMetadata } from "../lib/site";
 import Link from "next/link";
@@ -10,7 +11,7 @@ export default function PrivacyPage() {
       <SiteHeader />
       <main className="wrap legal" id="main-content" tabIndex={-1}>
         <Link href="/" className="legal-back">
-          ← Back
+          <ArrowLeftIcon aria-hidden="true" /> Back
         </Link>
         <h1>Privacy</h1>
         <p className="legal-updated">Last updated: June 2026</p>
