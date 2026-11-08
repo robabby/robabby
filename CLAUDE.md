@@ -33,7 +33,7 @@ This is Rob Abby's personal site for a mixed audience, bringing together his pro
 - `app/lib/share-image.tsx` and route `opengraph-image.tsx` files — matching share cards.
 - `app/privacy/page.tsx`, `app/robots.ts`, `app/sitemap.ts` — privacy and search infrastructure.
 - `public/images/wavepoint/` — current website and iPhone development captures; its `README.md` records provenance and distinguishes active images from retained historical assets.
-- `public/resume.pdf` — current user-supplied résumé (November 7, 2026), linked quietly from the homepage About section and shared footer; served with noindex. Preserve the supplied PDF unchanged.
+- `public/resume.pdf` — current user-supplied résumé (November 8, 2026), linked quietly from the homepage About section and shared footer; served with noindex. Preserve the supplied PDF unchanged.
 - `docs/ux/design-system.md` — current visual conventions.
 
 ### Content Rules
