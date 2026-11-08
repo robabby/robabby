@@ -9,6 +9,121 @@ import styles from "../case-study.module.css";
 
 export const metadata = pageMetadata("savo");
 
+type PortfolioImage = { src: string; label: string; alt: string; width: number; height: number };
+
+const portfolioImages: PortfolioImage[] = [
+  {
+    "src": "search-results.png",
+    "label": "Search results \u00b7 desktop",
+    "alt": "SAVO desktop search with results grouped into documents and posts, pages, and multimedia.",
+    "width": 2880,
+    "height": 9718
+  },
+  {
+    "src": "search-mobile-results.png",
+    "label": "Mobile results",
+    "alt": "Mobile SAVO search results showing documents and posts.",
+    "width": 728,
+    "height": 1294
+  },
+  {
+    "src": "search-mobile-filters.png",
+    "label": "Mobile filters",
+    "alt": "Mobile search filters for attention, document type, owner, and library.",
+    "width": 728,
+    "height": 1294
+  },
+  {
+    "src": "search-mobile-tags.png",
+    "label": "Mobile tags",
+    "alt": "Mobile search tags grouped by document type, audience, industry, and other categories.",
+    "width": 728,
+    "height": 1294
+  },
+  {
+    "src": "search-filters.png",
+    "label": "Desktop filters",
+    "alt": "Desktop search results alongside a filter panel.",
+    "width": 2880,
+    "height": 1472
+  },
+  {
+    "src": "search-filter-options.png",
+    "label": "Filter options",
+    "alt": "Desktop search with a filter dropdown expanded.",
+    "width": 2880,
+    "height": 1472
+  },
+  {
+    "src": "search-item-actions.png",
+    "label": "Item actions",
+    "alt": "Desktop search with an action menu open on a result.",
+    "width": 2880,
+    "height": 1472
+  },
+  {
+    "src": "search-documents.png",
+    "label": "Documents results",
+    "alt": "Expanded list of document search results.",
+    "width": 2880,
+    "height": 9814
+  },
+  {
+    "src": "styleguide-principles.png",
+    "label": "Design principles",
+    "alt": "SAVO style guide describing lean work, simplicity, user-centered design, informed decisions, and balanced design.",
+    "width": 2880,
+    "height": 6470
+  },
+  {
+    "src": "styleguide-colors.png",
+    "label": "Color palette",
+    "alt": "SAVO style guide with primary, neutral, and secondary color palettes.",
+    "width": 2880,
+    "height": 2662
+  },
+  {
+    "src": "styleguide-typography.png",
+    "label": "Typography",
+    "alt": "SAVO typography guidance with Proxima Nova and Roboto heading examples.",
+    "width": 2880,
+    "height": 3850
+  },
+  {
+    "src": "styleguide-empty-states.png",
+    "label": "Empty-state guidance",
+    "alt": "SAVO style guide showing how to explain blank states and suggest next steps.",
+    "width": 2880,
+    "height": 2368
+  },
+  {
+    "src": "styleguide-icons.png",
+    "label": "Icons",
+    "alt": "SAVO icon guidance with icon sets and implementation examples.",
+    "width": 2880,
+    "height": 10282
+  },
+  {
+    "src": "styleguide-voice-tone.png",
+    "label": "Voice and tone",
+    "alt": "SAVO voice and tone guidance describing the product voice and its audiences.",
+    "width": 2880,
+    "height": 3248
+  }
+];
+
+function PortfolioFigure({ image, className = "", sizes }: { image: PortfolioImage; className?: string; sizes: string }) {
+  const href = `/images/savo/${image.src}`;
+  return (
+    <figure className={`${styles.portfolioFigure} ${className}`}>
+      <a className={styles.portfolioImage} href={href} target="_blank" rel="noopener noreferrer" aria-label={`Open ${image.label.toLowerCase()} at full size (opens in a new tab)`}>
+        <Image src={href} width={image.width} height={image.height} sizes={sizes} alt={image.alt} />
+      </a>
+      <figcaption>{image.label} · <a href={href} target="_blank" rel="noopener noreferrer">Full image<span className="sr-only"> (opens in a new tab)</span></a></figcaption>
+    </figure>
+  );
+}
+
 const sections = [
   {
     id: "people-using-savo",
@@ -39,6 +154,12 @@ const sections = [
       <p>Brittany and I worked through the redesign together, from design through implementation. We put it in front of end users through multiple rounds of feedback and usability testing.</p>
       <p>The redesign shipped to customers and was well received. Users particularly appreciated the added mobile support, which was new to them at the time.</p>
     </>),
+  },
+  {
+    id: "search",
+    title: "Finding content across desktop and mobile",
+    label: "Search",
+    content: <p>Search screens from the SAVO portfolio archive, showing results, filters, and tags across desktop and mobile layouts.</p>,
   },
   {
     id: "shared-ui",
@@ -160,13 +281,32 @@ export default function Savo() {
                         <figcaption>Early team sketches exploring the Asset Page layout. <a href="/images/savo/asset-page-sketches.jpg" target="_blank" rel="noopener noreferrer">View the full image<span className="sr-only"> (opens in a new tab)</span></a>.</figcaption>
                       </figure>
                     )}
+                    {section.id === "search" && (
+                      <>
+                        <PortfolioFigure image={portfolioImages[0]} className={styles.searchOverview} sizes="(max-width: 720px) calc(100vw - 68px), 786px" />
+                        <div className={styles.searchPhones}>
+                          {portfolioImages.slice(1, 4).map((image) => <PortfolioFigure key={image.src} image={image} sizes="270px" />)}
+                        </div>
+                        <details className={styles.moreImages}>
+                          <summary>More Search screens (4)</summary>
+                          <div className={styles.portfolioGrid}>
+                            {portfolioImages.slice(4, 8).map((image) => <PortfolioFigure key={image.src} image={image} sizes="(max-width: 720px) calc(100vw - 68px), 375px" />)}
+                          </div>
+                        </details>
+                      </>
+                    )}
                     {section.id === "shared-ui" && (
-                      <figure className={styles.processFigure}>
-                        <a className={styles.figureMat} href="/images/savo/styleguide-empty-states.png" target="_blank" rel="noopener noreferrer" aria-label="Open the full-size empty-state guidance (opens in a new tab)">
-                          <Image src="/images/savo/styleguide-empty-states.png" width={2880} height={2368} sizes="(max-width: 720px) calc(100vw - 68px), 786px" alt="SAVO style guide with voice and tone guidance for blank states and examples of helpful next steps." />
-                        </a>
-                        <figcaption>Guidance we developed together for empty states—helping people understand what’s happening and what they can do next. Part of the shared style guide I built. <a href="/images/savo/styleguide-empty-states.png" target="_blank" rel="noopener noreferrer">View the full image<span className="sr-only"> (opens in a new tab)</span></a>.</figcaption>
-                      </figure>
+                      <>
+                        <div className={styles.portfolioGrid}>
+                          {portfolioImages.slice(8, 12).map((image) => <PortfolioFigure key={image.src} image={image} sizes="(max-width: 720px) calc(100vw - 68px), 375px" />)}
+                        </div>
+                        <details className={styles.moreImages}>
+                          <summary>More Style Guide screens (2)</summary>
+                          <div className={styles.portfolioGrid}>
+                            {portfolioImages.slice(12).map((image) => <PortfolioFigure key={image.src} image={image} sizes="(max-width: 720px) calc(100vw - 68px), 375px" />)}
+                          </div>
+                        </details>
+                      </>
                     )}
                     {section.id === "research-and-process" && (
                       <figure className={styles.processFigure}>

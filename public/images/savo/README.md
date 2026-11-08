@@ -16,3 +16,24 @@ Source images and PDFs were copied byte-for-byte; the mind-map preview is render
 - `design-session.jpg`: original IMG_3682.JPG; sketches and voting dots from a team design session. The specific project, date, and facilitator are not established.
 
 These three originals were copied unchanged for SG-1772. Rob confirmed team attribution and authorized publication on November 8, 2026.
+
+## Search and Style Guide gallery — SG-1777
+
+Rob approved the placement and image selection on November 8, 2026. These historical screenshots are copied byte-for-byte from his preserved Portfolio archive. The Search screenshots show interface states; they do not establish release status, measured outcomes, or sole authorship. Display windows show the top of long captures and link to complete originals. Existing Buttons and Empty States originals are reused.
+
+| Website file | Original filename |
+| --- | --- |
+| `search-results.png` | `Search - Home.png` |
+| `search-mobile-results.png` | `Search - Mobile - Home.png` |
+| `search-mobile-filters.png` | `Search - Mobile - Filters.png` |
+| `search-mobile-tags.png` | `Search - Mobile - Tags.png` |
+| `search-filters.png` | `Search - Home - Filters.png` |
+| `search-filter-options.png` | `Search - Home - Filters - Dropdown.png` |
+| `search-item-actions.png` | `Search - Home - Item Actions Dropup.png` |
+| `search-documents.png` | `Search - Documents Bucket.png` |
+| `styleguide-principles.png` | `SavoStyleguide - Home.png` |
+| `styleguide-colors.png` | `SavoStyleguide - Design - Colors.png` |
+| `styleguide-typography.png` | `SavoStyleguide - Design - Typography.png` |
+| `styleguide-empty-states.png` | `SavoStyleguide - Voice & Tone - Blank State.png` |
+| `styleguide-icons.png` | `SavoStyleguide - Design - Icons.png` |
+| `styleguide-voice-tone.png` | `SavoStyleguide - Voice & Tone - Intro.png` |
