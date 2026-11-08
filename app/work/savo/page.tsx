@@ -117,6 +117,7 @@ export default function Savo() {
                 <h1 id="savo-title">Building a UI/UX practice at SAVO.</h1>
                 <p className={styles.lead}>SAVO is where my career truly started. I joined as a self-taught frontend developer and went on to help shape how we designed, built, and learned from the people using our software.</p>
                 <p className={styles.intro}>I led the initiative to form our UI/UX team, hired visual designer <a href="https://www.linkedin.com/in/brittanymikottis/">Brittany Mikottis</a>, and worked alongside her on design and implementation. I also built the shared Ember.js component system and style guide used across several parts of the product.</p>
+                <p className={styles.acquisitionNote}>SAVO was acquired by <a href="https://www.seismic.com/">Seismic</a> in 2018.</p>
               </div>
               <aside className={styles.projectContext} aria-label="Project context">
                 <dl>
