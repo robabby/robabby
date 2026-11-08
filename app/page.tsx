@@ -83,7 +83,7 @@ export default function Home() {
             <p>AI has become a substantial part of how I work. I use it throughout development, and I’m continuing to learn where it helps and what needs more attention from me. We’re a small operation at WavePoint, so keeping the work practical and avoiding unnecessary complexity matters.</p>
             <p>Before WavePoint, I worked at SAVO, project44, and PartySlate.</p>
             <div className="about-links">
-              <Link className="text-link" href="/work-with-me">Ways we can work together <ArrowRightIcon className="arrow" aria-hidden="true" /></Link>
+              <Link className="text-link" href="/work-with-me">Ways we can work together</Link>
               <a className="text-link" href="/resume.pdf">Résumé (PDF)</a>
             </div>
           </div>
