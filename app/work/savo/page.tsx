@@ -55,7 +55,7 @@ const sections = [
     title: "Bringing research into the process",
     label: "Research and process",
     content: (<>
-      <p>Access to the SAVO User Alliance Group eventually gave us a pool of administrators and end users for interviews and testing. <a href="https://www.linkedin.com/in/tom-green-b6198a4/">Tom Green</a> was our user researcher, and <a href="https://www.linkedin.com/in/allisonpaul/">Allison Paul</a> later managed outreach, scheduling, and session facilitation. We worked together to define research goals.</p>
+      <p>Access to the SAVO User Alliance Group eventually gave us a pool of administrators and end users for interviews and testing. <a href="https://www.linkedin.com/in/tom-green-b6198a4/">Tom Green</a> was our UX Designer, and <a href="https://www.linkedin.com/in/allisonpaul/">Allison Paul</a> later managed outreach and scheduling. Tom and Allison both frequently facilitated user-testing sessions. We worked together to define research goals.</p>
       <p>Getting candid feedback took relationship-building, too. We worked to create the trust and space for one-to-one conversations with the people using the software.</p>
       <p>Alongside Brittany, the rest of our UI/UX team, Head of Product <a href="https://www.linkedin.com/in/zachary-debelak-39b7541/">Zach Debelak</a>, and the wider Product team, I helped define a product process that included research throughout the work. Our process diagram connected early exploration, design, development, and feedback after release.</p>
     </>),
