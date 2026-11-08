@@ -31,6 +31,15 @@
 .figureWindow img { width: 100%; height: auto; }
 .figure figcaption { margin-top: 12px; color: var(--muted); font-size: 12px; line-height: 1.65; }
 .processFigure { margin-top: 28px; }
+.assetGallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 20px; margin-top: 28px; align-items: start; }
+.assetImage { display: flex; justify-content: center; align-items: flex-start; padding: 14px; background: var(--image-mat); border-radius: 5px; }
+.assetImage img { width: 100%; height: auto; }
+.assetGallery figcaption { font-size: 13px; line-height: 1.5; }
+.assetGallery figcaption a { display: inline-flex; align-items: center; min-height: 44px; color: var(--accent); }
+@media (max-width: 720px) {
+  .assetGallery { grid-template-columns: 1fr; }
+  .assetGallery figure:nth-child(n + 3) { max-width: 300px; width: 100%; justify-self: center; }
+}
 .processFigure img { width: 100%; height: auto; }
 .processFigure figcaption { margin-top: 12px; color: var(--muted); font-size: 13px; line-height: 1.65; }
 .related { display: flex; align-items: center; justify-content: space-between; gap: 30px; border-top: 1px solid var(--line); padding: 24px 0; margin-bottom: 24px; }
