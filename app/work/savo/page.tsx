@@ -37,7 +37,7 @@ const sections = [
     content: (<>
       <p>The Asset Page was where someone could view a document or other piece of content and decide what to do with it. We wanted to make it easier to navigate the asset and take the next action: save it, share it, or edit it.</p>
       <p>Brittany and I worked through the redesign together, from design through implementation. We put it in front of end users through multiple rounds of feedback and usability testing.</p>
-      <p>The redesign shipped to customers and was well received.</p>
+      <p>The redesign shipped to customers and was well received. Users particularly appreciated the added mobile support, which was new to them at the time.</p>
     </>),
   },
   {
@@ -151,6 +151,23 @@ export default function Savo() {
                   <section className={styles.section} id={section.id} key={section.id} aria-labelledby={`${section.id}-title`}>
                     <h2 id={`${section.id}-title`}>{section.title}</h2>
                     {section.content}
+                    {section.id === "asset-page" && (
+                      <div className={styles.assetGallery} role="group" aria-label="Asset Page before and after gallery">
+                        {[
+                          { src: "asset-page-before.png", label: "Before · desktop", width: 2880, height: 3146, alt: "Earlier Asset Page with document thumbnails, preview, comments, and tags on one long page" },
+                          { src: "asset-page.png", label: "After · desktop", width: 2880, height: 1566, alt: "Redesigned Asset Page with a larger document preview and file details alongside it" },
+                          { src: "asset-page-mobile-preview.png", label: "Mobile · preview", width: 728, height: 1295, alt: "Redesigned mobile Asset Page with the Preview tab selected and a document viewer" },
+                          { src: "asset-page-mobile-details.png", label: "Mobile · details", width: 728, height: 1295, alt: "Redesigned mobile Asset Page with the Details tab selected, showing modified date and file type" },
+                        ].map((image) => (
+                          <figure key={image.src}>
+                            <a className={styles.assetImage} href={`/images/savo/${image.src}`} target="_blank" rel="noopener noreferrer" aria-label={`Open ${image.label.toLowerCase()} image at full size (opens in a new tab)`}>
+                              <Image src={`/images/savo/${image.src}`} width={image.width} height={image.height} sizes="(max-width: 720px) calc(100vw - 68px), 375px" alt={image.alt} />
+                            </a>
+                            <figcaption><a href={`/images/savo/${image.src}`} target="_blank" rel="noopener noreferrer">{image.label}<span className="sr-only"> · full-size image (opens in a new tab)</span></a></figcaption>
+                          </figure>
+                        ))}
+                      </div>
+                    )}
                     {section.id === "team-culture" && (
                       <figure className={styles.processFigure}>
                         <a className={styles.figureMat} href="/images/savo/ux-team.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open the full UI/UX team mind map PDF (opens in a new tab)">
