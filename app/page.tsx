@@ -32,7 +32,7 @@ export default function Home() {
             <p className="identity-meta">Based in Bellingham.<br />Working locally and remotely.</p>
           </div>
           <div className="hero-copy">
-            <h2 className="hero-statement">Product thinking.<br />A feel for people.<br /><em>Hands on the work.</em></h2>
+            <h2 className="hero-statement">I design and<br /><span>build software.</span></h2>
             <p className="hero-intro">My background is in frontend engineering. Over time, I’ve found myself getting involved in more of what goes into making a product—especially design and working with the people who use it. These days, I’m the founder of WavePoint.</p>
             <div className="hero-actions">
               <a className="button" href="#work">Explore my work <ArrowRightIcon className="arrow" aria-hidden="true" /></a>
@@ -55,7 +55,7 @@ export default function Home() {
               <p className="project-role">Founder and operator</p>
               <WavePointGallery />
               <div className="work-info">
-                <p>WavePoint is the business I’m building. I look after the product, design, engineering, and day-to-day operation. The iPhone app is currently in TestFlight.</p>
+                <p>WavePoint is an astrology app I’m building for iPhone. It brings together charts, readings, and a place to record experiences and revisit them over time. I look after the product, design, engineering, and day-to-day business - collaborating with my wife, Shayna. The app is currently in TestFlight.</p>
                 <a className="text-link" href="https://wavepoint.space/">Visit WavePoint <ArrowRightIcon className="arrow" aria-hidden="true" /></a>
               </div>
             </article>
@@ -65,10 +65,10 @@ export default function Home() {
                 <span>Historical work</span>
               </div>
               <p className="project-role">UI/UX and frontend engineering</p>
-              <Link className="work-image" href="/work/savo" aria-label="Read the SAVO story">
-                <Image src="/images/savo/styleguide-buttons.png" alt="SAVO’s shared style guide, showing button variants and implementation examples" width={2880} height={4464} sizes="(max-width: 720px) calc(100vw - 76px), (max-width: 1000px) 35vw, 440px" />
+              <Link className="work-image savo-preview" href="/work/savo" aria-label="Read the SAVO story">
+                <Image src="/images/savo/asset-page.png" alt="Historical SAVO Asset Page showing a document preview, download action, and file details" width={2880} height={1566} sizes="(max-width: 720px) calc(100vw - 76px), (max-width: 1000px) 35vw, 440px" />
               </Link>
-              <p className="image-caption">The shared component system and style guide.</p>
+              <p className="image-caption">The Asset Page · historical interface example.</p>
               <div className="work-info">
                 <p>At SAVO, I helped establish our UI/UX team and worked closely with our visual designer on design and implementation. I also built the shared component system and style guide, and helped other engineers with their frontend work.</p>
                 <Link className="text-link" href="/work/savo">Read the SAVO story <ArrowRightIcon className="arrow" aria-hidden="true" /></Link>
@@ -82,7 +82,10 @@ export default function Home() {
             <p>A lot of my attention goes into how someone will actually use what we’re making. I’m interested in what they’re trying to do, how they think about it, and how the software could help.</p>
             <p>AI has become a substantial part of how I work. I use it throughout development, and I’m continuing to learn where it helps and what needs more attention from me. We’re a small operation at WavePoint, so keeping the work practical and avoiding unnecessary complexity matters.</p>
             <p>Before WavePoint, I worked at SAVO, project44, and PartySlate.</p>
-            <Link className="text-link" href="/work-with-me">Ways we can work together <ArrowRightIcon className="arrow" aria-hidden="true" /></Link>
+            <div className="about-links">
+              <Link className="text-link" href="/work-with-me">Ways we can work together <ArrowRightIcon className="arrow" aria-hidden="true" /></Link>
+              <a className="text-link" href="/resume.pdf">Résumé (PDF)</a>
+            </div>
           </div>
         </section>
         <Contact intro="If you see an opportunity for us to work together, I’d love to hear from you. That could be a role, a project, or simply getting to know each other and seeing where it goes." wavepointLink />

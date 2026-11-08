@@ -9,7 +9,7 @@ export const metadata = pageMetadata("services");
 export default function WorkWithMe() {
   return (
     <>
-      <SiteHeader />
+      <SiteHeader currentPage="services" localContact />
 
       <main id="main-content" tabIndex={-1}>
         <section className="wrap sub-hero" aria-labelledby="services-title">
@@ -20,13 +20,14 @@ export default function WorkWithMe() {
               software and AI.
             </h1>
             <p className="sub-lead">
-              Bring me an idea, a website you’ve outgrown, or a problem you
-              haven’t quite figured out yet. We can work through it together.
+              Bring me an idea, a product you’d like to improve, or a website
+              you’ve outgrown. I can help work through what it needs, design
+              how it should work, and build it with you.
             </p>
             <p className="sub-intro">
-              I design and build websites and software for small businesses,
-              and help owners put AI to use in their work. I’m based in
-              Bellingham, Washington, and work locally and remotely.
+              I also help people connect the tools they already use and put AI
+              to work in everyday workflows. I’m based in Bellingham,
+              Washington, and work locally and remotely.
             </p>
             <div className="hero-actions">
               <a className="button" href="#contact">
@@ -65,81 +66,46 @@ export default function WorkWithMe() {
           aria-label="Services"
         >
           <article className="service-row">
+            <div><h2>Improve an existing product.</h2></div>
             <div>
-              <h2>
-                Make the next
-                <br />
-                step obvious.
-              </h2>
-              <p className="section-context">Website design and development</p>
+              <p className="body-copy">If a part of your product is confusing or getting in people’s way, we can work through it together. I can help understand the problem, refine the design, and work with your team on the implementation.</p>
+              <ul className="deliverables">
+                <li>Make a difficult workflow easier to use</li>
+                <li>Design and build improvements to the interface</li>
+                <li>Develop shared components that help the team build consistently</li>
+              </ul>
             </div>
+          </article>
+          <article className="service-row">
+            <div><h2>Shape and build something new.</h2></div>
             <div>
-              <p className="body-copy">
-                A good website helps people understand what you offer and act on
-                it. We can improve what you have or build a new site around the
-                needs of your business and customers.
-              </p>
+              <p className="body-copy">If you have an idea, we can work out who it’s for, what it needs to do, and where to start. I can help make it tangible with a prototype, then design and build an agreed first version.</p>
+              <ul className="deliverables">
+                <li>Work through the idea and its scope</li>
+                <li>Build a prototype to try with the people who would use it</li>
+                <li>Take an agreed piece of the product through design and development</li>
+              </ul>
+            </div>
+          </article>
+          <article className="service-row">
+            <div><h2>Design and build a website.</h2></div>
+            <div>
+              <p className="body-copy">A good website helps people understand what you offer and act on it. We can improve what you have or build a new site around the needs of your business and customers.</p>
               <ul className="deliverables">
                 <li>A clearer homepage and service pages</li>
                 <li>Navigation and contact paths that work well on phones</li>
-                <li>
-                  Accessible interfaces, responsive layouts, and a sound search
-                  foundation
-                </li>
+                <li>Accessible interfaces, responsive layouts, and a sound search foundation</li>
               </ul>
             </div>
           </article>
           <article className="service-row">
+            <div><h2>AI workflows and automation.</h2></div>
             <div>
-              <h2>
-                Give a difficult
-                <br />
-                process a better tool.
-              </h2>
-              <p className="section-context">Software and product interfaces</p>
-            </div>
-            <div>
-              <p className="body-copy">
-                If you’re working around the limits of a spreadsheet or an
-                awkward piece of software, let’s look at how the process
-                works. I can help you improve the interface or build a tool
-                around what you need.
-              </p>
+              <p className="body-copy">If you’re spending time gathering information, moving it between tools, or repeating the same steps, we can look at where AI and automation could help. I can help connect the tools you already use, set up a practical workflow, and work through what should happen automatically and what needs your review.</p>
               <ul className="deliverables">
-                <li>A prototype to test an idea before a larger build</li>
-                <li>A clearer interface for an existing product</li>
-                <li>
-                  An internal tool for a workflow that has outgrown a
-                  spreadsheet
-                </li>
-              </ul>
-            </div>
-          </article>
-          <article className="service-row">
-            <div>
-              <h2>
-                Start with a task
-                <br />
-                that matters.
-              </h2>
-              <p className="section-context">Practical AI</p>
-            </div>
-            <div>
-              <p className="body-copy">
-                I use AI throughout my work on WavePoint. If you’re wondering
-                where it could help your business, we can start with a task
-                you already do, try an approach together, and check whether it
-                helps.
-              </p>
-              <ul className="deliverables">
-                <li>Choose tools and models around the task</li>
-                <li>
-                  Give AI useful context and a clear way to check its work
-                </li>
-                <li>
-                  Try the workflow with realistic examples and refine it
-                  together
-                </li>
+                <li>Connect tools such as Google Drive, Gmail, or Slack with AI where useful</li>
+                <li>Start with one workflow, such as preparing a briefing or drafting a follow-up</li>
+                <li>Try it with real examples, refine it together, and make sure you know how to use it</li>
               </ul>
             </div>
           </article>
@@ -157,7 +123,7 @@ export default function WorkWithMe() {
               <div>
                 <h3>Understand the problem.</h3>
                 <p>
-                  I’ll ask about your business, the people using the product,
+                  I’ll ask about your business, the people doing the work,
                   and what’s getting in their way. We’ll work out what needs
                   to change.
                 </p>
@@ -167,7 +133,7 @@ export default function WorkWithMe() {
               <div>
                 <h3>Make it tangible.</h3>
                 <p>
-                  I’ll make a prototype we can look at and try together.
+                  I’ll make a prototype or set up a workflow we can try together.
                   Seeing the idea in action gives us something concrete to
                   discuss and improve.
                 </p>
@@ -200,7 +166,7 @@ export default function WorkWithMe() {
             <details>
               <summary>Can you work with what I already have?</summary>
               <p>
-                Yes. We can start by looking at the current website or product
+                Yes. We can start by looking at the current website, product, or workflow
                 and decide whether a focused improvement or a new build makes
                 sense.
               </p>

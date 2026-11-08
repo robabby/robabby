@@ -6,13 +6,13 @@ export const PAGE_INFO = {
     path: "/",
     title: "Rob Abby | Product, design and engineering",
     description:
-      "Product thinking, design, engineering, and a feel for people. Rob Abby is the founder of WavePoint, based in Bellingham, Washington.",
+      "I design and build software. I’m Rob Abby, a frontend engineer and founder of WavePoint, based in Bellingham, Washington.",
   },
   services: {
     path: "/work-with-me",
     title: "Web Design and Software Development | Rob Abby, Bellingham",
     description:
-      "Website design, custom software, and practical AI help for small businesses. Work directly with Rob Abby in Bellingham or remotely.",
+      "Product improvements, new software, websites, and practical AI workflows. Work directly with Rob Abby in Bellingham or remotely.",
   },
   savo: {
     path: "/work/savo",

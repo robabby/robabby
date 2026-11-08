@@ -15,7 +15,7 @@ Ultramarine marks emphasis and action. Neutral surfaces and dividers keep the wo
 | `--paper` | `#f9fafb` | `#191c20` | Page background |
 | `--ink` | `#202429` | `#eef0f2` | Headings and main text |
 | `--muted` | `#58616a` | `#b1b8c1` | Supporting copy, navigation, captions, employer logos |
-| `--accent` | `#2945ba` | `#b0c3ff` | Text links, italic hero line, active gallery choice, focus |
+| `--accent` | `#2945ba` | `#b0c3ff` | Text links, second hero line, active gallery choice, focus |
 | `--action` | `#2945ba` | `#b7c8ff` | Filled action and text-selection background |
 | `--action-ink` | `#fff` | `#1c2b53` | Text on the action color |
 | `--line` | `#d2d8dd` | `#3c434b` | Section rules and control borders |
@@ -33,7 +33,7 @@ Themes use `data-theme` on the document. A saved choice takes precedence over th
 | Body | Instrument Sans, sans-serif; 17px / 1.65 base | Paragraphs and supporting copy |
 | Labels and controls | Instrument Sans; generally 12–15px | Navigation, captions, buttons, role labels |
 
-The homepage statement is “Product thinking. / A feel for people. / Hands on the work.” on three lines. Its final line is italic and uses the accent color. It scales to 60px on wide screens, 48px below 1000px, 40px on phones, and 35px at 360px and below. Rob’s name remains the page’s sole h1.
+The current homepage trial is “I design and / build software.” on two lines. Both lines are upright; the second uses the accent color. It scales to 68px on wide screens, 48px below 1000px and on phones, and 42px at 360px and below. Rob’s name remains the page’s sole h1. The homepage share card uses the same two-line statement.
 
 Headings use close leading (usually 1.08–1.15) and slightly tightened tracking. Body copy uses 1.65–1.8 leading with a general 68ch limit; long-form copy is limited to 65ch. Sentence case and first-person language support the personal voice. Do not add decorative ampersands or a red accent.
 
@@ -45,7 +45,7 @@ Headings use close leading (usually 1.08–1.15) and slightly tightened tracking
 - Major sections are separated by one-pixel rules and generous vertical space. Contact uses the page background and the same editorial grid.
 - The SAVO article uses the shared rail for its contents list, sticky 28px from the top on larger screens. On phones, contents precede the story and stop being sticky. Privacy and the not-found page use the narrower 760px reading layout.
 
-Keep navigation visible at every width. The mobile header wraps into rows without a menu drawer. The portrait moves beside the name and location, shrinking from 192px to 84px, then 72px at the narrowest breakpoint.
+Keep navigation visible at every width. The mobile header places the identity and theme control above a full-width row of navigation links, without a menu drawer. The portrait moves beside the name and location, shrinking from 192px to 84px, then 72px at the narrowest breakpoint.
 
 ## Elevation & Depth
 
@@ -59,7 +59,7 @@ Corners are only gently softened: the portrait uses 3px, image frames and filled
 
 ### Header and footer
 
-The home header reads “Product, design and engineering”; inner pages link home with “Rob Abby”. Main navigation is Work (`/#work`), About (`/#about`), and Contact. The footer contains Work with me, LinkedIn, GitHub, and Privacy. Navigation has at least 44px-high targets, muted text at rest, and an accent underline on hover.
+The home header reads “Product, design and engineering”; inner pages link home with “Rob Abby”. Main navigation is Work (`/#work`), Work with me (`/work-with-me`), About (`/#about`), and Contact. The footer contains Work with me, Résumé (PDF), LinkedIn, GitHub, and Privacy. Work with me has a current-page indicator; Contact stays on the current page when it has a contact section. Navigation has at least 44px-high targets, muted text at rest, and an accent underline on hover.
 
 ### Actions and contact
 
@@ -97,4 +97,4 @@ Services use the shared editorial rows and native `details` for the FAQ. SAVO, p
 - **Do** preserve actual image provenance, historical context, and release-status distinctions.
 - **Don't** restore the superseded green/ivory palette, Fraunces, decorative ampersands, or red accents.
 - **Don't** substitute private chart or customer data, reconstructed employer wordmarks, or speculative product mockups for the established imagery.
-- **Don't** add a second homepage logo beside the personal-name heading or promote the historical resume into a new call to action.
+- **Don't** add a second homepage logo beside the personal-name heading. Keep the résumé as a quiet “Résumé (PDF)” text link in About and the shared footer, rather than a primary hero action. Open the PDF normally so visitors can read or save it through their browser.

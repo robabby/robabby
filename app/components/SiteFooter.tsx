@@ -6,6 +6,7 @@ export default function SiteFooter() {
       <p>© {new Date().getFullYear()} Rob Abby · Bellingham, Washington</p>
       <nav aria-label="Footer">
         <Link href="/work-with-me">Work with me</Link>
+        <a href="/resume.pdf">Résumé (PDF)</a>
         <a
           href="https://linkedin.com/in/robabby"
           target="_blank"

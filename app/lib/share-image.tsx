@@ -21,9 +21,8 @@ async function loadGoogleFont(family: string, text: string) {
 }
 
 export async function shareImage({ heading, role, description = "", home = false }: ShareCopy) {
-  const [display, italic, body] = await Promise.all([
-    loadGoogleFont("Newsreader:opsz,wght@60,400", `${heading}${role}Product thinking.A feel for people.`),
-    loadGoogleFont("Newsreader:ital,opsz,wght@1,60,400", "Hands on the work."),
+  const [display, body] = await Promise.all([
+    loadGoogleFont("Newsreader:opsz,wght@60,400", `${heading}${role}I design andbuild software.`),
     loadGoogleFont("Instrument+Sans", `${description}Rob AbbyProduct, design and engineeringrobabby.com`),
   ]);
   return new ImageResponse(
@@ -34,12 +33,11 @@ export async function shareImage({ heading, role, description = "", home = false
           <span>robabby.com</span>
         </div>
         <div style={{ display: "flex", flex: 1, alignItems: home ? "center" : "flex-start", justifyContent: "center", flexDirection: home ? "row" : "column", gap: home ? 65 : 0 }}>
-          <div style={{ display: "flex", fontFamily: "Newsreader", fontSize: home ? 60 : 91, letterSpacing: -2, lineHeight: 1.1, width: home ? 295 : "100%", marginBottom: home ? 0 : 24, alignSelf: "flex-start", marginTop: home ? 81 : 0 }}>{heading}</div>
+          <div style={{ display: "flex", fontFamily: "Newsreader", fontSize: home ? 60 : 91, letterSpacing: -2, lineHeight: 1.1, width: home ? 295 : "100%", marginBottom: home ? 0 : 24, alignSelf: "flex-start", marginTop: home ? 105 : 0 }}>{heading}</div>
           {home ? (
             <div style={{ display: "flex", flexDirection: "column", fontFamily: "Newsreader", fontSize: 64, letterSpacing: -1.7, lineHeight: 1.15, flex: 1 }}>
-              <span>Product thinking.</span>
-              <span>A feel for people.</span>
-              <span style={{ color: "#b0c3ff", fontStyle: "italic" }}>Hands on the work.</span>
+              <span>I design and</span>
+              <span style={{ color: "#b0c3ff" }}>build software.</span>
             </div>
           ) : (
             <div style={{ display: "flex", flexDirection: "column" }}>
@@ -55,7 +53,6 @@ export async function shareImage({ heading, role, description = "", home = false
       height: 630,
       fonts: [
         { name: "Newsreader", data: display, weight: 400, style: "normal" },
-        { name: "Newsreader", data: italic, weight: 400, style: "italic" },
         { name: "Instrument Sans", data: body, weight: 400, style: "normal" },
       ],
     },

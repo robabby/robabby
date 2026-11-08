@@ -25,11 +25,14 @@
 .section p { max-width: 65ch; margin-bottom: 20px; color: var(--muted); font-size: 17px; line-height: 1.8; }
 .section p:last-child { margin-bottom: 0; }
 .section p a { color: var(--accent); }
-.figure { margin-top: 32px; }
+.figure { max-width: 830px; margin: 32px 0 0 auto; }
 .figureMat { display: block; padding: 22px; background: var(--image-mat); border-radius: 5px; }
 .figureWindow { height: clamp(245px, 30vw, 390px); overflow: hidden; background: #fff; }
 .figureWindow img { width: 100%; height: auto; }
 .figure figcaption { margin-top: 12px; color: var(--muted); font-size: 12px; line-height: 1.65; }
+.processFigure { margin-top: 28px; }
+.processFigure img { width: 100%; height: auto; }
+.processFigure figcaption { margin-top: 12px; color: var(--muted); font-size: 13px; line-height: 1.65; }
 .related { display: flex; align-items: center; justify-content: space-between; gap: 30px; border-top: 1px solid var(--line); padding: 24px 0; margin-bottom: 24px; }
 .related p { font-size: 13px; color: var(--muted); }
 .related a { display: inline-flex; align-items: center; gap: 24px; min-height: 44px; color: var(--accent); font-size: 16px; }

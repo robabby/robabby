@@ -1,9 +1,9 @@
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 
-type Props = { home?: boolean };
+type Props = { home?: boolean; currentPage?: "services"; localContact?: boolean };
 
-export default function SiteHeader({ home = false }: Props) {
+export default function SiteHeader({ home = false, currentPage, localContact = false }: Props) {
   return (
     <>
       <a className="skip" href="#main-content">
@@ -20,8 +20,9 @@ export default function SiteHeader({ home = false }: Props) {
         <div className="header-right">
           <nav className="nav" aria-label="Main navigation">
             <Link href="/#work">Work</Link>
+            <Link href="/work-with-me" aria-current={currentPage === "services" ? "page" : undefined}>Work with me</Link>
             <Link href="/#about">About</Link>
-            <a href={home ? "#contact" : "/#contact"}>Contact</a>
+            <a href={home || localContact ? "#contact" : "/#contact"}>Contact</a>
           </nav>
           <ThemeToggle />
         </div>

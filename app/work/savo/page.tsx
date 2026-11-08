@@ -107,7 +107,7 @@ const schema = {
 export default function Savo() {
   return (
     <>
-      <SiteHeader />
+      <SiteHeader localContact />
       <JsonLd value={schema} />
       <main id="main-content" tabIndex={-1}>
         <div className="wrap">
@@ -125,6 +125,14 @@ export default function Savo() {
                 </dl>
               </aside>
             </header>
+            <figure className={styles.figure}>
+                        <a className={styles.figureMat} href="/images/savo/styleguide-buttons.png" target="_blank" rel="noopener noreferrer" aria-label="Open the full SAVO style guide image (opens in a new tab)">
+                          <div className={styles.figureWindow}>
+                            <Image src="/images/savo/styleguide-buttons.png" width={2880} height={4464} sizes="(max-width: 720px) calc(100vw - 68px), 786px" alt="SAVO’s style guide showing button variants alongside Ember template examples." />
+                          </div>
+                        </a>
+                        <figcaption>I built the shared Ember.js component system and this style guide, which became a reference for developers working across SAVO’s products. <a href="/images/savo/styleguide-buttons.png" target="_blank" rel="noopener noreferrer">Open the full image<span className="sr-only"> (opens in a new tab)</span></a>.</figcaption>
+                      </figure>
             <div className={styles.layout}>
               <nav className={styles.contents} aria-label="In this case study">
                 <p>In this story</p>
@@ -143,14 +151,20 @@ export default function Savo() {
                   <section className={styles.section} id={section.id} key={section.id} aria-labelledby={`${section.id}-title`}>
                     <h2 id={`${section.id}-title`}>{section.title}</h2>
                     {section.content}
-                    {section.id === "shared-ui" && (
-                      <figure className={styles.figure}>
-                        <a className={styles.figureMat} href="/images/savo/styleguide-buttons.png" target="_blank" rel="noopener noreferrer" aria-label="Open the full SAVO style guide image (opens in a new tab)">
-                          <div className={styles.figureWindow}>
-                            <Image src="/images/savo/styleguide-buttons.png" width={2880} height={4464} sizes="(max-width: 760px) calc(100vw - 76px), (max-width: 1000px) 65vw, 750px" alt="SAVO’s style guide showing button variants alongside Ember template examples." />
-                          </div>
+                    {section.id === "team-culture" && (
+                      <figure className={styles.processFigure}>
+                        <a className={styles.figureMat} href="/images/savo/ux-team.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open the full UI/UX team mind map PDF (opens in a new tab)">
+                          <Image src="/images/savo/ux-team.png" width={2000} height={1906} sizes="(max-width: 720px) calc(100vw - 68px), 786px" alt="UI/UX team mind map connecting our shared needs, values, traits, abilities, skills, and principles, including collaboration, growth, feedback, and respect." />
                         </a>
-                        <figcaption>The style guide paired component examples with implementation guidance. <a href="/images/savo/styleguide-buttons.png" target="_blank" rel="noopener noreferrer">Open the full image<span className="sr-only"> (opens in a new tab)</span></a>.</figcaption>
+                        <figcaption>The mind map we developed together during the team workshop. <a href="/images/savo/ux-team.pdf" target="_blank" rel="noopener noreferrer">View the full mind map (PDF)<span className="sr-only"> (opens in a new tab)</span></a>.</figcaption>
+                      </figure>
+                    )}
+                    {section.id === "research-and-process" && (
+                      <figure className={styles.processFigure}>
+                        <a className={styles.figureMat} href="/images/savo/product-process.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open the full SAVO product process diagram (opens in a new tab)">
+                          <Image src="/images/savo/product-process.jpg" width={2415} height={1575} sizes="(max-width: 720px) calc(100vw - 68px), 786px" alt="SAVO product process: Ideation, Research, Design, and Develop span seven stages from Target to Release to Portfolio, with research continuing through delivery and after release." />
+                        </a>
+                        <figcaption>The process we defined together across Product, UI/UX, and engineering. Research runs from early exploration through feedback after release. <a href="/images/savo/product-process.jpg" target="_blank" rel="noopener noreferrer">View the full-size diagram<span className="sr-only"> (opens in a new tab)</span></a>.</figcaption>
                       </figure>
                     )}
                   </section>
@@ -163,7 +177,7 @@ export default function Savo() {
             <Link href="/#wavepoint">Explore WavePoint <ArrowRightIcon aria-hidden="true" /></Link>
           </nav>
         </div>
-        <Contact />
+        <Contact intro="If you see an opportunity for us to work together, I’d love to hear from you. That could be a role, a project, or simply getting to know each other and seeing where it goes." />
       </main>
     </>
   );

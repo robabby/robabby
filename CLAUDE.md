@@ -33,13 +33,13 @@ This is Rob Abby's personal site for a mixed audience, bringing together his pro
 - `app/lib/share-image.tsx` and route `opengraph-image.tsx` files — matching share cards.
 - `app/privacy/page.tsx`, `app/robots.ts`, `app/sitemap.ts` — privacy and search infrastructure.
 - `public/images/wavepoint/` — current website and iPhone development captures; its `README.md` records provenance and distinguishes active images from retained historical assets.
-- `public/resume.pdf` — historical direct URL retained without a CTA; served with noindex. A resume refresh is not a dependency of site work.
+- `public/resume.pdf` — current user-supplied résumé (November 7, 2026), linked quietly from the homepage About section and shared footer; served with noindex. Preserve the supplied PDF unchanged.
 - `docs/ux/design-system.md` — current visual conventions.
 
 ### Content Rules
 
 - Consult `../career/docs/positioning.md` for facts and `../career/docs/copy-blocks.md` for previously approved copy. Their September 2026 website direction predates Rob's November 6 decisions for this site; do not use it to restore the older visual system, founder-only framing, navigation, or removed WavePoint case study.
-- The November 6 working direction presents Rob to people considering roles, projects, or a conversation. The accepted homepage hero is “Product thinking. A feel for people. Hands on the work.” The final line is italic and blue. The rest of the revised homepage copy remains a working draft. Local implementation is authorized; this does not establish final copy or publication approval.
+- The November 6 working direction presents Rob to people considering roles, projects, or a conversation. The current homepage hero trial is “I design and build software.” on two lines, with “build software.” upright and blue. It replaces the earlier three-line statement for local review; the homepage share card uses the same statement. The rest of the revised homepage copy remains a working draft. Local implementation is authorized; this does not establish final copy or publication approval.
 - Preserve the substantive services, SAVO, and privacy copy during theme work. WavePoint remains the featured current business; SAVO supplies historical work evidence. Historical resume/LinkedIn wording is not authority over the current direction. No private-repository links, unsupported outcomes, or stale numeric claims.
 - WavePoint's app status is TestFlight. Its gallery screenshots show a development preview with fictional sample content, not proof that those exact screens are distributed in TestFlight. Preserve that distinction in captions and image descriptions.
 
