@@ -33,7 +33,7 @@ export default function Home() {
           </div>
           <div className="hero-copy">
             <h2 className="hero-statement">I design and<br /><span>build software.</span></h2>
-            <p className="hero-intro">My background is in frontend engineering. Over time, I’ve found myself getting involved in more of what goes into making a product—especially design and working with the people who use it. These days, I’m the founder of WavePoint.</p>
+            <p className="hero-intro">My background is in frontend engineering. Over time, I’ve found myself getting involved in more of what goes into making a product—especially design and working with the people who use it. These days, I am working on WavePoint.</p>
             <div className="hero-actions">
               <a className="button" href="#work">Explore my work <ArrowRightIcon className="arrow" aria-hidden="true" /></a>
               <a className="text-link" href="#contact">Get in touch <ArrowRightIcon className="arrow" aria-hidden="true" /></a>
