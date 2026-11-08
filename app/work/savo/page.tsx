@@ -152,6 +152,30 @@ export default function Savo() {
                     <h2 id={`${section.id}-title`}>{section.title}</h2>
                     {section.content}
                     {section.id === "asset-page" && (
+                      <figure className={styles.sketchFigure}>
+                        <a className={styles.figureMat} href="/images/savo/asset-page-sketches.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open the full-size Asset Page sketches (opens in a new tab)">
+                          <Image src="/images/savo/asset-page-sketches.jpg" width={2448} height={3264} sizes="(max-width: 720px) calc(100vw - 68px), 436px" alt="Whiteboard with alternative Asset Page layouts, including document preview, details, comments, and actions." />
+                        </a>
+                        <figcaption>Early team sketches exploring the Asset Page layout. <a href="/images/savo/asset-page-sketches.jpg" target="_blank" rel="noopener noreferrer">View the full image<span className="sr-only"> (opens in a new tab)</span></a>.</figcaption>
+                      </figure>
+                    )}
+                    {section.id === "shared-ui" && (
+                      <figure className={styles.processFigure}>
+                        <a className={styles.figureMat} href="/images/savo/styleguide-empty-states.png" target="_blank" rel="noopener noreferrer" aria-label="Open the full-size empty-state guidance (opens in a new tab)">
+                          <Image src="/images/savo/styleguide-empty-states.png" width={2880} height={2368} sizes="(max-width: 720px) calc(100vw - 68px), 786px" alt="SAVO style guide with voice and tone guidance for blank states and examples of helpful next steps." />
+                        </a>
+                        <figcaption>Guidance we developed together for empty states—helping people understand what’s happening and what they can do next. Part of the shared style guide I built. <a href="/images/savo/styleguide-empty-states.png" target="_blank" rel="noopener noreferrer">View the full image<span className="sr-only"> (opens in a new tab)</span></a>.</figcaption>
+                      </figure>
+                    )}
+                    {section.id === "research-and-process" && (
+                      <figure className={styles.processFigure}>
+                        <a className={styles.figureMat} href="/images/savo/design-session.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open the full-size design-session photo (opens in a new tab)">
+                          <Image src="/images/savo/design-session.jpg" width={3264} height={2448} sizes="(max-width: 720px) calc(100vw - 68px), 786px" alt="Interface sketches on sheets of paper attached to a glass wall, with colored voting dots." />
+                        </a>
+                        <figcaption>Sketches and voting dots from a SAVO team design session. <a href="/images/savo/design-session.jpg" target="_blank" rel="noopener noreferrer">View the full image<span className="sr-only"> (opens in a new tab)</span></a>.</figcaption>
+                      </figure>
+                    )}
+                    {section.id === "asset-page" && (
                       <div className={styles.assetGallery} role="group" aria-label="Asset Page before and after gallery">
                         {[
                           { src: "asset-page-before.png", label: "Before · desktop", width: 2880, height: 3146, alt: "Earlier Asset Page with document thumbnails, preview, comments, and tags on one long page" },
