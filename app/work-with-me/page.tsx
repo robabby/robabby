@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import { ArrowRightIcon, ArrowDownIcon } from "@radix-ui/react-icons";
 import SiteHeader from "@/app/components/SiteHeader";
 import Contact from "@/app/components/Contact";
 import { pageMetadata } from "@/app/lib/site";
@@ -9,154 +9,109 @@ export const metadata = pageMetadata("services");
 export default function WorkWithMe() {
   return (
     <>
-      <SiteHeader active="services" />
+      <SiteHeader currentPage="services" localContact />
 
       <main id="main-content" tabIndex={-1}>
         <section className="wrap sub-hero" aria-labelledby="services-title">
           <div>
-            <p className="eyebrow">Work with me</p>
             <h1 id="services-title">
               Web design,
               <br />
-              software &amp; AI.
+              software and AI.
             </h1>
             <p className="sub-lead">
-              Bring me an idea, a website you’ve outgrown, or a problem you
-              haven’t quite figured out yet. We can work through it together.
+              Bring me an idea, a product you’d like to improve, or a website
+              you’ve outgrown. I can help work through what it needs, design
+              how it should work, and build it with you.
             </p>
             <p className="sub-intro">
-              I design and build websites and software for small businesses,
-              and help owners put AI to use in their work. I’m based in
-              Bellingham, Washington, and work locally and remotely.
+              I also help people connect the tools they already use and put AI
+              to work in everyday workflows. I’m based in Bellingham,
+              Washington, and work locally and remotely.
             </p>
             <div className="hero-actions">
               <a className="button" href="#contact">
                 Discuss a project{" "}
-                <span className="arrow" aria-hidden="true">
-                  ↗
-                </span>
+                <ArrowRightIcon className="arrow" aria-hidden="true" />
               </a>
               <a className="text-link" href="#services">
-                Ways I can help <span aria-hidden="true">↓</span>
+                Ways I can help <ArrowDownIcon aria-hidden="true" />
               </a>
             </div>
           </div>
           <figure className="proof-card">
             <Image
-              src="/images/wavepoint/wavepoint-web.png"
-              width={1280}
-              height={820}
-              alt="WavePoint’s birth-chart introduction and example chart"
-              sizes="(max-width: 760px) calc(100vw - 80px), 620px"
+              src="/images/wavepoint/homepage-2026-11.png"
+              width={1440}
+              height={1000}
+              alt="WavePoint’s current website homepage, with a Day chart and Moment example"
+              sizes="(max-width: 720px) calc(100vw - 68px), 520px"
             />
             <figcaption>
-              <p className="eyebrow">From my own business</p>
               <h2>WavePoint.</h2>
               <p>
                 WavePoint is the business I founded and run. It’s where I put
                 this way of working into practice, from the first idea to the
                 details of running the product.
               </p>
-              <Link className="text-link" href="/work/wavepoint">
-                Explore the work <span aria-hidden="true">→</span>
-              </Link>
+              <a className="text-link" href="https://wavepoint.space/">
+                Visit WavePoint <ArrowRightIcon className="arrow" aria-hidden="true" />
+              </a>
             </figcaption>
           </figure>
-        </section>{" "}
+        </section>
         <section
           className="wrap service-list"
           id="services"
           aria-label="Services"
         >
           <article className="service-row">
+            <div><h2>Improve an existing product.</h2></div>
             <div>
-              <p className="eyebrow">Website design &amp; development</p>
-              <h2>
-                Make the next
-                <br />
-                step obvious.
-              </h2>
+              <p className="body-copy">If a part of your product is confusing or getting in people’s way, we can work through it together. I can help understand the problem, refine the design, and work with your team on the implementation.</p>
+              <ul className="deliverables">
+                <li>Make a difficult workflow easier to use</li>
+                <li>Design and build improvements to the interface</li>
+                <li>Develop shared components that help the team build consistently</li>
+              </ul>
             </div>
+          </article>
+          <article className="service-row">
+            <div><h2>Shape and build something new.</h2></div>
             <div>
-              <p className="body-copy">
-                A good website helps people understand what you offer and act on
-                it. We can improve what you have or build a new site around the
-                needs of your business and customers.
-              </p>
+              <p className="body-copy">If you have an idea, we can work out who it’s for, what it needs to do, and where to start. I can help make it tangible with a prototype, then design and build an agreed first version.</p>
+              <ul className="deliverables">
+                <li>Work through the idea and its scope</li>
+                <li>Build a prototype to try with the people who would use it</li>
+                <li>Take an agreed piece of the product through design and development</li>
+              </ul>
+            </div>
+          </article>
+          <article className="service-row">
+            <div><h2>Design and build a website.</h2></div>
+            <div>
+              <p className="body-copy">A good website helps people understand what you offer and act on it. We can improve what you have or build a new site around the needs of your business and customers.</p>
               <ul className="deliverables">
                 <li>A clearer homepage and service pages</li>
                 <li>Navigation and contact paths that work well on phones</li>
-                <li>
-                  Accessible interfaces, responsive layouts, and a sound search
-                  foundation
-                </li>
+                <li>Accessible interfaces, responsive layouts, and a sound search foundation</li>
               </ul>
             </div>
           </article>
           <article className="service-row">
+            <div><h2>AI workflows and automation.</h2></div>
             <div>
-              <p className="eyebrow">Software &amp; product interfaces</p>
-              <h2>
-                Give a difficult
-                <br />
-                process a better tool.
-              </h2>
-            </div>
-            <div>
-              <p className="body-copy">
-                If you’re working around the limits of a spreadsheet or an
-                awkward piece of software, let’s look at how the process
-                works. I can help you improve the interface or build a tool
-                around what you need.
-              </p>
+              <p className="body-copy">If you’re spending time gathering information, moving it between tools, or repeating the same steps, we can look at where AI and automation could help. I can help connect the tools you already use, set up a practical workflow, and work through what should happen automatically and what needs your review.</p>
               <ul className="deliverables">
-                <li>A prototype to test an idea before a larger build</li>
-                <li>A clearer interface for an existing product</li>
-                <li>
-                  An internal tool for a workflow that has outgrown a
-                  spreadsheet
-                </li>
+                <li>Connect tools such as Google Drive, Gmail, or Slack with AI where useful</li>
+                <li>Start with one workflow, such as preparing a briefing or drafting a follow-up</li>
+                <li>Try it with real examples, refine it together, and make sure you know how to use it</li>
               </ul>
             </div>
           </article>
-          <article className="service-row">
-            <div>
-              <p className="eyebrow">Practical AI</p>
-              <h2>
-                Start with a task
-                <br />
-                that matters.
-              </h2>
-            </div>
-            <div>
-              <p className="body-copy">
-                I use AI throughout my work on WavePoint. If you’re wondering
-                where it could help your business, we can start with a task
-                you already do, try an approach together, and check whether it
-                helps.
-              </p>
-              <ul className="deliverables">
-                <li>Choose tools and models around the task</li>
-                <li>
-                  Give AI useful context and a clear way to check its work
-                </li>
-                <li>
-                  Try the workflow with realistic examples and refine it
-                  together
-                </li>
-              </ul>
-              <Link
-                className="text-link service-process-link"
-                href="/work/wavepoint#process"
-              >
-                See how I build with AI <span aria-hidden="true">→</span>
-              </Link>
-            </div>
-          </article>
-        </section>{" "}
+        </section>
         <section className="wrap approach" aria-labelledby="approach-title">
           <div>
-            <p className="eyebrow">Working together</p>
             <h2 id="approach-title">
               How we’ll
               <br />
@@ -168,7 +123,7 @@ export default function WorkWithMe() {
               <div>
                 <h3>Understand the problem.</h3>
                 <p>
-                  I’ll ask about your business, the people using the product,
+                  I’ll ask about your business, the people doing the work,
                   and what’s getting in their way. We’ll work out what needs
                   to change.
                 </p>
@@ -178,7 +133,7 @@ export default function WorkWithMe() {
               <div>
                 <h3>Make it tangible.</h3>
                 <p>
-                  I’ll make a prototype we can look at and try together.
+                  I’ll make a prototype or set up a workflow we can try together.
                   Seeing the idea in action gives us something concrete to
                   discuss and improve.
                 </p>
@@ -195,10 +150,9 @@ export default function WorkWithMe() {
               </div>
             </li>
           </ol>
-        </section>{" "}
+        </section>
         <section className="wrap questions" aria-labelledby="questions-title">
           <div>
-            <p className="eyebrow">A few practical questions</p>
             <h2 id="questions-title">Before we begin.</h2>
           </div>
           <div>
@@ -212,7 +166,7 @@ export default function WorkWithMe() {
             <details>
               <summary>Can you work with what I already have?</summary>
               <p>
-                Yes. We can start by looking at the current website or product
+                Yes. We can start by looking at the current website, product, or workflow
                 and decide whether a focused improvement or a new build makes
                 sense.
               </p>

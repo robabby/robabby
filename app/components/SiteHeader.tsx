@@ -1,17 +1,17 @@
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 
-type Props = { home?: boolean; active?: "services" | "wavepoint" };
+type Props = { home?: boolean; currentPage?: "services"; localContact?: boolean };
 
-export default function SiteHeader({ home = false, active }: Props) {
+export default function SiteHeader({ home = false, currentPage, localContact = false }: Props) {
   return (
     <>
-      <a className="skip" href={home ? "#hero-title" : "#main-content"}>
+      <a className="skip" href="#main-content">
         Skip to content
       </a>
-      <header className={home ? "wrap home-header" : "wrap sub-header"}>
+      <header className="wrap site-header">
         {home ? (
-          <p className="eyebrow">Product, design &amp; engineering</p>
+          <p className="site-description">Product, design and engineering</p>
         ) : (
           <Link className="home-link" href="/">
             Rob Abby
@@ -19,19 +19,10 @@ export default function SiteHeader({ home = false, active }: Props) {
         )}
         <div className="header-right">
           <nav className="nav" aria-label="Main navigation">
-            <Link
-              href="/work/wavepoint"
-              aria-current={active === "wavepoint" ? "page" : undefined}
-            >
-              WavePoint
-            </Link>
-            <Link
-              href="/work-with-me"
-              aria-current={active === "services" ? "page" : undefined}
-            >
-              Work with me
-            </Link>
+            <Link href="/#work">Work</Link>
+            <Link href="/work-with-me" aria-current={currentPage === "services" ? "page" : undefined}>Work with me</Link>
             <Link href="/#about">About</Link>
+            <a href={home || localContact ? "#contact" : "/#contact"}>Contact</a>
           </nav>
           <ThemeToggle />
         </div>

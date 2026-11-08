@@ -2,9 +2,11 @@ import Link from "next/link";
 
 export default function SiteFooter() {
   return (
-    <footer className="wrap">
+    <footer className="wrap site-footer">
       <p>© {new Date().getFullYear()} Rob Abby · Bellingham, Washington</p>
-      <nav aria-label="Professional profiles">
+      <nav aria-label="Footer">
+        <Link href="/work-with-me">Work with me</Link>
+        <a href="/resume.pdf">Résumé (PDF)</a>
         <a
           href="https://linkedin.com/in/robabby"
           target="_blank"

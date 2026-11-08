@@ -1,10 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowRightIcon } from "@radix-ui/react-icons";
 import SiteHeader from "@/app/components/SiteHeader";
 import Contact from "@/app/components/Contact";
 import { pageMetadata, PAGE_INFO, SITE_URL } from "@/app/lib/site";
 import JsonLd from "@/app/components/JsonLd";
 import ExperienceLogos from "@/app/components/ExperienceLogos";
+import WavePointGallery from "@/app/components/WavePointGallery";
 
 export const metadata = pageMetadata("home");
 
@@ -23,221 +25,70 @@ export default function Home() {
         }}
       />
       <main id="main-content" tabIndex={-1}>
-        {" "}
-        <section className="wrap hero" aria-labelledby="hero-title">
-          {" "}
+        <section className="wrap opening" aria-labelledby="hero-title">
+          <div className="identity">
+            <h1 id="hero-title">Rob Abby</h1>
+            <Image className="portrait" src="/profile.jpeg" alt="Rob Abby outdoors by the water" width={640} height={640} sizes="(max-width: 360px) 72px, (max-width: 720px) 84px, 192px" priority />
+            <p className="identity-meta">Based in Bellingham.<br />Working locally and remotely.</p>
+          </div>
           <div className="hero-copy">
-            {" "}
-            <h1 id="hero-title" tabIndex={-1}>
-              Rob Abby
-            </h1>{" "}
-            <p className="hero-business">
-              I’m the founder and operator of <a href="#wavepoint">WavePoint</a>
-              , a personal astrology business.
-            </p>{" "}
-            <p className="hero-lead">
-              I also take on select projects with small business owners. I
-              design and build websites and software, and help people use AI
-              in their work.
-            </p>{" "}
+            <h2 className="hero-statement">I design and<br /><span>build software.</span></h2>
+            <p className="hero-intro">My background is in frontend engineering. Over time, I’ve found myself getting involved in more of what goes into making a product—especially design and working with the people who use it. These days, I’m the founder of WavePoint.</p>
             <div className="hero-actions">
-              {" "}
-              <a className="button" href="#contact">
-                Discuss a project{" "}
-                <span className="arrow" aria-hidden="true">
-                  ↗
-                </span>
-              </a>{" "}
-              <a className="text-link" href="#wavepoint">
-                Explore WavePoint <span aria-hidden="true">↓</span>
-              </a>{" "}
-            </div>{" "}
-          </div>{" "}
-          <figure className="hero-portrait">
-            {" "}
-            <div className="portrait-frame">
-              <Image
-                src="/profile.jpeg"
-                alt="Rob Abby outdoors by the water"
-                width={449}
-                height={449}
-                sizes="(max-width: 370px) 110px, (max-width: 760px) 130px, 340px"
-                preload
-              />
-            </div>{" "}
-            <figcaption>
-              <span className="portrait-location">
-                Based in Bellingham, Washington.
-                <span className="location-remote">
-                  Working locally and remotely.
-                </span>
-              </span>
-            </figcaption>{" "}
-          </figure>{" "}
-        </section>{" "}
-        <div className="wrap experience-strip" aria-label="Previous experience">
-          {" "}
-          <p>
-            Previously building
-            <br />
-            web products at
-          </p>{" "}
-          <ExperienceLogos />{" "}
-        </div>{" "}
-        <section
-          className="wrap section business"
-          id="wavepoint"
-          aria-labelledby="wavepoint-title"
-        >
-          {" "}
-          <div>
-            {" "}
-            <p className="eyebrow">My business</p>{" "}
-            <h2 id="wavepoint-title">WavePoint.</h2>{" "}
-            <p className="business-lead">
-              Personal astrology,
-              <br />
-              on screen and paper.
-            </p>{" "}
-            <p className="body-copy">
-              Birth-chart tools, a reference library, and a printed Moon
-              Calendar. An iPhone and iPad app is in development.
-            </p>{" "}
-            <p className="body-copy">
-              I look after the product, design, engineering, and day-to-day
-              operation.
-            </p>{" "}
-            <Link className="text-link" href="/work/wavepoint">
-              Read the WavePoint case study <span aria-hidden="true">→</span>
-            </Link>{" "}
-          </div>{" "}
-          <figure className="product-figure">
-            {" "}
-            <div className="product-art">
-              {" "}
-              <Image
-                className="product-web"
-                loading="lazy"
-                src="/images/wavepoint/wavepoint-web.png"
-                alt="WavePoint’s public website, showing its free birth-chart experience and an example chart"
-                width={1280}
-                height={820}
-                sizes="(max-width: 760px) calc(100vw - 80px), 620px"
-              />{" "}
-              <p className="art-label">
-                Digital tools.
-                <br />A year in print.
-              </p>{" "}
-              <Image
-                className="product-calendar"
-                loading="lazy"
-                src="/images/wavepoint/calendar-2027-august.jpg"
-                alt="The August page of WavePoint’s printed 2027 Moon Calendar"
-                width={720}
-                height={508}
-                sizes="(max-width: 760px) 40vw, 320px"
-              />{" "}
-            </div>{" "}
-            <figcaption>
-              <span>WavePoint · Web &amp; print</span>
-              <span>The website and 2027 Moon Calendar</span>
-            </figcaption>{" "}
-          </figure>{" "}
-        </section>{" "}
-        <section
-          className="wrap section client-section"
-          id="work"
-          aria-labelledby="work-title"
-        >
-          {" "}
-          <div className="client-intro">
-            {" "}
-            <p className="eyebrow">Work with me</p>{" "}
-            <h2 id="work-title">
-              Websites &amp; software
-              <br />
-              for your business.
-            </h2>{" "}
-            <p className="body-copy">
-              Have something you want to make or improve? We can work through
-              it together. I’ll help you figure out what’s needed, then design
-              and build it with you.
-            </p>{" "}
-            <Link className="text-link" href="/work-with-me">
-              Explore ways to work together <span aria-hidden="true">→</span>
-            </Link>{" "}
-            <p className="scope-note">
-              You’ll work directly with me throughout the project.
-            </p>{" "}
-          </div>{" "}
-          <div className="offers">
-            {" "}
-            <article className="offer">
-              {" "}
-              <p className="eyebrow">Websites</p>{" "}
-              <h3>Help customers take the next step.</h3>{" "}
-              <p>
-                Help people understand your business, find what they need, and
-                get in touch.
-              </p>{" "}
-            </article>{" "}
-            <article className="offer">
-              {" "}
-              <p className="eyebrow">Tools &amp; workflows</p>{" "}
-              <h3>Make daily work simpler.</h3>{" "}
-              <p>
-                Bring a spreadsheet, a repetitive task, or a process that keeps
-                getting in the way.
-              </p>{" "}
-            </article>{" "}
-            <article className="offer">
-              {" "}
-              <p className="eyebrow">Practical AI</p>{" "}
-              <h3>Put AI to work on a real task.</h3>{" "}
-              <p>
-                We can explore where AI could help your business and try it on
-                work you already do.
-              </p>{" "}
-            </article>{" "}
-          </div>{" "}
-        </section>{" "}
-        <section
-          className="wrap section about"
-          id="about"
-          aria-labelledby="about-title"
-        >
-          {" "}
-          <div>
-            {" "}
-            <p className="eyebrow">Experience behind the work</p>{" "}
-            <h2 id="about-title">
-              Product thinking.
-              <br />
-              Hands-on engineering.
-            </h2>{" "}
-          </div>{" "}
-          <div className="about-detail">
-            <p className="body-copy">
-              Before WavePoint, I worked on web products at PartySlate,
-              project44, and SAVO. Design and engineering have both shaped how I
-              work. I care about the whole experience, including the details
-              people rely on every day.
-            </p>
-            <aside className="case-callout" aria-labelledby="savo-callout-title">
-              <h3 id="savo-callout-title">
-                Building a UI/UX practice at SAVO.
-              </h3>
-              <p>
-                How I helped build the team, the shared UI system, and a closer
-                connection to the people using our software.
-              </p>
-              <Link className="text-link" href="/work/savo">
-                Read the SAVO case study <span aria-hidden="true">→</span>
+              <a className="button" href="#work">Explore my work <ArrowRightIcon className="arrow" aria-hidden="true" /></a>
+              <a className="text-link" href="#contact">Get in touch <ArrowRightIcon className="arrow" aria-hidden="true" /></a>
+            </div>
+          </div>
+        </section>
+        <section className="wrap experience" aria-label="Previous roles">
+          <p>Previously at</p>
+          <ExperienceLogos />
+        </section>
+        <section className="wrap selected-work" id="work" aria-labelledby="work-title">
+          <h2 id="work-title">Some of the work.</h2>
+          <div className="work-grid">
+            <article id="wavepoint" aria-labelledby="wavepoint-title">
+              <div className="project-heading">
+                <h3 id="wavepoint-title"><a href="https://wavepoint.space/">WavePoint</a></h3>
+                <span>Current business</span>
+              </div>
+              <p className="project-role">Founder and operator</p>
+              <WavePointGallery />
+              <div className="work-info">
+                <p>WavePoint is an astrology app I’m building for iPhone. It brings together charts, readings, and a place to record experiences and revisit them over time. I look after the product, design, engineering, and day-to-day business - collaborating with my wife, Shayna. The app is currently in TestFlight.</p>
+                <a className="text-link" href="https://wavepoint.space/">Visit WavePoint <ArrowRightIcon className="arrow" aria-hidden="true" /></a>
+              </div>
+            </article>
+            <article aria-labelledby="savo-work-title">
+              <div className="project-heading">
+                <h3 id="savo-work-title"><Link href="/work/savo">SAVO</Link></h3>
+                <span>Historical work</span>
+              </div>
+              <p className="project-role">UI/UX and frontend engineering</p>
+              <Link className="work-image savo-preview" href="/work/savo" aria-label="Read the SAVO story">
+                <Image src="/images/savo/asset-page.png" alt="Historical SAVO Asset Page showing a document preview, download action, and file details" width={2880} height={1566} sizes="(max-width: 720px) calc(100vw - 76px), (max-width: 1000px) 35vw, 440px" />
               </Link>
-            </aside>
-          </div>{" "}
-        </section>{" "}
-        <Contact eyebrow="Have something in mind?" />{" "}
+              <p className="image-caption">The Asset Page · historical interface example.</p>
+              <div className="work-info">
+                <p>At SAVO, I helped establish our UI/UX team and worked closely with our visual designer on design and implementation. I also built the shared component system and style guide, and helped other engineers with their frontend work.</p>
+                <Link className="text-link" href="/work/savo">Read the SAVO story <ArrowRightIcon className="arrow" aria-hidden="true" /></Link>
+              </div>
+            </article>
+          </div>
+        </section>
+        <section className="wrap about" id="about" aria-labelledby="about-title">
+          <h2 id="about-title">A bit about how I work.</h2>
+          <div className="about-copy">
+            <p>A lot of my attention goes into how someone will actually use what we’re making. I’m interested in what they’re trying to do, how they think about it, and how the software could help.</p>
+            <p>AI has become a substantial part of how I work. I use it throughout development, and I’m continuing to learn where it helps and what needs more attention from me. We’re a small operation at WavePoint, so keeping the work practical and avoiding unnecessary complexity matters.</p>
+            <p>Before WavePoint, I worked at SAVO, project44, and PartySlate.</p>
+            <div className="about-links">
+              <Link className="text-link" href="/work-with-me">Ways we can work together <ArrowRightIcon className="arrow" aria-hidden="true" /></Link>
+              <a className="text-link" href="/resume.pdf">Résumé (PDF)</a>
+            </div>
+          </div>
+        </section>
+        <Contact intro="If you see an opportunity for us to work together, I’d love to hear from you. That could be a role, a project, or simply getting to know each other and seeing where it goes." wavepointLink />
       </main>
     </>
   );

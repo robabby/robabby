@@ -6,7 +6,6 @@ export default function NotFound() {
     <>
       <SiteHeader />
       <main className="wrap legal" id="main-content" tabIndex={-1}>
-        <p className="eyebrow">Page not found</p>
         <h1>That page isn’t here.</h1>
         <p>
           The address may have changed. You can return home or explore ways to

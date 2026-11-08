@@ -1,112 +1,50 @@
 import { ImageResponse } from "next/og";
 
 type ShareCopy = {
-  eyebrow: string;
   heading: string;
   role: string;
-  description: string;
+  description?: string;
+  home?: boolean;
 };
 
 async function loadGoogleFont(family: string, text: string) {
   const response = await fetch(
     `https://fonts.googleapis.com/css2?family=${family}&text=${encodeURIComponent(text)}`,
   );
-  if (!response.ok)
-    throw new Error(`Could not load share font: ${response.status}`);
+  if (!response.ok) throw new Error(`Could not load share font: ${response.status}`);
   const css = await response.text();
-  const resource = css.match(
-    /src: url\((.+?)\) format\('(?:opentype|truetype)'\)/,
-  );
+  const resource = css.match(/src: url\((.+?)\) format\('(?:opentype|truetype)'\)/);
   if (!resource) throw new Error(`No TTF source resolved for ${family}`);
   const font = await fetch(resource[1]);
-  if (!font.ok)
-    throw new Error(`Could not load share font data: ${font.status}`);
+  if (!font.ok) throw new Error(`Could not load share font data: ${font.status}`);
   return font.arrayBuffer();
 }
 
-export async function shareImage({
-  eyebrow,
-  heading,
-  role,
-  description,
-}: ShareCopy) {
+export async function shareImage({ heading, role, description = "", home = false }: ShareCopy) {
   const [display, body] = await Promise.all([
-    loadGoogleFont("Fraunces:opsz,wght@144,400", heading),
-    loadGoogleFont(
-      "Instrument+Sans",
-      `${eyebrow}${role}${description}robabby.com`,
-    ),
+    loadGoogleFont("Newsreader:opsz,wght@60,400", `${heading}${role}I design andbuild software.`),
+    loadGoogleFont("Instrument+Sans", `${description}Rob AbbyProduct, design and engineeringrobabby.com`),
   ]);
   return new ImageResponse(
     (
-      <div
-        style={{
-          width: "100%",
-          height: "100%",
-          display: "flex",
-          flexDirection: "column",
-          background: "#f5f3eb",
-          color: "#20372c",
-          padding: "66px 80px",
-          fontFamily: "Instrument Sans",
-        }}
-      >
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            width: "100%",
-            borderBottom: "1px solid #cdd1c4",
-            paddingBottom: 23,
-            color: "#4f5b51",
-            fontSize: 19,
-          }}
-        >
-          <span>{eyebrow}</span>
+      <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", background: "#191c20", color: "#eef0f2", padding: "54px 70px", fontFamily: "Instrument Sans" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", borderBottom: "1px solid #3c434b", paddingBottom: 22, color: "#b1b8c1", fontSize: 19 }}>
+          <span>{home ? "Product, design and engineering" : "Rob Abby"}</span>
           <span>robabby.com</span>
         </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            flex: 1,
-            justifyContent: "center",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              fontFamily: "Fraunces",
-              fontSize: 112,
-              letterSpacing: -4,
-              lineHeight: 1.1,
-              marginBottom: 24,
-            }}
-          >
-            {heading}
-          </div>
-          <div
-            style={{
-              display: "flex",
-              fontSize: 31,
-              lineHeight: 1.4,
-              marginBottom: 17,
-            }}
-          >
-            {role}
-          </div>
-          <div
-            style={{
-              display: "flex",
-              fontSize: 25,
-              lineHeight: 1.5,
-              color: "#4f5b51",
-              maxWidth: 930,
-            }}
-          >
-            {description}
-          </div>
+        <div style={{ display: "flex", flex: 1, alignItems: home ? "center" : "flex-start", justifyContent: "center", flexDirection: home ? "row" : "column", gap: home ? 65 : 0 }}>
+          <div style={{ display: "flex", fontFamily: "Newsreader", fontSize: home ? 60 : 91, letterSpacing: -2, lineHeight: 1.1, width: home ? 295 : "100%", marginBottom: home ? 0 : 24, alignSelf: "flex-start", marginTop: home ? 105 : 0 }}>{heading}</div>
+          {home ? (
+            <div style={{ display: "flex", flexDirection: "column", fontFamily: "Newsreader", fontSize: 64, letterSpacing: -1.7, lineHeight: 1.15, flex: 1 }}>
+              <span>I design and</span>
+              <span style={{ color: "#b0c3ff" }}>build software.</span>
+            </div>
+          ) : (
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              <div style={{ display: "flex", color: "#b0c3ff", fontFamily: "Newsreader", fontSize: 44, lineHeight: 1.2, marginBottom: 20 }}>{role}</div>
+              <div style={{ display: "flex", color: "#b1b8c1", fontSize: 24, lineHeight: 1.5, maxWidth: 940 }}>{description}</div>
+            </div>
+          )}
         </div>
       </div>
     ),
@@ -114,7 +52,7 @@ export async function shareImage({
       width: 1200,
       height: 630,
       fonts: [
-        { name: "Fraunces", data: display, weight: 400, style: "normal" },
+        { name: "Newsreader", data: display, weight: 400, style: "normal" },
         { name: "Instrument Sans", data: body, weight: 400, style: "normal" },
       ],
     },

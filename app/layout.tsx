@@ -1,18 +1,18 @@
 import "./globals.css";
 import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/react";
-import { Fraunces, Instrument_Sans } from "next/font/google";
+import { Newsreader, Instrument_Sans } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import SiteFooter from "./components/SiteFooter";
 import JsonLd from "./components/JsonLd";
 import { identitySchema, pageMetadata, SITE_URL } from "./lib/site";
 
-const fraunces = Fraunces({
+const newsreader = Newsreader({
   subsets: ["latin"],
   variable: "--font-display",
   display: "swap",
-  axes: ["opsz"],
+  style: ["normal", "italic"],
 });
 
 const instrumentSans = Instrument_Sans({
@@ -28,8 +28,8 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f5f3eb" },
-    { media: "(prefers-color-scheme: dark)", color: "#111d17" },
+    { media: "(prefers-color-scheme: light)", color: "#f9fafb" },
+    { media: "(prefers-color-scheme: dark)", color: "#191c20" },
   ],
   colorScheme: "light dark",
 };
@@ -46,7 +46,7 @@ export default function RootLayout({
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
-      <body className={`${fraunces.variable} ${instrumentSans.variable}`}>
+      <body className={`${newsreader.variable} ${instrumentSans.variable}`}>
         <JsonLd value={identitySchema} />
         {children}
         <SiteFooter />

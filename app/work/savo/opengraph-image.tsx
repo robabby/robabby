@@ -7,7 +7,6 @@ export const contentType = "image/png";
 
 export default function Image() {
   return shareImage({
-    eyebrow: "Rob Abby · Selected work",
     heading: "SAVO.",
     role: "Building a UI/UX practice",
     description:

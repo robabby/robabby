@@ -6,12 +6,11 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 
 const base = (process.argv[2] ?? "http://localhost:3000").replace(/\/$/, "");
-const out = fileURLToPath(new URL("../screenshots/", import.meta.url));
+const out = fileURLToPath(new URL("../screenshots/sg-1764-site-theme/", import.meta.url));
 const canonicalOrigin = "https://www.robabby.com";
 const routes = [
   { path: "/", name: "home" },
   { path: "/work-with-me", name: "services" },
-  { path: "/work/wavepoint", name: "wavepoint" },
   { path: "/work/savo", name: "savo" },
   { path: "/privacy", name: "privacy" },
 ];
@@ -103,6 +102,7 @@ try {
       await page.evaluate(() => document.fonts.ready);
       assert.equal(await page.locator("h1").count(), 1);
       assert.equal(await page.locator("main").count(), 1);
+      assert.equal(await page.locator('a[href^="/work/wavepoint"]').count(), 0);
       assert.ok(await page.locator("h1").isVisible());
       assert.ok((await page.locator("main").innerText()).length > 300);
       assert.equal(
@@ -155,7 +155,7 @@ try {
         );
         assert.equal(
           paper,
-          options.colorScheme === "dark" ? "#111d17" : "#f5f3eb",
+          options.colorScheme === "dark" ? "#191c20" : "#f9fafb",
         );
       } else {
         assert.equal(
@@ -163,7 +163,13 @@ try {
           options.colorScheme,
         );
       }
-      await page.evaluate(() => scrollTo(0, 0));
+      if (path === "/") {
+        await page.locator(".gallery-viewport").evaluate((el) => el.scrollTo({ left: 0, behavior: "instant" }));
+        if (options.javaScriptEnabled !== false) {
+          await page.waitForFunction(() => document.querySelector('.gallery-choices button').getAttribute('aria-pressed') === 'true');
+        }
+      }
+      await page.evaluate(() => scrollTo({ top: 0, behavior: "instant" }));
       if (name.startsWith("desktop") || name.startsWith("mobile")) {
         await page.screenshot({
           path: `${out}${routeName}-${name}.png`,
@@ -176,7 +182,7 @@ try {
       }
       if (routeName !== "privacy") {
         assert.equal(
-          await page.locator("#contact .button").getAttribute("href"),
+          await page.locator("#contact .email").getAttribute("href"),
           "mailto:robabby23@gmail.com",
         );
       }
@@ -204,10 +210,70 @@ try {
         overflow: "none",
       });
     }
-    assert.deepEqual(errors, [], `${name}: browser errors`);
+    const missingPage = await page.goto(`${base}/this-page-does-not-exist`);
+    assert.equal(missingPage.status(), 404);
+    assert.ok(await page.getByRole('link', { name: 'Back to home', exact: true }).isVisible());
+    assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+    if (name.startsWith('desktop') || name.startsWith('mobile')) {
+      await page.screenshot({ path: `${out}not-found-${name}.png`, fullPage: true });
+    }
+    // The intentional 404 emits a resource error, unlike the four content routes.
+    assert.deepEqual(errors.filter(error => !error.includes('404')), [], `${name}: browser errors`);
     await context.close();
     console.log(`✓ ${name}: ${routes.length} pages`);
   }
+
+  const galleryContext = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, colorScheme: "dark" });
+  await galleryContext.route("**/_vercel/**", route => route.fulfill({ status: 200, body: "" }));
+  const galleryPage = await galleryContext.newPage();
+  await galleryPage.goto(base);
+  const gallery = galleryPage.locator(".product-gallery");
+  await gallery.scrollIntoViewIfNeeded();
+  const website = gallery.getByRole("button", { name: "Website", exact: true });
+  const app = gallery.getByRole("button", { name: "iPhone app", exact: true });
+  await app.click();
+  await galleryPage.waitForFunction(() => document.querySelectorAll('.gallery-choices button')[1].getAttribute('aria-pressed') === 'true');
+  assert.match(await gallery.locator('.gallery-caption').innerText(), /Development preview/);
+  await galleryPage.waitForFunction(() => {
+    const el = document.querySelector('.gallery-viewport');
+    return Math.abs(el.scrollLeft - el.clientWidth) < 1;
+  });
+  const height = (await gallery.boundingBox()).height;
+  await gallery.screenshot({ path: `${out}gallery-mobile-dark-app.png` });
+  const viewport = gallery.locator('.gallery-viewport');
+  await viewport.focus();
+  await galleryPage.keyboard.press('Home');
+  await galleryPage.waitForFunction(() => document.querySelector('.gallery-choices button').getAttribute('aria-pressed') === 'true');
+  assert.equal((await gallery.boundingBox()).height, height, 'Slides reserve the same layout height');
+  await galleryPage.keyboard.press('End');
+  await galleryPage.waitForFunction(() => document.querySelectorAll('.gallery-choices button')[1].getAttribute('aria-pressed') === 'true');
+  await gallery.getByRole('button', { name: 'Next product image' }).click();
+  await galleryPage.waitForFunction(() => document.querySelector('.gallery-choices button').getAttribute('aria-pressed') === 'true');
+  const client = await galleryContext.newCDPSession(galleryPage);
+  const bounds = await viewport.boundingBox();
+  const y = bounds.y + bounds.height / 2;
+  await client.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [{ x: bounds.x + bounds.width - 25, y }] });
+  for (let step = 1; step <= 8; step++) {
+    await client.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: [{ x: bounds.x + bounds.width - 25 - step * (bounds.width - 50) / 8, y }] });
+  }
+  await client.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
+  await galleryPage.waitForFunction(() => document.querySelectorAll('.gallery-choices button')[1].getAttribute('aria-pressed') === 'true');
+  await galleryPage.waitForFunction(() => {
+    const el = document.querySelector('.gallery-viewport');
+    return Math.abs(el.scrollLeft - el.clientWidth) < 1;
+  });
+  await galleryPage.setViewportSize({ width: 1440, height: 1000 });
+  await galleryPage.waitForFunction(() => {
+    const el = document.querySelector('.gallery-viewport');
+    return Math.abs(el.scrollLeft - el.clientWidth) < 2;
+  });
+  await gallery.screenshot({ path: `${out}gallery-desktop-dark-app.png` });
+  for (const control of await gallery.getByRole('button').all()) {
+    const box = await control.boundingBox();
+    assert.ok(box.width >= 44 && box.height >= 44, 'Gallery touch targets are at least 44px');
+  }
+  await website.click();
+  await galleryContext.close();
 
   const context = await browser.newContext({ colorScheme: "light" });
   await context.route("**/_vercel/**", (route) =>
@@ -231,13 +297,13 @@ try {
   await page.keyboard.press("Enter");
   assert.equal(
     await page.evaluate(() => document.activeElement.id),
-    "hero-title",
+    "main-content",
   );
   await page.locator('.hero-actions a[href="#contact"]').click();
   assert.ok(await page.evaluate(() => scrollY > 0));
   await page.getByRole("button", { name: "Switch to dark theme" }).click();
   await page
-    .getByRole("navigation", { name: "Main navigation" })
+    .getByRole("navigation", { name: "Footer" })
     .getByRole("link", { name: "Work with me" })
     .click();
   await page.waitForURL(`${base}/work-with-me`);
@@ -247,9 +313,12 @@ try {
   assert.equal(await page.locator("html").getAttribute("data-theme"), "dark");
   await page.reload();
   assert.equal(await page.locator("html").getAttribute("data-theme"), "dark");
-  await page.getByRole("link", { name: "See how I build with AI" }).click();
-  await page.waitForURL(`${base}/work/wavepoint#process`);
-  assert.ok(await page.locator("#process-title").isVisible());
+  await page.getByRole("navigation", { name: "Main navigation" })
+    .getByRole("link", { name: "Work", exact: true }).click();
+  await page.waitForURL(`${base}/#work`);
+  assert.ok(await page.locator("#wavepoint-title").isVisible());
+  assert.equal(await page.getByRole("link", { name: "Visit WavePoint", exact: true }).getAttribute("href"),
+    "https://wavepoint.space/");
   await page.getByRole("link", { name: "About", exact: true }).click();
   await page.waitForURL(`${base}/#about`);
   assert.ok(await page.locator("#about-title").isVisible());
@@ -267,12 +336,11 @@ try {
     person["@id"],
   );
 
-  await page.getByRole("complementary", { name: "Building a UI/UX practice at SAVO." })
-    .getByRole("link", { name: "Read the SAVO case study" }).click();
+  await page.getByRole("link", { name: "Read the SAVO story", exact: true }).last().click();
   await page.waitForURL(`${base}/work/savo`);
   await page.waitForLoadState("networkidle");
   assert.ok(await page.locator(".skip").evaluate((el) => el.getBoundingClientRect().bottom < 0),
-    "The callout navigates without revealing the skip link");
+    "The work link navigates without revealing the skip link");
   await page.keyboard.press("Tab");
   await page.keyboard.press("Shift+Tab");
   assert.equal(await page.evaluate(() => document.activeElement.className), "skip");
@@ -288,10 +356,10 @@ try {
     .getByRole("link", { name: "The shared UI system", exact: true }).click();
   await page.waitForURL(`${base}/work/savo#shared-ui`);
   assert.ok(await page.locator("#shared-ui-title").isVisible());
-  assert.ok(await page.locator("#shared-ui-title").evaluate((el) => {
-    const bounds = el.getBoundingClientRect();
+  await page.waitForFunction(() => {
+    const bounds = document.querySelector("#shared-ui-title").getBoundingClientRect();
     return bounds.top >= 0 && bounds.bottom <= innerHeight;
-  }));
+  });
   const expectedProfiles = [
     "brittanymikottis", "johnnarofsky", "tom-green-b6198a4", "allisonpaul",
     "zachary-debelak-39b7541", "doug-marquis", "vbrianhauk",
@@ -314,14 +382,13 @@ try {
   assert.match(figure.headers()["content-type"], /^image\/png/);
   await page.getByRole("navigation", { name: "Related work" })
     .getByRole("link", { name: "Explore WavePoint" }).click();
-  await page.waitForURL(`${base}/work/wavepoint`);
-  await page.getByRole("navigation", { name: "Related work" })
-    .getByRole("link", { name: "Building a UI/UX practice at SAVO" }).click();
-  await page.waitForURL(`${base}/work/savo`);
+  await page.waitForURL(`${base}/#wavepoint`);
+  assert.ok(await page.locator("#wavepoint-title").isVisible());
 
   const sitemap = await context.request.get(`${base}/sitemap.xml`);
   assert.equal(sitemap.status(), 200);
   const xml = await sitemap.text();
+  assert.ok(!xml.includes("/work/wavepoint"));
   for (const { path } of routes)
     assert.ok(xml.includes(`<loc>${canonicalOrigin}${path}</loc>`));
   assert.ok(!xml.includes("<lastmod>"));
@@ -337,6 +404,13 @@ try {
     new URL(redirect.headers().location).href,
     "https://wavepoint.space/",
   );
+  const retiredCaseStudy = await context.request.get(`${base}/work/wavepoint`, {
+    maxRedirects: 0,
+  });
+  assert.equal(retiredCaseStudy.status(), 308);
+  assert.equal(new URL(retiredCaseStudy.headers().location, base).href, `${base}/#wavepoint`);
+  const retiredShareCard = await context.request.get(`${base}/work/wavepoint/opengraph-image`);
+  assert.equal(retiredShareCard.status(), 404);
   const resume = await context.request.get(`${base}/resume.pdf`);
   assert.equal(resume.status(), 200);
   assert.equal(resume.headers()["x-robots-tag"], "noindex");
@@ -364,7 +438,7 @@ try {
     results,
     navigation: "pass",
     caseStudyLinksAndClaims: "pass",
-    aboutCaseStudyCallout: "pass",
+    selectedWorkLinks: "pass",
     skipLinkPointerAndKeyboard: "pass",
     keyboard: "pass",
     themePersistence: "pass",
@@ -372,6 +446,7 @@ try {
     searchRoutes: "pass",
     legacyRoutes: "pass",
     shareImages: "pass",
+    galleryControlsKeyboardSwipeResize: "pass",
     analyticsTransport: "not tested",
   };
   writeFileSync(`${out}verification.json`, JSON.stringify(report, null, 2));
