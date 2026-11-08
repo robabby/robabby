@@ -132,7 +132,9 @@ const sections = [
     content: (<>
       <p>SAVO helped salespeople find and use content for conversations with clients and prospects. The executives buying the software, the administrators managing it, and the people using it every day had different needs.</p>
       <p>Product decisions were heavily influenced by sales commitments. We also supported older enterprise environments, which placed real constraints on the interface. I wanted us to hear more directly from the sales and marketing people who spent their days using what we built.</p>
-      <p>One early attempt was a usability questionnaire I prepared for the SAVO User Alliance Group. It was canceled before it went out. We still needed a way to bring user feedback into our work.</p>
+      <p>I researched ways to establish a baseline for the usability of our systems and settled on the System Usability Scale (SUS). The idea was straightforward: get an initial score, then use it to track whether we were making the software easier to use.</p>
+      <p>I worked with <a href="https://www.linkedin.com/in/meggancarczyk/">Megan “Meg” Gancarczyk</a>, a Junior Product Manager at the time, to prepare the questionnaire and its introduction to the SAVO User Alliance Group. Just before it was due to go out, <a href="https://www.linkedin.com/in/gwgoodman/">Greg Goodman</a>, a Senior Product Manager, stopped the initiative over concerns about how low our initial score would be. We never sent the questionnaire, so we didn’t establish that baseline.</p>
+      <p>I still wanted us to give the people using SAVO more attention. I kept advocating for a visual designer and a dedicated UI/UX team.</p>
     </>),
   },
   {
