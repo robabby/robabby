@@ -96,8 +96,8 @@ export default function Home() {
           <div className="about-copy">
             <p>A lot of my attention goes into how someone will actually use what we’re making. I’m interested in what they’re trying to do, how they think about it, and how the software could help.</p>
             <p>I also enjoy helping other engineers grow—pairing on difficult problems, sharing what I’ve learned, and working across design and engineering to make it easier for a team to build together.</p>
-            <p>AI has become a substantial part of how I work. I use it throughout development, and I’m continuing to learn where it helps and what needs more attention from me. We’re a small operation at WavePoint, so keeping the work practical and avoiding unnecessary complexity matters.</p>
-            <p>Before WavePoint, I worked at SAVO, project44, and PartySlate.</p>
+            <p>AI has become a substantial part of how I work. I use it throughout development, and I’m continuing to learn where it helps and what needs more attention from me. We’re a small operation at WavePoint, so keeping the work practical and avoiding unnecessary complexity is the focus.</p>
+            <p>Before WavePoint, I worked at <Link href="/work/savo">SAVO</Link>, project44, and <Link href="/work/partyslate">PartySlate</Link>.</p>
             <div className="about-links">
               <Link className="text-link" href="/work-with-me">Ways we can work together</Link>
               <a className="text-link" href="/resume.pdf">Résumé (PDF)</a>
