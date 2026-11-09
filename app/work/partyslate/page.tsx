@@ -42,8 +42,18 @@ const sections = [
       <p>{"I led the definition of a component-development process that made the decisions explicit. When a new design need emerged, the team would consider whether an existing component could meet it. Design would explain the opportunity, engineering would assess the work involved, and product would decide whether to invest. The process connected reusable components documented in Storybook with corresponding symbols in the Figma library."}</p>
       <p>{"I also led the framework evaluation and the Chakra/Soirée work. The evaluation considered maturity, customization, community support and integration with design tools. We selected Chakra UI as a foundation for Soirée, PartySlate’s design system."}</p>
       <p>{"We built a fully custom Soirée theme through Chakra’s theme object, with a Rollup build system that integrated it into both our Next.js application and the legacy frontend. That let us bring the same theme into newer and existing parts of the site."}</p>
-      <p>{"The Product Day material connected those choices to a familiar problem: handoffs that leave designers and developers negotiating the same details repeatedly. It described the design system as something that needed continued investment, with common components replacing redundant interfaces over time."}</p>
-    </>, images: [{"src": "/images/partyslate/component-process.jpg", "width": 1400, "height": 788, "alt": "Component-development process connecting design, engineering and product decisions.", "caption": "Component-development process shown in the Product Day material preserved in the September 2023 archive. The diagram describes the proposed collaboration between design, engineering and product."}] }
+      <p>{"I wanted us to stop negotiating the same interface details at every handoff. Shared components and a common design language gave us something to build on together. Keeping that useful required continued investment from design, engineering and product."}</p>
+    </>, images: [{"src": "/images/partyslate/component-process.jpg", "width": 1400, "height": 788, "alt": "Component-development process connecting design, engineering and product decisions.", "caption": "Component-development process shown in the Product Day material preserved in the September 2023 archive. The diagram describes the proposed collaboration between design, engineering and product."}] },
+  { id: "mentoring", label: "Helping engineers grow", title: "Helping other engineers find their footing", content: <>
+      <p>Alongside feature work, I spent substantial time helping other engineers develop. I paired with junior and apprentice engineers, hosted technical lunch-and-learns, and created documentation to help people understand our codebase and conventions. Making it comfortable to ask questions was an important part of that work.</p>
+      <p>As the frontend changed, there was a lot to learn together. My teaching materials covered React Context, GraphQL and the structure of our shared code. I wanted engineers to have working examples they could refer to and someone they could work through a problem with.</p>
+      <p>In 2022, I created a style-guide repository and drafted technical documentation to support hiring and onboarding. I also continued supporting colleagues as they took on larger initiatives. That meant making room for questions about the work and helping people communicate what they needed to move forward.</p>
+    </>, images: [] },
+  { id: "what-i-learned", label: "What I learned", title: "Learning what it takes to sustain the work", content: <>
+      <p>PartySlate gave me opportunities to build substantial features and help other engineers grow. It also taught me how difficult that work becomes when responsibilities, priorities and support are unclear.</p>
+      <p>An earlier effort to move the marketplace to server-side rendering was shelved in 2022. It competed with feature delivery and did not have the dedicated planning and support I felt it needed. That experience stayed with me: a large technical initiative needs realistic scope, shared ownership and room in the team’s priorities.</p>
+      <p>I also learned that supporting everyone else could come at the expense of supporting myself. Being committed to the work meant learning to communicate my own needs, make limits visible and protect a sustainable balance. Those lessons were hard-earned, and they remain part of how I think about working with a team.</p>
+    </>, images: [] }
 ];
 
 const url = `${SITE_URL}${PAGE_INFO.partyslate.path}`;
@@ -78,6 +88,7 @@ export default function PartySlate() {
             </div>
             <aside className={styles.projectContext} aria-label="Project context">
               <dl>
+                <div><dt>At PartySlate</dt><dd>December 2018–February 2024</dd></div>
                 <div><dt>My work</dt><dd>Frontend engineering<br />Design-system leadership<br />Mentoring and collaboration</dd></div>
                 <div><dt>Across the product</dt><dd>Idea Gallery, venue search, professional onboarding and Soirée</dd></div>
               </dl>

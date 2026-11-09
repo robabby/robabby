@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRightIcon, ArrowDownIcon } from "@radix-ui/react-icons";
 import SiteHeader from "@/app/components/SiteHeader";
 import Contact from "@/app/components/Contact";
@@ -74,6 +75,7 @@ export default function WorkWithMe() {
                 <li>Design and build improvements to the interface</li>
                 <li>Develop shared components that help the team build consistently</li>
               </ul>
+              <p className="body-copy">See how I approached this work at <Link href="/work/partyslate">PartySlate</Link> and <Link href="/work/savo">SAVO</Link>.</p>
             </div>
           </article>
           <article className="service-row">
