@@ -398,12 +398,12 @@ try {
   assert.ok(partyText.includes("Rollup"));
   assert.doesNotMatch(partyText, /150%|private review|page-drafts|\/Users\//i);
   const partyProfiles = await page.locator('article a[href^="https://www.linkedin.com/in/"]').evaluateAll(links => [...new Set(links.map(link => link.href))].sort());
-  assert.deepEqual(partyProfiles, ["ben-kimpel", "mark-semon-84ab913", "lucasbrandt", "katharine-cooney"].map(slug => `https://www.linkedin.com/in/${slug}/`).sort());
+  assert.deepEqual(partyProfiles, ["ben-kimpel", "mark-semon-84ab913", "lucasbrandt", "katharine-cooney", "tylertravitz"].map(slug => `https://www.linkedin.com/in/${slug}/`).sort());
   assert.equal(await page.locator("article figure").count(), 6);
   const people = page.locator("#people");
   await people.locator("summary").click();
   assert.equal(await people.getAttribute("open"), "");
-  assert.equal(await people.locator("a").count(), 4);
+  assert.equal(await people.locator("a").count(), 5);
   await people.locator("summary").click();
   assert.equal(await people.getAttribute("open"), null);
   for (const link of await page.locator('article figcaption a').all()) {

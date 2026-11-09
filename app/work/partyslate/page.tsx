@@ -110,6 +110,12 @@ export default function PartySlate() {
                 </ul>
               </div>
               <div>
+                <h3>Design system</h3>
+                <ul role="list">
+                  <li><a href="https://www.linkedin.com/in/tylertravitz/">Tyler Travitz</a><span>Design-system collaboration</span></li>
+                </ul>
+              </div>
+              <div>
                 <h3>Frontend engineering</h3>
                 <ul role="list">
                   <li><a href="https://www.linkedin.com/in/katharine-cooney/">Katy Cooney</a><span>Engineer · onboarding flows</span></li>
