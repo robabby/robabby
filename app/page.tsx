@@ -81,9 +81,9 @@ export default function Home() {
               </div>
               <p className="project-role">Frontend engineering, product ownership, and UI/UX</p>
               <Link className="work-image historical-preview" href="/work/savo" aria-label="Read the SAVO story">
-                <Image src="/images/savo/asset-page.png" alt="Historical SAVO Asset Page showing a document preview, download action, and file details" width={2880} height={1566} sizes="(max-width: 720px) calc(100vw - 76px), 550px" />
+                <Image src="/images/savo/design-session.jpg" alt="Interface sketches and colored voting dots displayed on a glass wall during a SAVO team design session" width={3264} height={2448} sizes="(max-width: 720px) calc(100vw - 76px), 550px" />
               </Link>
-              <p className="image-caption">The Asset Page · historical interface example.</p>
+              <p className="image-caption">Sketches and voting from a team design session.</p>
               <div className="work-info">
                 <p>My time at SAVO took me from frontend engineering into product ownership and helping establish our UI/UX team. I worked closely with our visual designer on design and implementation, built the shared component system and style guide, and helped other engineers with their frontend work.</p>
                 <Link className="text-link" href="/work/savo">Read the SAVO story <ArrowRightIcon className="arrow" aria-hidden="true" /></Link>
