@@ -108,10 +108,10 @@ a:hover .arrow { transform: translateX(3px); }
 .experience-logo-savo { width: 76px; }
 .selected-work { border-top: 1px solid var(--line); padding-top: 27px; }
 .selected-work > h2 { font-size: 37px; margin-bottom: 26px; }
-.work-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px 40px; }
-.featured-work { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); column-gap: 40px; }
-.featured-work .project-heading, .featured-work .project-role { grid-column: 1 / -1; }
-.featured-work .work-info { margin-top: 0; align-self: center; }
+.work-grid { display: grid; gap: 48px; }
+.project-work { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); column-gap: 40px; }
+.project-work .project-heading, .project-work .project-role { grid-column: 1 / -1; }
+.project-work .work-info { margin-top: 0; align-self: center; }
 .project-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
 .project-heading h3 { font-size: 30px; line-height: 1.15; }
 .project-heading h3 a { text-decoration: none; }
@@ -120,7 +120,8 @@ a:hover .arrow { transform: translateX(3px); }
 .project-role { margin-bottom: 9px; }
 .work-image { display: block; padding: 18px; background: var(--image-mat); border-radius: 5px; }
 .work-image img { width: 100%; aspect-ratio: 1.44; object-fit: cover; object-position: top; }
-.historical-preview img { object-fit: contain; object-position: center; }
+.historical-preview { display: flex; align-items: center; height: clamp(280px, 32vw, 452px); }
+.historical-preview img { height: 100%; object-fit: contain; object-position: center; }
 .image-caption { line-height: 1.55; margin-top: 8px; }
 .work-info { margin-top: 16px; }
 .work-info p { color: var(--muted); font-size: 15px; line-height: 1.65; }
@@ -231,10 +232,11 @@ a:hover .arrow { transform: translateX(3px); }
   .experience-logo-savo { width: clamp(58px, 16vw, 66px); }
   .selected-work { padding-top: 24px; }
   .selected-work > h2 { font-size: 33px; margin-bottom: 24px; }
-  .work-grid, .featured-work { display: block; }
-  .featured-work .work-info { margin-top: 16px; }
+  .work-grid, .project-work { display: block; }
+  .project-work .work-info { margin-top: 16px; }
   .work-grid > article + article { margin-top: 34px; }
   .project-heading h3 { font-size: 29px; }
+  .historical-preview { height: clamp(280px, 90vw, 400px); }
   .gallery-stage { height: clamp(280px, 90vw, 400px); padding: 14px; gap: 16px; }
   .gallery-phones img { max-width: calc(50% - 8px); }
   .gallery-choices { gap: 4px; }

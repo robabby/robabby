@@ -41,7 +41,7 @@ Headings use close leading (usually 1.08–1.15) and slightly tightened tracking
 
 - The shared container is at most 1200px wide, with 48px side gutters. Gutters become 28px at 1000px and below, then 20px at 720px and below.
 - The recurring editorial grid uses a 280px heading or identity column, a 90px gap, and a flexible content column. At 1000px and below, the rail is 220px and the gap 50px. Sections stack at 720px and below.
-- Selected work features WavePoint across the first row, with its gallery and description in a 1.45:1 split. PartySlate and SAVO follow in two equal columns, in that order. The layout stacks on phones. Project entries are open content groups rather than enclosed cards.
+- Selected work gives WavePoint, PartySlate, and SAVO the same full-width row treatment, in that order, with imagery and description in a 1.45:1 split. Project titles, contribution labels, and image stages share the same scale. The layout stacks on phones. Project entries are open content groups rather than enclosed cards.
 - Major sections are separated by one-pixel rules and generous vertical space. Contact uses the page background and the same editorial grid.
 - The SAVO and PartySlate articles use the shared rail for its contents list, sticky 28px from the top on larger screens. On phones, contents precede the story and stop being sticky. Privacy and the not-found page use the narrower 760px reading layout.
 
