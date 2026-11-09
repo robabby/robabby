@@ -98,25 +98,25 @@ export default function PartySlate() {
             <summary>People behind the work <span>LinkedIn profiles</span></summary>
             <div className={styles.peopleGroups}>
               <div>
-                <h3>Engineering guidance</h3>
+                <h2>Engineering guidance</h2>
                 <ul role="list">
                   <li><a href="https://www.linkedin.com/in/ben-kimpel/">Ben Kimpel</a><span>Principal Engineer · codebase guidance</span></li>
                 </ul>
               </div>
               <div>
-                <h3>Visual design</h3>
+                <h2>Visual design</h2>
                 <ul role="list">
                   <li><a href="https://www.linkedin.com/in/mark-semon-84ab913/">Mark Semon</a><span>Visual Designer · button design collaboration</span></li>
                 </ul>
               </div>
               <div>
-                <h3>Design system</h3>
+                <h2>Design system</h2>
                 <ul role="list">
                   <li><a href="https://www.linkedin.com/in/tylertravitz/">Tyler Travitz</a><span>Design-system collaboration</span></li>
                 </ul>
               </div>
               <div>
-                <h3>Frontend engineering</h3>
+                <h2>Frontend engineering</h2>
                 <ul role="list">
                   <li><a href="https://www.linkedin.com/in/katharine-cooney/">Katy Cooney</a><span>Engineer · onboarding flows</span></li>
                   <li><a href="https://www.linkedin.com/in/lucasbrandt/">Lucas Brandt</a><span>Engineer · onboarding flows</span></li>
@@ -124,6 +124,7 @@ export default function PartySlate() {
               </div>
             </div>
           </details>
+          <a className={styles.recommendationLink} href="#tyler-recommendation">Read Tyler’s recommendation</a>
           <div className={styles.layout}>
             <nav className={styles.contents} aria-label="In this case study">
               <p>In this story</p>
@@ -140,8 +141,8 @@ export default function PartySlate() {
                   <figcaption>{image.caption} <a href={image.src} target="_blank" rel="noopener noreferrer">Full image<span className="sr-only"> (opens in a new tab)</span></a></figcaption>
                 </figure>)}
                 {section.id === "design-system" && (
-                  <figure className={styles.recommendation}>
-                    <p>Tyler and I worked together for roughly a year and a half. Here’s what he had to say about working with me.</p>
+                  <figure className={styles.recommendation} id="tyler-recommendation">
+                    <p>Tyler and I worked together for roughly a year and a half. In 2021, here’s what he had to say about working with me.</p>
                     <blockquote>
                       <span className={styles.quoteMark} aria-hidden="true">“</span>
                       <p>{"In my experience, it's exceedingly rare to find an engineer who places the end user's needs at the core of what they build. When you work with Rob, you get not only a fantastic engineer, but also a user-centric thinker capable of viewing his own work in the broader context of the product. Rob is one of the best engineers I've worked with, period. He takes pride in his craft and cares deeply about delivering high-quality work, evident in the code he ships. However, what I valued most in Rob was that he was very collaborative. He cared about the process and always sought to have strong and open feedback loops between development, design and product. Rob was a pleasure to work with and I hope to have the opportunity to do so again in the future. I would recommend Rob to anyone looking to elevate their front-end team."}</p>
