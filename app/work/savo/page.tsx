@@ -357,7 +357,7 @@ export default function Savo() {
             </div>
           </article>
           <nav className={styles.related} aria-label="Related work">
-            <p>My business</p>
+            <Link href="/work/partyslate">Read the PartySlate story <ArrowRightIcon aria-hidden="true" /></Link>
             <Link href="/#wavepoint">Explore WavePoint <ArrowRightIcon aria-hidden="true" /></Link>
           </nav>
         </div>

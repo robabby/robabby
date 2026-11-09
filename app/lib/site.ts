@@ -14,6 +14,11 @@ export const PAGE_INFO = {
     description:
       "Product improvements, new software, websites, and practical AI workflows. Work directly with Rob Abby in Bellingham or remotely.",
   },
+  partyslate: {
+    path: "/work/partyslate",
+    title: "PartySlate Frontend and Design System Case Study | Rob Abby",
+    description: "Rob Abby’s work on PartySlate’s Idea Gallery, venue search, professional onboarding and Soirée design system, alongside mentoring and cross-team collaboration.",
+  },
   savo: {
     path: "/work/savo",
     title: "SAVO UI/UX and Design System Case Study | Rob Abby",

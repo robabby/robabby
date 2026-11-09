@@ -12,7 +12,7 @@ This file provides the canonical guidance for coding agents working in this repo
 
 ## Project Architecture
 
-This is Rob Abby's personal site for a mixed audience, bringing together his product, design, engineering, and collaborative experience. WavePoint is the featured current business, with historical work shown through SAVO. The accepted visual direction is Ink + Ultramarine: an editorial layout built with Next.js App Router.
+This is Rob Abby's personal site for a mixed audience, bringing together his product, design, engineering, and collaborative experience. WavePoint is the featured current business, with historical work shown through PartySlate and SAVO. The accepted visual direction is Ink + Ultramarine: an editorial layout built with Next.js App Router.
 
 ### Tech stack
 
@@ -23,12 +23,13 @@ This is Rob Abby's personal site for a mixed audience, bringing together his pro
 
 ### Structure
 
-- `app/page.tsx` — personal introduction, previous-employer logos, selected WavePoint and SAVO work, approach, and contact.
+- `app/page.tsx` — personal introduction, previous-employer logos, selected WavePoint, PartySlate, and SAVO work, approach, and contact.
 - `app/work-with-me/page.tsx` — services, approach, FAQ, and contact.
 - WavePoint is introduced on the homepage with a link to its website; `/work/wavepoint` redirects to `/#wavepoint`.
+- `app/work/partyslate/page.tsx` — frontend engineering, design-system leadership, onboarding, and collaboration case study.
 - `app/work/savo/page.tsx` — historical UI/UX, shared UI system, and team-building case study.
 - `app/components/` — shared header, footer, contact, theme control, original employer logos, manual product gallery, and JSON-LD rendering.
-- `app/work/case-study.module.css` — SAVO article layout, contents navigation, and image framing.
+- `app/work/case-study.module.css` — shared historical case-study article layout, contents navigation, and image framing.
 - `app/lib/site.ts` — page metadata, canonical origin, and Person/Organization identities.
 - `app/lib/share-image.tsx` and route `opengraph-image.tsx` files — matching share cards.
 - `app/privacy/page.tsx`, `app/robots.ts`, `app/sitemap.ts` — privacy and search infrastructure.
