@@ -363,15 +363,15 @@ try {
     return bounds.top >= 0 && bounds.bottom <= innerHeight;
   });
   const expectedProfiles = [
-    "meggancarczyk", "gwgoodman", "brittanymikottis", "johnnarofsky", "tom-green-b6198a4", "allisonpaul",
+    "meggancarczyk", "gwgoodman", "brittanymikottis", "johnnarofsky", "tom-green-b6198a4", "allisonpaul", "esands", "caronp", "jeff-charbeneau-984b7a14", "braunreyes", "andrewikamas", "jason-liu-a4757812",
     "zachary-debelak-39b7541", "doug-marquis", "vbrianhauk",
   ].map((slug) => `https://www.linkedin.com/in/${slug}/`).sort();
   const profiles = await page.locator('article a[href^="https://www.linkedin.com/in/"]')
-    .evaluateAll((links) => links.map((link) => link.href).sort());
+    .evaluateAll((links) => [...new Set(links.map((link) => link.href))].sort());
   assert.deepEqual(profiles, expectedProfiles);
   const article = await page.locator("article").innerText();
   assert.ok(article.includes("The redesign shipped to customers and was well received."));
-  assert.ok(article.includes("The team never delivered that work to customers; company priorities changed."));
+  assert.ok(article.includes("The recommendation initiative ultimately didn’t reach customers; company priorities changed."));
   assert.doesNotMatch(article, /private review|draft 02|Downloads\/Portfolio|iHeartMEDIA/i);
   const caseSchema = await page.locator('script[type="application/ld+json"]')
     .evaluateAll((items) => items.map((el) => JSON.parse(el.textContent))
@@ -400,6 +400,12 @@ try {
   const partyProfiles = await page.locator('article a[href^="https://www.linkedin.com/in/"]').evaluateAll(links => [...new Set(links.map(link => link.href))].sort());
   assert.deepEqual(partyProfiles, ["ben-kimpel", "mark-semon-84ab913", "lucasbrandt", "katharine-cooney"].map(slug => `https://www.linkedin.com/in/${slug}/`).sort());
   assert.equal(await page.locator("article figure").count(), 6);
+  const people = page.locator("#people");
+  await people.locator("summary").click();
+  assert.equal(await people.getAttribute("open"), "");
+  assert.equal(await people.locator("a").count(), 4);
+  await people.locator("summary").click();
+  assert.equal(await people.getAttribute("open"), null);
   for (const link of await page.locator('article figcaption a').all()) {
     assert.equal((await context.request.get(new URL(await link.getAttribute("href"), base).href)).status(), 200);
   }

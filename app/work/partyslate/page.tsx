@@ -94,6 +94,30 @@ export default function PartySlate() {
               </dl>
             </aside>
           </header>
+          <details className={styles.collaborators} id="people">
+            <summary>People behind the work <span>LinkedIn profiles</span></summary>
+            <div className={styles.peopleGroups}>
+              <div>
+                <h3>Engineering guidance</h3>
+                <ul role="list">
+                  <li><a href="https://www.linkedin.com/in/ben-kimpel/">Ben Kimpel</a><span>Principal Engineer · codebase guidance</span></li>
+                </ul>
+              </div>
+              <div>
+                <h3>Visual design</h3>
+                <ul role="list">
+                  <li><a href="https://www.linkedin.com/in/mark-semon-84ab913/">Mark Semon</a><span>Visual Designer · button design collaboration</span></li>
+                </ul>
+              </div>
+              <div>
+                <h3>Frontend engineering</h3>
+                <ul role="list">
+                  <li><a href="https://www.linkedin.com/in/katharine-cooney/">Katy Cooney</a><span>Engineer · onboarding flows</span></li>
+                  <li><a href="https://www.linkedin.com/in/lucasbrandt/">Lucas Brandt</a><span>Engineer · onboarding flows</span></li>
+                </ul>
+              </div>
+            </div>
+          </details>
           <div className={styles.layout}>
             <nav className={styles.contents} aria-label="In this case study">
               <p>In this story</p>
