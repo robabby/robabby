@@ -141,7 +141,9 @@ export default function PartySlate() {
                 </figure>)}
                 {section.id === "design-system" && (
                   <figure className={styles.recommendation}>
+                    <p>Tyler and I worked together for roughly a year and a half. Here’s what he had to say about working with me.</p>
                     <blockquote>
+                      <span className={styles.quoteMark} aria-hidden="true">“</span>
                       <p>{"In my experience, it's exceedingly rare to find an engineer who places the end user's needs at the core of what they build. When you work with Rob, you get not only a fantastic engineer, but also a user-centric thinker capable of viewing his own work in the broader context of the product. Rob is one of the best engineers I've worked with, period. He takes pride in his craft and cares deeply about delivering high-quality work, evident in the code he ships. However, what I valued most in Rob was that he was very collaborative. He cared about the process and always sought to have strong and open feedback loops between development, design and product. Rob was a pleasure to work with and I hope to have the opportunity to do so again in the future. I would recommend Rob to anyone looking to elevate their front-end team."}</p>
                     </blockquote>
                     <figcaption>

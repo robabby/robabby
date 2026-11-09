@@ -87,6 +87,8 @@ Use `next/image` with intrinsic dimensions and responsive sizes. Only the hero p
 
 ### Reading and sharing
 
+Long-form recommendations use Newsreader italic at 21–25px, an accent opening quotation mark, and a one-pixel neutral inset rule. Introductions remain body text; linked attribution and dates sit below the full quotation.
+
 Services use the shared editorial rows and native `details` for the FAQ. SAVO, privacy, and the not-found page inherit the same type, rules, colors, and controls. Share cards use Newsreader and Instrument Sans on the dark ink background with the blue accent; the home card repeats the three-line statement.
 
 ## Do's and Don'ts
