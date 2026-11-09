@@ -139,6 +139,17 @@ export default function PartySlate() {
                   </a>
                   <figcaption>{image.caption} <a href={image.src} target="_blank" rel="noopener noreferrer">Full image<span className="sr-only"> (opens in a new tab)</span></a></figcaption>
                 </figure>)}
+                {section.id === "design-system" && (
+                  <figure className={styles.recommendation}>
+                    <blockquote>
+                      <p>{"In my experience, it's exceedingly rare to find an engineer who places the end user's needs at the core of what they build. When you work with Rob, you get not only a fantastic engineer, but also a user-centric thinker capable of viewing his own work in the broader context of the product. Rob is one of the best engineers I've worked with, period. He takes pride in his craft and cares deeply about delivering high-quality work, evident in the code he ships. However, what I valued most in Rob was that he was very collaborative. He cared about the process and always sought to have strong and open feedback loops between development, design and product. Rob was a pleasure to work with and I hope to have the opportunity to do so again in the future. I would recommend Rob to anyone looking to elevate their front-end team."}</p>
+                    </blockquote>
+                    <figcaption>
+                      <a href="https://www.linkedin.com/in/tylertravitz/">Tyler Travitz</a>
+                      <span>Teammate · LinkedIn recommendation · <time dateTime="2021-09-27">September 27, 2021</time></span>
+                    </figcaption>
+                  </figure>
+                )}
               </section>)}
             </div>
           </div>

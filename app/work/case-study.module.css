@@ -121,3 +121,10 @@
 .peopleGroups li span { display: block; color: var(--muted); font-size: 12px; line-height: 1.5; }
 @media (max-width: 1000px) { .peopleGroups { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 480px) { .peopleGroups { grid-template-columns: 1fr; gap: 22px; } .collaborators summary > span { display: block; margin: 4px 0 0 18px; } }
+
+.recommendation { margin: 36px 0 0; padding: 28px 0 0; border-top: 1px solid var(--line); }
+.recommendation blockquote { margin: 0; }
+.recommendation blockquote p { color: var(--ink); }
+.recommendation figcaption { margin-top: 18px; font-size: 14px; line-height: 1.7; }
+.recommendation figcaption a { display: inline-flex; align-items: center; min-height: 44px; color: var(--accent); }
+.recommendation figcaption span { display: block; color: var(--muted); font-size: 13px; }
