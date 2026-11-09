@@ -44,12 +44,11 @@ export default function Home() {
           <p>Previously at</p>
           <ExperienceLogos />
         </section>
-        <section className="wrap selected-work" id="work" aria-labelledby="work-title">
-          <h2 id="work-title">Some of the work.</h2>
+        <section className="wrap selected-work" id="work" aria-label="Selected work">
           <div className="work-grid">
             <article className="project-work" id="wavepoint" aria-labelledby="wavepoint-title">
               <div className="project-heading">
-                <h3 id="wavepoint-title"><a href="https://wavepoint.space/">WavePoint</a></h3>
+                <h2 id="wavepoint-title"><a href="https://wavepoint.space/">WavePoint</a></h2>
                 <span>Current business</span>
               </div>
               <p className="project-role">Product, design, and AI-assisted development</p>
@@ -61,7 +60,7 @@ export default function Home() {
             </article>
             <article className="project-work" aria-labelledby="partyslate-work-title">
               <div className="project-heading">
-                <h3 id="partyslate-work-title"><Link href="/work/partyslate">PartySlate</Link></h3>
+                <h2 id="partyslate-work-title"><Link href="/work/partyslate">PartySlate</Link></h2>
                 <span>2018–2024</span>
               </div>
               <p className="project-role">Frontend engineering and design systems</p>
@@ -78,7 +77,7 @@ export default function Home() {
             </article>
             <article className="project-work" aria-labelledby="savo-work-title">
               <div className="project-heading">
-                <h3 id="savo-work-title"><Link href="/work/savo">SAVO</Link></h3>
+                <h2 id="savo-work-title"><Link href="/work/savo">SAVO</Link></h2>
                 <span>2013–2018</span>
               </div>
               <p className="project-role">Frontend engineering, product ownership, and UX</p>
