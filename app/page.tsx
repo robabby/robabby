@@ -79,13 +79,13 @@ export default function Home() {
                 <h3 id="savo-work-title"><Link href="/work/savo">SAVO</Link></h3>
                 <span>Historical work</span>
               </div>
-              <p className="project-role">UI/UX and frontend engineering</p>
+              <p className="project-role">Frontend engineering, product ownership, and UI/UX</p>
               <Link className="work-image historical-preview" href="/work/savo" aria-label="Read the SAVO story">
                 <Image src="/images/savo/asset-page.png" alt="Historical SAVO Asset Page showing a document preview, download action, and file details" width={2880} height={1566} sizes="(max-width: 720px) calc(100vw - 76px), 550px" />
               </Link>
               <p className="image-caption">The Asset Page · historical interface example.</p>
               <div className="work-info">
-                <p>At SAVO, I helped establish our UI/UX team and worked closely with our visual designer on design and implementation. I also built the shared component system and style guide, and helped other engineers with their frontend work.</p>
+                <p>My time at SAVO took me from frontend engineering into product ownership and helping establish our UI/UX team. I worked closely with our visual designer on design and implementation, built the shared component system and style guide, and helped other engineers with their frontend work.</p>
                 <Link className="text-link" href="/work/savo">Read the SAVO story <ArrowRightIcon className="arrow" aria-hidden="true" /></Link>
               </div>
             </article>

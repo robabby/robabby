@@ -126,11 +126,47 @@ function PortfolioFigure({ image, className = "", sizes }: { image: PortfolioIma
 
 const sections = [
   {
+    id: "early-years",
+    title: "Starting with the work in front of me",
+    label: "The early years",
+    content: (<>
+      <p>SAVO helped salespeople find and use content for conversations with clients and prospects. I joined as a self-taught frontend engineer. For roughly my first two and a half years, I didn’t feel I was growing very much beyond the work assigned to me.</p>
+      <p>We worked in a waterfall process, following detailed product requirements documents that defined what we were supposed to build. Those requirements could still change late in the process as new demands came from sales. There wasn’t much room in my work to explore the problem or help shape the solution.</p>
+    </>),
+  },
+  {
+    id: "changing-how-we-worked",
+    title: "Seeing another way to work",
+    label: "The shift to Agile",
+    content: (<>
+      <p>The company was entering a period of change. In June 2014, SAVO announced a <a href="https://www.prnewswire.com/news-releases/savo-raises-35-million-to-drive-global-leadership-in-sales-productivity-software-solutions-261821291.html">$35 million funding round led by Goldman Sachs</a>, with two Goldman Sachs representatives joining the board.</p>
+      <p><a href="https://www.linkedin.com/in/jason-liu-a4757812/">Jason Liu</a> was <a href="https://www.prnewswire.com/news-releases/jason-liu-named-ceo-of-savo-300045952.html">appointed CEO in March 2015</a>. <a href="https://www.linkedin.com/in/doug-marquis/">Doug Marquis</a> <a href="https://www.prnewswire.com/news-releases/savo-appoints-doug-marquis-as-executive-vice-president-product-development-300153629.html">joined that October as EVP of Product Development</a> and later became our CTO. For me, the shift toward Agile development during this period opened up a different way of thinking about software.</p>
+      <p>I remember the organization becoming much flatter, with people who had held leadership roles moving into individual contributor work. It was also a difficult period. There were major cuts to QA and Support, and colleagues lost their jobs. The changes that opened up opportunities for me came alongside real disruption for other people.</p>
+      <p>Working with <a href="https://www.linkedin.com/in/vbrianhauk/">Brian Hauk</a>, our Agile Coach, and <a href="https://www.linkedin.com/in/andrewikamas/">Andrew Ikamas</a>, our Scrum Master, was eye-opening. They demonstrated a more collaborative way of working through problems together. I began to see that I could contribute to how we approached the work, as well as what appeared on the screen.</p>
+      <p>That shift opened the door to my Product Owner training and a very different role on the Data Science team.</p>
+    </>),
+  },
+  {
+    id: "data-science",
+    title: "Finding my footing as a Product Owner",
+    label: "Data Science and product ownership",
+    content: (<>
+      <p>SAVO paid for me to become a Certified Scrum Product Owner (CSPO). I became the embedded Product Owner for the Data Science team, working on the Predictive initiative and reporting directly to the CTO.</p>
+      <p>I worked with <a href="https://www.linkedin.com/in/caronp/">Peter Caron</a>, a Senior VP of Product, to define the goals for an intuitive recommendation system. We wanted to help salespeople prepare for deeper conversations with their clients.</p>
+      <p>The bigger ambition was to use a salesperson’s calendar to understand who they were meeting with, then connect that context with the content SAVO housed and other information we could gather. Rather than making someone search through a library before every meeting, we wanted to help bring relevant material to them.</p>
+      <p><a href="https://www.linkedin.com/in/jeff-charbeneau-984b7a14/">Jeff Charbeneau</a> joined as our Data Scientist. Much of his work involved “laying pipe”—building the data pipelines needed to collect information the team could work with. <a href="https://www.linkedin.com/in/braunreyes/">Braun Reyes</a>, a database specialist on the team, worked with Neo4j to build graph databases.</p>
+      <p>My part often came through sprint planning and grooming sessions. We kept meetings spaced out so the team could spend most of its time building and experimenting, with room to decide how best to approach the problems. I facilitated those conversations and often worked at the whiteboard, sketching concepts as people talked through them. I brought my technical perspective where it helped, while learning a domain that was new to me.</p>
+      <p>Over time, I found it difficult to work with the uncertainty around the team’s direction. I was well outside my comfort zone, and I missed the tangible nature of frontend engineering: making a change on screen and seeing the effect of my work. I shifted my focus toward the interface and user experience work that followed.</p>
+      <p>The recommendation initiative ultimately didn’t reach customers; company priorities changed. Even so, the experience broadened how I thought about product development, facilitating a team, and giving people room to solve problems.</p>
+      <p>During that period, I read Steve Krug’s <em>Don’t Make Me Think</em>. It helped shape the user advocacy that followed.</p>
+    </>),
+  },
+  {
     id: "people-using-savo",
     title: "Making room for the people using the software",
     label: "The people using SAVO",
     content: (<>
-      <p>SAVO helped salespeople find and use content for conversations with clients and prospects. The executives buying the software, the administrators managing it, and the people using it every day had different needs.</p>
+      <p>The executives buying SAVO, the administrators managing it, and the people using it every day had different needs.</p>
       <p>Product decisions were heavily influenced by sales commitments. We also supported older enterprise environments, which placed real constraints on the interface. I wanted us to hear more directly from the sales and marketing people who spent their days using what we built.</p>
       <p>I researched ways to establish a baseline for the usability of our systems and settled on the System Usability Scale (SUS). The idea was straightforward: get an initial score, then use it to track whether we were making the software easier to use.</p>
       <p>I worked with <a href="https://www.linkedin.com/in/meggancarczyk/">Megan “Meg” Gancarczyk</a>, a Junior Product Manager at the time, to prepare the questionnaire and its introduction to the SAVO User Alliance Group. Just before it was due to go out, <a href="https://www.linkedin.com/in/gwgoodman/">Greg Goodman</a>, a Senior Product Manager, stopped the initiative over concerns about how low our initial score would be. We never sent the questionnaire, so we didn’t establish that baseline.</p>
@@ -144,6 +180,7 @@ const sections = [
     content: (<>
       <p>The dated interface gave us a concrete place to begin. My manager, <a href="https://www.linkedin.com/in/johnnarofsky/">John Narofsky</a>, helped carry my request through the organization and secure the CTO’s approval to hire a Visual Designer.</p>
       <p>I wrote the job posting, ran the interviews, and hired Brittany. From there, we helped form a UI/UX team that brought visual design, user experience, research, and frontend engineering together.</p>
+      <p><a href="https://www.linkedin.com/in/esands/">Eric Sands</a>, previously our VP of QA, became the Delivery Manager on the UI/UX team after the Agile transformation. We worked together as colleagues on that team.</p>
       <p>Brittany and I worked hand-in-hand throughout the work we produced together. I was involved in both design and implementation, and our collaboration continued as we built. That relationship was central to the Asset Page redesign and the shared UI foundation that supported it.</p>
     </>),
   },
@@ -178,7 +215,7 @@ const sections = [
     title: "Bringing research into the process",
     label: "Research and process",
     content: (<>
-      <p>Access to the SAVO User Alliance Group eventually gave us a pool of administrators and end users for interviews and testing. <a href="https://www.linkedin.com/in/tom-green-b6198a4/">Tom Green</a> was our UX Designer, and <a href="https://www.linkedin.com/in/allisonpaul/">Allison Paul</a> later managed outreach and scheduling. Tom and Allison both frequently facilitated user-testing sessions. We worked together to define research goals.</p>
+      <p>Access to the SAVO User Alliance Group eventually gave us a pool of administrators and end users for interviews and testing. <a href="https://www.linkedin.com/in/tom-green-b6198a4/">Tom Green</a> was our UX Designer, and <a href="https://www.linkedin.com/in/allisonpaul/">Allison Paul</a> later managed outreach and scheduling. Allison had moved into our UI/UX team from Support during the layoffs, which allowed her to stay at SAVO. Tom and Allison both frequently facilitated user-testing sessions. We worked together to define research goals.</p>
       <p>Getting candid feedback took relationship-building, too. We worked to create the trust and space for one-to-one conversations with the people using the software.</p>
       <p>Alongside Brittany, the rest of our UI/UX team, Head of Product <a href="https://www.linkedin.com/in/zachary-debelak-39b7541/">Zach Debelak</a>, and the wider Product team, I helped define a product process that included research throughout the work. Our process diagram connected early exploration, design, development, and feedback after release.</p>
     </>),
@@ -198,10 +235,6 @@ const sections = [
     title: "Learning to contribute beyond my title",
     label: "What I learned",
     content: (<>
-      <p>Before the UI/UX initiative, SAVO moved from waterfall delivery to Agile. Our CTO, <a href="https://www.linkedin.com/in/doug-marquis/">Doug Marquis</a>, brought in <a href="https://www.linkedin.com/in/vbrianhauk/">Brian Hauk</a> to help guide that transition. Their work opened up a different way of thinking about software for me.</p>
-      <p>The company paid for my Product Owner certification, and I became the embedded Product Owner for our Predictive Analytics team, reporting directly to the CTO.</p>
-      <p>I ran grooming sessions, brought a technical perspective where it helped, and helped the team work through problems in a domain I was still learning. The ambition was to recommend useful documents in the context of a salesperson’s meetings and conversations. The team never delivered that work to customers; company priorities changed.</p>
-      <p>During that period, I read Steve Krug’s <em>Don’t Make Me Think</em>. It helped shape the user advocacy that followed. Later, our UI/UX team learned together at conferences and brought ideas back into our work.</p>
       <p>When I first joined SAVO, I compared my self-taught background with the degrees and experience of the people around me. I thought of myself as someone who was good at CSS. Over time, I learned that my product thinking, commitment to users, and interests outside engineering could be useful to the team, too. That meant the world to me.</p>
     </>),
   }
@@ -238,17 +271,57 @@ export default function Savo() {
             <header className={styles.hero}>
               <div>
                 <h1 id="savo-title">Building a UI/UX practice at SAVO.</h1>
-                <p className={styles.lead}>SAVO is where my career truly started. I joined as a self-taught frontend developer and went on to help shape how we designed, built, and learned from the people using our software.</p>
+                <p className={styles.lead}>SAVO is where I began to see how much I could contribute beyond frontend engineering. My path into UI/UX went through a company-wide shift in how we worked, Product Owner training, and a period with the Data Science team. Each chapter changed how I thought about building software with other people.</p>
                 <p className={styles.intro}>I led the initiative to form our UI/UX team, hired visual designer <a href="https://www.linkedin.com/in/brittanymikottis/">Brittany Mikottis</a>, and worked alongside her on design and implementation. I also built the shared Ember.js component system and style guide used across several parts of the product.</p>
                 <p className={styles.acquisitionNote}>SAVO was acquired by <a href="https://www.seismic.com/">Seismic</a> in 2018.</p>
               </div>
               <aside className={styles.projectContext} aria-label="Project context">
                 <dl>
                   <div><dt>My work</dt><dd>Frontend engineering<br />Product ownership<br />Building the UI/UX team</dd></div>
-                  <div><dt>Alongside</dt><dd>Brittany Mikottis and the UI/UX, Product, and engineering teams</dd></div>
+                  <div><dt>Alongside</dt><dd>Brittany Mikottis and the UI/UX, Product, and engineering teams. <a href="#people">Meet the people</a>.</dd></div>
                 </dl>
               </aside>
             </header>
+            <details className={styles.collaborators} id="people">
+              <summary>People behind the work <span>LinkedIn profiles</span></summary>
+              <div className={styles.peopleGroups}>
+                  <div>
+                    <h3>UI/UX team</h3>
+                    <ul role="list">
+                      <li><a href="https://www.linkedin.com/in/brittanymikottis/">Brittany Mikottis</a><span>Visual Designer</span></li>
+                      <li><a href="https://www.linkedin.com/in/tom-green-b6198a4/">Tom Green</a><span>UX Designer</span></li>
+                      <li><a href="https://www.linkedin.com/in/allisonpaul/">Allison Paul</a><span>Research outreach and testing</span></li>
+                      <li><a href="https://www.linkedin.com/in/esands/">Eric Sands</a><span>Delivery Manager</span></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3>Product and Data Science</h3>
+                    <ul role="list">
+                      <li><a href="https://www.linkedin.com/in/caronp/">Peter Caron</a><span>Senior VP of Product</span></li>
+                      <li><a href="https://www.linkedin.com/in/jeff-charbeneau-984b7a14/">Jeff Charbeneau</a><span>Data Scientist</span></li>
+                      <li><a href="https://www.linkedin.com/in/braunreyes/">Braun Reyes</a><span>Database specialist</span></li>
+                      <li><a href="https://www.linkedin.com/in/meggancarczyk/">Megan “Meg” Gancarczyk</a><span>Junior Product Manager</span></li>
+                      <li><a href="https://www.linkedin.com/in/gwgoodman/">Greg Goodman</a><span>Senior Product Manager</span></li>
+                      <li><a href="https://www.linkedin.com/in/zachary-debelak-39b7541/">Zach Debelak</a><span>Head of Product</span></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3>Agile transition</h3>
+                    <ul role="list">
+                      <li><a href="https://www.linkedin.com/in/vbrianhauk/">Brian Hauk</a><span>Agile Coach</span></li>
+                      <li><a href="https://www.linkedin.com/in/andrewikamas/">Andrew Ikamas</a><span>Scrum Master</span></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3>Leadership and support</h3>
+                    <ul role="list">
+                      <li><a href="https://www.linkedin.com/in/jason-liu-a4757812/">Jason Liu</a><span>CEO</span></li>
+                      <li><a href="https://www.linkedin.com/in/doug-marquis/">Doug Marquis</a><span>Product Development / CTO</span></li>
+                      <li><a href="https://www.linkedin.com/in/johnnarofsky/">John Narofsky</a><span>My manager</span></li>
+                    </ul>
+                  </div>
+              </div>
+            </details>
             <figure className={styles.figure}>
                         <a className={styles.figureMat} href="/images/savo/styleguide-buttons.png" target="_blank" rel="noopener noreferrer" aria-label="Open the full SAVO style guide image (opens in a new tab)">
                           <div className={styles.figureWindow}>
