@@ -1,0 +1,13 @@
+.invitation { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; border-top: 1px solid var(--line); padding-block: 56px 60px; }
+.eyebrow { color: var(--muted); font-size: 12px; margin-bottom: 18px; }
+.invitation h2 { font-size: 46px; line-height: 1.08; }
+.invitation h2 span { color: var(--accent); }
+.description { max-width: 46ch; color: var(--muted); font-size: 16px; margin: 20px 0 24px; }
+.preview { background: #191c20; color: #eef0f2; border: 1px solid #3c434b; border-radius: 5px; font: 13px/1.7 ui-monospace, SFMono-Regular, Menlo, monospace; overflow: hidden; }
+.bar { display: flex; justify-content: space-between; gap: 16px; padding: 14px 22px; border-bottom: 1px solid #3c434b; color: #b1b8c1; font-size: 11px; }
+.prompt { display: flex; gap: 12px; background: #363b43; padding: 15px; margin: 24px 22px 20px; }
+.response { padding: 0 25px; }
+.context { color: #b0c3ff; font-size: 11px; padding: 20px 25px 0; }
+.caption { color: #b1b8c1; font-size: 10px; padding: 20px 25px; }
+@media (max-width: 1000px) { .invitation { gap: 40px; } .invitation h2 { font-size: 40px; } }
+@media (max-width: 720px) { .invitation { grid-template-columns: minmax(0, 1fr); gap: 30px; padding-block: 34px 38px; } .invitation h2 { font-size: 36px; } .description { font-size: 15px; } .preview { font-size: 12px; } .bar { padding-inline: 16px; } .prompt { margin-inline: 14px; } .response, .context, .caption { padding-inline: 18px; } }

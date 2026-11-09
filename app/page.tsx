@@ -6,6 +6,7 @@ import Contact from "@/app/components/Contact";
 import { pageMetadata, PAGE_INFO, SITE_URL } from "@/app/lib/site";
 import JsonLd from "@/app/components/JsonLd";
 import ExperienceLogos from "@/app/components/ExperienceLogos";
+import AIWorkflowInvitation from "@/app/components/AIWorkflowInvitation";
 import WavePointGallery from "@/app/components/WavePointGallery";
 
 export const metadata = pageMetadata("home");
@@ -44,6 +45,7 @@ export default function Home() {
           <p>Previously at</p>
           <ExperienceLogos />
         </section>
+        <AIWorkflowInvitation />
         <section className="wrap selected-work" id="work" aria-label="Selected work">
           <div className="work-grid">
             <article className="project-work" id="wavepoint" aria-labelledby="wavepoint-title">

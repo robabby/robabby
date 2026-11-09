@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "shots": "node scripts/screenshots.mjs"
+    "shots": "node scripts/screenshots.mjs",
+    "shots:ai": "node scripts/ai-workflow.mjs"
   },
   "dependencies": {
     "@next/third-parties": "^16.2.9",

@@ -59,7 +59,7 @@ Corners are only gently softened: the portrait uses 3px, image frames and filled
 
 ### Header and footer
 
-The home header reads “Product, design and engineering”; inner pages link home with “Rob Abby”. Main navigation is Work (`/#work`), Work with me (`/work-with-me`), About (`/#about`), and Contact. The footer contains Work with me, Résumé (PDF), LinkedIn, GitHub, and Privacy. Work with me has a current-page indicator; Contact stays on the current page when it has a contact section. Navigation has at least 44px-high targets, muted text at rest, and an accent underline on hover.
+The home header reads “Product, design and engineering”; inner pages link home with “Rob Abby”. Main navigation is Work (`/#work`), AI workflow (`/how-i-work-with-ai`), Work with me (`/work-with-me`), About (`/#about`), and Contact. The footer contains How I work with AI, Work with me, Résumé (PDF), LinkedIn, GitHub, and Privacy. Work with me and AI workflow have current-page indicators; Contact stays on the current page when it has a contact section. Navigation has at least 44px-high targets, muted text at rest, and an accent underline on hover.
 
 ### Actions and contact
 
@@ -74,6 +74,12 @@ The outlined theme button includes an icon and the destination theme’s name, �
 ### Employer logos
 
 Use the original PartySlate, project44, and SAVO wordmarks from `ExperienceLogos`, with their individual optical sizes and `currentColor`. The homepage label is “Previously at”. PartySlate and SAVO link to their local case studies; project44’s company homepage opens in a new tab. Preserve the named links and original artwork; source notes are in `docs/ux/company-logos.md`.
+
+### How I work with AI
+
+The homepage introduces this page after the previous-employer logos and before selected work. A short editorial introduction sits beside a static, clearly illustrative terminal exchange, with a direct link to `/how-i-work-with-ai`.
+
+The page pairs a looping pseudo-terminal hero with server-rendered explanations of tools, skills, plans, and concurrent sessions. Activity and ticket examples are explicitly simulated. The terminal keeps its prompt area visible, types user messages, and pauses for inspection, when offscreen, and when the document is hidden. Reduced motion starts paused; a full transcript and native ticket disclosures remain usable without JavaScript. Platform marks retain a light mat in both themes. The rest of the page inherits the site tokens and fonts.
 
 ### WavePoint gallery and imagery
 
