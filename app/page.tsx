@@ -47,7 +47,7 @@ export default function Home() {
         <section className="wrap selected-work" id="work" aria-labelledby="work-title">
           <h2 id="work-title">Some of the work.</h2>
           <div className="work-grid">
-            <article id="wavepoint" aria-labelledby="wavepoint-title">
+            <article className="featured-work" id="wavepoint" aria-labelledby="wavepoint-title">
               <div className="project-heading">
                 <h3 id="wavepoint-title"><a href="https://wavepoint.space/">WavePoint</a></h3>
                 <span>Current business</span>
@@ -59,14 +59,29 @@ export default function Home() {
                 <a className="text-link" href="https://wavepoint.space/">Visit WavePoint <ArrowRightIcon className="arrow" aria-hidden="true" /></a>
               </div>
             </article>
+            <article aria-labelledby="partyslate-work-title">
+              <div className="project-heading">
+                <h3 id="partyslate-work-title"><Link href="/work/partyslate">PartySlate</Link></h3>
+                <span>Historical work</span>
+              </div>
+              <p className="project-role">Frontend engineering and design-system leadership</p>
+              <Link className="work-image historical-preview" href="/work/partyslate" aria-label="Read the PartySlate story">
+                <Image src="/images/partyslate/buttons.jpg" alt="PartySlate button variants and Storybook color tokens from the later Soirée design-system work" width={1400} height={788} sizes="(max-width: 720px) calc(100vw - 76px), 550px" />
+              </Link>
+              <p className="image-caption">Button variants and states · a later design-system example, 2023.</p>
+              <div className="work-info">
+                <p>At PartySlate, I built interfaces for finding inspiration, exploring venues and onboarding event professionals. I led the design system, worked across design and engineering, and helped other engineers build on shared patterns.</p>
+                <Link className="text-link" href="/work/partyslate">Read the PartySlate story <ArrowRightIcon className="arrow" aria-hidden="true" /></Link>
+              </div>
+            </article>
             <article aria-labelledby="savo-work-title">
               <div className="project-heading">
                 <h3 id="savo-work-title"><Link href="/work/savo">SAVO</Link></h3>
                 <span>Historical work</span>
               </div>
               <p className="project-role">Frontend engineering, product ownership, and UI/UX</p>
-              <Link className="work-image savo-preview" href="/work/savo" aria-label="Read the SAVO story">
-                <Image src="/images/savo/asset-page.png" alt="Historical SAVO Asset Page showing a document preview, download action, and file details" width={2880} height={1566} sizes="(max-width: 720px) calc(100vw - 76px), (max-width: 1000px) 35vw, 440px" />
+              <Link className="work-image historical-preview" href="/work/savo" aria-label="Read the SAVO story">
+                <Image src="/images/savo/asset-page.png" alt="Historical SAVO Asset Page showing a document preview, download action, and file details" width={2880} height={1566} sizes="(max-width: 720px) calc(100vw - 76px), 550px" />
               </Link>
               <p className="image-caption">The Asset Page · historical interface example.</p>
               <div className="work-info">
@@ -80,6 +95,7 @@ export default function Home() {
           <h2 id="about-title">A bit about how I work.</h2>
           <div className="about-copy">
             <p>A lot of my attention goes into how someone will actually use what we’re making. I’m interested in what they’re trying to do, how they think about it, and how the software could help.</p>
+            <p>I also enjoy helping other engineers grow—pairing on difficult problems, sharing what I’ve learned, and working across design and engineering to make it easier for a team to build together.</p>
             <p>AI has become a substantial part of how I work. I use it throughout development, and I’m continuing to learn where it helps and what needs more attention from me. We’re a small operation at WavePoint, so keeping the work practical and avoiding unnecessary complexity matters.</p>
             <p>Before WavePoint, I worked at SAVO, project44, and PartySlate.</p>
             <div className="about-links">

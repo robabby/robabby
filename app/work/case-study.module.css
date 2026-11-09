@@ -114,10 +114,19 @@
 .collaborators summary { cursor: pointer; padding: 12px 0; font-size: 16px; }
 .collaborators summary > span { margin-left: 12px; font-size: 13px; color: var(--muted); }
 .peopleGroups { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; padding: 18px 0 28px; }
-.peopleGroups h3 { font-family: var(--font-body), sans-serif; font-size: 16px; margin-bottom: 14px; }
+.peopleGroups h2, .peopleGroups h3 { font-family: var(--font-body), sans-serif; font-size: 16px; margin-bottom: 14px; }
 .peopleGroups ul { list-style: none; padding: 0; margin: 0; }
 .peopleGroups li { margin-bottom: 10px; font-size: 14px; }
 .peopleGroups a { display: inline-flex; align-items: center; min-height: 44px; color: var(--accent); }
 .peopleGroups li span { display: block; color: var(--muted); font-size: 12px; line-height: 1.5; }
 @media (max-width: 1000px) { .peopleGroups { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 480px) { .peopleGroups { grid-template-columns: 1fr; gap: 22px; } .collaborators summary > span { display: block; margin: 4px 0 0 18px; } }
+
+.recommendationLink { display: inline-flex; align-items: center; min-height: 44px; margin-top: 12px; color: var(--accent); font-size: 14px; }
+.recommendation { margin: 36px 0 0; padding: 28px 0 0; border-top: 1px solid var(--line); scroll-margin-top: 28px; }
+.recommendation blockquote { margin: 28px 0 0; padding-left: 24px; border-left: 1px solid var(--line); }
+.quoteMark { display: block; color: var(--accent); font-family: var(--font-display), Georgia, serif; font-size: 72px; line-height: 0.8; }
+.recommendation blockquote p { color: var(--ink); font-family: var(--font-display), Georgia, serif; font-style: italic; font-size: clamp(21px, 2vw, 25px); line-height: 1.55; }
+.recommendation figcaption { margin: 18px 0 0 25px; font-size: 14px; line-height: 1.7; }
+.recommendation figcaption a { display: inline-flex; align-items: center; min-height: 44px; color: var(--accent); }
+.recommendation figcaption span { display: block; color: var(--muted); font-size: 13px; }

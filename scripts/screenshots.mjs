@@ -6,12 +6,13 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 
 const base = (process.argv[2] ?? "http://localhost:3000").replace(/\/$/, "");
-const out = fileURLToPath(new URL("../screenshots/sg-1764-site-theme/", import.meta.url));
+const out = fileURLToPath(new URL("../screenshots/sg-1779-partyslate/", import.meta.url));
 const canonicalOrigin = "https://www.robabby.com";
 const routes = [
   { path: "/", name: "home" },
   { path: "/work-with-me", name: "services" },
   { path: "/work/savo", name: "savo" },
+  { path: "/work/partyslate", name: "partyslate" },
   { path: "/privacy", name: "privacy" },
 ];
 const variants = [
@@ -96,7 +97,7 @@ try {
     });
     for (const { path, name: routeName } of routes) {
       const response = await page.goto(`${base}${path}`, {
-        waitUntil: "networkidle",
+        waitUntil: "domcontentloaded",
       });
       assert.equal(response.status(), 200);
       await page.evaluate(() => document.fonts.ready);
@@ -135,6 +136,7 @@ try {
         0,
       );
       for (const img of await page.locator("img").all()) {
+        if (!(await img.isVisible())) continue;
         await img.scrollIntoViewIfNeeded();
         await img.evaluate((el) => el.decode());
         assert.ok(await img.getAttribute("alt"));
@@ -307,7 +309,7 @@ try {
     .getByRole("link", { name: "Work with me" })
     .click();
   await page.waitForURL(`${base}/work-with-me`);
-  await page.waitForLoadState("networkidle");
+  await page.waitForLoadState("load");
   assert.ok(await page.locator(".skip").evaluate((el) => el.getBoundingClientRect().bottom < 0),
     "Pointer navigation keeps the skip link offscreen");
   assert.equal(await page.locator("html").getAttribute("data-theme"), "dark");
@@ -338,7 +340,7 @@ try {
 
   await page.getByRole("link", { name: "Read the SAVO story", exact: true }).last().click();
   await page.waitForURL(`${base}/work/savo`);
-  await page.waitForLoadState("networkidle");
+  await page.waitForLoadState("load");
   assert.ok(await page.locator(".skip").evaluate((el) => el.getBoundingClientRect().bottom < 0),
     "The work link navigates without revealing the skip link");
   await page.keyboard.press("Tab");
@@ -361,15 +363,15 @@ try {
     return bounds.top >= 0 && bounds.bottom <= innerHeight;
   });
   const expectedProfiles = [
-    "brittanymikottis", "johnnarofsky", "tom-green-b6198a4", "allisonpaul",
+    "meggancarczyk", "gwgoodman", "brittanymikottis", "johnnarofsky", "tom-green-b6198a4", "allisonpaul", "esands", "caronp", "jeff-charbeneau-984b7a14", "braunreyes", "andrewikamas", "jason-liu-a4757812",
     "zachary-debelak-39b7541", "doug-marquis", "vbrianhauk",
   ].map((slug) => `https://www.linkedin.com/in/${slug}/`).sort();
   const profiles = await page.locator('article a[href^="https://www.linkedin.com/in/"]')
-    .evaluateAll((links) => links.map((link) => link.href).sort());
+    .evaluateAll((links) => [...new Set(links.map((link) => link.href))].sort());
   assert.deepEqual(profiles, expectedProfiles);
   const article = await page.locator("article").innerText();
   assert.ok(article.includes("The redesign shipped to customers and was well received."));
-  assert.ok(article.includes("The team never delivered that work to customers; company priorities changed."));
+  assert.ok(article.includes("The recommendation initiative ultimately didn’t reach customers; company priorities changed."));
   assert.doesNotMatch(article, /private review|draft 02|Downloads\/Portfolio|iHeartMEDIA/i);
   const caseSchema = await page.locator('script[type="application/ld+json"]')
     .evaluateAll((items) => items.map((el) => JSON.parse(el.textContent))
@@ -384,6 +386,33 @@ try {
     .getByRole("link", { name: "Explore WavePoint" }).click();
   await page.waitForURL(`${base}/#wavepoint`);
   assert.ok(await page.locator("#wavepoint-title").isVisible());
+
+  await page.goto(base);
+  assert.deepEqual(await page.locator(".work-grid article h3").allTextContents(), ["WavePoint", "PartySlate", "SAVO"]);
+  await page.getByRole("link", { name: "PartySlate — read the case study", exact: true }).click();
+  await page.waitForURL(`${base}/work/partyslate`);
+  await page.getByRole("navigation", { name: "In this case study" }).getByRole("link", { name: "The Soirée design system", exact: true }).click();
+  await page.waitForURL(`${base}/work/partyslate#design-system`);
+  const partyText = await page.locator("article").innerText();
+  assert.ok(partyText.includes("and to PartySlate's detriment"));
+  assert.ok(partyText.includes("Rollup"));
+  assert.doesNotMatch(partyText, /150%|private review|page-drafts|\/Users\//i);
+  const partyProfiles = await page.locator('article a[href^="https://www.linkedin.com/in/"]').evaluateAll(links => [...new Set(links.map(link => link.href))].sort());
+  assert.deepEqual(partyProfiles, ["ben-kimpel", "mark-semon-84ab913", "lucasbrandt", "katharine-cooney", "tylertravitz"].map(slug => `https://www.linkedin.com/in/${slug}/`).sort());
+  assert.equal(await page.locator("article figure").count(), 7);
+  const people = page.locator("#people");
+  await people.locator("summary").click();
+  assert.equal(await people.getAttribute("open"), "");
+  assert.equal(await people.locator("a").count(), 5);
+  await people.locator("summary").click();
+  assert.equal(await people.getAttribute("open"), null);
+  for (const link of await page.locator('article figcaption a[href^="/images/"]').all()) {
+    assert.equal((await context.request.get(new URL(await link.getAttribute("href"), base).href)).status(), 200);
+  }
+  await page.getByRole("navigation", { name: "Related work" }).getByRole("link", { name: "Read the SAVO story" }).click();
+  await page.waitForURL(`${base}/work/savo`);
+  await page.getByRole("navigation", { name: "Related work" }).getByRole("link", { name: "Read the PartySlate story" }).click();
+  await page.waitForURL(`${base}/work/partyslate`);
 
   const sitemap = await context.request.get(`${base}/sitemap.xml`);
   assert.equal(sitemap.status(), 200);

@@ -41,9 +41,9 @@ Headings use close leading (usually 1.08–1.15) and slightly tightened tracking
 
 - The shared container is at most 1200px wide, with 48px side gutters. Gutters become 28px at 1000px and below, then 20px at 720px and below.
 - The recurring editorial grid uses a 280px heading or identity column, a 90px gap, and a flexible content column. At 1000px and below, the rail is 220px and the gap 50px. Sections stack at 720px and below.
-- Selected work uses a wider WavePoint column and narrower SAVO column (1.45:1, with a 40px gap), then stacks on phones. Project entries are open content groups rather than enclosed cards.
+- Selected work features WavePoint across the first row, with its gallery and description in a 1.45:1 split. PartySlate and SAVO follow in two equal columns, in that order. The layout stacks on phones. Project entries are open content groups rather than enclosed cards.
 - Major sections are separated by one-pixel rules and generous vertical space. Contact uses the page background and the same editorial grid.
-- The SAVO article uses the shared rail for its contents list, sticky 28px from the top on larger screens. On phones, contents precede the story and stop being sticky. Privacy and the not-found page use the narrower 760px reading layout.
+- The SAVO and PartySlate articles use the shared rail for its contents list, sticky 28px from the top on larger screens. On phones, contents precede the story and stop being sticky. Privacy and the not-found page use the narrower 760px reading layout.
 
 Keep navigation visible at every width. The mobile header places the identity and theme control above a full-width row of navigation links, without a menu drawer. The portrait moves beside the name and location, shrinking from 192px to 84px, then 72px at the narrowest breakpoint.
 
@@ -73,7 +73,7 @@ The outlined theme button includes an icon and the destination theme’s name, �
 
 ### Employer logos
 
-Use the original PartySlate, project44, and SAVO wordmarks from `ExperienceLogos`, with their individual optical sizes and `currentColor`. The homepage label is “Previously at”. Company homepage links open in new tabs; SAVO links to the local case study. Preserve the named links and original artwork; source notes are in `docs/ux/company-logos.md`.
+Use the original PartySlate, project44, and SAVO wordmarks from `ExperienceLogos`, with their individual optical sizes and `currentColor`. The homepage label is “Previously at”. PartySlate and SAVO link to their local case studies; project44’s company homepage opens in a new tab. Preserve the named links and original artwork; source notes are in `docs/ux/company-logos.md`.
 
 ### WavePoint gallery and imagery
 
@@ -86,6 +86,8 @@ Use the November 2026 product captures in `public/images/wavepoint/`. The iPhone
 Use `next/image` with intrinsic dimensions and responsive sizes. Only the hero portrait is prioritized; supporting images load lazily. The SAVO article crops its tall style-guide image for the page and links to the full source image.
 
 ### Reading and sharing
+
+Long-form recommendations use Newsreader italic at 21–25px, an accent opening quotation mark, and a one-pixel neutral inset rule. Introductions remain body text; linked attribution and dates sit below the full quotation.
 
 Services use the shared editorial rows and native `details` for the FAQ. SAVO, privacy, and the not-found page inherit the same type, rules, colors, and controls. Share cards use Newsreader and Instrument Sans on the dark ink background with the blue accent; the home card repeats the three-line statement.
 
