@@ -320,3 +320,29 @@ html:has(.portrait-dialog[open]) { overflow: hidden; }
   a { color: inherit; }
   h1, h2, h3 { break-after: avoid; }
 }
+
+/* Mobile menu uses a native modal dialog for focus containment and Escape. */
+.mobile-menu-button { display: none; }
+.mobile-menu { position: fixed; inset: 0 0 0 auto; width: min(360px, calc(100% - 24px)); max-width: none; height: 100dvh; max-height: none; margin: 0; padding: 0; border: 0; border-left: 1px solid var(--line); background: var(--paper); color: var(--ink); }
+.mobile-menu::backdrop { background: rgb(0 0 0 / 40%); }
+.mobile-menu-content { min-height: 100%; padding: max(20px, env(safe-area-inset-top)) 24px max(24px, env(safe-area-inset-bottom)); }
+.mobile-menu-heading { display: flex; align-items: center; justify-content: space-between; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+.mobile-menu-heading p { margin: 0; font-size: 26px; font-family: var(--font-display); }
+.mobile-menu-heading button, .mobile-menu-button { align-items: center; justify-content: center; width: 44px; height: 44px; padding: 10px; border: 1px solid var(--line); border-radius: 6px; background: transparent; }
+.mobile-menu-heading button { display: flex; }
+.mobile-menu-heading svg, .mobile-menu-button svg { width: 22px; height: 22px; }
+.mobile-menu .nav { display: flex; flex-direction: column; align-items: stretch; gap: 0; padding-block: 20px; font-size: 17px; }
+.mobile-menu .nav a { min-height: 48px; }
+.mobile-work-links { padding-bottom: 16px; margin-bottom: 12px; border-bottom: 1px solid var(--line); }
+.mobile-work-links p { color: var(--muted); font-size: 13px; margin-bottom: 8px; }
+.mobile-work-links ul { list-style: none; margin: 0; padding: 0; }
+.mobile-work-links a { display: flex; gap: 10px; }
+.mobile-work-links svg { width: 16px; height: 16px; }
+.mobile-menu .theme { width: 100%; font-size: 15px; }
+html:has(.mobile-menu[open]) { overflow: hidden; }
+@media (max-width: 720px) {
+  html[data-js] .site-header { padding-block: 12px; }
+  html[data-js] .header-right { display: none; }
+  html[data-js] .mobile-menu-button { display: flex; }
+}
+@media print { .mobile-menu, .mobile-menu-button { display: none !important; } }

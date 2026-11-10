@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { ChevronDownIcon, ExternalLinkIcon } from "@radix-ui/react-icons";
 
-export default function WorkNavigation() {
+export default function WorkNavigation({ mobile = false }: { mobile?: boolean }) {
   const disclosure = useRef<HTMLDetailsElement>(null);
 
   useEffect(() => {
@@ -15,6 +15,14 @@ export default function WorkNavigation() {
     document.addEventListener("pointerdown", dismiss);
     return () => document.removeEventListener("pointerdown", dismiss);
   }, []);
+
+  const links = <>
+    <li><a href="https://wavepoint.space/" target="_blank" rel="noopener noreferrer">WavePoint <ExternalLinkIcon aria-hidden="true" /><span className="sr-only"> (opens in a new tab)</span></a></li>
+    <li><Link href="/work/partyslate">PartySlate</Link></li>
+    <li><Link href="/work/savo">SAVO</Link></li>
+  </>;
+
+  if (mobile) return <div className="mobile-work-links"><p>Work</p><ul>{links}</ul></div>;
 
   return (
     <details
@@ -35,9 +43,7 @@ export default function WorkNavigation() {
       <ul className="work-nav-links" onClick={() => {
         if (disclosure.current) disclosure.current.open = false;
       }}>
-        <li><a href="https://wavepoint.space/" target="_blank" rel="noopener noreferrer">WavePoint <ExternalLinkIcon aria-hidden="true" /><span className="sr-only"> (opens in a new tab)</span></a></li>
-        <li><Link href="/work/partyslate">PartySlate</Link></li>
-        <li><Link href="/work/savo">SAVO</Link></li>
+        {links}
       </ul>
     </details>
   );

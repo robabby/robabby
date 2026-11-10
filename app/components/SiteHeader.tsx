@@ -1,10 +1,22 @@
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 import WorkNavigation from "./WorkNavigation";
+import MobileNavigation from "./MobileNavigation";
 
 type Props = { home?: boolean; currentPage?: "services" | "ai"; localContact?: boolean };
 
 export default function SiteHeader({ home = false, currentPage, localContact = false }: Props) {
+  const navigation = (mobile = false) => <>
+    <nav className="nav" aria-label="Main navigation">
+      <WorkNavigation mobile={mobile} />
+      <Link href="/ai" aria-current={currentPage === "ai" ? "page" : undefined}>AI workflow</Link>
+      <Link href="/work-with-me" aria-current={currentPage === "services" ? "page" : undefined}>Work with me</Link>
+      <Link href="/#about">About</Link>
+      <a href={home || localContact ? "#contact" : "/#contact"}>Contact</a>
+    </nav>
+    <ThemeToggle />
+  </>;
+
   return (
     <>
       <a className="skip" href="#main-content">
@@ -18,16 +30,8 @@ export default function SiteHeader({ home = false, currentPage, localContact = f
             Rob Abby
           </Link>
         )}
-        <div className="header-right">
-          <nav className="nav" aria-label="Main navigation">
-            <WorkNavigation />
-            <Link href="/ai" aria-current={currentPage === "ai" ? "page" : undefined}>AI workflow</Link>
-            <Link href="/work-with-me" aria-current={currentPage === "services" ? "page" : undefined}>Work with me</Link>
-            <Link href="/#about">About</Link>
-            <a href={home || localContact ? "#contact" : "/#contact"}>Contact</a>
-          </nav>
-          <ThemeToggle />
-        </div>
+        <div className="header-right">{navigation()}</div>
+        <MobileNavigation>{navigation(true)}</MobileNavigation>
       </header>
     </>
   );
