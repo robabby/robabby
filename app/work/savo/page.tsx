@@ -270,7 +270,11 @@ export default function Savo() {
         <div className="wrap">
           <article aria-labelledby="savo-title">
             <header className={styles.hero}>
-              <div>
+              <figure className={styles.heroImage}>
+                <Image src="/images/savo/design-workshop.jpg" alt="A colleague discussing interface sketches displayed on a glass wall during a SAVO team design session." width={1200} height={900} sizes="(max-width: 720px) 100vw, (max-width: 1000px) 44vw, 510px" priority />
+                <figcaption>A team design session at SAVO.</figcaption>
+              </figure>
+              <div className={styles.heroCopy}>
                 <h1 id="savo-title">Building a UI/UX practice at SAVO.</h1>
                 <p className={styles.lead}>SAVO is where I began to see how much I could contribute beyond frontend engineering. My path into UI/UX went through a company-wide shift in how we worked, Product Owner training, and a period with the Data Science team. Each chapter changed how I thought about building software with other people.</p>
                 <p className={styles.intro}>I led the initiative to form our UI/UX team, hired visual designer <a href="https://www.linkedin.com/in/brittanymikottis/">Brittany Mikottis</a>, and worked alongside her on design and implementation. I also built the shared Ember.js component system and style guide used across several parts of the product.</p>

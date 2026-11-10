@@ -37,3 +37,7 @@ Rob approved the placement and image selection on November 8, 2026. These histor
 | `styleguide-empty-states.png` | `SavoStyleguide - Voice & Tone - Blank State.png` |
 | `styleguide-icons.png` | `SavoStyleguide - Design - Icons.png` |
 | `styleguide-voice-tone.png` | `SavoStyleguide - Voice & Tone - Intro.png` |
+
+## Hero photograph — SG-1793
+
+`design-workshop.jpg` is a web derivative of `IMG_3681.JPG` from the preserved Design Studio Photos collection. Auto-oriented and resized to 1200 × 900, with metadata removed. It shows a colleague discussing interface sketches during a team design session. The specific project, date, and person's identity are not established. Rob selected this photograph for the case-study introduction on November 10, 2026.

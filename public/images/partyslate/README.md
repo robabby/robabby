@@ -8,3 +8,7 @@ Historical images supplied from Rob Abby’s retained PartySlate archive and sel
 - `onboarding-company.jpg`, `onboarding-event.jpg`, `onboarding-mobile.jpg`: Q1 2023 onboarding design document, pages 4, 18 and 65. Design artifacts, not production screenshots or evidence of measured conversion outcomes.
 
 The original source documents and research remain in the private career archive. Public captions preserve the distinction between design, development and released work.
+
+## Hero photograph — SG-1793
+
+`panel-discussion.jpg` is a 1024 × 768 JPEG derivative of a photograph Rob supplied on November 10, 2026 for a local hero-image trial. It shows two speakers and an audience in front of a PartySlate backdrop. The event date and speakers' identities are not established. Metadata was removed; the composition is uncropped.
