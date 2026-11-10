@@ -145,10 +145,9 @@
 .ai-page .evidence-intro { font-size: 15px; line-height: 1.65; color: var(--muted); max-width: 70ch; margin: 0 0 24px; }
 .ai-page .evidence-pair { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .ai-page .terminal-capture { max-width: 1000px; margin-left: auto; margin-right: auto; }
-.ai-page .terminal-capture figcaption { font-size: 15px; line-height: 1.6; padding-top: 16px; }
-.ai-page .terminal-capture figcaption strong { font-weight: 500; }
+.ai-page .terminal-capture figcaption { font-size: 15px; line-height: 1.6; padding: 0 0 24px; }
 .ai-page .terminal-capture figcaption p { color: var(--muted); max-width: 70ch; margin: 6px 0; }
-.ai-page .terminal-capture figcaption a { display: inline-flex; align-items: center; min-height: 44px; color: var(--accent); font-size: 13px; }
+.ai-page .terminal-capture .full-image-link { display: inline-flex; align-items: center; min-height: 44px; color: var(--accent); font-size: 13px; }
 @media (max-width: 720px) {
   .ai-page .work-evidence { margin-top: 28px; }
   .ai-page .work-evidence h3 { font-size: 24px; }
@@ -157,4 +156,15 @@
 
 @media (max-width: 720px) {
   .ai-page .evidence-pair { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; overflow: visible; padding: 0; }
+}
+
+/* Introduce the real task before asking readers to inspect Linear. */
+.ai-page #linear-in-practice { border-top: 1px solid var(--line); padding-top: 36px; margin-top: 40px; }
+.ai-page .evidence-pair figcaption { padding: 0 0 16px; }
+.ai-page .evidence-pair figcaption strong { font-size: 18px; }
+.ai-page .evidence-pair figcaption span { font-size: 14px; line-height: 1.6; max-width: 56ch; margin-top: 6px; }
+.ai-page .evidence-hint { font-size: 12px; line-height: 1.6; color: var(--muted); margin: 18px 0 0; }
+@media (max-width: 720px) {
+  .ai-page #linear-in-practice { margin-top: 28px; padding-top: 28px; }
+  .ai-page .evidence-pair { gap: 28px; }
 }
