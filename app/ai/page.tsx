@@ -296,28 +296,29 @@ export default function AIWorkflow() {
         </div>
         <p className="work-caption">Illustrative tickets from one idea. Open a ticket to see its plan.</p>
         <div className="work-evidence" id="linear-in-practice">
-          <h3>A plan and its review, in Linear.</h3>
-          <p className="evidence-intro">This WavePoint widget task keeps the implementation plan, decisions and review screenshots together. Updates posted through MCP give the next session context to continue.</p>
+          <h3>One task, from plan to review.</h3>
+          <p className="evidence-intro">Here’s a real example: a WavePoint iPhone widget. We recorded what to build in a Linear task. The AI session then added progress notes and screenshots to that same task for review.</p>
           <ul className="screens-gallery evidence-pair" aria-label="A real WavePoint task in Linear">
             <li><figure>
+              <figcaption><strong>The plan</strong><span>Show the current sky and Moon details, with agreed behavior and implementation steps.</span></figcaption>
               <a className="screen-image" href="/images/ai-workflow/linear-widget-plan.png" aria-label="Open full-size screenshot: Linear implementation plan">
                 <Image src="/images/ai-workflow/linear-widget-plan.png" alt="Linear task SG-1712 for WavePoint widgets, showing its implementation plan and accepted product decisions." width={3194} height={1808} sizes="(max-width: 720px) 85vw, (max-width: 1296px) 46vw, 588px" />
               </a>
-              <figcaption><strong>The assignment and plan</strong><span>What to build, constraints and decisions · Open full size</span></figcaption>
             </figure></li>
             <li><figure>
+              <figcaption><strong>The review</strong><span>The session posts what changed, which checks passed and a screenshot I can inspect.</span></figcaption>
               <a className="screen-image" href="/images/ai-workflow/linear-widget-review.png" aria-label="Open full-size screenshot: Linear review comment">
                 <Image src="/images/ai-workflow/linear-widget-review.png" alt="An MCP-posted comment on the same Linear task with implementation notes, checks, and a screenshot of the running Moon widget." width={3204} height={2004} sizes="(max-width: 720px) 85vw, (max-width: 1296px) 46vw, 588px" />
               </a>
-              <figcaption><strong>The work returned for review</strong><span>Implementation notes, checks and a simulator screenshot · Open full size</span></figcaption>
             </figure></li>
           </ul>
+          <p className="evidence-hint">Both screenshots show the same task. Select an image to view it full size.</p>
         </div>
       </section>
       <section className="parallel-section" id="parallel" aria-labelledby="parallel-heading">
         <div className="work-intro">
           <h2 id="parallel-heading">Working in parallel.</h2>
-          <p>I generally aim for three or four concurrent sessions and try not to stay above four for too long. It depends on the work.</p>
+          <p>When working in the terminal, I generally aim for three or four concurrent AI sessions actively building or working on something. I try not to stay above four parallel sessions for too long. It depends on the work.</p>
         </div>
         <div className="parallel-board">
           <div className="parallel-board-heading">
@@ -388,10 +389,11 @@ export default function AIWorkflow() {
           </div>
         </div>
         <figure className="terminal-capture work-evidence" id="terminal-workspace">
+          <figcaption><h3>My terminal workspace</h3><p>Tabs keep separate conversations available as I move between projects. Here, the Moments session moves from a merged change into the next design question. Open tabs aren’t necessarily all actively working.</p></figcaption>
           <a className="screen-image" href="/images/ai-workflow/terminal-tabs.png" aria-label="Open full-size screenshot: my terminal workspace">
             <Image src="/images/ai-workflow/terminal-tabs.png" alt="Rob’s terminal with named tabs for iOS, web, content and other projects. The selected Moments session reports a merged change and asks about the next design decision." width={2464} height={1794} sizes="(max-width: 720px) calc(100vw - 40px), (max-width: 1096px) calc(100vw - 96px), 1000px" />
           </a>
-          <figcaption><strong>My terminal workspace</strong><p>Tabs keep separate conversations available as I move between projects. Here, the Moments session moves from a merged change into the next design question. Open tabs aren’t necessarily all actively working.</p><a href="/images/ai-workflow/terminal-tabs.png">Open full-size screenshot →</a></figcaption>
+          <a className="full-image-link" href="/images/ai-workflow/terminal-tabs.png">Open full-size screenshot →</a>
         </figure>
       </section>
       <section className="work-screens" id="working-screens" aria-labelledby="screens-heading">
