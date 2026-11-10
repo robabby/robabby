@@ -1,18 +1,25 @@
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 760px) 1fr;
-  gap: 70px;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  grid-template-areas: "copy image" "copy context";
+  grid-template-rows: auto 1fr;
+  gap: 28px 64px;
   padding: 60px 0;
   border-bottom: 1px solid var(--line);
 }
+.heroCopy { grid-area: copy; }
+.heroImage { grid-area: image; margin: 0; }
+.heroImage img { width: 100%; height: auto; border-radius: 5px; }
+.heroImage figcaption { margin-top: 10px; color: var(--muted); font-size: 12px; line-height: 1.6; }
 .hero h1 { font-size: clamp(42px, 4.4vw, 62px); line-height: 1.08; max-width: 720px; margin-bottom: 27px; }
 .websiteLink { margin-bottom: 24px; font-size: 15px; }
 .lead { font-size: 22px; line-height: 1.6; max-width: 650px; margin-bottom: 21px; }
 .intro { color: var(--muted); font-size: 16px; line-height: 1.75; max-width: 650px; }
 .acquisitionNote { margin-top: 24px; color: var(--muted); font-size: 14px; line-height: 1.7; }
 .acquisitionNote a { color: var(--accent); }
-.projectContext { align-self: end; font-size: 14px; line-height: 1.7; }
+.projectContext { grid-area: context; align-self: start; font-size: 14px; line-height: 1.7; }
 .projectContext dl { margin: 0; }
+.projectContext dl > div:first-child dt { margin-top: 0; }
 .projectContext dt { margin: 24px 0 7px; font-size: 12px; color: var(--muted); }
 .projectContext dd { margin: 0; }
 .layout { display: grid; grid-template-columns: 280px minmax(0, 1fr); gap: 90px; padding: 54px 0 65px; }
@@ -52,18 +59,18 @@
 .related a { display: inline-flex; align-items: center; gap: 24px; min-height: 44px; color: var(--accent); font-size: 16px; }
 .related svg { width: 20px; height: 20px; }
 @media (max-width: 1000px) {
-  .hero { grid-template-columns: minmax(0, 1fr) 190px; gap: 42px; }
+  .hero { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); column-gap: 36px; }
   .layout { grid-template-columns: 220px minmax(0, 1fr); gap: 50px; }
   .projectContext, .contents { font-size: 13px; }
   .lead { font-size: 20px; }
   .section h2 { font-size: 33px; }
 }
 @media (max-width: 720px) {
-  .hero { display: block; padding: 32px 0; }
+  .hero { grid-template-columns: minmax(0, 1fr); grid-template-areas: "image" "copy" "context"; grid-template-rows: auto; gap: 28px; padding: 32px 0; }
   .hero h1 { font-size: 42px; }
   .lead { font-size: 19px; }
   .intro { font-size: 15px; }
-  .projectContext dl { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-top: 25px; }
+  .projectContext dl { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
   .projectContext dt { margin-top: 0; }
   .layout { display: block; padding: 28px 0 38px; }
   .contents { position: static; padding-bottom: 26px; margin-bottom: 34px; border-bottom: 1px solid var(--line); }
