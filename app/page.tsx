@@ -46,23 +46,24 @@ export default function Home() {
           <ExperienceLogos />
         </section>
         <AIWorkflowInvitation />
-        <section className="wrap selected-work" id="work" aria-label="Selected work">
+        <section className="wrap selected-work" id="work" aria-labelledby="work-title">
+          <h2 id="work-title">Work</h2>
           <div className="work-grid">
             <article className="project-work" id="wavepoint" aria-labelledby="wavepoint-title">
               <div className="project-heading">
-                <h2 id="wavepoint-title"><a href="https://wavepoint.space/">WavePoint</a></h2>
+                <h3 id="wavepoint-title"><a href="https://wavepoint.space/" target="_blank" rel="noopener noreferrer">WavePoint<span className="sr-only"> (opens in a new tab)</span></a></h3>
                 <span>Current business</span>
               </div>
               <p className="project-role">Product, design, and AI-assisted development</p>
               <WavePointGallery />
               <div className="work-info">
                 <p>WavePoint is an astrology app I’m building for iPhone. It brings together charts, readings, and a place to record experiences and revisit them over time. As founder, I look after the product, design, engineering, and day-to-day business, collaborating with my wife, Shayna. The app is currently in TestFlight.</p>
-                <a className="text-link" href="https://wavepoint.space/">Visit WavePoint <ArrowRightIcon className="arrow" aria-hidden="true" /></a>
+                <a className="text-link" href="https://wavepoint.space/" target="_blank" rel="noopener noreferrer">Visit WavePoint<span className="sr-only"> (opens in a new tab)</span> <ArrowRightIcon className="arrow" aria-hidden="true" /></a>
               </div>
             </article>
             <article className="project-work" aria-labelledby="partyslate-work-title">
               <div className="project-heading">
-                <h2 id="partyslate-work-title"><Link href="/work/partyslate">PartySlate</Link></h2>
+                <h3 id="partyslate-work-title"><Link href="/work/partyslate">PartySlate</Link></h3>
                 <span>2018–2024</span>
               </div>
               <p className="project-role">Frontend engineering and design systems</p>
@@ -79,7 +80,7 @@ export default function Home() {
             </article>
             <article className="project-work" aria-labelledby="savo-work-title">
               <div className="project-heading">
-                <h2 id="savo-work-title"><Link href="/work/savo">SAVO</Link></h2>
+                <h3 id="savo-work-title"><Link href="/work/savo">SAVO</Link></h3>
                 <span>2013–2018</span>
               </div>
               <p className="project-role">Frontend engineering, product ownership, and UX</p>
@@ -97,10 +98,10 @@ export default function Home() {
           </div>
         </section>
         <section className="wrap about" id="about" aria-labelledby="about-title">
-          <h2 id="about-title">A bit about how I work.</h2>
+          <h2 id="about-title">A bit about<br /><span>how I work.</span></h2>
           <div className="about-copy">
             <p>A lot of my attention goes into how someone will actually use what we’re making. I’m interested in what they’re trying to do, how they think about it, and how the software could help.</p>
-            <p>I also enjoy helping other engineers grow—pairing on difficult problems, sharing what I’ve learned, and working across design and engineering to make it easier for a team to build together.</p>
+            <p>I also enjoy helping other people grow—pairing on difficult problems, sharing what I’ve learned, and working across disciplines to make it easier for a team to build together.</p>
             <p>AI has become a substantial part of how I work. I use it throughout development, and I’m continuing to learn where it helps and what needs more attention from me. I try to keep the work practical, make decisions deliberately, and avoid complexity that doesn’t help.</p>
             <p>Before WavePoint, I worked at <Link href="/work/savo">SAVO</Link>, project44, and <Link href="/work/partyslate">PartySlate</Link>.</p>
             <div className="about-links">

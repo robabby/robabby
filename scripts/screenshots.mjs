@@ -189,9 +189,9 @@ try {
         );
       }
       if (path === "/work-with-me") {
-        await page.locator("summary").first().click();
+        await page.locator(".questions summary").first().click();
         assert.equal(
-          await page.locator("details").first().getAttribute("open"),
+          await page.locator(".questions details").first().getAttribute("open"),
           "",
         );
       }
@@ -315,11 +315,13 @@ try {
   assert.equal(await page.locator("html").getAttribute("data-theme"), "dark");
   await page.reload();
   assert.equal(await page.locator("html").getAttribute("data-theme"), "dark");
-  await page.getByRole("navigation", { name: "Main navigation" })
-    .getByRole("link", { name: "Work", exact: true }).click();
-  await page.waitForURL(`${base}/#work`);
+  await page.locator(".work-nav summary").click();
+  await page.locator(".work-nav").getByRole("link", { name: "SAVO", exact: true }).click();
+  await page.waitForURL(`${base}/work/savo`);
+  await page.getByRole("link", { name: "Rob Abby", exact: true }).click();
+  await page.waitForURL(`${base}/`);
   assert.ok(await page.locator("#wavepoint-title").isVisible());
-  assert.equal(await page.getByRole("link", { name: "Visit WavePoint", exact: true }).getAttribute("href"),
+  assert.equal(await page.getByRole("link", { name: "Visit WavePoint (opens in a new tab)", exact: true }).getAttribute("href"),
     "https://wavepoint.space/");
   await page.getByRole("link", { name: "About", exact: true }).click();
   await page.waitForURL(`${base}/#about`);

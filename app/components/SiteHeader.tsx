@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
+import WorkNavigation from "./WorkNavigation";
 
 type Props = { home?: boolean; currentPage?: "services" | "ai"; localContact?: boolean };
 
@@ -19,7 +20,7 @@ export default function SiteHeader({ home = false, currentPage, localContact = f
         )}
         <div className="header-right">
           <nav className="nav" aria-label="Main navigation">
-            <Link href="/#work">Work</Link>
+            <WorkNavigation />
             <Link href="/ai" aria-current={currentPage === "ai" ? "page" : undefined}>AI workflow</Link>
             <Link href="/work-with-me" aria-current={currentPage === "services" ? "page" : undefined}>Work with me</Link>
             <Link href="/#about">About</Link>

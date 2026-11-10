@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRightIcon } from "@radix-ui/react-icons";
+import { ArrowRightIcon, ExternalLinkIcon } from "@radix-ui/react-icons";
 import SiteHeader from "@/app/components/SiteHeader";
+import CaseStudyContents from "@/app/components/CaseStudyContents";
 import Contact from "@/app/components/Contact";
 import JsonLd from "@/app/components/JsonLd";
 import { pageMetadata, PAGE_INFO, SITE_URL } from "@/app/lib/site";
@@ -83,6 +84,7 @@ export default function PartySlate() {
           <header className={styles.hero}>
             <div>
               <h1 id="partyslate-title">Building interfaces and shared foundations at PartySlate.</h1>
+              <a className={`text-link ${styles.websiteLink}`} href="https://www.partyslate.com/" target="_blank" rel="noopener noreferrer">Visit PartySlate <ExternalLinkIcon aria-hidden="true" /><span className="sr-only"> (opens in a new tab)</span></a>
               <p className={styles.lead}>At PartySlate, I built ways for people to find event inspiration, explore venues and get their businesses onto the platform. I also led the design-system work that helped us build more consistently.</p>
               <p className={styles.intro}>My work connected frontend engineering, interaction design and collaboration across the team. It was a challenging period, with opportunities to grow as an engineer, mentor and design-system lead.</p>
             </div>
@@ -126,10 +128,7 @@ export default function PartySlate() {
           </details>
           <a className={styles.recommendationLink} href="#tyler-recommendation">Read Tyler’s recommendation</a>
           <div className={styles.layout}>
-            <nav className={styles.contents} aria-label="In this case study">
-              <p>In this story</p>
-              <ol>{sections.map(section => <li key={section.id}><a href={`#${section.id}`}>{section.label}</a></li>)}</ol>
-            </nav>
+            <CaseStudyContents sections={sections.map(({ id, label }) => ({ id, label }))} />
             <div className={styles.story}>
               {sections.map(section => <section className={styles.section} id={section.id} key={section.id} aria-labelledby={`${section.id}-title`}>
                 <h2 id={`${section.id}-title`}>{section.title}</h2>

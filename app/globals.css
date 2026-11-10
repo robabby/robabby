@@ -79,6 +79,16 @@ main:focus { outline: none; }
 .nav a { display: inline-flex; align-items: center; min-height: 44px; color: var(--muted); text-decoration: none; }
 .nav a[aria-current="page"] { color: var(--accent); text-decoration: underline; }
 .nav a:hover { color: var(--accent); text-decoration: underline; }
+.work-nav { position: relative; }
+.work-nav summary { display: flex; align-items: center; gap: 5px; min-height: 44px; color: var(--muted); cursor: pointer; list-style: none; }
+.work-nav summary::-webkit-details-marker { display: none; }
+.work-nav summary:hover, .work-nav[open] summary { color: var(--accent); }
+.work-nav summary svg { width: 14px; height: 14px; }
+.work-nav[open] summary svg { transform: rotate(180deg); }
+.work-nav-links { position: absolute; top: calc(100% + 8px); left: 0; z-index: 5; min-width: 180px; padding: 6px; margin: 0; list-style: none; border: 1px solid var(--line); border-radius: 5px; background: var(--paper); }
+.nav .work-nav-links a { display: flex; justify-content: space-between; gap: 20px; padding: 8px 12px; color: var(--ink); }
+.nav .work-nav-links a:hover { color: var(--accent); background: var(--surface); }
+.work-nav-links svg { width: 15px; height: 15px; }
 .theme { display: flex; align-items: center; justify-content: center; gap: 7px; min-height: 44px; min-width: 86px; padding: 8px 13px; font-size: 13px; border: 1px solid var(--line); border-radius: 6px; background: transparent; }
 .theme:hover { border-color: var(--muted); background: var(--surface); }
 .theme svg { width: 16px; height: 16px; }
@@ -107,14 +117,15 @@ a:hover .arrow { transform: translateX(3px); }
 .experience-logo-project44 { width: 100px; }
 .experience-logo-savo { width: 76px; }
 .selected-work { border-top: 1px solid var(--line); padding-top: 27px; }
+.selected-work > h2 { font-size: 47px; margin-bottom: 40px; }
 .work-grid { display: grid; gap: 48px; }
 .project-work { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); column-gap: 40px; }
 .project-work .project-heading, .project-work .project-role { grid-column: 1 / -1; }
 .project-work .work-info { margin-top: 0; align-self: center; }
 .project-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
-.project-heading h2 { font-size: 30px; line-height: 1.15; }
-.project-heading h2 a { text-decoration: none; }
-.project-heading h2 a:hover { text-decoration: underline; }
+.project-heading h3 { font-size: 30px; line-height: 1.15; }
+.project-heading h3 a { text-decoration: none; }
+.project-heading h3 a:hover { text-decoration: underline; }
 .project-heading > span, .project-role, .image-caption { font-size: 12px; color: var(--muted); }
 .project-role { margin-bottom: 9px; }
 .work-image { display: block; padding: 18px; background: var(--image-mat); border-radius: 5px; }
@@ -141,6 +152,7 @@ a:hover .arrow { transform: translateX(3px); }
 .about, .contact, .service-row, .approach, .questions { display: grid; grid-template-columns: 280px minmax(0, 1fr); gap: 90px; }
 .about { padding-block: 58px; margin-top: 54px; border-top: 1px solid var(--line); }
 .about h2 { font-size: 36px; max-width: 14ch; }
+.about h2 span { color: var(--accent); }
 .about-copy { max-width: 62ch; }
 .about-copy p { color: var(--muted); font-size: 16px; line-height: 1.75; }
 .about-copy p + p { margin-top: 18px; }
@@ -166,6 +178,8 @@ a:hover .arrow { transform: translateX(3px); }
 .proof-card p { color: var(--muted); font-size: 14px; line-height: 1.7; }
 .proof-card .text-link { font-size: 14px; margin-top: 9px; }
 .service-row { padding-block: 44px; border-top: 1px solid var(--line); }
+.work-reference { margin-top: 24px; padding: 14px 18px; border-radius: 5px; background: var(--surface); color: var(--muted); font-size: 15px; line-height: 1.7; }
+.work-reference a { color: var(--accent); }
 .service-row h2, .approach h2, .questions h2 { font-size: 36px; max-width: 18ch; }
 .section-context { margin-top: 16px; color: var(--muted); font-size: 13px; }
 .body-copy { color: var(--muted); max-width: 65ch; }
@@ -230,10 +244,11 @@ a:hover .arrow { transform: translateX(3px); }
   .experience-logo-project44 { width: clamp(76px, 21.5vw, 90px); }
   .experience-logo-savo { width: clamp(58px, 16vw, 66px); }
   .selected-work { padding-top: 24px; }
+  .selected-work > h2 { font-size: 39px; margin-bottom: 32px; }
   .work-grid, .project-work { display: block; }
   .project-work .work-info { margin-top: 16px; }
   .work-grid > article + article { margin-top: 34px; }
-  .project-heading h2 { font-size: 29px; }
+  .project-heading h3 { font-size: 29px; }
   .historical-preview { height: clamp(280px, 90vw, 400px); }
   .gallery-stage { height: clamp(280px, 90vw, 400px); padding: 14px; gap: 16px; }
   .gallery-phones img { max-width: calc(50% - 8px); }
