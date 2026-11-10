@@ -236,7 +236,7 @@ const sections = [
     title: "Learning to contribute beyond my title",
     label: "What I learned",
     content: (<>
-      <p>When I first joined SAVO, I compared my self-taught background with the degrees and experience of the people around me. I thought of myself as someone who was good at CSS. Over time, I learned that my product thinking, commitment to users, and interests outside engineering could be useful to the team, too. That meant the world to me.</p>
+      <p>When I first joined SAVO, I compared my self-taught background with the degrees and experience of the people around me. I thought of myself as someone who was good at CSS. I grew as an engineer there, deepening my JavaScript skills and learning to build shared UI components that other engineers could use. Over time, I also learned that my product thinking, commitment to users, and interests outside engineering could be useful to the team. That meant the world to me.</p>
     </>),
   }
 ];
