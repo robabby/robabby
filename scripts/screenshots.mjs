@@ -321,7 +321,7 @@ try {
   await page.getByRole("link", { name: "Rob Abby", exact: true }).click();
   await page.waitForURL(`${base}/`);
   assert.ok(await page.locator("#wavepoint-title").isVisible());
-  assert.equal(await page.getByRole("link", { name: "Visit WavePoint", exact: true }).getAttribute("href"),
+  assert.equal(await page.getByRole("link", { name: "Visit WavePoint (opens in a new tab)", exact: true }).getAttribute("href"),
     "https://wavepoint.space/");
   await page.getByRole("link", { name: "About", exact: true }).click();
   await page.waitForURL(`${base}/#about`);

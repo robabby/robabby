@@ -19,7 +19,7 @@ export default function Contact({
           robabby23@gmail.com <ArrowRightIcon className="arrow" aria-hidden="true" />
         </a>
         {wavepointLink && (
-          <p className="contact-product">Interested in WavePoint? <a href="https://wavepoint.space/">Visit WavePoint.</a></p>
+          <p className="contact-product">Interested in WavePoint? <a href="https://wavepoint.space/" target="_blank" rel="noopener noreferrer">Visit WavePoint.<span className="sr-only"> (opens in a new tab)</span></a></p>
         )}
       </div>
     </section>

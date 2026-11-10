@@ -47,18 +47,18 @@ export default function Home() {
         </section>
         <AIWorkflowInvitation />
         <section className="wrap selected-work" id="work" aria-labelledby="work-title">
-          <h2 id="work-title">Selected work</h2>
+          <h2 id="work-title">Work</h2>
           <div className="work-grid">
             <article className="project-work" id="wavepoint" aria-labelledby="wavepoint-title">
               <div className="project-heading">
-                <h3 id="wavepoint-title"><a href="https://wavepoint.space/">WavePoint</a></h3>
+                <h3 id="wavepoint-title"><a href="https://wavepoint.space/" target="_blank" rel="noopener noreferrer">WavePoint<span className="sr-only"> (opens in a new tab)</span></a></h3>
                 <span>Current business</span>
               </div>
               <p className="project-role">Product, design, and AI-assisted development</p>
               <WavePointGallery />
               <div className="work-info">
                 <p>WavePoint is an astrology app I’m building for iPhone. It brings together charts, readings, and a place to record experiences and revisit them over time. As founder, I look after the product, design, engineering, and day-to-day business, collaborating with my wife, Shayna. The app is currently in TestFlight.</p>
-                <a className="text-link" href="https://wavepoint.space/">Visit WavePoint <ArrowRightIcon className="arrow" aria-hidden="true" /></a>
+                <a className="text-link" href="https://wavepoint.space/" target="_blank" rel="noopener noreferrer">Visit WavePoint<span className="sr-only"> (opens in a new tab)</span> <ArrowRightIcon className="arrow" aria-hidden="true" /></a>
               </div>
             </article>
             <article className="project-work" aria-labelledby="partyslate-work-title">

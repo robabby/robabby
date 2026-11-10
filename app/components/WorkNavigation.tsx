@@ -35,7 +35,7 @@ export default function WorkNavigation() {
       <ul className="work-nav-links" onClick={() => {
         if (disclosure.current) disclosure.current.open = false;
       }}>
-        <li><a href="https://wavepoint.space/">WavePoint <ExternalLinkIcon aria-hidden="true" /><span className="sr-only"> (external website)</span></a></li>
+        <li><a href="https://wavepoint.space/" target="_blank" rel="noopener noreferrer">WavePoint <ExternalLinkIcon aria-hidden="true" /><span className="sr-only"> (opens in a new tab)</span></a></li>
         <li><Link href="/work/partyslate">PartySlate</Link></li>
         <li><Link href="/work/savo">SAVO</Link></li>
       </ul>
