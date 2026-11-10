@@ -6,6 +6,7 @@
   border-bottom: 1px solid var(--line);
 }
 .hero h1 { font-size: clamp(42px, 4.4vw, 62px); line-height: 1.08; max-width: 720px; margin-bottom: 27px; }
+.websiteLink { margin-bottom: 24px; font-size: 15px; }
 .lead { font-size: 22px; line-height: 1.6; max-width: 650px; margin-bottom: 21px; }
 .intro { color: var(--muted); font-size: 16px; line-height: 1.75; max-width: 650px; }
 .acquisitionNote { margin-top: 24px; color: var(--muted); font-size: 14px; line-height: 1.7; }

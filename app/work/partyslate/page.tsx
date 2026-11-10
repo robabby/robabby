@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRightIcon } from "@radix-ui/react-icons";
+import { ArrowRightIcon, ExternalLinkIcon } from "@radix-ui/react-icons";
 import SiteHeader from "@/app/components/SiteHeader";
 import Contact from "@/app/components/Contact";
 import JsonLd from "@/app/components/JsonLd";
@@ -83,6 +83,7 @@ export default function PartySlate() {
           <header className={styles.hero}>
             <div>
               <h1 id="partyslate-title">Building interfaces and shared foundations at PartySlate.</h1>
+              <a className={`text-link ${styles.websiteLink}`} href="https://www.partyslate.com/" target="_blank" rel="noopener noreferrer">Visit PartySlate <ExternalLinkIcon aria-hidden="true" /><span className="sr-only"> (opens in a new tab)</span></a>
               <p className={styles.lead}>At PartySlate, I built ways for people to find event inspiration, explore venues and get their businesses onto the platform. I also led the design-system work that helped us build more consistently.</p>
               <p className={styles.intro}>My work connected frontend engineering, interaction design and collaboration across the team. It was a challenging period, with opportunities to grow as an engineer, mentor and design-system lead.</p>
             </div>
