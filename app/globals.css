@@ -152,6 +152,7 @@ a:hover .arrow { transform: translateX(3px); }
 .about, .contact, .service-row, .approach, .questions { display: grid; grid-template-columns: 280px minmax(0, 1fr); gap: 90px; }
 .about { padding-block: 58px; margin-top: 54px; border-top: 1px solid var(--line); }
 .about h2 { font-size: 36px; max-width: 14ch; }
+.about h2 span { color: var(--accent); }
 .about-copy { max-width: 62ch; }
 .about-copy p { color: var(--muted); font-size: 16px; line-height: 1.75; }
 .about-copy p + p { margin-top: 18px; }

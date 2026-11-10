@@ -98,7 +98,7 @@ export default function Home() {
           </div>
         </section>
         <section className="wrap about" id="about" aria-labelledby="about-title">
-          <h2 id="about-title">A bit about how I work.</h2>
+          <h2 id="about-title">A bit about<br /><span>how I work.</span></h2>
           <div className="about-copy">
             <p>A lot of my attention goes into how someone will actually use what we’re making. I’m interested in what they’re trying to do, how they think about it, and how the software could help.</p>
             <p>I also enjoy helping other engineers grow—pairing on difficult problems, sharing what I’ve learned, and working across design and engineering to make it easier for a team to build together.</p>
