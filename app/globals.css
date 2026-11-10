@@ -177,6 +177,8 @@ a:hover .arrow { transform: translateX(3px); }
 .proof-card p { color: var(--muted); font-size: 14px; line-height: 1.7; }
 .proof-card .text-link { font-size: 14px; margin-top: 9px; }
 .service-row { padding-block: 44px; border-top: 1px solid var(--line); }
+.work-reference { margin-top: 24px; padding: 14px 18px; border-radius: 5px; background: var(--surface); color: var(--muted); font-size: 15px; line-height: 1.7; }
+.work-reference a { color: var(--accent); }
 .service-row h2, .approach h2, .questions h2 { font-size: 36px; max-width: 18ch; }
 .section-context { margin-top: 16px; color: var(--muted); font-size: 13px; }
 .body-copy { color: var(--muted); max-width: 65ch; }
