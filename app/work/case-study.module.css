@@ -29,6 +29,7 @@
 .contents a { display: flex; align-items: center; min-height: 44px; padding: 8px 0; color: var(--muted); text-decoration: none; }
 .contents a:hover { color: var(--accent); text-decoration: underline; }
 .contents a[aria-current="location"] { color: var(--accent); text-decoration: underline; }
+.contentsToggle { display: none; }
 .story { min-width: 0; }
 .section { padding-bottom: 42px; margin-bottom: 42px; border-bottom: 1px solid var(--line); }
 .section:last-child { padding-bottom: 0; margin-bottom: 0; border-bottom: 0; }
@@ -75,12 +76,29 @@
   .layout { display: block; padding: 28px 0 38px; }
   .contents { position: static; padding-bottom: 26px; margin-bottom: 34px; border-bottom: 1px solid var(--line); }
   .contents ol { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 24px; }
+  :global(html[data-js]) .contents { position: sticky; top: 0; z-index: 4; padding: 0; margin-bottom: 28px; background: var(--paper); }
+  :global(html[data-js]) .contents > p { display: none; }
+  :global(html[data-js]) .contentsToggle { display: flex; align-items: center; justify-content: space-between; gap: 16px; width: 100%; min-height: 68px; padding: 10px 0; border: 0; background: var(--paper); text-align: left; font-size: 15px; line-height: 1.4; }
+  .contentsToggle > span { display: grid; gap: 3px; }
+  .contentsLabel { font-size: 12px; color: var(--muted); }
+  .contentsToggle svg { width: 18px; height: 18px; flex-shrink: 0; transition: transform 200ms ease-out; }
+  .contents[data-open="true"] .contentsToggle svg { transform: rotate(180deg); }
+  :global(html[data-js]) .contents ol { display: none; position: absolute; top: 100%; left: 0; right: 0; max-height: min(60dvh, 480px); overflow-y: auto; overscroll-behavior: contain; padding: 8px 16px; border: 1px solid var(--line); border-radius: 0 0 5px 5px; background: var(--paper); opacity: 0; transform: translateY(-6px); transition: opacity 180ms ease-out, transform 180ms ease-out, display 180ms allow-discrete; }
+  :global(html[data-js]) .contents[data-open="true"] ol { display: block; opacity: 1; transform: translateY(0); }
+  :global(html[data-js]) .contents a { min-height: 48px; font-size: 15px; }
+  :global(html[data-js]) .section { scroll-margin-top: 100px; }
+  @starting-style {
+    :global(html[data-js]) .contents[data-open="true"] ol { opacity: 0; transform: translateY(-6px); }
+  }
   .section { padding-bottom: 32px; margin-bottom: 34px; }
   .section p { font-size: 16px; line-height: 1.8; }
   .section h2 { font-size: 31px; margin-bottom: 21px; }
   .figureMat { padding: 14px; }
   .figureWindow { height: 270px; }
   .related { flex-wrap: wrap; gap: 8px 24px; margin-bottom: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .contentsToggle svg, :global(html[data-js]) .contents ol { transition: none; }
 }
 @media (max-width: 360px) {
   .hero h1 { font-size: 37px; }
