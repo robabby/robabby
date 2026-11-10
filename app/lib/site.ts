@@ -9,7 +9,7 @@ export const PAGE_INFO = {
       "I design and build software. I’m Rob Abby, a frontend engineer and founder of WavePoint, based in Bellingham, Washington.",
   },
   ai: {
-    path: "/how-i-work-with-ai",
+    path: "/ai",
     title: "How I Work with AI | Rob Abby",
     description: "How Rob Abby works with AI: Codex and Claude Code in the terminal, clear plans in Linear, reusable skills, and concurrent sessions across projects.",
   },

@@ -5,7 +5,7 @@ export default function SiteFooter() {
     <footer className="wrap site-footer">
       <p>© {new Date().getFullYear()} Rob Abby · Bellingham, Washington</p>
       <nav aria-label="Footer">
-        <Link href="/how-i-work-with-ai">How I work with AI</Link>
+        <Link href="/ai">How I work with AI</Link>
         <Link href="/work-with-me">Work with me</Link>
         <a href="/resume.pdf">Résumé (PDF)</a>
         <a

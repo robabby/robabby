@@ -8,7 +8,7 @@ export default function AIWorkflowInvitation() {
       <p className={styles.eyebrow}>My everyday practice</p>
       <h2 id="ai-invitation-title">How I work<br /><span>with AI.</span></h2>
       <p className={styles.description}>From a conversation in the terminal to several sessions across projects. A look at the tools, plans and judgment behind the work.</p>
-      <Link className="text-link" href="/how-i-work-with-ai">See how I work with AI <ArrowRightIcon className="arrow" aria-hidden="true" /></Link>
+      <Link className="text-link" href="/ai">See how I work with AI <ArrowRightIcon className="arrow" aria-hidden="true" /></Link>
     </div>
     <div className={styles.preview} aria-label="Illustrative terminal exchange">
       <div className={styles.bar}><span>Codex / Claude Code</span><span>Terminal</span></div>

@@ -26,8 +26,8 @@ export default function AIWorkflow() {
             <br />
             <span>with AI.</span>
           </h1>
-          <p>95% of the time, I work with AI directly in the terminal.</p>
-          <p className="secondary">I rarely touch VS Code or work in an IDE.</p>
+          <p>I work with AI mostly in the terminal, using Codex and Claude Code to explore ideas, make plans and build software.</p>
+          <p className="secondary">Here’s how the tools, plans and skills fit together—and how I guide several sessions at once.</p>
           <div className="brands">
             <div className="brand">
               <Image src="/images/ai-workflow/openai.svg" alt="" width={80} height={80} unoptimized />
@@ -58,10 +58,10 @@ export default function AIWorkflow() {
             <div className="platform-copy">
               <h3>Codex + Claude Code</h3>
               <p>
-                <strong>Think, build and review.</strong>
-                {" I give direction, explore ideas and work through changes in the terminal."}
+                <strong>AI coding assistants.</strong>
+                {" I ask questions, work through plans, and have them read files, edit code and run checks."}
               </p>
-              <span className="platform-access">Terminal UI</span>
+              <span className="platform-access">Terminal + Codex and Claude desktop apps</span>
             </div>
           </li>
           <li className="platform-row">
@@ -71,10 +71,10 @@ export default function AIWorkflow() {
             <div className="platform-copy">
               <h3>Linear</h3>
               <p>
-                <strong>Keep the work connected.</strong>
-                {" Assignments, plans and handoffs stay together, including decisions, screenshots and feedback."}
+                <strong>My task tracker.</strong>
+                {" Each task holds its plan and progress. Comments let people, agents and different AI models share decisions, screenshots and updates, collaborate and hand work off."}
               </p>
-              <span className="platform-access">MCP + desktop app</span>
+              <span className="platform-access">AI connection (MCP) · Desktop app</span>
             </div>
           </li>
           <li className="platform-row">
@@ -84,10 +84,10 @@ export default function AIWorkflow() {
             <div className="platform-copy">
               <h3>Google Drive</h3>
               <p>
-                <strong>Bring the context along.</strong>
-                {" Shared documents and drafts give sessions the background they need."}
+                <strong>Shared documents and files.</strong>
+                {" I use it for drafts and reference material that AI sessions can read while working on an assignment."}
               </p>
-              <span className="platform-access">MCP + web app</span>
+              <span className="platform-access">AI connection (MCP) · Web app</span>
             </div>
           </li>
           <li className="platform-row">
@@ -97,10 +97,10 @@ export default function AIWorkflow() {
             <div className="platform-copy">
               <h3>GitHub</h3>
               <p>
-                <strong>Track and review changes.</strong>
-                {" Code history and pull requests make changes inspectable before they merge."}
+                <strong>Code storage and review.</strong>
+                {" Proposed changes are grouped into pull requests, which I review before adding them to the main version of the code."}
               </p>
-              <span className="platform-access">gh command-line tool</span>
+              <span className="platform-access">GitHub’s terminal tool (gh)</span>
             </div>
           </li>
           <li className="platform-row">
@@ -110,10 +110,26 @@ export default function AIWorkflow() {
             <div className="platform-copy">
               <h3>Vercel</h3>
               <p>
-                <strong>See the web work running.</strong>
-                {" Previews let me inspect the result; deployments deliver the approved work."}
+                <strong>Website hosting.</strong>
+                {" I open preview versions to check changes before publishing, then verify that the live site works."}
               </p>
-              <span className="platform-access">MCP + Next.js / React skills</span>
+              <span className="platform-access">AI connection (MCP) · Next.js / React skills</span>
+            </div>
+          </li>
+          <li className="platform-row" id="messaging-apps">
+            <div className="platform-marks messaging">
+              <Image src="/images/ai-workflow/slack.svg" alt="Slack" width={80} height={80} unoptimized />
+              <Image src="/images/ai-workflow/telegram.svg" alt="Telegram" width={80} height={80} unoptimized />
+              <Image src="/images/ai-workflow/whatsapp.svg" alt="WhatsApp" width={80} height={80} unoptimized />
+              <Image src="/images/ai-workflow/discord.svg" alt="Discord" width={80} height={80} unoptimized />
+            </div>
+            <div className="platform-copy">
+              <h3>Messaging apps</h3>
+              <p>
+                <strong>Chat with people and AI agents.</strong>
+                {" I share documents, task links and results in chat, using integrations—especially in Slack—to access them from the conversation."}
+              </p>
+              <span className="platform-access">Slack · Telegram · WhatsApp · Discord</span>
             </div>
           </li>
         </ul>
@@ -125,7 +141,7 @@ export default function AIWorkflow() {
             <br />
             {"the work."}
           </h2>
-          <p>Reusable instructions for how AI helps me plan, build and review.</p>
+          <p>Skills are reusable instructions that guide how AI works. These are a few cornerstones of my current workflow, not the full list.</p>
         </div>
         <dl className="skills-list">
           <div className="skill-row">
@@ -133,8 +149,8 @@ export default function AIWorkflow() {
               <a href="https://www.skills.sh/mattpocock/skills/grilling">Grilling</a>
             </dt>
             <dd>
-              <h3>Decide what to build.</h3>
-              <p>Ask focused questions and resolve the important choices before implementation.</p>
+              <h3>Make the direction tangible.</h3>
+              <p>I use grilling to explore ideas and challenge assumptions. We work through questions and often iterate on a prototype, turning the discussion into a clearer plan for implementation.</p>
             </dd>
           </div>
           <div className="skill-row">
@@ -279,14 +295,28 @@ export default function AIWorkflow() {
           <p>Grill a ticket again. Update its plan. Pick up from there.</p>
         </div>
         <p className="work-caption">Illustrative tickets from one idea. Open a ticket to see its plan.</p>
+        <div className="work-evidence" id="linear-in-practice">
+          <h3>A plan and its review, in Linear.</h3>
+          <p className="evidence-intro">This WavePoint widget task keeps the implementation plan, decisions and review screenshots together. Updates posted through MCP give the next session context to continue.</p>
+          <ul className="screens-gallery evidence-pair" aria-label="A real WavePoint task in Linear">
+            <li><figure>
+              <a className="screen-image" href="/images/ai-workflow/linear-widget-plan.png" aria-label="Open full-size screenshot: Linear implementation plan">
+                <Image src="/images/ai-workflow/linear-widget-plan.png" alt="Linear task SG-1712 for WavePoint widgets, showing its implementation plan and accepted product decisions." width={3194} height={1808} sizes="(max-width: 720px) 85vw, (max-width: 1296px) 46vw, 588px" />
+              </a>
+              <figcaption><strong>The assignment and plan</strong><span>What to build, constraints and decisions · Open full size</span></figcaption>
+            </figure></li>
+            <li><figure>
+              <a className="screen-image" href="/images/ai-workflow/linear-widget-review.png" aria-label="Open full-size screenshot: Linear review comment">
+                <Image src="/images/ai-workflow/linear-widget-review.png" alt="An MCP-posted comment on the same Linear task with implementation notes, checks, and a screenshot of the running Moon widget." width={3204} height={2004} sizes="(max-width: 720px) 85vw, (max-width: 1296px) 46vw, 588px" />
+              </a>
+              <figcaption><strong>The work returned for review</strong><span>Implementation notes, checks and a simulator screenshot · Open full size</span></figcaption>
+            </figure></li>
+          </ul>
+        </div>
       </section>
       <section className="parallel-section" id="parallel" aria-labelledby="parallel-heading">
         <div className="work-intro">
-          <h2 id="parallel-heading">
-            {"Several sessions."}
-            <br />
-            {"Different priorities."}
-          </h2>
+          <h2 id="parallel-heading">Working in parallel.</h2>
           <p>I generally aim for three or four concurrent sessions and try not to stay above four for too long. It depends on the work.</p>
         </div>
         <div className="parallel-board">
@@ -357,6 +387,36 @@ export default function AIWorkflow() {
             <p>Answer questions, inspect the work and give feedback. The plans keep the context with each assignment.</p>
           </div>
         </div>
+        <figure className="terminal-capture work-evidence" id="terminal-workspace">
+          <a className="screen-image" href="/images/ai-workflow/terminal-tabs.png" aria-label="Open full-size screenshot: my terminal workspace">
+            <Image src="/images/ai-workflow/terminal-tabs.png" alt="Rob’s terminal with named tabs for iOS, web, content and other projects. The selected Moments session reports a merged change and asks about the next design decision." width={2464} height={1794} sizes="(max-width: 720px) calc(100vw - 40px), (max-width: 1096px) calc(100vw - 96px), 1000px" />
+          </a>
+          <figcaption><strong>My terminal workspace</strong><p>Tabs keep separate conversations available as I move between projects. Here, the Moments session moves from a merged change into the next design question. Open tabs aren’t necessarily all actively working.</p><a href="/images/ai-workflow/terminal-tabs.png">Open full-size screenshot →</a></figcaption>
+        </figure>
+      </section>
+      <section className="work-screens" id="working-screens" aria-labelledby="screens-heading">
+        <div className="work-intro">
+          <h2 id="screens-heading">From the terminal to working screens.</h2>
+          <p>Some sessions build iOS features in separate simulators, while others update the website or develop content. I review working screens, screenshot walkthroughs and proposed changes as the work progresses.</p>
+        </div>
+        <p className="screens-swipe">Three simulator views. Swipe to explore.</p>
+        <ul className="screens-gallery" aria-label="WavePoint development in Device Hub">
+          {[
+            { file: "event-details", title: "Event details", device: "iPhone-1", width: 1442, height: 1754, alt: "Device Hub with iPhone-1 selected, showing WavePoint’s event details and an interpretation of a Moon transit." },
+            { file: "cycles", title: "Cycles", device: "iPhone-2", width: 1436, height: 1752, alt: "Device Hub with iPhone-2 selected, showing WavePoint’s lunar, seasonal and planetary cycles." },
+            { file: "moments", title: "Moments", device: "iPhone-3", width: 1438, height: 1754, alt: "Device Hub with iPhone-3 selected, showing a WavePoint profile with photo and text Moments in dark mode." },
+          ].map(screen => (
+            <li key={screen.file}>
+              <figure>
+                <a className="screen-image" href={`/images/ai-workflow/device-hub-${screen.file}.png`} aria-label={`Open full-size screenshot: ${screen.title}`}>
+                  <Image src={`/images/ai-workflow/device-hub-${screen.file}.png`} alt={screen.alt} width={screen.width} height={screen.height} sizes="(max-width: 720px) 85vw, (max-width: 1296px) 30vw, 384px" />
+                </a>
+                <figcaption><strong>{screen.title}</strong><span>{screen.device} · Open full size</span></figcaption>
+              </figure>
+            </li>
+          ))}
+        </ul>
+        <p className="work-caption">WavePoint development previews in three separate iOS simulators, captured in Device Hub. Select an image to view it full size.</p>
       </section>
       <WorkflowTranscript />
       <p className="workflow-end"><Link href="/#work">Explore my work →</Link><Link href="/work-with-me">Ways we can work together →</Link></p>

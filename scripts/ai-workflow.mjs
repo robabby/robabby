@@ -13,7 +13,7 @@ fs.mkdirSync(out, { recursive: true });
             const context = await browser.newContext({ viewport: { width, height }, colorScheme: theme, javaScriptEnabled: js, reducedMotion: 'reduce' });
             const page = await context.newPage();
             page.on('pageerror', e => errors.push(name + ': ' + e.message));
-            for (const route of ['/', '/how-i-work-with-ai']) {
+            for (const route of ['/', '/ai']) {
                 await page.goto(base + route);
                 await page.evaluate(() => document.fonts.ready);
                 assert.equal(await page.locator('h1').count(), 1);
@@ -34,7 +34,7 @@ fs.mkdirSync(out, { recursive: true });
                     assert.equal(await page.locator('.skill-row').count(), 4);
                     assert.equal(await page.locator('.plan-ticket').count(), 3);
                     assert.equal(await page.locator('.parallel-sessions li').count(), 4);
-                    assert.equal(await page.locator('link[rel="canonical"]').getAttribute('href'), 'https://www.robabby.com/how-i-work-with-ai');
+                    assert.equal(await page.locator('link[rel="canonical"]').getAttribute('href'), 'https://www.robabby.com/ai');
                     assert.equal(await page.locator('.skill-row a').count(), 5);
                     if (js)
                         assert.equal(await page.locator('.caption button').textContent(), 'Play');
@@ -59,7 +59,7 @@ fs.mkdirSync(out, { recursive: true });
         const p = await ctx.newPage();
         p.on('pageerror', e => errors.push(e.message));
         await p.clock.install();
-        await p.goto(base + '/how-i-work-with-ai');
+        await p.goto(base + '/ai');
         await p.locator('.caption button:not([hidden])').waitFor();
         await p.clock.runFor(1400);
         let draft = await p.locator('[data-draft]').textContent();
@@ -85,7 +85,7 @@ fs.mkdirSync(out, { recursive: true });
         await p.locator('.home-link').click();
         await p.waitForURL(base + '/');
         await p.getByRole('link', { name: 'See how I work with AI' }).click();
-        await p.waitForURL('**/how-i-work-with-ai');
+        await p.waitForURL('**/ai');
         await p.locator('.terminal:not(.paused)').waitFor();
         await p.clock.runFor(1200);
         assert.equal(await p.locator('.terminal').count(), 1);
