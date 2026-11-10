@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 import SiteHeader from "@/app/components/SiteHeader";
+import ProfilePhoto from "@/app/components/ProfilePhoto";
 import Contact from "@/app/components/Contact";
 import { pageMetadata, PAGE_INFO, SITE_URL } from "@/app/lib/site";
 import JsonLd from "@/app/components/JsonLd";
@@ -29,7 +30,7 @@ export default function Home() {
         <section className="wrap opening" aria-labelledby="hero-title">
           <div className="identity">
             <h1 id="hero-title">Rob Abby</h1>
-            <Image className="portrait" src="/profile.jpeg" alt="Rob Abby outdoors by the water" width={640} height={640} sizes="(max-width: 360px) 72px, (max-width: 720px) 84px, 192px" priority />
+            <ProfilePhoto />
             <p className="identity-meta">Based in Bellingham.<br />Working locally and remotely.</p>
           </div>
           <div className="hero-copy">
