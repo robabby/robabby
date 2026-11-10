@@ -318,7 +318,7 @@ export default function AIWorkflow() {
       <section className="parallel-section" id="parallel" aria-labelledby="parallel-heading">
         <div className="work-intro">
           <h2 id="parallel-heading">Working in parallel.</h2>
-          <p>When working in the terminal, I generally aim for three or four concurrent AI sessions actively building or working on something. I try not to stay above four parallel sessions for too long. It depends on the work.</p>
+          <p>When working in the terminal, I generally aim for three or four concurrent AI sessions actively building or working on something. I try not to stay above four parallel sessions for too long due to the cognitive load. It depends on the work.</p>
         </div>
         <div className="parallel-board">
           <div className="parallel-board-heading">
