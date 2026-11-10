@@ -7,7 +7,7 @@ type ShareCopy = {
   home?: boolean;
 };
 
-async function loadGoogleFont(family: string, text: string) {
+export async function loadGoogleFont(family: string, text: string) {
   const response = await fetch(
     `https://fonts.googleapis.com/css2?family=${family}&text=${encodeURIComponent(text)}`,
   );

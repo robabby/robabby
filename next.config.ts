@@ -16,6 +16,11 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      {
+        source: "/how-i-work-with-ai",
+        destination: "/ai",
+        permanent: true,
+      },
       // Per-application source attribution: print robabby.com/via/<slug> on a
       // resume or outreach message and GA4 records the landing as /?src=<slug>
       // (page_location keeps the query), so each application is measurable.
