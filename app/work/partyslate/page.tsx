@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRightIcon, ExternalLinkIcon } from "@radix-ui/react-icons";
 import SiteHeader from "@/app/components/SiteHeader";
+import CaseStudyContents from "@/app/components/CaseStudyContents";
 import Contact from "@/app/components/Contact";
 import JsonLd from "@/app/components/JsonLd";
 import { pageMetadata, PAGE_INFO, SITE_URL } from "@/app/lib/site";
@@ -127,10 +128,7 @@ export default function PartySlate() {
           </details>
           <a className={styles.recommendationLink} href="#tyler-recommendation">Read Tyler’s recommendation</a>
           <div className={styles.layout}>
-            <nav className={styles.contents} aria-label="In this case study">
-              <p>In this story</p>
-              <ol>{sections.map(section => <li key={section.id}><a href={`#${section.id}`}>{section.label}</a></li>)}</ol>
-            </nav>
+            <CaseStudyContents sections={sections.map(({ id, label }) => ({ id, label }))} />
             <div className={styles.story}>
               {sections.map(section => <section className={styles.section} id={section.id} key={section.id} aria-labelledby={`${section.id}-title`}>
                 <h2 id={`${section.id}-title`}>{section.title}</h2>

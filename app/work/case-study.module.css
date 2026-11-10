@@ -21,6 +21,7 @@
 .contents ol { list-style: none; margin: 0; padding: 0; }
 .contents a { display: flex; align-items: center; min-height: 44px; padding: 8px 0; color: var(--muted); text-decoration: none; }
 .contents a:hover { color: var(--accent); text-decoration: underline; }
+.contents a[aria-current="location"] { color: var(--accent); text-decoration: underline; }
 .story { min-width: 0; }
 .section { padding-bottom: 42px; margin-bottom: 42px; border-bottom: 1px solid var(--line); }
 .section:last-child { padding-bottom: 0; margin-bottom: 0; border-bottom: 0; }

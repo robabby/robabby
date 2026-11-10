@@ -2,6 +2,7 @@ import Image from "next/image";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 import SiteHeader from "@/app/components/SiteHeader";
+import CaseStudyContents from "@/app/components/CaseStudyContents";
 import Contact from "@/app/components/Contact";
 import JsonLd from "@/app/components/JsonLd";
 import { pageMetadata, PAGE_INFO, SITE_URL } from "@/app/lib/site";
@@ -331,18 +332,7 @@ export default function Savo() {
                         <figcaption>I built the shared Ember.js component system and this style guide, which became a reference for developers working across SAVO’s products. <a href="/images/savo/styleguide-buttons.png" target="_blank" rel="noopener noreferrer">Open the full image<span className="sr-only"> (opens in a new tab)</span></a>.</figcaption>
                       </figure>
             <div className={styles.layout}>
-              <nav className={styles.contents} aria-label="In this case study">
-                <p>In this story</p>
-                <ol role="list">
-                  {sections.map((section) => (
-                    <li key={section.id}>
-                      <a href={`#${section.id}`}>
-                        <span>{section.label}</span>
-                      </a>
-                    </li>
-                  ))}
-                </ol>
-              </nav>
+              <CaseStudyContents sections={sections.map(({ id, label }) => ({ id, label }))} />
               <div className={styles.story}>
                 {sections.map((section) => (
                   <section className={styles.section} id={section.id} key={section.id} aria-labelledby={`${section.id}-title`}>
