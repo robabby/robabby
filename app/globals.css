@@ -79,6 +79,16 @@ main:focus { outline: none; }
 .nav a { display: inline-flex; align-items: center; min-height: 44px; color: var(--muted); text-decoration: none; }
 .nav a[aria-current="page"] { color: var(--accent); text-decoration: underline; }
 .nav a:hover { color: var(--accent); text-decoration: underline; }
+.work-nav { position: relative; }
+.work-nav summary { display: flex; align-items: center; gap: 5px; min-height: 44px; color: var(--muted); cursor: pointer; list-style: none; }
+.work-nav summary::-webkit-details-marker { display: none; }
+.work-nav summary:hover, .work-nav[open] summary { color: var(--accent); }
+.work-nav summary svg { width: 14px; height: 14px; }
+.work-nav[open] summary svg { transform: rotate(180deg); }
+.work-nav-links { position: absolute; top: calc(100% + 8px); left: 0; z-index: 5; min-width: 180px; padding: 6px; margin: 0; list-style: none; border: 1px solid var(--line); border-radius: 5px; background: var(--paper); }
+.nav .work-nav-links a { display: flex; justify-content: space-between; gap: 20px; padding: 8px 12px; color: var(--ink); }
+.nav .work-nav-links a:hover { color: var(--accent); background: var(--surface); }
+.work-nav-links svg { width: 15px; height: 15px; }
 .theme { display: flex; align-items: center; justify-content: center; gap: 7px; min-height: 44px; min-width: 86px; padding: 8px 13px; font-size: 13px; border: 1px solid var(--line); border-radius: 6px; background: transparent; }
 .theme:hover { border-color: var(--muted); background: var(--surface); }
 .theme svg { width: 16px; height: 16px; }
