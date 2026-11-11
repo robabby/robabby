@@ -14,7 +14,7 @@ export default function PrivacyPage() {
           <ArrowLeftIcon aria-hidden="true" /> Back
         </Link>
         <h1>Privacy</h1>
-        <p className="legal-updated">Last updated: June 2026</p>
+        <p className="legal-updated">Last updated: November 2026</p>
 
         <p>
           robabby.com is a personal portfolio site. There are no accounts, no
@@ -28,6 +28,23 @@ export default function PrivacyPage() {
           which pages are viewed, roughly where visitors arrive from, and what
           kind of device they’re on. This data is anonymous and reported in
           aggregate; it isn’t used to identify you.
+        </p>
+
+        <h2>When you contact me</h2>
+        <p>
+          The contact form sends your name, email address, and message through
+          Brevo to my Gmail inbox so I can reply. Your email address is used as
+          the reply address. Sending a message does not subscribe you to a
+          mailing list. The website does not keep a separate database of messages;
+          correspondence and delivery records are handled by these email services.
+          Please avoid sending sensitive information through the form.
+        </p>
+        <h2>The map</h2>
+        <p>
+          The contact page uses Apple Maps to show the Bellingham area. Loading
+          the map connects your browser to Apple, which receives information
+          such as your IP address. The map does not request your location.
+          See <a href="https://www.apple.com/legal/privacy/">Apple’s privacy policy</a>.
         </p>
 
         <h2>Cookies</h2>
@@ -61,7 +78,7 @@ export default function PrivacyPage() {
 
         <h2>What’s not collected</h2>
         <p>
-          No personal accounts, no form submissions, no advertising trackers,
+          No personal accounts, no advertising trackers,
           and nothing sold or shared for marketing. The site is hosted on
           Vercel, which collects standard request logs and privacy-friendly
           aggregate analytics as part of hosting.

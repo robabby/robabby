@@ -22,6 +22,7 @@ export default function SiteFooter() {
         >
           GitHub<span className="sr-only"> (opens in a new tab)</span>
         </a>
+        <Link href="/contact">Contact</Link>
         <Link href="/privacy">Privacy</Link>
       </nav>
     </footer>
