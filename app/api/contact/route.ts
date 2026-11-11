@@ -12,6 +12,7 @@ export async function POST(request: Request) {
   return handleContact(request, {
     apiKey: process.env.BREVO_API_KEY,
     sender: process.env.CONTACT_FROM_EMAIL,
+    listId: Number(process.env.BREVO_CONTACT_LIST_ID),
     recipient: "robabby23@gmail.com",
     allowedOrigins,
   });

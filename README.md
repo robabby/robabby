@@ -37,8 +37,11 @@ See [the design system](docs/ux/design-system.md) for visual conventions and [CL
 
 `/contact` posts to `/api/contact`, which sends a plain-text transactional email
 through Brevo. The recipient is fixed to Rob’s inbox; the visitor is the Reply-To.
-There is no contact database or mailing-list enrollment. Set `BREVO_API_KEY` and
-`CONTACT_FROM_EMAIL` as server-only environment variables. The sender must belong
+Submitters are upserted into the dedicated Brevo contact-inquiries list before
+the email is sent. Existing unsubscribe preferences are preserved. Set
+`BREVO_API_KEY`, `CONTACT_FROM_EMAIL`, and `BREVO_CONTACT_LIST_ID` as server-only
+environment variables. The key needs Transactional email and Contacts access;
+the account needs the text contact attribute `CONTACT_FORM_NAME`. The sender must belong
 to a domain authenticated in Brevo. Never prefix these values with `NEXT_PUBLIC_`.
 
 The regional Apple map uses `MAPKIT_TEAM_ID`, `MAPKIT_KEY_ID`, and
@@ -46,8 +49,7 @@ The regional Apple map uses `MAPKIT_TEAM_ID`, `MAPKIT_KEY_ID`, and
 origin-restricted browser token; the signing key stays on the server. Missing map
 configuration leaves a location description and an Apple Maps link.
 
-For local development, add these values to an ignored `.env.local` or
-`.env.development.local`. Copy names from `.env.example`, not secret values into
+For local development, add these values to the ignored `.env.local`. Copy names from `.env.example`, not secret values into
 source control. Local origins supported by the routes are `localhost:3000` and
 `localhost:3098` (plus `127.0.0.1:3098`). Vercel’s current deployment URL and both
 production domain variants are allowed in deployed environments.

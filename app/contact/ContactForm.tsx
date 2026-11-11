@@ -51,7 +51,7 @@ export default function ContactForm() {
       </div>
       <div className={styles.trap} aria-hidden="true"><label htmlFor="contact-website">Leave this empty</label><input id="contact-website" name="website" tabIndex={-1} autoComplete="off" /></div>
       <button className={`button ${styles.send}`} type="submit" disabled={pending}>{pending ? "Sending…" : "Send message"}</button>
-      <p className={styles.reply}>I’ll reply by email. No mailing list, just a conversation.</p>
+      <p className={styles.reply}>I’ll reply by email.</p>
       <div role="status" aria-live="polite" aria-atomic="true" className={styles.status}>
         {result && <p>{result.message}{!result.ok && <> <a href="mailto:robabby23@gmail.com">Email Rob</a>.</>}</p>}
       </div>
