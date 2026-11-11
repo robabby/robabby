@@ -20,7 +20,14 @@ export default function ContactForm() {
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(Object.fromEntries(data)),
+        body: JSON.stringify({
+          ...Object.fromEntries(data),
+          ...Object.fromEntries(
+            ["utm_source", "utm_medium", "utm_campaign"].map((key) =>
+              [key, new URLSearchParams(window.location.search).get(key)],
+            ),
+          ),
+        }),
         signal: AbortSignal.timeout(15_000),
       });
       const body = await response.json().catch(() => null);
