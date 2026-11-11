@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ArrowRightIcon, ExternalLinkIcon } from "@radix-ui/react-icons";
 
 type Props = { intro?: string; wavepointLink?: boolean };
@@ -15,6 +16,7 @@ export default function Contact({
       <h2 id="contact-title">Let’s talk.</h2>
       <div>
         <p>{intro}</p>
+        <p><Link className="text-link" href="/contact">Send me a message <ArrowRightIcon aria-hidden="true" /></Link></p>
         <a className="text-link email" href="mailto:robabby23@gmail.com">
           robabby23@gmail.com <ArrowRightIcon className="arrow" aria-hidden="true" />
         </a>

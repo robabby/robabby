@@ -30,6 +30,11 @@ export const PAGE_INFO = {
     description:
       "How Rob Abby helped establish SAVO’s UI/UX team, redesigned its Asset Page with Brittany Mikottis, and built a shared Ember.js UI system.",
   },
+  contact: {
+    path: "/contact",
+    title: "Contact | Rob Abby",
+    description: "Have a question, an idea, or an opportunity to work together? Get in touch with Rob Abby in Bellingham, Washington.",
+  },
   privacy: {
     path: "/privacy",
     title: "Privacy | Rob Abby",

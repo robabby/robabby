@@ -32,3 +32,30 @@ pnpm shots http://localhost:3000
 `pnpm shots` checks public pages, navigation, metadata, themes, gallery interaction, no-JavaScript rendering, and reduced motion. It writes browser screenshots and a verification report to the ignored `screenshots/` directory. Run it against a local production build before release.
 
 See [the design system](docs/ux/design-system.md) for visual conventions and [CLAUDE.md](CLAUDE.md) for repository workflows. Active images in `public/images/wavepoint/` show WavePoint’s November 2026 website and iPhone development previews with fictional sample content. The app is in TestFlight; these captures do not establish which screens are distributed there. See the [image provenance notes](public/images/wavepoint/README.md) for capture details and retained historical assets. Original employer wordmarks and their sources are documented in [the logo notes](docs/ux/company-logos.md).
+
+## Contact page configuration
+
+`/contact` posts to `/api/contact`, which sends a plain-text transactional email
+through Brevo. The recipient is fixed to Rob’s inbox; the visitor is the Reply-To.
+There is no contact database or mailing-list enrollment. Set `BREVO_API_KEY` and
+`CONTACT_FROM_EMAIL` as server-only environment variables. The sender must belong
+to a domain authenticated in Brevo. Never prefix these values with `NEXT_PUBLIC_`.
+
+The regional Apple map uses `MAPKIT_TEAM_ID`, `MAPKIT_KEY_ID`, and
+`MAPKIT_PRIVATE_KEY` (base64-encoded `.p8`). `/api/maps/token` returns a short-lived,
+origin-restricted browser token; the signing key stays on the server. Missing map
+configuration leaves a location description and an Apple Maps link.
+
+For local development, add these values to an ignored `.env.local` or
+`.env.development.local`. Copy names from `.env.example`, not secret values into
+source control. Local origins supported by the routes are `localhost:3000` and
+`localhost:3098` (plus `127.0.0.1:3098`). Vercel’s current deployment URL and both
+production domain variants are allowed in deployed environments.
+
+Run `node --test tests/contact.test.mjs` for the email-handler checks. Before
+release, verify a real submission reaches the inbox and that Reply-To addresses
+the visitor. Also publish and validate the Vercel firewall rule for POST
+`/api/contact`; its initial observation threshold is 10 requests per IP in 10
+minutes. Observation mode logs excess requests and does **not** enforce a limit.
+Enable enforcement after reviewing matching traffic. The honeypot, input limits,
+and fixed recipient in the handler do not replace distributed rate limiting.

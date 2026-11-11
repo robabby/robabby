@@ -3,16 +3,16 @@ import ThemeToggle from "./ThemeToggle";
 import WorkNavigation from "./WorkNavigation";
 import MobileNavigation from "./MobileNavigation";
 
-type Props = { home?: boolean; currentPage?: "services" | "ai"; localContact?: boolean };
+type Props = { home?: boolean; currentPage?: "services" | "ai" | "contact"; localContact?: boolean };
 
-export default function SiteHeader({ home = false, currentPage, localContact = false }: Props) {
+export default function SiteHeader({ home = false, currentPage }: Props) {
   const navigation = (mobile = false) => <>
     <nav className="nav" aria-label="Main navigation">
       <WorkNavigation mobile={mobile} />
       <Link href="/ai" aria-current={currentPage === "ai" ? "page" : undefined}>AI workflow</Link>
       <Link href="/work-with-me" aria-current={currentPage === "services" ? "page" : undefined}>Work with me</Link>
       <Link href="/#about">About</Link>
-      <a href={home || localContact ? "#contact" : "/#contact"}>Contact</a>
+      <Link href="/contact" aria-current={currentPage === "contact" ? "page" : undefined}>Contact</Link>
     </nav>
     <ThemeToggle />
   </>;

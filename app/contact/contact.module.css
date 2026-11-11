@@ -1,0 +1,54 @@
+.layout { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); column-gap: clamp(48px, 8vw, 120px); padding-block: 94px 88px; align-items: start; }
+.intro { grid-column: 1; grid-row: 1; }
+.intro h1 { font-size: clamp(64px, 7vw, 88px); margin-bottom: 24px; }
+.intro p { max-width: 33ch; font-size: 21px; line-height: 1.6; color: var(--muted); }
+.alternatives { grid-column: 1; grid-row: 2; margin-top: 52px; }
+.alternatives h2 { font: 500 14px/1.5 var(--font-body), sans-serif; margin-bottom: 10px; }
+.email { font-size: clamp(18px, 2vw, 23px); color: var(--accent); overflow-wrap: anywhere; }
+.socials { display: flex; gap: 24px; margin-top: 12px; font-size: 14px; color: var(--muted); }
+.socials a { display: inline-flex; align-items: center; gap: 7px; min-height: 44px; }
+.socials svg { width: 14px; height: 14px; }
+.form { grid-column: 2; grid-row: 1 / span 2; padding-top: 9px; min-width: 0; }
+.paired { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.field { display: flex; flex-direction: column; margin-bottom: 24px; min-width: 0; }
+.field label { font-size: 14px; font-weight: 500; margin-bottom: 9px; }
+.field input, .field textarea { width: 100%; min-height: 48px; border: 1px solid var(--line); border-radius: 5px; padding: 12px 14px; background: var(--paper); color: var(--ink); font: inherit; caret-color: var(--accent); }
+.field textarea { resize: vertical; min-height: 164px; }
+.field input:hover, .field textarea:hover { border-color: var(--muted); }
+.hint { font-size: 13px; color: var(--muted); margin: -3px 0 12px; }
+.send { min-width: 154px; justify-content: center; }
+.send:disabled { opacity: .65; cursor: wait; }
+.reply { font-size: 12px; color: var(--muted); margin-top: 12px; }
+.status { font-size: 14px; }
+.status p { padding-top: 16px; }
+.status a, .notice a { color: var(--accent); }
+.notice { margin-bottom: 24px; }
+.trap { position: absolute; width: 1px; height: 1px; clip-path: inset(50%); overflow: hidden; }
+.form:has(.notice) :is(.send, .paired, .field, .reply) { display: none; }
+.location { border-top: 1px solid var(--line); }
+.locationHeading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; padding-block: 32px 26px; }
+.locationHeading h2 { font-size: 34px; }
+.locationHeading p { font-size: 14px; color: var(--muted); }
+.mapFrame { position: relative; background: var(--surface); }
+.map { height: clamp(360px, 40vw, 540px); width: 100%; }
+.mapStatus { position: absolute; inset: 0; display: grid; place-content: center; padding: 36px; text-align: center; color: var(--muted); pointer-events: none; }
+.mapControls { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-block: 14px; font-size: 13px; color: var(--muted); }
+.mapControls button { background: var(--paper); border: 1px solid var(--line); border-radius: 5px; padding: 9px 14px; min-height: 44px; color: var(--ink); font-size: 13px; }
+.mapControls button:hover { border-color: var(--muted); }
+.mapControls button:disabled { display: none; }
+@media (max-width: 760px) {
+  .layout { grid-template-columns: 1fr; padding-block: 52px 48px; }
+  .intro, .form, .alternatives { grid-column: 1; grid-row: auto; }
+  .intro h1 { font-size: 64px; margin-bottom: 18px; }
+  .intro p { font-size: 19px; max-width: 38ch; }
+  .form { margin-top: 38px; padding: 0; }
+  .alternatives { margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--line); }
+  .locationHeading { display: block; padding-block: 26px 22px; }
+  .locationHeading h2 { font-size: 30px; margin-bottom: 10px; }
+  .locationHeading p { font-size: 13px; }
+  .map { height: 400px; }
+  .mapControls { flex-wrap: wrap; gap: 8px; }
+}
+@media (max-width: 440px) { .paired { grid-template-columns: 1fr; gap: 0; } }
+
+.noJsMap { background: var(--surface); }
