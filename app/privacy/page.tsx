@@ -35,7 +35,7 @@ export default function PrivacyPage() {
           The contact form sends your name, email address, and message through
           Brevo to my Gmail inbox so I can reply. Your email address is used as
           the reply address. Your name and email address are also saved in a
-          contact-inquiries list in Brevo so I can keep track of people who reach
+          contact-inquiries list in Brevo, along with any source, medium, and campaign tags in the contact-page link, so I can keep track of people who reach
           out. The website does not keep a separate database of messages;
           correspondence and delivery records are handled by these email services.
           Please avoid sending sensitive information through the form.

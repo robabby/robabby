@@ -65,6 +65,14 @@ export async function handleContact(request: Request, config: ContactConfig, sen
   if (!config.apiKey || !config.sender || !Number.isSafeInteger(config.listId) || config.listId! <= 0) {
     return response(503, "The form is unavailable right now. Your message is still here. Please try again or email me directly.");
   }
+  // Attribution is optional, visitor-supplied context, never trusted identity.
+  const attribution = (key: string) => {
+    const value = typeof data[key] === "string" ? data[key].trim() : "";
+    return value.length <= 120 && !/[\x00-\x1f\x7f]/.test(value) ? value : "";
+  };
+  const source = attribution("utm_source") || "Website — source unknown";
+  const medium = attribution("utm_medium") || "Not specified";
+  const campaign = attribution("utm_campaign") || "Not specified";
   try {
     // Upsert before sending: a retry can safely add an existing contact again.
     // Omit blacklist fields so existing unsubscribe preferences stay intact.
@@ -73,7 +81,12 @@ export async function handleContact(request: Request, config: ContactConfig, sen
       headers: { "api-key": config.apiKey, "Content-Type": "application/json", accept: "application/json" },
       body: JSON.stringify({
         email,
-        attributes: { CONTACT_FORM_NAME: name },
+        attributes: {
+          CONTACT_FORM_NAME: name,
+          INQUIRY_SOURCE: source,
+          INQUIRY_MEDIUM: medium,
+          INQUIRY_CAMPAIGN: campaign,
+        },
         listIds: [config.listId],
         updateEnabled: true,
       }),
@@ -88,7 +101,7 @@ export async function handleContact(request: Request, config: ContactConfig, sen
         to: [{ email: config.recipient, name: "Rob Abby" }],
         replyTo: { name, email },
         subject: `Website inquiry from ${name}`,
-        textContent: `Name: ${name}\nEmail: ${email}\n\n${message}`,
+        textContent: `Name: ${name}\nEmail: ${email}\nSource (URL tag): ${source}\nMedium: ${medium}\nCampaign: ${campaign}\n\n${message}`,
         tags: ["website-contact"],
       }),
       signal: AbortSignal.timeout(8_000),

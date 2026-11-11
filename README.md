@@ -61,3 +61,17 @@ the visitor. Also publish and validate the Vercel firewall rule for POST
 minutes. Observation mode logs excess requests and does **not** enforce a limit.
 Enable enforcement after reviewing matching traffic. The honeypot, input limits,
 and fixed recipient in the handler do not replace distributed rate limiting.
+
+
+Contact links can include `utm_source`, `utm_medium`, and `utm_campaign`, for example:
+`https://www.robabby.com/contact?utm_source=flyer&utm_medium=qr&utm_campaign=bellingham`.
+These optional tags are captured from the contact page URL at submission, validated
+(up to 120 characters, no control characters), included in the notification email,
+and saved in Brevo text attributes `INQUIRY_SOURCE`, `INQUIRY_MEDIUM`, and
+`INQUIRY_CAMPAIGN`. Create these attributes before deploying. They describe the
+latest submitted inquiry: missing or invalid values replace previous values with
+“Website — source unknown” / “Not specified”. No cookies or cross-page tracking are
+used. Forwarded links retain their tags, so attribution is a clue, not proof.
+
+The Brevo Opportunities pipeline is managed manually. Form submissions create or
+update contacts only; create a linked deal when a conversation looks promising.

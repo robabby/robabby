@@ -17,7 +17,7 @@ test('only sends to the configured recipient, with the visitor as Reply-To',asyn
     return Response.json({messageId:'test-receipt'}, {status:201});
   });
   assert.equal(result.status,200);
-  assert.deepEqual(contact,{email:valid.email,attributes:{CONTACT_FORM_NAME:valid.name},listIds:[7],updateEnabled:true});
+  assert.deepEqual(contact,{email:valid.email,attributes:{CONTACT_FORM_NAME:valid.name,INQUIRY_SOURCE:'Website — source unknown',INQUIRY_MEDIUM:'Not specified',INQUIRY_CAMPAIGN:'Not specified'},listIds:[7],updateEnabled:true});
   assert.equal(sent.to[0].email,config.recipient);
   assert.equal(sent.sender.email,config.sender);
   assert.equal(sent.replyTo.email,valid.email);
@@ -48,4 +48,21 @@ test('a failed contact upsert does not send an email or claim success',async()=>
   assert.equal(result.status,502);
   assert.deepEqual(calls,['https://api.brevo.com/v3/contacts']);
   assert.equal((await handleContact(request(valid),{...config,listId:NaN})).status,503);
+});
+
+
+test('captures bounded URL attribution and ignores malformed tags without losing an inquiry',async()=>{
+  for (const [tags, expected] of [
+    [{utm_source:' flyer ',utm_medium:'qr',utm_campaign:'bellingham'},['flyer','qr','bellingham']],
+    [{utm_source:'flyer\nInjected',utm_medium:['qr'],utm_campaign:'x'.repeat(121)},['Website — source unknown','Not specified','Not specified']],
+  ]) {
+    let contact, mail;
+    const result=await handleContact(request({...valid,...tags}),config,async(url,options)=>{
+      if(url.endsWith('/contacts')) { contact=JSON.parse(options.body); return new Response(null,{status:204}); }
+      mail=JSON.parse(options.body); return Response.json({messageId:'receipt'},{status:201});
+    });
+    assert.equal(result.status,200);
+    assert.deepEqual(['INQUIRY_SOURCE','INQUIRY_MEDIUM','INQUIRY_CAMPAIGN'].map(k=>contact.attributes[k]),expected);
+    for (const value of expected) assert.ok(mail.textContent.includes(value));
+  }
 });
