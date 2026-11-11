@@ -1,6 +1,7 @@
 export type ContactConfig = {
   apiKey?: string;
   sender?: string;
+  listId?: number;
   recipient: string;
   allowedOrigins: string[];
 };
@@ -61,10 +62,24 @@ export async function handleContact(request: Request, config: ContactConfig, sen
   if (!message || message.length > 5000 || /\x00/.test(message)) {
     return response(400, "Please write a message of up to 5,000 characters.");
   }
-  if (!config.apiKey || !config.sender) {
+  if (!config.apiKey || !config.sender || !Number.isSafeInteger(config.listId) || config.listId! <= 0) {
     return response(503, "The form is unavailable right now. Your message is still here. Please try again or email me directly.");
   }
   try {
+    // Upsert before sending: a retry can safely add an existing contact again.
+    // Omit blacklist fields so existing unsubscribe preferences stay intact.
+    const contact = await send("https://api.brevo.com/v3/contacts", {
+      method: "POST",
+      headers: { "api-key": config.apiKey, "Content-Type": "application/json", accept: "application/json" },
+      body: JSON.stringify({
+        email,
+        attributes: { CONTACT_FORM_NAME: name },
+        listIds: [config.listId],
+        updateEnabled: true,
+      }),
+      signal: AbortSignal.timeout(5_000),
+    });
+    if (!contact.ok) return response(502, "Your message could not be sent. It is still here — please try again or email me directly.");
     const result = await send("https://api.brevo.com/v3/smtp/email", {
       method: "POST",
       headers: { "api-key": config.apiKey, "Content-Type": "application/json", accept: "application/json" },
@@ -76,7 +91,7 @@ export async function handleContact(request: Request, config: ContactConfig, sen
         textContent: `Name: ${name}\nEmail: ${email}\n\n${message}`,
         tags: ["website-contact"],
       }),
-      signal: AbortSignal.timeout(10_000),
+      signal: AbortSignal.timeout(8_000),
     });
     if (!result.ok) return response(502, "Your message could not be sent. It is still here — please try again or email me directly.");
     const accepted = await result.json();
