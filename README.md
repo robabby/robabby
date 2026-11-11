@@ -1,14 +1,16 @@
 # Rob Abby
 
-I’m the founder and operator of [WavePoint](https://wavepoint.space/), a personal astrology business. I lead its product, design, engineering, and day-to-day operation.
+I’m Rob. I design and build software. My background is in frontend engineering, though over the years I’ve found myself getting involved in more of what goes into making a product. I enjoy figuring out what it needs, working through the design, and building it with the team and the people who use it.
 
-I also work with small business owners on select projects: clearer websites, useful software, and practical ways to use AI. Based in Bellingham, Washington; working locally and remotely.
+I’ve led frontend engineering at PartySlate, worked at project44, and helped establish the UI/UX team at SAVO. Design, shared components, and helping other engineers with their frontend work have been recurring parts of that experience.
 
-Building WavePoint has shaped how I work with AI, from questions and prototypes through development, release, and ongoing improvement. [Visit WavePoint](https://wavepoint.space/) or [explore ways to work together](https://www.robabby.com/work-with-me).
+These days, I am working on [WavePoint](https://wavepoint.space/), an astrology app for iPhone. It brings together charts, readings, and a place to record experiences and revisit them over time. I look after the product, design, engineering, and day-to-day business, collaborating with my wife, Shayna. The app is currently in TestFlight.
 
-Previously building web products at PartySlate, project44, and SAVO.
+AI has become a substantial part of how I work. I use it throughout development, and I’m continuing to learn where it helps and what needs more attention from me.
 
-[Discuss a project](mailto:robabby23@gmail.com) · [Website](https://www.robabby.com/) · [LinkedIn](https://linkedin.com/in/robabby)
+I’m based in Bellingham, Washington, and work locally and remotely. If you see an opportunity for us to work together—a role, a project, or simply getting to know each other—I’d love to hear from you.
+
+[Get in touch](mailto:robabby23@gmail.com) · [Website](https://www.robabby.com/) · [LinkedIn](https://linkedin.com/in/robabby)
 
 ---
 
