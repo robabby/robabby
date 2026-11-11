@@ -30,6 +30,9 @@
 # screenshot harness output (scripts/screenshots.mjs)
 /screenshots/
 
+# local UI critique reports
+/.impeccable/
+
 # debug
 npm-debug.log*
 yarn-debug.log*
