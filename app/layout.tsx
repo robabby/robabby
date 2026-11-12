@@ -5,6 +5,7 @@ import { Newsreader, Instrument_Sans } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import SiteFooter from "./components/SiteFooter";
+import BackToTop from "./components/BackToTop";
 import JsonLd from "./components/JsonLd";
 import { identitySchema, pageMetadata, SITE_URL } from "./lib/site";
 
@@ -47,6 +48,7 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body className={`${newsreader.variable} ${instrumentSans.variable}`}>
+        <BackToTop />
         <JsonLd value={identitySchema} />
         {children}
         <SiteFooter />
