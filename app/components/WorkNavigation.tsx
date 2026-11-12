@@ -36,7 +36,11 @@ export default function WorkNavigation({ mobile = false }: { mobile?: boolean })
         }
       }}
       onBlur={(event) => {
-        if (!event.currentTarget.contains(event.relatedTarget)) event.currentTarget.open = false;
+        // A pointer activation can blur the summary without focusing the link.
+        // Keep it visible until the click completes; outside pointers dismiss above.
+        if (event.relatedTarget && !event.currentTarget.contains(event.relatedTarget)) {
+          event.currentTarget.open = false;
+        }
       }}
     >
       <summary>Work <ChevronDownIcon aria-hidden="true" /></summary>
