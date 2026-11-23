@@ -58,7 +58,7 @@ export default function Home() {
               <p className="project-role">Product, design, and AI-assisted development</p>
               <WavePointGallery />
               <div className="work-info">
-                <p>WavePoint is an astrology app I’m building for iPhone. It brings together charts, readings, and a place to record experiences and revisit them over time. As founder, I look after the product, design, engineering, and day-to-day business, collaborating with my wife, Shayna. The app is currently in TestFlight.</p>
+                <p>WavePoint is an astrology and reflection app. It brings together charts, readings, and a place to record experiences and revisit them over time. The original iPhone app is in TestFlight, and I’m now building a shared app for iPhone and Android. As founder, I look after the product, design, engineering, and day-to-day business, collaborating with my wife, Shayna.</p>
                 <a className="text-link" href="https://wavepoint.space/" target="_blank" rel="noopener noreferrer">Visit WavePoint<span className="sr-only"> (opens in a new tab)</span> <ArrowRightIcon className="arrow" aria-hidden="true" /></a>
               </div>
             </article>

@@ -6,7 +6,7 @@ import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons";
 
 const slides = [
   { label: "Website", caption: "WavePoint’s current website homepage." },
-  { label: "iPhone app", caption: "Day chart and Journal · Development preview with fictional sample content. App currently in TestFlight." },
+  { label: "iPhone app", caption: "Day chart and Journal · Development preview with fictional sample content." },
 ];
 
 const subscribeToHydration = () => () => {};
@@ -89,7 +89,7 @@ export default function WavePointGallery() {
           <button type="button" aria-label="Next product image" aria-controls="wavepoint-images" onClick={() => show(active + 1)}><ArrowRightIcon aria-hidden="true" /></button>
         </div>
       </div>
-      <p className="image-caption gallery-caption">{ready ? slides[active].caption : "WavePoint’s website and iPhone app. App images are development previews with fictional sample content; the app is currently in TestFlight."}</p>
+      <p className="image-caption gallery-caption">{ready ? slides[active].caption : "WavePoint’s website and iPhone app. App images are development previews with fictional sample content."}</p>
       <p className="sr-only" aria-live="polite" aria-atomic="true">{ready ? `${slides[active].label}, ${active + 1} of ${slides.length}` : ""}</p>
       <noscript><p className="image-caption">Swipe or scroll horizontally to see the iPhone app.</p></noscript>
     </div>
