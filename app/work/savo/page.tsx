@@ -131,8 +131,8 @@ const sections = [
     title: "Starting with the work in front of me",
     label: "The early years",
     content: (<>
-      <p>SAVO helped salespeople find and use content for conversations with clients and prospects. I joined as a self-taught frontend engineer. For roughly my first two and a half years, I didn’t feel I was growing very much beyond the work assigned to me.</p>
-      <p>We worked in a waterfall process, following detailed product requirements documents that defined what we were supposed to build. Those requirements could still change late in the process as new demands came from sales. There wasn’t much room in my work to explore the problem or help shape the solution.</p>
+      <p>SAVO helped salespeople find and use content for conversations with clients and prospects. I joined as a self-taught frontend engineer. Our application used .NET MVC. When something went wrong on screen, I often traced it back from the browser to the template that produced the page. That helped me work out where to make the fix, whether in the client-side code or in the template itself.</p>
+      <p>For roughly my first two and a half years, I didn’t feel I was growing very much beyond the work assigned to me. We worked in a waterfall process, following detailed product requirements documents that defined what we were supposed to build. Those requirements could still change late in the process as new demands came from sales. There wasn’t much room in my work to explore the problem or help shape the solution.</p>
     </>),
   },
   {
@@ -282,7 +282,7 @@ export default function Savo() {
               </div>
               <aside className={styles.projectContext} aria-label="Project context">
                 <dl>
-                  <div><dt>My work</dt><dd>Frontend engineering<br />Product ownership<br />Building the UI/UX team</dd></div>
+                  <div><dt>My work</dt><dd>Frontend engineering in .NET MVC<br />Product ownership<br />Building the UI/UX team</dd></div>
                   <div><dt>Alongside</dt><dd>Brittany Mikottis and the UI/UX, Product, and engineering teams. <a href="#people">Meet the people</a>.</dd></div>
                 </dl>
               </aside>
