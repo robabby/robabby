@@ -88,7 +88,7 @@ export default function PartySlate() {
           <header className={styles.hero}>
             <figure className={styles.heroImage}>
               <Image src="/images/partyslate/panel-discussion.jpg" alt="Two speakers in a panel discussion in front of a PartySlate backdrop, with an audience in the foreground." width={1024} height={768} sizes="(max-width: 720px) 100vw, (max-width: 1000px) 44vw, 510px" priority />
-              <figcaption>A panel discussion at PartySlate.</figcaption>
+              <figcaption>A panel discussion at PartySlate&apos;s 2022 annual all-hands conference.</figcaption>
             </figure>
             <div className={styles.heroCopy}>
               <h1 id="partyslate-title">Building interfaces and shared foundations at PartySlate.</h1>
